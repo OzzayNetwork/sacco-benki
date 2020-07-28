@@ -4,7 +4,7 @@ html, body {
   height: 100%
 }
 body {
-  line-height: 30px;
+  line-height: 0px;
   font-size: 16px;
   color: #8a8592;
  font-family: 'Muli', sans-serif;
@@ -2435,7 +2435,7 @@ a.cmnt-link-share i.fa {
     bottom: -23px
   }
   .banner-content h2 {
-    font-size: 50px;
+    font-size: 39px;
     line-height: 50px
   }
   .mbl-1-img img {
@@ -2825,7 +2825,7 @@ margin-bottom: 20px;
 	font-weight: 700;
 }
 .navbar-brand img{
-	height: 55px;
+	height: 85px;
 }
 
 /*search container*/
@@ -3518,7 +3518,7 @@ table.dataTable td:last-child, table.dataTable th:last-child{
 	position: absolute;
 }
 .mockupImg img{
-	height: 650px;
+	height: 600px;
 }
 
 /*login page styling*/

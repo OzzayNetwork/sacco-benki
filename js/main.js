@@ -210,6 +210,128 @@ $(window).on('load', function(){
 });
 
 
+//=====================================================================================
+//******************membership form ******************************/
+//=====================================================================================
+
+$('.occupation-text').on("change", function(){
+	var occupation=$(this).text();
+});
+
+$('#nat-id').on('change', function(){
+
+	var file = $(this).val();
+	var fullPath = $(this).val();
+
+	var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+    var filename = fullPath.substring(startIndex);
+    if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+        filename = filename.substring(1);
+    }
+    
+	
+	if(file=="" ){ 
+		alert("No files selected") ; 
+		$(".id-container").removeClass("activated");
+		$(".id-container small strong").text("No file selected");
+		$(".id-container small").addClass("text-danger").removeClass("text-success");
+
+		
+	} else { 
+		$(".id-container").addClass("activated");		
+		$(".id-container small strong").text("File ("+filename+ ") Selected");
+		$(".id-container small").addClass("text-success").removeClass("text-danger");
+	} 
+	//id-container
+});
+
+$('#kra-pin').on('change', function(){
+
+	var file = $(this).val();
+	var fullPath = $(this).val();
+
+	var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+    var filename = fullPath.substring(startIndex);
+    if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+        filename = filename.substring(1);
+    }
+    
+	
+	if(file=="" ){ 
+		alert("No files selected") ; 
+		$(".kra-container").removeClass("activated");
+		$(".kra-container small strong").text("No file selected");
+		$(".kra-container small").addClass("text-danger").removeClass("text-success");
+
+		
+	} else { 
+		$(".kra-container").addClass("activated");		
+		$(".kra-container small strong").text("File ("+filename+ ") Selected");
+		$(".kra-container small").addClass("text-success").removeClass("text-danger");
+	} 
+	
+});
+
+$('#user-photo').on('change', function(){
+
+	var file = $(this).val();
+	var fullPath = $(this).val();
+
+	var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+    var filename = fullPath.substring(startIndex);
+    if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+        filename = filename.substring(1);
+	}
+	alert("changed");
+    
+	
+	if(file=="" ){ 
+		// alert("No files selected") ; 
+		$(".user-photo-container").removeClass("activated");
+		$(".user-photo-container small strong").text("No file selected");
+		$(".user-photo-container small").addClass("text-danger").removeClass("text-success");
+
+		
+	} else { 
+		$(".user-photo-container").addClass("activated");		
+		$(".user-photo-container small strong").text("File ("+filename+ ") Selected");
+		$(".user-photo-container small").addClass("text-success").removeClass("text-danger");
+	} 
+	
+});
+
+$('#mpesa-statement').on('change', function(){
+
+	var file = $(this).val();
+	var fullPath = $(this).val();
+
+	var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+    var filename = fullPath.substring(startIndex);
+    if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+        filename = filename.substring(1);
+    }
+    
+	
+	if(file=="" ){ 
+		alert("No files selected") ; 
+		$(".mpesa-statement-container").removeClass("activated");
+		$(".mpesa-statement-container small strong").text("No file selected");
+		$(".mpesa-statement-container small").addClass("text-danger").removeClass("text-success");
+
+		
+	} else { 
+		$(".mpesa-statement-container").addClass("activated");		
+		$(".mpesa-statement-container small strong").text("File ("+filename+ ") Selected");
+		$(".mpesa-statement-container small").addClass("text-success").removeClass("text-danger");
+	} 
+	
+});
+
+//=====================================================================================
+//******************membership form ******************************/
+//=====================================================================================
+
+
 //owl initializer
 $(document).ready(function(){
 

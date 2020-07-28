@@ -11,6 +11,15 @@
 		<!-- Vendor styles -->
 		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.carousel.min.css">
 		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.theme.default.css">
+	
+		<!--flat icon-->
+		<link rel="stylesheet" href="css/flaticon/font/flaticon.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_4.css">
+
+	
 
         <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
         <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
@@ -32,13 +41,15 @@
         <main class="main">
             <div class="page-loader">
                 <div class="page-loader__spinner">
-                    <svg viewBox="25 25 50 50">
+                    <svg class="d-none" viewBox="25 25 50 50">
                         <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
                     </svg>
+					<img src="demo/img/gifs/preloader.gif">
                 </div>
 				<span class="powerd-container">
-					<img src="demo/img/logo-files/fav-icon.png">
-					<strong>POWERED BY NOUVETA</strong>
+					<strong class="mb-2">Sacco Benki By</strong>
+					<img src="demo/img/logo-files/nouveta-orange.svg">
+					
 				</span>
             </div>
 
@@ -57,7 +68,7 @@
 
                 <form class="search">
                     <div class="search__inner">
-                        <input type="text" class="search__text" placeholder="Search for a blinker, tack shop owner or a guardian">
+                        <input type="text" class="search__text" placeholder="Search through the dashboard">
                         <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
                     </div>
                 </form>
@@ -228,113 +239,41 @@
 
                     <ul class="navigation">
                         <li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-view-dashboard"></i>Home</a></li>
-						<li class="navigation__active"><a href="student.html"><i class="zmdi zmdi-face "></i>Students</a></li>
-						<li class="navigation__active"><a href="parents.html"><i class="zmdi zmdi-accounts-alt "></i>Parents</a></li>
-						<li class="navigation__active"><a href="shop.html"><i class="zmdi zmdi-store "></i>Shops</a></li>
-						 <li class="navigation__sub">
-                            <a href="#"><i class="zmdi zmdi-accounts-add"></i>Associations</a>
+						<li class="navigation__sub">
+                            <a href="#"><i class="flaticon-group"></i>Members</a>
                             <ul>
-                                <li><a href="associations.html">Requests</a></li>
-                                <li><a href="approved-asso.html">Approved</a></li>
-                                <li><a href="declined-asso.html">Declined</a></li>
+                                <li><a href="members.html" title="members register">Members register</a></li>
+                                <li><a href="new-member.html" title="add new member">New Members</a></li>
                             </ul>
 						</li>
-                        <li class="navigation__sub">
-                            <a href="#"><i class="zmdi zmdi-card"></i>Cards</a>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="flaticon-briefcase"></i>Accounts</a>
                             <ul>
-                                <li><a href="active-cards.html">Active cards</a></li>
-                                <li><a href="inactive-cards.html">Inactive cards</a></li>
-                                <li><a href="pending-cards.html">Pending cards</a></li>
-                                <li><a href="deactivated-cards.html">Deactivated cards</a></li>
+                                <li><a href="account.html">Share Capital</a></li>
+                                <li><a href="account.html">Deposit account</a></li>
+								 <li><a href="account-html">Savings</a></li>
+								 <li><a href="new-account.html" title="set up new account">New account</a></li>
                             </ul>
 						</li>
-						<li class="navigation__active"><a href="transactions.html"><i class="zmdi zmdi-hourglass-alt"></i>Transactions reports</a></li>
-						 <li class="navigation__sub">
-                            <a href="#"><i class="zmdi zmdi-account"></i>Systems Users</a>
-
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="flaticon-money"></i>Loans</a>
                             <ul>
-								<li><a href="new-user.html">New User</a></li>
-								<li><a href="active-users.html">Active users</a></li>
-                                <li><a href="blocked-users.html">Blocked Users</a></li>
-                                
+                                <li><a href="loan.html">Development loan</a></li>
+                                <li><a href="loan.html">Emergency loan</a></li>
+								 <li><a href="loan.html">School fees loan</a></li>
+								 <li><a href="loan.html">Karibu loan</a></li>
+								 <li><a href="loan.html">Motor Vehicle Loan</a></li>
+								 <li><a href="new-loan.html" title="create a new loan">Loan setup</a></li>
                             </ul>
-                        </li>
+						</li>
+						
 						 <li class="navigation__active mt-4"><a href="landing-page.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
                     </ul>
                 </div>
             </aside>
-			<aside class="chat">
-                <div class="chat__header">
-                    <h2 class="chat__title"><strong>Associations Requests</strong><small>You have 20 notifications yet to be addressed</small></h2>
-
-                    <div class="chat__search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search...">
-                            <i class="form-group__bar"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="scrollbar-inner">
-                    <div class="listview listview--hover chat__buddies">
-                        <a class="listview__item chat__available" data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/7.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-
-                        <a class="listview__item chat__available"  data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/5.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-
-                        <a class="listview__item chat__away" data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/3.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-
-                        <a class="listview__item " data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/8.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-
-                        <a class="listview__item" data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/6.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-
-                        <a class="listview__item chat__busy" data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/9.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <a href="messages.html" class="btn btn--action btn-danger d-none"><i class="zmdi zmdi-plus"></i></a>
-            </aside>
+			
 			
 			<!--associate blinker modal-->
 			<div class="modal" id="associate" tabindex="-1" role="dialog">
