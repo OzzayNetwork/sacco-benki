@@ -461,43 +461,47 @@
 										<div class="mb-3">
 											<ul class="nav nav-pills">
 												<li class="nav-item">
-													<a class="nav-link active" href="#"><i class="pe-7s-user mr-2"></i>Generall Information</a>
+													<a class="nav-link active gen-info-link" href="#"><i class="pe-7s-user mr-2"></i>Generall Information</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="pe-7s-portfolio mr-2"></i>Occupation</a>
+													<a class="nav-link occupation-link disabled" href="#"><i class="pe-7s-portfolio mr-2"></i>Occupation</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="pe-7s-users mr-2"></i>Beneficiaries</a>
+													<a class="nav-link ben-link disabled" href="#"><i class="pe-7s-users mr-2"></i>Beneficiaries</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="pe-7s-note2 mr-2"></i>Documents</a>
+													<a class="nav-link doc-link disabled" href="#"><i class="pe-7s-note2 mr-2"></i>Documents</a>
 												</li>
-												<li class="nav-item">
-													<a class="nav-link disabled" href="#"><i class="pe-7s-piggy mr-2"></i>Start saving</a>
+												<li class="nav-item ">
+													<a class="nav-link disabled save-link" href="#"><i class="pe-7s-piggy mr-2"></i>Start saving</a>
 												</li>
 											</ul>
 										</div>
 										<hr>
-										<h4 class="card-title">General information</h4>
-										<h6 class="card-subtitle">Enter the form bellow. Fields with <strong class="text-danger">(*)</strong> are required.</h6>
-										<hr>
-										<div class="row clearfix form-gen-information">
+										
+										<form class="membership-form">
+											<div class="row clearfix form-gen-information animated fadeInRight">
+											<div class="col-12">
+												<h4 class="card-title">General information</h4>
+												<h6 class="card-subtitle">Enter the form bellow. Fields with <strong class="text-danger">(*)</strong> are required.</h6>
+												<hr>
+											</div>
 											<div class="col-md-4 col-sm-12">
 												<div class="form-group"> 
 													<label>First name  <strong class="text-danger">*</strong></label>
-													<input type="text" class="form-control" autofocus placeholder="Enter first name">
+													<input type="text"  class="form-control validate" pattern="^[a-zA-Z]{2,30}$" minlength="2" autofocus placeholder="Enter first name" required>
 												</div>
 											</div>
 											<div class="col-md-4 col-sm-12">
 												<div class="form-group"> 
 													<label>SurName  <strong class="text-danger">*</strong></label>
-													<input type="text" class="form-control" placeholder="Enter surname">
+													<input type="text" class="form-control validate" pattern="^[a-zA-Z']{2,30}$" minlength="2"  placeholder="Enter surname" required>
 												</div>
 											</div>
 											<div class="col-md-4 col-sm-12">
 												<div class="form-group"> 
 													<label>Other Name(s)</label>
-													<input type="text" class="form-control" pattern="[a-zA-Z]{2,}" placeholder="Enter other name(s)">
+													<input type="text" class="form-control validate" pattern="^[0-9a-zA-Z'\s]{2,100}$" minlength="2"  placeholder="Enter other name(s)">
 												</div>
 											</div>
 											<div class="col-md-12">
@@ -505,21 +509,22 @@
 													<div class="col-md-4 col-sm-12">
 														<div class="form-group"> 
 															<label>ID Number/Passport Number  <strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control" autofocus placeholder="Enter ID Number">
+															<input type="text" class="form-control validate" pattern="^[0-9a-zA-Z'\s]{2,100}$"  minlength="2" placeholder="Enter ID Number" required>
 														</div>													
 													</div>
 													
 													<div class="col-md-4 col-sm-12">
 														<div class="form-group"> 
 															<label>KRA Pin  <strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control" placeholder="Enter KRA pin">
+															<input type="text" class="form-control validate" pattern="^[0-9a-zA-Z'\s]{2,100}$" placeholder="Enter KRA pin"  minlength="2" required>
 														</div>
 													</div>
 													
 													<div class="col-md-4 col-sm-12">
 														<div class="form-group"> 
 															<label>Nationality<strong class="text-danger">*</strong></label>
-															<select name="ctl00$MainContent$DdlNationality" id="" title="please select your nationality" class="form-control" placeholder="Nationality">
+															<select name="" id="" title="please select your nationality" class="form-control nationality-form" placeholder="Nationality">
+																<option value="0">-- select nationality --</option>
 																<option value="AF">Afghanistan</option>
 																<option value="AL">Albania</option>
 																<option value="DZ">Algeria</option>
@@ -768,8 +773,8 @@
 											<div class="col-md-4 col-sm-12">
 												<div class="form-group">
 													<label>Gender <strong class="text-danger">*</strong></label>
-													<select class="form-control">
-														<option value="">-- Select Gander --</option>
+													<select class="form-control gender-form">
+														<option value="0" selected>-- Select Gender --</option>
 														<option value="Male">Male</option>
 														<option value="Female">Female</option>
 													</select>
@@ -782,15 +787,15 @@
 													<div class="input-group-prepend">
 														<span class="input-group-text"><i class="pe-7s-date"></i></span>
 													</div>
-													<input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-													<input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
+													<input type="date" class="form-control hidden-md-up dob2 d-none"  placeholder="Pick a date">
+													<input type="text" class="form-control date-picker  dob1" required placeholder="Pick a date">
 												</div>
 											</div>
 											<div class="col-md-4 col-sm-12">
 												<div class="form-group"> 
 													<label>Marital status<strong class="text-danger">*</strong></label>
-													<select name="ctl00$MainContent$Ddlmarital" id="MainContent_Ddlmarital" title="please select your gender" class="form-control" placeholder="Gender">
-														<option value="0">---Select Marital status--</option>
+													<select name="" id="" title="please select your " class="form-control status-form" placeholder="Gender">
+														<option value="0" selected>---Select Marital status--</option>
 														<option value="1">Single</option>
 														<option value="2">Married</option>
 														<option value="3">Devorced</option>
@@ -808,27 +813,28 @@
 											<div class="col-md-4 col-sm-12">
 												<div class="form-group"> 
 													<label>Postal address <strong class="text-danger">*</strong></label>
-													<input type="text" class="form-control" placeholder="Enter the postal address">
+													<input type="text" class="form-control posta-form validate" pattern="^[0-9']{1,100000000000000000}$" minlength="1"  required placeholder="Enter the postal address">
 												</div>
 											</div>
 											<div class="col-md-4 col-sm-12">
 												<div class="form-group"> 
 													<label>Postal code <strong class="text-danger">*</strong></label>
-													<input type="text" class="form-control" pattern="[0-9]" placeholder="Enter the postal code">
+													<input type="text" required class="form-control validate" pattern="^[0-9']{1,10000000000}$" minlength="1" placeholder="Enter the postal code">
 												</div>
 											</div>
 											
 											<div class="col-md-4 col-sm-12">
 												<div class="form-group"> 
 													<label>City<strong class="text-danger">*</strong></label>
-													<input type="text" class="form-control" pattern="[0-9]" placeholder="Enter the city name">
+													<input type="text" class="form-control city-form" required pattern="^[0-9a-zA-Z'\s]{2,100}$" minlength="1"  placeholder="Enter the city name">
 												</div>
 											</div>
 											
 											<div class="col-md-4 col-sm-12">
 												<div class="form-group"> 
 													<label>Country<strong class="text-danger">*</strong></label>
-													<select name="ctl00$MainContent$DdlNationality" id="" title="please select your nationality" class="form-control" placeholder="Nationality">
+													<select name="" id="" title="please select your postal country" class="form-control country-form" placeholder="Country">
+														<option value="0">-- Select country --</option>
 														<option value="AF">Afghanistan</option>
 														<option value="AL">Albania</option>
 														<option value="DZ">Algeria</option>
@@ -854,6 +860,7 @@
 														<option value="BJ">Benin</option>
 														<option value="BM">Bermuda</option>
 														<option value="BT">Bhutan</option>
+
 														<option value="BO">Bolivia</option>
 														<option value="BA">Bosnia And Herzegowina</option>
 														<option value="BW">Botswana</option>
@@ -1076,14 +1083,15 @@
 													<div class="col-md-6 col-sm-12">
 														<div class="form-group"> 
 															<label>Phone Number<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control" autofocus placeholder="Enter phone number">
+															<input type="text" class="form-control phone-num validate" pattern="^[0-9']{10,11}$" minlength="10" required placeholder="Enter phone number">
 														</div>													
 													</div>
 													
 													<div class="col-md-6 col-sm-12">
 														<div class="form-group"> 
-															<label>email address<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control" placeholder="Enter email address">
+															<label>Email address<strong class="text-danger">*</strong></label>
+															<input type="email" class="form-control email-input validate" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" id="id1"  required placeholder="email@email.com">
+															
 														</div>
 													</div>
 													
@@ -1092,14 +1100,14 @@
 											</div>
 											
 											<div class="col-12">
-												<button class="btn btn-primary occupation-next">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></button>
+												<a class="btn btn-primary occupation-next btn-next text-white" >Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
 											</div>
 											
 											
 											
 										</div>
 										
-										<div class="row clearfix form-occupation">
+										<div class="row clearfix form-occupation animated fadeInRight d-none">
 											<div class="col-md-12">
 												<h4 class="card-title">Occupation</h4>
 											<h6 class="card-subtitle">Enter the form bellow. Fields with <strong class="text-danger">(*)</strong> are required.</h6>
@@ -1109,7 +1117,8 @@
 												<div class="form-group"> 
 													<label>Select source of income<strong class="text-danger">*</strong></label>
 													<select title="please select your source of income" class="form-control occupation-text" placeholder="Gender">
-														<option selected="selected" value="Employment">Employment</option>
+														<option selected="selected" value="0">-- select source of income --</option>
+														<option  value="Employment">Employment</option>
 														<option value="Business">Business</option>
 														<option value="Pension">Pension</option>
 
@@ -1122,21 +1131,21 @@
 													<div class="col-md-6 col-sm-12">
 														<div class="form-group"> 
 															<label>Emoployer<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control" placeholder="Enter employers name">
+															<input type="text" class="form-control must-input emp-employer" placeholder="Enter employers name">
 														</div>
 													</div>
 													
 													<div class="col-sm-12 col-md-6">
 														<div class="form-group"> 
 															<label>Position of employment<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control" placeholder="Enter position">
+															<input type="text" class="form-control emp-position must-input" placeholder="Enter position">
 														</div>
 													</div>
 													
 													<div class="col-md-6 col-sm-12">
 														<div class="form-group"> 
 															<label>Payroll/Staff number<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control" placeholder="Enter staff number or pay roll number">
+															<input type="text" class="form-control emp-staff-num must-input"  placeholder="Enter staff number or pay roll number">
 														</div>
 													</div>
 													
@@ -1147,15 +1156,15 @@
 															<div class="input-group-prepend">
 																<span class="input-group-text"><i class="pe-7s-date"></i></span>
 															</div>
-															<input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-															<input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
+<!--															<input type="date" class="form-control hidden-md-up" placeholder="Pick a date">-->
+															<input type="text" class="form-control date-picker must-input emp-date" placeholder="Pick a date">
 														</div>
 													</div>
 													
 													<div class="col-md-6 col-sm-12">
 														<div class="form-group"> 
 															<label>Gross monthly Income<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control" placeholder="Enter monthly income">
+															<input type="text" class="form-control must-input emp-income" placeholder="Enter monthly income">
 														</div>
 													</div>
 													
@@ -1202,13 +1211,13 @@
 											</div>
 
 											<div class="col-12">
-												<button class="btn btn-light btn-border mr-3 btn-outline gen-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </button>
-												<button class="btn btn-primary ben-next">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></button>
+												<a class="btn btn-light btn-border mr-3 btn-outline gen-prev btn-prev "><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
+												<a class="btn btn-primary btn-next ben-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
 											</div>
 											
 										</div>
 
-										<div class="row clearfix form-ben">
+										<div class="row clearfix form-ben animated fadeInRight d-none">
 											<div class="col-12">
 												<h4 class="card-title">Beneficiaries</h4>
 												<h6 class="card-subtitle">Enter the form bellow. Fields with <strong class="text-danger">(*)</strong> are required.</h6>
@@ -2194,12 +2203,12 @@
 											</div>
 											
 											<div class="col-12">
-												<button class="btn btn-light btn-border mr-3 btn-outline occ-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </button>
-												<button class="btn btn-primary attach-next">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></button>
+												<a class="btn btn-light btn-border mr-3 btn-outline occ-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
+												<a class="btn btn-primary attach-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
 											</div>
 										</div>
 
-										<div class="row clearfix form-attach">
+										<div class="row clearfix form-attach animated fadeInRight d-none">
 											<div class="col-12">
 												<h4 class="card-title">Attachments</h4>
 												<h6 class="card-subtitle">Attach official documents for the applicant here.</h6>
@@ -2255,14 +2264,14 @@
 
 											
 											<div class="col-12 mt-5">
-												<button class="btn btn-light btn-border mr-3 btn-outline ben-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </button>
-												<button class="btn btn-primary fund-next">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></button>
+												<a class="btn btn-light btn-border mr-3 btn-outline ben-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
+												<a class="btn btn-primary fund-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
 											</div>
 											
 
 										</div>
 										
-										<div class="row clearfix form-save">
+										<div class="row clearfix form-save animated fadeInRight d-none">
 											<div class="col-12">
 												<h4 class="card-title">Account savings & Activation</h4>
 												<h6 class="card-subtitle">
@@ -2270,7 +2279,7 @@
 												</h6>
 												<hr>
 											</div>
-											<div class="col-12 mb-5">
+											<div class="col-12">
 												<label><strong>Applicant chooses to pay both registration fee and the first deposit using which of the following methods:</strong></label>
 												
 												<div class="radio">
@@ -2284,16 +2293,73 @@
 												</div>
 												
 												<div class="radio">
+													<input type="radio" name="pay-method" id="method-teller">
+													<label class="radio__label" for="method-teller">Will activate at teller</label>
+												</div>
+												
+												<div class="radio">
 													<input type="radio" name="pay-method" id="method-own">
 													<label class="radio__label" for="method-own">Will activate at own time</label>
 												</div>
+												
+												<div class="row">
+													<div class="col-md-6 col-sm-12 my-5">
+														<div class="notes">
+															<p>
+																Kindly note the member registration fee is <strong>KES 1,000.</strong> If the applicant will choose to pay more, the additional amount will be credited to his account.
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="act-mpesa col-12 animated fadeIn d-none">
+												<div class="row">
+													<div class="col-md-4 col-sm-12">
+															<div class="form-group"> 
+																<label>Mpesa number<strong class="text-danger">*</strong></label>
+																<input type="text" class="form-control" placeholder="Enter Mpesa number">
+															</div>
+														</div>	
+													
+														<div class="col-md-3 col-sm-12">
+															<div class="form-group"> 
+																<label>Amount<strong class="text-danger">*</strong></label>
+																<input type="text" class="form-control" placeholder="Amount to be paid">
+															</div>
+														</div>	
+													
+														
+													
+														<div class="col-sm-12 col-md-auto">
+															<div class="form-group"> 
+																<label class="opacity-0">request<strong class="text-danger">*</strong></label>
+																<button class="btn btn-success d-flex align-items-center" title="click to send payment request">Send payment request <i class="ml-3 arrow_carrot-2right" style="font-size: 20px;" ></i></button>
+															</div>
+														</div>	
+												</div>
 											</div>
 											
-											<div class="col-12">
-												<button class="btn btn-light btn-border mr-3 btn-outline occ-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </button>
+											<div class="act-cash col-12 animated fadeIn d-none">
+												<div class="row">
+													<div class="col-12">
+														<p><strong>How much money have you received from the applicant</strong></p>
+													</div>
+													<div class="col-md-4 col-sm-12">
+														<div class="form-group"> 
+															<label>Amount<strong class="text-danger">*</strong></label>
+															<input type="text" class="form-control" autofocus placeholder="KSH">
+														</div>
+													</div>
+													
+												</div>
+											</div>
+											
+											<div class="col-12 mt-5">
+												<a class="btn btn-light btn-border mr-3 btn-outline attach-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
 												<button class="btn btn-primary attach-next">Submit Application<i class="ml-3 zmdi zmdi-mail-reply-all flipx"></i></button>
 											</div>
 										</div>
+										</form>
 									</div>
 								</div>
 							</div>
@@ -2398,12 +2464,18 @@
 		<script src="vendors/highcharts/export-data.js"></script>
 		<script src="vendors/highcharts/accesibility.js"></script>
 		
+		<!--form validation-->
+		<script src="vendors/jq-validation/jquery.validate.min.js"></script>
+		<script src="vendors/jq-validation/additional-methods.min.js"></script>
+		
 		<script src="js/highcharts/highcharts-more.js"></script>
 		<!--owl corousel-->
 		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script><!-- App functions and actions -->
 		<script src="js/wow.js"></script>
         <script src="js/app.min.js"></script>
-        <script src="js/main.js"></script>		
+        <script src="js/main.js"></script>	
+		
+		
     </body>
 
 <!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:43 GMT -->

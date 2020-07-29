@@ -213,6 +213,295 @@ $(window).on('load', function(){
 //=====================================================================================
 //******************membership form ******************************/
 //=====================================================================================
+$('.membership-form').validate();
+//go gen info
+
+//disabling function
+check_gen_info();
+
+$('.form-gen-information input').on("change", function(){
+	check_gen_info();
+});
+
+$('.form-gen-information input').on("keydown", function(){
+	check_gen_info();
+});
+
+
+
+$('.form-gen-information select').on("change", function(){
+	check_gen_info();
+});
+
+$('.form-gen-information .dob1').on("change", function(){
+	var dated=$(this).val();
+	$('.form-gen-information .dob2').val(dated);
+});
+
+$('.form-gen-information .dob2').on("change", function(){
+	var dated=$(this).val();
+	$('.form-gen-information .dob1').val(dated);
+});
+
+
+function myFunction() {
+	var email_address = document.getElementById("id1");
+	if (!email_address.checkValidity()) {
+	 
+	  //alert(email_address.setCustomValidity("Input a valid email address!"));
+
+	  email_address.setCustomValidity("I am expecting an e-mail address!");
+	} else {
+	  
+	  alert("Input OK");
+	} 
+  } 
+
+  function disable_genifo(){
+	  $('.gen-info-link').parent().siblings().children().addClass('disabled');
+	  $('.form-gen-information .btn-next').attr('disabled', true).addClass('disabled');
+	 // alert("successfull");
+  }
+
+
+
+
+function check_gen_info(){
+	$('.form-gen-information input[required]').each(function(index, value) {
+		// myFunction()
+		//alert("got them");
+
+		var has_error=$(this).hasClass('error');
+	
+		var the_value=$(this).val();
+		var nationality=$('.form-gen-information .nationality-form').val();
+		$('.form-gen-information .nationality-form').removeClass('border-danger');
+
+		//alert(nationality);
+		var gender=$('.form-gen-information .gender-form').val();
+		$('.form-gen-information .gender-form').removeClass('border-danger');
+
+		//alert(gender);
+		var status=$('.form-gen-information .status-form').val();
+		$('.form-gen-information .status-form').removeClass('border-danger');
+		//alert(status);
+		var country=$('.form-gen-information .country-form').val();
+		$('.form-gen-information .country-form').removeClass('border-danger')
+		//alert(country);	
+
+		$(this).removeClass('border-danger');
+		
+	
+		if(the_value==""){
+			disable_genifo();
+			$(this).addClass('border-danger');
+			return false;
+			// alert("value is empty");			
+		}
+		if(has_error==true){
+			
+			disable_genifo();
+			$(this).addClass('border-danger');
+			return false;
+			// alert("value is empty");			
+		}		
+		
+		if(nationality==0){
+			disable_genifo();
+			$('.form-gen-information .nationality-form').addClass('border-danger')
+			return false;
+
+			
+		}
+		if(gender==0){
+			disable_genifo();
+			$('.form-gen-information .gender-form').addClass('border-danger')
+
+			return false;
+		}
+
+		if(status==0){
+			disable_genifo();
+			$('.form-gen-information .status-form').addClass('border-danger')
+
+			return false;
+			
+		}
+
+		if(country==0){
+			disable_genifo();
+			$('.form-gen-information .country-form').addClass('border-danger')
+
+			return false;
+		}		
+			
+		
+		if(the_value!==""){
+			$('.form-gen-information .btn-next').attr('disabled', false).removeClass('disabled');
+			$(this).removeClass('border-danger');
+			$('.nav-link .occupation-link').removeClass('disabled');
+			//alert("value is not empty");
+			//alert(the_value);
+		}
+		
+	  });
+}
+//disabling function
+$('a.gen-prev').on('click', function(){
+	$(this).parent().parent("div").addClass('d-none').prev().removeClass('d-none');
+	$('.gen-info-link').removeClass('disabled').addClass('active').parent().siblings().children().removeClass('active');
+
+});
+
+$('a.gen-info-link').on('click', function(){
+	$('.form-gen-information').removeClass('d-none').siblings('.row').addClass('d-none');
+	$(this).removeClass('disabled').addClass('active').parent().siblings().children().removeClass('active');
+
+});
+//******************occupation form functions **************************************/
+function disable_occupation(){
+	$('.gen-info-link').parent().siblings().children().addClass('disabled');
+	$('.occupation-link').removeClass('disabled');
+	$('.form-occupation .btn-next').attr('disabled', true).addClass('disabled');
+   // alert("successfull");
+}
+
+$('.form-occupation .occupation-text').on('change', function(){
+	var employed_has_dnone=$(".form-occupation .employer-opt").hasClass('d-none');
+	var occupation=$(this).val();
+	//alert(occupation);
+	if(occupation=="Employment"){
+		$('.employer-opt').removeClass('d-none').siblings('.business-opt').addClass('d-none');
+		
+		$('.employer-opt .emp-employer').attr("pattern", '^[0-9a-zA-Z\\s]{2,100}$');
+		$('.employer-opt .emp-position').attr("pattern", '^[0-9a-zA-Z\\s]{2,100}$');
+		$('.employer-opt .emp-employer').attr("pattern", '^[0-9a-zA-Z\\s]{2,100}$');
+		$('.employer-opt .emp-income').attr("pattern", '^[0-9]{2,10000}$');
+		$('.employer-opt .emp-staff-num').attr("pattern", "^[^$%?#!<>*+'\\x22]+$");
+		
+		$('.employer-opt .must-input').each(function(index, value){
+			$(this).attr('required', '');
+		});
+	}
+
+	// employed
+	if(employed_has_dnone==false){
+
+		checkEmployedValidity();
+	
+		$(".form-occupation .employer-opt input").on("keydown", function(){
+			checkEmployedValidity();
+		});
+		
+	
+		function checkEmployedValidity(){
+			$('.employer-opt input').each(function(index, value){
+	
+				$(this).removeClass('border-danger');
+				var has_error=$(this).hasClass('error');
+				// var has_required=$(this).hasAttribute('required');
+	
+				//alert(has_required);
+				
+				if(has_error==true){
+					disable_occupation()
+					$(this).addClass('border-danger');
+					alert(has_error);
+					return false;
+				}
+				else{
+					$('.gen-info-link').parent().next().children().removeClass('disabled');				
+					$('.form-occupation .btn-next').attr('disabled', false).removeClass('disabled');
+				}
+			});
+		}
+	}
+
+
+});
+
+//check for errors
+//alert(employed_has_dnone);
+
+
+
+
+
+//employment validationn of inputs
+
+
+//go to occupation
+$('a.occupation-next').on('click', function(){
+	//e.preventDefault();
+	$(this).parent().parent("div").addClass('d-none').next().removeClass('d-none');
+	$('.occupation-link').removeClass('disabled').addClass('active').parent().siblings().children().removeClass('active');
+});
+
+$('a.occupation-link').on('click', function(){
+	$('.form-occupation').removeClass('d-none').siblings('.row').addClass('d-none');
+	$(this).removeClass('disabled').addClass('active').parent().siblings().children().removeClass('active');
+
+});
+
+$('a.occ-prev').on('click', function(){
+	$(this).parent().parent("div").addClass('d-none').prev().removeClass('d-none');
+	$('.occupation-link').removeClass('disabled').addClass('active').parent().siblings().children().removeClass('active');
+});
+
+//go to beneficiaries
+$('a.ben-next').on('click', function(){
+	$(this).parent().parent("div").addClass('d-none').next().removeClass('d-none');
+	$('.ben-link').removeClass('disabled').addClass('active').parent().siblings().children().removeClass('active');;
+});
+
+
+$('a.ben-link').on('click', function(){
+	$('.form-ben').removeClass('d-none').siblings('.row').addClass('d-none');
+	$(this).removeClass('disabled').addClass('active').parent().siblings().children().removeClass('active');
+
+});
+
+$('a.ben-prev').on('click', function(){
+	$(this).parent().parent("div").addClass('d-none').prev().removeClass('d-none');
+	$('.ben-link').removeClass('disabled').addClass('active').parent().siblings().children().removeClass('active');
+});
+
+
+//go to documents
+$('a.attach-next').on('click', function(){
+	$(this).parent().parent("div").addClass('d-none').next().removeClass('d-none');
+	$('.doc-link').removeClass('disabled').addClass('active').parent().siblings().children().removeClass('active');;
+
+});
+
+$('a.doc-link').on('click', function(){
+	$('.form-attach').removeClass('d-none').siblings('.row').addClass('d-none');
+	$(this).removeClass('disabled').addClass('active').parent().siblings().children().removeClass('active');
+
+});
+
+$('a.attach-prev').on('click', function(){
+	$(this).parent().parent("div").addClass('d-none').prev().removeClass('d-none');
+	$('.doc-link').removeClass('disabled').addClass('active').parent().siblings().children().removeClass('active');
+});
+
+
+//go to save
+$('a.fund-next').on('click', function(){
+	$(this).parent().parent("div").addClass('d-none').next().removeClass('d-none');
+	$('.save-link').removeClass('disabled').addClass('active').parent().siblings().children().removeClass('active');
+
+});
+
+$('a.save-link').on('click', function(){
+	$('.form-save').removeClass('d-none').siblings('.row').addClass('d-none');
+	$(this).removeClass('disabled').addClass('active').parent().siblings().children().removeClass('active');
+
+});
+
+
+
+//occupation functions
 
 $('.occupation-text').on("change", function(){
 	var occupation=$(this).text();
