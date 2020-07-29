@@ -14797,4 +14797,7 @@ a.badge-white.focus, a.badge-white:focus {
 .asset-num-container .card-body{
 	flex-grow: 0;
 }
+.form-save .radio__label{
+    cursor: pointer;
+}
 /*custom budge designs*/

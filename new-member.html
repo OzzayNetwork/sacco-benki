@@ -1744,17 +1744,6 @@
 												<h6 class="card-subtitle">Attach official documents for the applicant here.</h6>
 												<hr>
 
-												<!-- national id input box -->
-												<input type="file"  id="nat-id" class="form-control nat-id d-none">
-
-												<!-- kra pin input -->
-												<input type="file" id="kra-pin" class="form-control kra-pin d-none">
-
-												<!-- user photo -->
-												<input type="file" id="user-photo" class="form-control user-photo d-none">
-
-												<!-- mpesa statemetn -->
-												<input type="file" id="mpesa-statement" class="form-control mpesa-statement d-none">
 											</div>
 											<label class="col-sm-12 col-md-3 form-attach" for="nat-id">
 												<div class="id-container img-container">
@@ -1762,6 +1751,8 @@
 													<h5>Nat ID card</h5>
 													<p>Only <strong>.PDF files</strong> are accepted</p>
 													<small class="text-danger"><strong>No file selected</strong></small>
+													<!-- national id input box -->
+													<input type="file" accept="application/pdf"  id="nat-id" required class="form-control nat-id d-none">
 												</div>
 											</label>
 
@@ -1771,6 +1762,8 @@
 													<h5>KRA pin</h5>
 													<p>Only <strong>.PDF files</strong> are accepted</p>
 													<small class="text-danger"><strong>No file selected</strong></small>
+													<!-- kra pin input -->
+													<input type="file" accept="application/pdf" required id="kra-pin" class="form-control kra-pin d-none">
 												</div>
 											</label>
 
@@ -1780,6 +1773,8 @@
 													<h5>Mpesa statement</h5>
 													<p>Only <strong>.PDF files</strong> are accepted</p>
 													<small class="text-danger"><strong>No file selected</strong></small>
+													<!-- mpesa statemetn -->
+													<input type="file" accept="application/pdf" required id="mpesa-statement" class="form-control mpesa-statement d-none">
 												</div>
 											</label>
 
@@ -1789,19 +1784,21 @@
 													<h5>Attach photo</h5>
 													<p>Only <strong>.PNG, .JPEG, .JPEG and .GIF</strong> are accepted</p>
 													<small class="text-danger"><strong>No file selected</strong></small>
+													<!-- user photo -->
+													<input type="file" required id="user-photo" accept="image/png, .jpeg, .jpg, image/gif" class="form-control user-photo d-none">
 												</div>
 											</label>
 
 											
 											<div class="col-12 mt-5">
 												<a class="btn btn-light btn-border mr-3 btn-outline ben-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
-												<a class="btn btn-primary fund-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
+												<a class="btn btn-primary fund-next text-white btn-next">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
 											</div>
 											
 
 										</div>
 										
-										<div class="row clearfix form-save animated fadeInRight d-none">
+										<div class="row clearfix form-save animated fadeInRight">
 											<div class="col-12">
 												<h4 class="card-title">Account savings & Activation</h4>
 												<h6 class="card-subtitle">
@@ -1813,22 +1810,22 @@
 												<label><strong>Applicant chooses to pay both registration fee and the first deposit using which of the following methods:</strong></label>
 												
 												<div class="radio">
-													<input type="radio" name="pay-method" id="method-mpesa">
+													<input type="radio" required name="pay-method" id="method-mpesa">
 													<label class="radio__label" for="method-mpesa">Mpesa</label>
 												</div>
 												
 												<div class="radio">
-													<input type="radio" name="pay-method" id="method-cash">
+													<input type="radio" required  name="pay-method" id="method-cash">
 													<label class="radio__label" for="method-cash">Cash or cheque</label>
 												</div>
 												
 												<div class="radio">
-													<input type="radio" name="pay-method" id="method-teller">
+													<input type="radio" required  name="pay-method" id="method-teller">
 													<label class="radio__label" for="method-teller">Will activate at teller</label>
 												</div>
 												
 												<div class="radio">
-													<input type="radio" name="pay-method" id="method-own">
+													<input type="radio" required  name="pay-method" id="method-own">
 													<label class="radio__label" for="method-own">Will activate at own time</label>
 												</div>
 												

@@ -375,6 +375,15 @@ function disable_ben(){
     //alert("successfull");
 }
 
+function disable_attach(){
+	$('.doc-link').parent().siblings().children().addClass('disabled');
+	$('.occupation-link').removeClass('disabled');
+	$('.gen-info-link').removeClass('disabled');
+	$('.ben-link').removeClass('disabled');
+	$('.form-attach .btn-next').attr('disabled', true).addClass('disabled');
+    //alert("successfull");
+}
+
 
 function activate_occupation(){
 	
@@ -648,6 +657,29 @@ function checkBenValidity(){
 	});
 
 }
+
+$('.form-attach input').on('change', function(){
+	attachValidate();
+});
+attachValidate();
+
+//form attach validations
+function attachValidate(){
+	$('.form-attach input').each(function(index, value){
+		var field_value=$(this).val();
+		//alert(field_value);
+		if(field_value==""){
+			//alert("empty field");
+			disable_attach();			
+			return false;
+		}
+		else{
+			$('.doc-link').parent().next().children().removeClass('disabled');				
+			$('.form-attach .btn-next').attr('disabled', false).removeClass('disabled');
+		}
+	});
+}
+
 
 
 
