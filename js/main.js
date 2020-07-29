@@ -366,6 +366,16 @@ function disable_occupation(){
    // alert("successfull");
 }
 
+
+function disable_ben(){
+	$('.ben-link').parent().siblings().children().addClass('disabled');
+	$('.occupation-link').removeClass('disabled');
+	$('.gen-info-link').removeClass('disabled');
+	$('.form-ben .btn-next').attr('disabled', true).addClass('disabled');
+    //alert("successfull");
+}
+
+
 function activate_occupation(){
 	
 	$('.form-occupation .btn-next').attr('disabled', false).removeClass('disabled');
@@ -566,6 +576,79 @@ if(business_has_dnone==false){
 
 //check for errors
 //alert(employed_has_dnone);
+
+//beneficiaries actions
+//disable_ben();
+// $('.form-ben input').on("change", function(){
+// 	checkBenValidity();
+// });
+
+$('.form-ben input').on("keydown", function(){
+	checkBenValidity();
+});
+$('.form-ben select').on("change", function(){
+	checkBenValidity();
+});
+
+
+checkBenValidity();
+function checkBenValidity(){
+	$('.form-ben input').each(function(index, value){
+		var field_value=$(this).val();
+		$(this).removeClass('border-danger').removeClass('error');
+
+		var relationship1=$(".form-ben .ben1-relationship").val();
+		var relationship2=$(".form-ben .ben2-relationship").val();
+		$(".form-ben .ben1-relationship").removeClass('border-danger');
+		$(".form-ben .ben2-relationship").removeClass('border-danger')
+
+
+		var has_error=$(this).hasClass('error');
+		var has_required=$(this).attr('required');
+		var field_value=$(this).val();
+		//alert("the required is "+has_required);
+		//alert("not showing employed"+employed_has_dnone);
+		
+
+		//alert(has_required);
+		if(has_required=="required"){
+			if(field_value==""){
+				disable_ben();
+				$(this).addClass('border-danger');
+				//alert($(this).eq(index)+": employed value empty");
+				//alert("the required is "+has_required);
+				return false;
+			}
+			
+			
+		}
+		
+		if(has_error==true){
+			disable_ben();
+			$(this).addClass('border-danger');
+			//alert(has_error);
+			return false;
+		}
+		if(relationship1=="--Select Relationship--"){
+			disable_ben();
+			$(".form-ben .ben1-relationship").addClass('border-danger');
+			//alert(has_error);
+			return false;
+		}
+		if(relationship2=="--Select Relationship--"){
+			disable_ben();
+			$(".form-ben .ben2-relationship").addClass('border-danger');
+			//alert(has_error);
+			return false;
+		}
+		else{
+			$('.ben-link').parent().next().children().removeClass('disabled');				
+			$('.form-ben .btn-next').attr('disabled', false).removeClass('disabled');
+		}
+	});
+
+}
+
 
 
 

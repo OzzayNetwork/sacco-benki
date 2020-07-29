@@ -1083,7 +1083,7 @@
 													<div class="col-md-6 col-sm-12">
 														<div class="form-group"> 
 															<label>Phone Number<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control phone-num validate" pattern="^[0-9']{10,11}$" minlength="10" required placeholder="Enter phone number">
+															<input type="text" class="form-control phone-num validate" pattern="^[0-9']{10,11}$" minlength="9" required placeholder="Enter phone number">
 														</div>													
 													</div>
 													
@@ -1220,7 +1220,7 @@
 										<div class="row clearfix form-ben animated fadeInRight d-none">
 											<div class="col-12">
 												<h4 class="card-title">Beneficiaries</h4>
-												<h6 class="card-subtitle">Enter the form bellow. Fields with <strong class="text-danger">(*)</strong> are required.</h6>
+												<h6 class="card-subtitle">Specify atleast <strong class="text-danger">one beneficiary</strong> for each</h6>
 												<hr>
 
 												<label><strong>Nominees for Deposits/Benefits in the event of Death:</strong></label>
@@ -1242,13 +1242,13 @@
 															 <strong>1</strong>
 														 </th>
 														<td>
-															<input type="text" class="form-control" placeholder="Full name">
+															<input type="text" class="form-control" placeholder="Full name"pattern="^[a-zA-Z'\s]{2,100}$" minlength="2" required>
 														  </td>
 														  <td>
-															<input type="text" class="form-control" placeholder="Enter Number">
+															<input type="text" class="form-control" placeholder="Enter Number" pattern="^[0-9a-zA-Z'\s]{2,100}$" required>
 														  </td>
 														  <td>
-															<select title="please select relationship" class="form-control" style="width:200px;">
+															<select title="please select relationship" class="form-control ben1-relationship required-check" style="width:200px;">
 																<option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
 																<option value="Assistant Chairperson">Assistant Chairperson</option>
 																<option value="Aunt">Aunt</option>
@@ -1288,12 +1288,12 @@
 																<div class="input-group-prepend">
 																	<span class="input-group-text"><i class="pe-7s-date"></i></span>
 																</div>
-																<input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-																<input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
+<!--																<input type="date" class="form-control hidden-md-up" placeholder="Pick a date">-->
+																<input type="text" class="form-control date-picker" placeholder="Pick a date" required>
 															</div>
 														  </td>
 														  <td>
-															<input type="text" class="form-control" placeholder="%">
+															<input type="text" class="form-control"pattern="^[0-9]{1,}$" max="100" min="1" required placeholder="%">
 														  </td>
 													 </tr>
 													 <tr>
@@ -1473,242 +1473,7 @@
 														   <input type="text" class="form-control" placeholder="%">
 														 </td>
 													</tr>
-													<tr>
-														<th>
-															<strong>5</strong>
-														</th>
-													   <td>
-														   <input type="text" class="form-control" placeholder="Full name">
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="Enter Number">
-														 </td>
-														 <td>
-														   <select title="please select relationship" class="form-control" style="width:200px;">
-															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
-															   <option value="Assistant Chairperson">Assistant Chairperson</option>
-															   <option value="Aunt">Aunt</option>
-															   <option value="Brother">Brother</option>
-															   <option value="Brother In Law">Brother In Law</option>
-															   <option value="Business Partner">Business Partner</option>
-															   <option value="Chairman">Chairman</option>
-															   <option value="Chairperson">Chairperson</option>
-															   <option value="Child">Child</option>
-															   <option value="Cousin">Cousin</option>
-															   <option value="Daughter">Daughter</option>
-															   <option value="Deputy Secretary">Deputy Secretary</option>
-															   <option value="Father">Father</option>
-															   <option value="Father In Law">Father In Law</option>
-															   <option value="Fiance">Fiance</option>
-															   <option value="Fiancee">Fiancee</option>
-															   <option value="Friend">Friend</option>
-															   <option value="Guardian">Guardian</option>
-															   <option value="Girlfriend">Girlfriend</option>
-															   <option value="Grand Daughter">Grand Daughter</option>
-															   <option value="Grand Father">Grand Father</option>
-															   <option value="Grand Son">Grand Son</option>
-															   <option value="Grandchild">Grandchild</option>
-															   <option value="Grandmother">Grandmother</option>
-															   <option value="Husband">Husband</option>
-															   <option value="Member">Member</option>
-															   <option value="Mother">Mother</option>
-															   <option value="Sister">Sister</option>
-															   <option value="Sister in Law">Sister in Law</option>
-															   <option value="Son">Son</option>
-															   <option value="Wife">Wife</option>
-											   
-														   </select>
-														 </td>
-														 <td>
-														   <div class="input-group">
-															   <div class="input-group-prepend">
-																   <span class="input-group-text"><i class="pe-7s-date"></i></span>
-															   </div>
-															   <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-															   <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
-														   </div>
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="%">
-														 </td>
-													</tr>
-													<tr>
-														<th>
-															<strong>6</strong>
-														</th>
-													   <td>
-														   <input type="text" class="form-control" placeholder="Full name">
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="Enter Number">
-														 </td>
-														 <td>
-														   <select title="please select relationship" class="form-control" style="width:200px;">
-															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
-															   <option value="Assistant Chairperson">Assistant Chairperson</option>
-															   <option value="Aunt">Aunt</option>
-															   <option value="Brother">Brother</option>
-															   <option value="Brother In Law">Brother In Law</option>
-															   <option value="Business Partner">Business Partner</option>
-															   <option value="Chairman">Chairman</option>
-															   <option value="Chairperson">Chairperson</option>
-															   <option value="Child">Child</option>
-															   <option value="Cousin">Cousin</option>
-															   <option value="Daughter">Daughter</option>
-															   <option value="Deputy Secretary">Deputy Secretary</option>
-															   <option value="Father">Father</option>
-															   <option value="Father In Law">Father In Law</option>
-															   <option value="Fiance">Fiance</option>
-															   <option value="Fiancee">Fiancee</option>
-															   <option value="Friend">Friend</option>
-															   <option value="Guardian">Guardian</option>
-															   <option value="Girlfriend">Girlfriend</option>
-															   <option value="Grand Daughter">Grand Daughter</option>
-															   <option value="Grand Father">Grand Father</option>
-															   <option value="Grand Son">Grand Son</option>
-															   <option value="Grandchild">Grandchild</option>
-															   <option value="Grandmother">Grandmother</option>
-															   <option value="Husband">Husband</option>
-															   <option value="Member">Member</option>
-															   <option value="Mother">Mother</option>
-															   <option value="Sister">Sister</option>
-															   <option value="Sister in Law">Sister in Law</option>
-															   <option value="Son">Son</option>
-															   <option value="Wife">Wife</option>
-											   
-														   </select>
-														 </td>
-														 <td>
-														   <div class="input-group">
-															   <div class="input-group-prepend">
-																   <span class="input-group-text"><i class="pe-7s-date"></i></span>
-															   </div>
-															   <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-															   <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
-														   </div>
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="%">
-														 </td>
-													</tr>
-													<tr>
-														<th>
-															<strong>7</strong>
-														</th>
-													   <td>
-														   <input type="text" class="form-control" placeholder="Full name">
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="Enter Number">
-														 </td>
-														 <td>
-														   <select title="please select relationship" class="form-control" style="width:200px;">
-															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
-															   <option value="Assistant Chairperson">Assistant Chairperson</option>
-															   <option value="Aunt">Aunt</option>
-															   <option value="Brother">Brother</option>
-															   <option value="Brother In Law">Brother In Law</option>
-															   <option value="Business Partner">Business Partner</option>
-															   <option value="Chairman">Chairman</option>
-															   <option value="Chairperson">Chairperson</option>
-															   <option value="Child">Child</option>
-															   <option value="Cousin">Cousin</option>
-															   <option value="Daughter">Daughter</option>
-															   <option value="Deputy Secretary">Deputy Secretary</option>
-															   <option value="Father">Father</option>
-															   <option value="Father In Law">Father In Law</option>
-															   <option value="Fiance">Fiance</option>
-															   <option value="Fiancee">Fiancee</option>
-															   <option value="Friend">Friend</option>
-															   <option value="Guardian">Guardian</option>
-															   <option value="Girlfriend">Girlfriend</option>
-															   <option value="Grand Daughter">Grand Daughter</option>
-															   <option value="Grand Father">Grand Father</option>
-															   <option value="Grand Son">Grand Son</option>
-															   <option value="Grandchild">Grandchild</option>
-															   <option value="Grandmother">Grandmother</option>
-															   <option value="Husband">Husband</option>
-															   <option value="Member">Member</option>
-															   <option value="Mother">Mother</option>
-															   <option value="Sister">Sister</option>
-															   <option value="Sister in Law">Sister in Law</option>
-															   <option value="Son">Son</option>
-															   <option value="Wife">Wife</option>
-											   
-														   </select>
-														 </td>
-														 <td>
-														   <div class="input-group">
-															   <div class="input-group-prepend">
-																   <span class="input-group-text"><i class="pe-7s-date"></i></span>
-															   </div>
-															   <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-															   <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
-														   </div>
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="%">
-														 </td>
-													</tr>
-													<tr>
-														<th>
-															<strong>8</strong>
-														</th>
-													   <td>
-														   <input type="text" class="form-control" placeholder="Full name">
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="Enter Number">
-														 </td>
-														 <td>
-														   <select title="please select relationship" class="form-control" style="width:200px;">
-															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
-															   <option value="Assistant Chairperson">Assistant Chairperson</option>
-															   <option value="Aunt">Aunt</option>
-															   <option value="Brother">Brother</option>
-															   <option value="Brother In Law">Brother In Law</option>
-															   <option value="Business Partner">Business Partner</option>
-															   <option value="Chairman">Chairman</option>
-															   <option value="Chairperson">Chairperson</option>
-															   <option value="Child">Child</option>
-															   <option value="Cousin">Cousin</option>
-															   <option value="Daughter">Daughter</option>
-															   <option value="Deputy Secretary">Deputy Secretary</option>
-															   <option value="Father">Father</option>
-															   <option value="Father In Law">Father In Law</option>
-															   <option value="Fiance">Fiance</option>
-															   <option value="Fiancee">Fiancee</option>
-															   <option value="Friend">Friend</option>
-															   <option value="Guardian">Guardian</option>
-															   <option value="Girlfriend">Girlfriend</option>
-															   <option value="Grand Daughter">Grand Daughter</option>
-															   <option value="Grand Father">Grand Father</option>
-															   <option value="Grand Son">Grand Son</option>
-															   <option value="Grandchild">Grandchild</option>
-															   <option value="Grandmother">Grandmother</option>
-															   <option value="Husband">Husband</option>
-															   <option value="Member">Member</option>
-															   <option value="Mother">Mother</option>
-															   <option value="Sister">Sister</option>
-															   <option value="Sister in Law">Sister in Law</option>
-															   <option value="Son">Son</option>
-															   <option value="Wife">Wife</option>
-											   
-														   </select>
-														 </td>
-														 <td>
-														   <div class="input-group">
-															   <div class="input-group-prepend">
-																   <span class="input-group-text"><i class="pe-7s-date"></i></span>
-															   </div>
-															   <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-															   <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
-														   </div>
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="%">
-														 </td>
-													</tr>
+													
 													</tbody>
 												  </table>
 
@@ -1730,13 +1495,13 @@
 															 <strong>1</strong>
 														 </th>
 														<td>
-															<input type="text" class="form-control" placeholder="Full name">
+															<input type="text" class="form-control" placeholder="Full name" pattern="^[a-zA-Z'\s]{2,100}$" minlength="2" required>
 														  </td>
 														  <td>
-															<input type="text" class="form-control" placeholder="Enter Number">
+															<input type="text" class="form-control" placeholder="Enter Number" pattern="^[0-9a-zA-Z'\s]{2,100}$"  required>
 														  </td>
 														  <td>
-															<select title="please select relationship" class="form-control" style="width:200px;">
+															<select title="please select relationship" class="form-control ben2-relationship required-check" style="width:200px;">
 																<option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
 																<option value="Assistant Chairperson">Assistant Chairperson</option>
 																<option value="Aunt">Aunt</option>
@@ -1776,12 +1541,12 @@
 																<div class="input-group-prepend">
 																	<span class="input-group-text"><i class="pe-7s-date"></i></span>
 																</div>
-																<input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-																<input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
+<!--																<input type="date" class="form-control hidden-md-up" placeholder="Pick a date">-->
+																<input type="text" class="form-control date-picker" placeholder="Pick a date" required>
 															</div>
 														  </td>
 														  <td>
-															<input type="text" class="form-control" placeholder="%">
+															<input type="text" class="form-control"pattern="^[0-9]{1,}$" max="100" min="1" required placeholder="%">
 														  </td>
 													 </tr>
 													 <tr>
@@ -1961,242 +1726,7 @@
 														   <input type="text" class="form-control" placeholder="%">
 														 </td>
 													</tr>
-													<tr>
-														<th>
-															<strong>5</strong>
-														</th>
-													   <td>
-														   <input type="text" class="form-control" placeholder="Full name">
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="Enter Number">
-														 </td>
-														 <td>
-														   <select title="please select relationship" class="form-control" style="width:200px;">
-															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
-															   <option value="Assistant Chairperson">Assistant Chairperson</option>
-															   <option value="Aunt">Aunt</option>
-															   <option value="Brother">Brother</option>
-															   <option value="Brother In Law">Brother In Law</option>
-															   <option value="Business Partner">Business Partner</option>
-															   <option value="Chairman">Chairman</option>
-															   <option value="Chairperson">Chairperson</option>
-															   <option value="Child">Child</option>
-															   <option value="Cousin">Cousin</option>
-															   <option value="Daughter">Daughter</option>
-															   <option value="Deputy Secretary">Deputy Secretary</option>
-															   <option value="Father">Father</option>
-															   <option value="Father In Law">Father In Law</option>
-															   <option value="Fiance">Fiance</option>
-															   <option value="Fiancee">Fiancee</option>
-															   <option value="Friend">Friend</option>
-															   <option value="Guardian">Guardian</option>
-															   <option value="Girlfriend">Girlfriend</option>
-															   <option value="Grand Daughter">Grand Daughter</option>
-															   <option value="Grand Father">Grand Father</option>
-															   <option value="Grand Son">Grand Son</option>
-															   <option value="Grandchild">Grandchild</option>
-															   <option value="Grandmother">Grandmother</option>
-															   <option value="Husband">Husband</option>
-															   <option value="Member">Member</option>
-															   <option value="Mother">Mother</option>
-															   <option value="Sister">Sister</option>
-															   <option value="Sister in Law">Sister in Law</option>
-															   <option value="Son">Son</option>
-															   <option value="Wife">Wife</option>
-											   
-														   </select>
-														 </td>
-														 <td>
-														   <div class="input-group">
-															   <div class="input-group-prepend">
-																   <span class="input-group-text"><i class="pe-7s-date"></i></span>
-															   </div>
-															   <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-															   <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
-														   </div>
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="%">
-														 </td>
-													</tr>
-													<tr>
-														<th>
-															<strong>6</strong>
-														</th>
-													   <td>
-														   <input type="text" class="form-control" placeholder="Full name">
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="Enter Number">
-														 </td>
-														 <td>
-														   <select title="please select relationship" class="form-control" style="width:200px;">
-															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
-															   <option value="Assistant Chairperson">Assistant Chairperson</option>
-															   <option value="Aunt">Aunt</option>
-															   <option value="Brother">Brother</option>
-															   <option value="Brother In Law">Brother In Law</option>
-															   <option value="Business Partner">Business Partner</option>
-															   <option value="Chairman">Chairman</option>
-															   <option value="Chairperson">Chairperson</option>
-															   <option value="Child">Child</option>
-															   <option value="Cousin">Cousin</option>
-															   <option value="Daughter">Daughter</option>
-															   <option value="Deputy Secretary">Deputy Secretary</option>
-															   <option value="Father">Father</option>
-															   <option value="Father In Law">Father In Law</option>
-															   <option value="Fiance">Fiance</option>
-															   <option value="Fiancee">Fiancee</option>
-															   <option value="Friend">Friend</option>
-															   <option value="Guardian">Guardian</option>
-															   <option value="Girlfriend">Girlfriend</option>
-															   <option value="Grand Daughter">Grand Daughter</option>
-															   <option value="Grand Father">Grand Father</option>
-															   <option value="Grand Son">Grand Son</option>
-															   <option value="Grandchild">Grandchild</option>
-															   <option value="Grandmother">Grandmother</option>
-															   <option value="Husband">Husband</option>
-															   <option value="Member">Member</option>
-															   <option value="Mother">Mother</option>
-															   <option value="Sister">Sister</option>
-															   <option value="Sister in Law">Sister in Law</option>
-															   <option value="Son">Son</option>
-															   <option value="Wife">Wife</option>
-											   
-														   </select>
-														 </td>
-														 <td>
-														   <div class="input-group">
-															   <div class="input-group-prepend">
-																   <span class="input-group-text"><i class="pe-7s-date"></i></span>
-															   </div>
-															   <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-															   <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
-														   </div>
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="%">
-														 </td>
-													</tr>
-													<tr>
-														<th>
-															<strong>7</strong>
-														</th>
-													   <td>
-														   <input type="text" class="form-control" placeholder="Full name">
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="Enter Number">
-														 </td>
-														 <td>
-														   <select title="please select relationship" class="form-control" style="width:200px;">
-															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
-															   <option value="Assistant Chairperson">Assistant Chairperson</option>
-															   <option value="Aunt">Aunt</option>
-															   <option value="Brother">Brother</option>
-															   <option value="Brother In Law">Brother In Law</option>
-															   <option value="Business Partner">Business Partner</option>
-															   <option value="Chairman">Chairman</option>
-															   <option value="Chairperson">Chairperson</option>
-															   <option value="Child">Child</option>
-															   <option value="Cousin">Cousin</option>
-															   <option value="Daughter">Daughter</option>
-															   <option value="Deputy Secretary">Deputy Secretary</option>
-															   <option value="Father">Father</option>
-															   <option value="Father In Law">Father In Law</option>
-															   <option value="Fiance">Fiance</option>
-															   <option value="Fiancee">Fiancee</option>
-															   <option value="Friend">Friend</option>
-															   <option value="Guardian">Guardian</option>
-															   <option value="Girlfriend">Girlfriend</option>
-															   <option value="Grand Daughter">Grand Daughter</option>
-															   <option value="Grand Father">Grand Father</option>
-															   <option value="Grand Son">Grand Son</option>
-															   <option value="Grandchild">Grandchild</option>
-															   <option value="Grandmother">Grandmother</option>
-															   <option value="Husband">Husband</option>
-															   <option value="Member">Member</option>
-															   <option value="Mother">Mother</option>
-															   <option value="Sister">Sister</option>
-															   <option value="Sister in Law">Sister in Law</option>
-															   <option value="Son">Son</option>
-															   <option value="Wife">Wife</option>
-											   
-														   </select>
-														 </td>
-														 <td>
-														   <div class="input-group">
-															   <div class="input-group-prepend">
-																   <span class="input-group-text"><i class="pe-7s-date"></i></span>
-															   </div>
-															   <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-															   <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
-														   </div>
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="%">
-														 </td>
-													</tr>
-													<tr>
-														<th>
-															<strong>8</strong>
-														</th>
-													   <td>
-														   <input type="text" class="form-control" placeholder="Full name">
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="Enter Number">
-														 </td>
-														 <td>
-														   <select title="please select relationship" class="form-control" style="width:200px;">
-															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
-															   <option value="Assistant Chairperson">Assistant Chairperson</option>
-															   <option value="Aunt">Aunt</option>
-															   <option value="Brother">Brother</option>
-															   <option value="Brother In Law">Brother In Law</option>
-															   <option value="Business Partner">Business Partner</option>
-															   <option value="Chairman">Chairman</option>
-															   <option value="Chairperson">Chairperson</option>
-															   <option value="Child">Child</option>
-															   <option value="Cousin">Cousin</option>
-															   <option value="Daughter">Daughter</option>
-															   <option value="Deputy Secretary">Deputy Secretary</option>
-															   <option value="Father">Father</option>
-															   <option value="Father In Law">Father In Law</option>
-															   <option value="Fiance">Fiance</option>
-															   <option value="Fiancee">Fiancee</option>
-															   <option value="Friend">Friend</option>
-															   <option value="Guardian">Guardian</option>
-															   <option value="Girlfriend">Girlfriend</option>
-															   <option value="Grand Daughter">Grand Daughter</option>
-															   <option value="Grand Father">Grand Father</option>
-															   <option value="Grand Son">Grand Son</option>
-															   <option value="Grandchild">Grandchild</option>
-															   <option value="Grandmother">Grandmother</option>
-															   <option value="Husband">Husband</option>
-															   <option value="Member">Member</option>
-															   <option value="Mother">Mother</option>
-															   <option value="Sister">Sister</option>
-															   <option value="Sister in Law">Sister in Law</option>
-															   <option value="Son">Son</option>
-															   <option value="Wife">Wife</option>
-											   
-														   </select>
-														 </td>
-														 <td>
-														   <div class="input-group">
-															   <div class="input-group-prepend">
-																   <span class="input-group-text"><i class="pe-7s-date"></i></span>
-															   </div>
-															   <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-															   <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
-														   </div>
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="%">
-														 </td>
-													</tr>
+													
 													</tbody>
 												  </table>
 
@@ -2204,7 +1734,7 @@
 											
 											<div class="col-12">
 												<a class="btn btn-light btn-border mr-3 btn-outline occ-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
-												<a class="btn btn-primary attach-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
+												<a class="btn btn-primary attach-next btn-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
 											</div>
 										</div>
 
