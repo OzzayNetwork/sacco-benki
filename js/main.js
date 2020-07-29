@@ -253,7 +253,7 @@ function myFunction() {
 	  email_address.setCustomValidity("I am expecting an e-mail address!");
 	} else {
 	  
-	  alert("Input OK");
+	  //alert("Input OK");
 	} 
   } 
 
@@ -366,59 +366,203 @@ function disable_occupation(){
    // alert("successfull");
 }
 
+function activate_occupation(){
+	
+	$('.form-occupation .btn-next').attr('disabled', false).removeClass('disabled');
+   // alert("successfull");
+}
+
+var employed_has_dnone=$(".form-occupation .employer-opt").hasClass('d-none');
+var business_has_dnone=$(".form-occupation .business-opt").hasClass('d-none');
+function activateEmployed(){
+	$('.employer-opt').removeClass('d-none').siblings('.business-opt').addClass('d-none');
+	employed_has_dnone=$(".form-occupation .employer-opt").hasClass('d-none');
+
+	$('.employer-opt .emp-employer').attr("pattern", '^[0-9a-zA-Z\\s]{2,100}$');
+	$('.employer-opt .emp-position').attr("pattern", '^[0-9a-zA-Z\\s]{2,100}$');
+	$('.employer-opt .emp-employer').attr("pattern", '^[0-9a-zA-Z\\s]{2,100}$');
+	$('.employer-opt .emp-income').attr("pattern", '^[0-9]{2,10000}$');
+	$('.employer-opt .emp-staff-num').attr("pattern", "^[^$%?#!<>*+'\\x22]+$");
+	
+	$('.employer-opt .must-input').each(function(index, value){
+		$(this).attr('required', '');
+	});
+
+	//alert("employee activated");
+}
+
+function deactivateEmployed(){
+
+	$('.employer-opt .emp-employer').removeAttr( "pattern" );
+	$('.employer-opt .emp-position').removeAttr( "pattern" );
+	$('.employer-opt .emp-employer').removeAttr( "pattern" );
+	$('.employer-opt .emp-income').removeAttr( "pattern" );
+	$('.employer-opt .emp-staff-num').removeAttr( "pattern" );
+	
+	$('.employer-opt .must-input').each(function(index, value){
+		$(this).removeAttr( "required" );
+	});
+	//alert("employee deactivated");
+	
+}
+
+function checkEmployedValidity(){
+	$('.employer-opt input').each(function(index, value){
+
+		$(this).removeClass('border-danger');
+		var has_error=$(this).hasClass('error');
+		var has_required=$(this).attr('required');
+		var field_value=$(this).val();
+
+		
+
+		//alert(has_required);
+		if(field_value==""){
+			if(has_required=="required"){
+				disable_occupation();
+				$(this).addClass('border-danger');
+				// alert("the required is "+has_required);
+				return false;
+			}
+			//alert("employee value empty");
+			
+		}
+		
+		if(has_error==true){
+			disable_occupation();
+			$(this).addClass('border-danger');
+			//alert(has_error);
+			return false;
+		}
+		else{
+			$('.gen-info-link').parent().next().children().removeClass('disabled');				
+			$('.form-occupation .btn-next').attr('disabled', false).removeClass('disabled');
+		}
+	});
+}
+
+function activateBusiness(){
+	$('.business-opt').removeClass('d-none').siblings('.employer-opt').addClass('d-none');
+	business_has_dnone=$(".form-occupation .business-opt").hasClass('d-none');
+
+	$('.business-opt .business-name').attr("pattern", '^[0-9a-zA-Z\\s]{2,100}$');
+	$('.business-opt .business-nature').attr("pattern", '^[0-9a-zA-Z\\s]{2,100}$');
+	$('.business-opt .business-location').attr("pattern", '^[0-9a-zA-Z\\s]{2,100}$');
+	$('.business-opt .business-income').attr("pattern", '^[0-9]{2,10000}$');
+	$('.business-opt .business-address').attr("pattern", "^[^$%?#!<>*+'\\x22]+$");
+	
+	$('.business-opt .must-input').each(function(index, value){
+		$(this).attr('required', '');
+	});
+	//alert("business activated");
+}
+
+function deactivateBusiness(){	
+	$('.business-opt input').each(function(index, value){
+		$(this).removeAttr( "pattern" ).removeAttr("required");
+	});
+
+	//alert("business deactivated");
+}
+
+
+function checkBusinessValidity(){
+	$('.business-opt input').each(function(index, value){
+
+		$(this).removeClass('border-danger');
+		var has_error=$(this).hasClass('error');
+		var has_required=$(this).attr('required');
+		var field_value=$(this).val();
+		//alert("the required is "+has_required);
+		//alert("not showing employed"+employed_has_dnone);
+		
+
+		//alert(has_required);
+		if(field_value==""){
+			if(has_required=="required"){
+				disable_occupation();
+				$(this).addClass('border-danger');
+				//alert($(this).eq(index)+": employed value empty");
+				//alert("the required is "+has_required);
+				return false;
+			}
+			
+			
+		}
+		
+		if(has_error==true){
+			disable_occupation();
+			$(this).addClass('border-danger');
+			//alert(has_error);
+			return false;
+		}
+		else{
+			$('.gen-info-link').parent().next().children().removeClass('disabled');				
+			$('.form-occupation .btn-next').attr('disabled', false).removeClass('disabled');
+		}
+	});
+}
+
 $('.form-occupation .occupation-text').on('change', function(){
-	var employed_has_dnone=$(".form-occupation .employer-opt").hasClass('d-none');
+	deactivateEmployed();
+	deactivateBusiness();
 	var occupation=$(this).val();
 	//alert(occupation);
 	if(occupation=="Employment"){
-		$('.employer-opt').removeClass('d-none').siblings('.business-opt').addClass('d-none');
 		
-		$('.employer-opt .emp-employer').attr("pattern", '^[0-9a-zA-Z\\s]{2,100}$');
-		$('.employer-opt .emp-position').attr("pattern", '^[0-9a-zA-Z\\s]{2,100}$');
-		$('.employer-opt .emp-employer').attr("pattern", '^[0-9a-zA-Z\\s]{2,100}$');
-		$('.employer-opt .emp-income').attr("pattern", '^[0-9]{2,10000}$');
-		$('.employer-opt .emp-staff-num').attr("pattern", "^[^$%?#!<>*+'\\x22]+$");
-		
-		$('.employer-opt .must-input').each(function(index, value){
-			$(this).attr('required', '');
-		});
-	}
-
-	// employed
-	if(employed_has_dnone==false){
-
+		activateEmployed();
+		business_has_dnone=$(".form-occupation .business-opt").hasClass('d-none');
+		employed_has_dnone=$(".form-occupation .employer-opt").hasClass('d-none');
 		checkEmployedValidity();
-	
-		$(".form-occupation .employer-opt input").on("keydown", function(){
-			checkEmployedValidity();
-		});
-		
-	
-		function checkEmployedValidity(){
-			$('.employer-opt input').each(function(index, value){
-	
-				$(this).removeClass('border-danger');
-				var has_error=$(this).hasClass('error');
-				// var has_required=$(this).hasAttribute('required');
-	
-				//alert(has_required);
-				
-				if(has_error==true){
-					disable_occupation()
-					$(this).addClass('border-danger');
-					alert(has_error);
-					return false;
-				}
-				else{
-					$('.gen-info-link').parent().next().children().removeClass('disabled');				
-					$('.form-occupation .btn-next').attr('disabled', false).removeClass('disabled');
-				}
-			});
-		}
 	}
+	if(occupation=="Business"){
+		
+		activateBusiness();
+		business_has_dnone=$(".form-occupation .business-opt").hasClass('d-none');
+		employed_has_dnone=$(".form-occupation .employer-opt").hasClass('d-none');
+		checkBusinessValidity();
+	}
+	if(occupation==0){
+		disable_occupation();
 
+		$('.form-occupation .business-opt').addClass('d-none');
+		$('.form-occupation .employer-opt').addClass('d-none');
+		business_has_dnone=$(".form-occupation .business-opt").hasClass('d-none');
+		employed_has_dnone=$(".form-occupation .employer-opt").hasClass('d-none');
+	}
+	if(occupation=="Pension"){
+		activate_occupation();
 
+		$('.form-occupation .business-opt').addClass('d-none');
+		$('.form-occupation .employer-opt').addClass('d-none');
+		business_has_dnone=$(".form-occupation .business-opt").hasClass('d-none');
+		employed_has_dnone=$(".form-occupation .employer-opt").hasClass('d-none');
+	}
+	
+	business_has_dnone=$(".form-occupation .business-opt").hasClass('d-none');
+	employed_has_dnone=$(".form-occupation .employer-opt").hasClass('d-none');
 });
+disable_occupation();
+
+// employed
+$(".form-occupation .employer-opt input").on("keydown", function(){
+	checkEmployedValidity();
+});	
+
+// alert("the employer is "+employed_has_dnone);
+if(employed_has_dnone==false){
+	activateEmployed();
+	checkEmployedValidity();
+}
+
+// business
+$(".form-occupation .business-opt input").on("keydown", function(){
+	checkBusinessValidity();
+});	
+if(business_has_dnone==false){
+	activateBusiness();
+	checkBusinessValidity();
+}
 
 //check for errors
 //alert(employed_has_dnone);
