@@ -240,9 +240,9 @@
                     <ul class="navigation">
                         <li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-view-dashboard"></i>Home</a></li>
 						<li class="navigation__sub">
-                            <a href="#"><i class="flaticon-group"></i>Members</a>
+                            <a href="#"><i class="pe-7s-id"></i>Members</a>
                             <ul>
-                                <li><a href="members.html" title="members register">Members register</a></li>
+                                <li><a href="members.html" title="members register">Registered Members</a></li>
                                 <li><a href="new-member.html" title="add new member">New Members</a></li>
                             </ul>
 						</li>
@@ -260,12 +260,10 @@
 						<li class="navigation__sub">
                             <a href="#"><i class="flaticon-money"></i>Loans</a>
                             <ul>
-                                <li><a href="loan.html">Development loan</a></li>
-                                <li><a href="loan.html">Emergency loan</a></li>
-								 <li><a href="loan.html">School fees loan</a></li>
-								 <li><a href="loan.html">Karibu loan</a></li>
-								 <li><a href="loan.html">Motor Vehicle Loan</a></li>
-								 <li><a href="new-loan.html" title="create a new loan">Loan setup</a></li>
+                                <li><a href="active-loans.html">Active Loans</a></li>
+                                <li><a href="ongoing-loans.html">Ongoing Applications</a></li>
+								 <li><a href="loan-application.html">New Loan application</a></li>
+								 
                             </ul>
 						</li>
 						
@@ -514,18 +512,18 @@
 				 	<div class="row">
 						<div class="col-md-8 col-sm-12">
 							<span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">Registered Gurdians (Parents)</h1>
+							 <h1 class="text-capitalize stream_name m-0">Registered Members</h1>
 							</span>
 							<div class="">
 								<ol class="breadcrumb border-0">
 									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item active">Guardians</li>
+									<li class="breadcrumb-item active">Registered members</li>
 								</ol>
 							</div>
 						</div>
 						<div class="col-4 col-sm-12 col-md-4">
 							<div class="section-header">
-								<a href="new-parent.html" class="btn btn-sm btn-primary" title="">New Guardian</a>
+								<a href="new-member.html" class="btn btn-sm btn-primary" title="">New Member</a>
 							</div>					
 						</div>						
 					</div>
@@ -539,122 +537,29 @@
 									<table class="table table-hover table-custom spacing8" id="data-table">
 										<thead>
 											<tr> 
-												<th></th>
-												<th>Gurdian Particulars</th>
-												<th>Last seen</th>
-												<th>Active Blinkers</th>
-												<th>Inactive Blinkers</th>
-												<th>Total Blinker(s)</th>
-												<th>Activation Status</th>
+												<th>Name</th>
+												<th>Phone</th>
+												<th>Email</th>
+												<th>Accounts</th>
+												<th>Registered By</th>
+												<th>Date registered</th>
 												<th>Actions</th>
-
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
 												<td class="w60">
-
-													<a title="" href="parent-profile.html"><div class="avatar-char">SO</div></a>
+													<a title="" href="member-profile.html">Kelvin Njuguna Ndungu</a>
 												</td>
-												<td class="the_guardian">
-													<p class="mb-0"><a href="parent-profile.html"><strong>Scott Ortega</strong></a></p>
-													<a href="tel:070235689" title="">070235689</a>
-												</td>
+												<td><a href="tel:0704549859">0704549859</a></td>	
+												<td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
+												<td>3 Accounts</td>	
+												<td>Alex Wanjala</td>
+												<td class="text-capitalize">22nd Aug 2020</td>		
 												<td>
-													<span>22 May 2020.</span>
-												</td>
-												<td>3 Student(s)</td>
-												<td>1 Student(s)</td>
-												<td><strong class="my_blinkers" data-toggle="modal" data-target="#MyBlinkers">4 Student(s)</strong></td>
-												<td><span class="badge badge-soft-success">Active</span></td>
-												<td>
-													<span class="icon_pencil-edit icon mr-3" title="Edit shop details"></span>
-													<button class="btn btn-danger btn--icon-text ml-2 deactivate-parent" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-parent"><i class="zmdi zmdi-block"></i> Block Account</button>													
-												</td>
-											</tr>
-											<tr>
-												<td class="w60">
-													<a title="" href="parent-profile.html"><div class="avatar-char">SO</div></a>
-												</td>
-												<td class="the_guardian">
-													<p class="mb-0"><a href="parent-profile.html"><strong>Scott Ortega</strong></a></p>
-													<a href="tel:070235689" title="">070235689</a>
-												</td>
-												<td>
-													<span>3 May 2020</span>
-												</td>
-												<td>5 Student(s)</td>
-												<td>2 Student(s)</td>
-												<td><strong class="my_blinkers" data-toggle="modal" data-target="#MyBlinkers">7 Student(s)</strong></td>
-												<td><span class="badge badge-soft-success">Active</span></td>
-												<td>
-													<span class="icon_pencil-edit icon" title="Edit shop details"></span>
-													<button class="btn btn-danger btn--icon-text ml-2 deactivate-parent" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-parent"><i class="zmdi zmdi-block"></i> Block Account</button>
-												</td>
-											</tr>
-											<tr>
-												<td class="w60">
-													<a title="" href="parent-profile.html"><div class="avatar-char">SO</div></a>
-												</td>
-												<td class="the_guardian">
-													<p class="mb-0"><a href="parent-profile.html"><strong>Scott Ortega</strong></a></p>
-													<a href="tel:070235689" title="">070235689</a>
-												</td>                                    
-												<td>
-													<span>3 May 2020</span>
-												</td>
-												<td>12 Student(s)</td>
-												<td>0 Student(s)</td>
-												<td><strong class="my_blinkers" data-toggle="modal" data-target="#MyBlinkers">12 Student(s)</strong></td>
-												<td><span class="badge badge-soft-danger">Not Activeted</span></td>
-												<td>
-													<button class="btn btn-success" title="send activation request">Activation Request</button>
-													<span class="icon_pencil-edit icon" title="Edit shop details"></span>
-													<button class="btn btn-danger btn--icon-text ml-2 deactivate-parent" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-parent"><i class="zmdi zmdi-block"></i> Block Account</button>
-												</td>
-											</tr>
-											<tr>
-												<td class="w60">
-													<a  title="" href="parent-profile.html"><div class="avatar-char">SO</div></a>
-												</td>
-												<td class="the_guardian">
-													<p class="mb-0"><a href="parent-profile.html"><strong>Scott Ortega</strong></a></p>
-													<a href="tel:070235689" title="">070235689</a>
-												</td>
-												<td>
-													<span>2 May 2020</span>
-												</td>
-												<td>15 Student(s)</td>
-												<td>3 Student(s)</td>
-												<td><strong class="my_blinkers" data-toggle="modal" data-target="#MyBlinkers">18 Student(s)</strong></td>
-												<td><span class="badge badge-soft-danger">Not Activated</span> </td>
-												<td>
-													<button class="btn btn-success" title="send activation request">Activation Request</button>
-													<span class="icon_pencil-edit icon" title="Edit shop details"></span>
-													<button class="btn btn-danger btn--icon-text ml-2 deactivate-parent" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-parent"><i class="zmdi zmdi-block"></i> Block Account</button>
-												</td>
-											</tr>
-											<tr>
-												<td class="w60">
-													<a title="" href="parent-profile.html"><div class="avatar-char">SO</div></a>
-												</td>
-												<td class="the_guardian">
-													<p class="mb-0"><a href="parent-profile.html"><strong>Scott Ortega</strong></a></p>
-													<a href="tel:070235689" title="">070235689</a>
-												</td>
-												<td>
-													<span>1 May 2020 </span>
-												</td>
-												<td>12 Student(s)</td>
-												<td>2 Student(s)</td>
-												<td><strong class="my_blinkers" data-toggle="modal" data-target="#MyBlinkers">14 Student(s)</strong></td>
-												<td><span class="badge badge-soft-danger">Inctive</span></td>
-												<td>
-													<button class="btn btn-success" title="send activation Request">Activation Request</button>
-													<span class="icon_pencil-edit icon" title="Edit shop details"></span>
-													<button class="btn btn-danger btn--icon-text ml-2 deactivate-parent" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-parent"><i class="zmdi zmdi-block"></i> Block Account</button>
-												</td>
-											</tr>
+													<button class="btn btn-primary">View profile</button>
+												</td>								
+											</tr>											
 										</tbody>
 									</table>
 								</div>

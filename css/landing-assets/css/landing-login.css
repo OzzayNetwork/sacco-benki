@@ -3561,7 +3561,8 @@ table.dataTable td:last-child, table.dataTable th:last-child{
 	content: "";
 	position: absolute;
 	width:100%;
-	height: 100%;
+  height: 100%;
+  background:rgba(242,107,44,0.82);
 	background-image: linear-gradient(-90deg, #000000d9, #031af44a);
 	background-image: linear-gradient(-90deg, #f26b2c, #020516b0);
 	
@@ -3571,7 +3572,8 @@ table.dataTable td:last-child, table.dataTable th:last-child{
 	content: "";
 	position: absolute;
 	width:100%;
-	height: 100%;
+  height: 100%;
+  background:rgba(242,107,44,0.82);
 	background-image: linear-gradient(-90deg, #000000d9, #031af44a);
 	background-image: linear-gradient(-90deg, #f26b2ce6, #020516b0);
 	
