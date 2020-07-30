@@ -214,6 +214,21 @@ $(window).on('load', function(){
 //******************membership form ******************************/
 //=====================================================================================
 $('.membership-form').validate();
+
+//preventing enter key from submitting membership form
+$('.membership-form input').keydown(function (e) {
+    if (e.keyCode == 13) {
+		e.preventDefault();
+		alert("enter was clicked")
+        return false;
+    }
+});
+
+//getting first phone number
+$('.form-gen-information .phone-num').on('change', function(){
+	var phone=$(this).val();
+	$('.form-save .mpesa-number').val(phone);
+})
 //go gen info
 
 //disabling function
@@ -223,7 +238,7 @@ $('.form-gen-information input').on("change", function(){
 	check_gen_info();
 });
 
-$('.form-gen-information input').on("keydown", function(){
+$('.form-gen-information input').on("keyup", function(){
 	check_gen_info();
 });
 
@@ -567,7 +582,7 @@ $('.form-occupation .occupation-text').on('change', function(){
 disable_occupation();
 
 // employed
-$(".form-occupation .employer-opt input").on("keydown", function(){
+$(".form-occupation .employer-opt input").on("keyup", function(){
 	checkEmployedValidity();
 });	
 
@@ -578,7 +593,7 @@ if(employed_has_dnone==false){
 }
 
 // business
-$(".form-occupation .business-opt input").on("keydown", function(){
+$(".form-occupation .business-opt input").on("keyup", function(){
 	checkBusinessValidity();
 });	
 if(business_has_dnone==false){
@@ -595,12 +610,69 @@ if(business_has_dnone==false){
 // 	checkBenValidity();
 // });
 
-$('.form-ben input').on("keydown", function(){
+$('.form-ben input').on("keyup", function(){
 	checkBenValidity();
 });
 $('.form-ben select').on("change", function(){
 	checkBenValidity();
 });
+
+
+
+// getting totals
+
+function getDepositShares(){
+	var total_shares=0;
+	$('.form-ben .deposit-ben tbody tr .shares').each(function(index, value){
+		//total_shares=0;
+		$(this).removeClass('border-danger');
+		$('.form-ben .deposit-ben .shares').parent().removeClass('bg-danger-light');
+		$('.form-ben .deposit-ben thead tr th').eq(5).children('small').addClass('d-none');
+		if($(this).val()!==""){
+			var shares=parseInt($(this).val());
+			total_shares=shares+total_shares;
+			console.log("Total shares: "+total_shares);
+			if(total_shares>100){
+				console.log("shares are beyond 100%");
+				$(this).addClass('border-danger');
+				$('.form-ben .deposit-ben .shares').parent().addClass('bg-danger-light');
+				$('.form-ben .deposit-ben thead tr th').eq(5).children('small').removeClass('d-none');
+				disable_ben();				
+				return false;
+			}
+
+		}
+
+		
+	});
+}
+
+// funeral beneficiaries
+function getFuneralShares(){
+	var total_shares=0;
+	$('.form-ben .funeral-ben tbody tr .shares').each(function(index, value){
+		//total_shares=0;
+		$(this).removeClass('border-danger');
+		$('.form-ben .funeral-ben .shares').parent().removeClass('bg-danger-light');
+		$('.form-ben .funeral-ben thead tr th').eq(5).children('small').addClass('d-none');
+		if($(this).val()!==""){
+			var shares=parseInt($(this).val());
+			total_shares=shares+total_shares;
+			console.log("Total shares: "+total_shares);
+			if(total_shares>100){
+				console.log("shares are beyond 100%");
+				$(this).addClass('border-danger');
+				$('.form-ben .funeral-ben .shares').parent().addClass('bg-danger-light');
+				$('.form-ben .funeral-ben thead tr th').eq(5).children('small').removeClass('d-none');
+				disable_ben();				
+				return false;
+			}
+
+		}
+
+		
+	});
+}
 
 
 checkBenValidity();
@@ -661,6 +733,19 @@ function checkBenValidity(){
 
 }
 
+getDepositShares();
+getFuneralShares();
+
+$('.form-ben .deposit-ben .shares').on('keyup', function(){
+	//console.log()
+	getDepositShares();
+});
+
+$('.form-ben .funeral-ben .shares').on('keyup', function(){
+	
+	getFuneralShares()
+});
+
 $('.form-attach input').on('change', function(){
 	attachValidate();
 });
@@ -683,6 +768,7 @@ function attachValidate(){
 	});
 }
 var mpesaMethodNone=$(".form-save .act-mpesa").hasClass('d-none');
+var cashMethodNone=$(".form-save .act-mpesa").hasClass('d-none');
 
 function hidePayMethods(){
 	$('.form-save .act-mpesa').addClass('d-none');
@@ -696,32 +782,50 @@ function hidePayMethods(){
 $('.form-save .radio').on('click', function(){
 	hidePayMethods();
 	checkingPayRadio();
-	if($('input[name="pay-method"]').is(':checked')) { alert("it's checked"); }
+	//if($('input[name="pay-method"]').is(':checked')) { alert("it's checked"); }
 });
 
 
 $('.form-save .method-mpesa').on('click', function(){
-	//alert("mpesa clicked");		
+		
 	activateMpesaFields();
+	deactivateCashFields();
 	
-	
-
-	//mpesaMethodNone=$(".form-save .act-mpesa").hasClass('d-none');
-	//alert(mpesaMethodNone);
 });
 
 $('.form-save .method-cash').on('click', function(){
-	//alert("cash clicked");
-	$('.form-save .act-cash').removeClass('d-none');
+	deactivateMpesaFields();
+	activateCashFields();
+	
 });
 checkingPayRadio();
-$('.form-save input').on('keydown', function(){
+$('.form-save input').on('keyup', function(){
 	checkingPayRadio();
 });
 
 // $('form-save input').on('change', function(){
 // 	checkingPayRadio();
 // });
+function activateCashFields(){
+	$('.form-save .act-cash').removeClass('d-none');
+	cashMethodNone=$(".form-save .act-mpesa").hasClass('d-none');
+	$('.form-save .act-cash .must-input').each(function(index, value){
+		$(this).attr('required', '');
+	});
+
+	//alert("employee activated");
+}
+
+function deactivateCashFields(){
+	$('.form-save .act-cash').addClass('d-none');
+	cashMethodNone=$(".form-save .act-mpesa").hasClass('d-none');
+
+	$('.form-save .act-cash .must-input').each(function(index, value){
+		$(this).removeAttr( "required" );
+	});
+
+	//alert("employee activated");
+}
 
 
 function activateMpesaFields(){
@@ -734,6 +838,21 @@ function activateMpesaFields(){
 	
 	$('.form-save .act-mpesa .must-input').each(function(index, value){
 		$(this).attr('required', '');
+	});
+
+	//alert("employee activated");
+}
+
+function deactivateMpesaFields(){
+	$('.form-save .act-mpesa').addClass('d-none');
+	mpesaMethodNone=$(".form-save .act-mpesa").hasClass('d-none');
+
+	$('.form-save .act-mpesa .mpesa-number').removeAttr( "pattern" );
+	$('.form-save .act-mpesa .mpesa-amount').removeAttr( "pattern" );
+	//$('.employer-opt .emp-staff-num').attr("pattern", "^[^$%?#!<>*+'\\x22]+$");
+	
+	$('.form-save .act-mpesa .must-input').each(function(index, value){
+		$(this).removeAttr( "required" );
 	});
 
 	//alert("employee activated");
@@ -942,7 +1061,7 @@ $('#user-photo').on('change', function(){
     if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
         filename = filename.substring(1);
 	}
-	alert("changed");
+	//alert("changed");
     
 	
 	if(file=="" ){ 

@@ -14804,4 +14804,23 @@ a.badge-white.focus, a.badge-white:focus {
 .form-save .radio{
     width: fit-content;
 }
+.shares{
+    color: inherit;
+}
+
+.shares-err{
+    white-space: break-spaces;
+}
+
+th label .error{
+    
+    max-width: 120px;
+    white-space: break-spaces;
+    font-size: 10px;
+    font-weight: bold;
+}
+.bg-danger-light{
+    background-color: #FFEBEE !important;
+    background: #FFEBEE !important;
+}
 /*custom budge designs*/

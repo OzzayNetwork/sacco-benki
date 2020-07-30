@@ -1225,7 +1225,7 @@
 
 												<label><strong>Nominees for Deposits/Benefits in the event of Death:</strong></label>
 
-												<table class="table table-bordered">
+												<table class="table table-bordered deposit-ben">
 													<thead>
 													  <tr>
 														  <th>#</th>
@@ -1233,7 +1233,7 @@
 														<th scope="col">ID/PP/Birth certificate No.</th>
 														<th scope="col">Relationship</th>
 														<th scope="col">DOB</th>
-														<th scope="col">Allocations(%)</th>
+														<th scope="col" class="">Allocations(%)<br><small class="text-danger shares-err d-none"><strong>Shares should not exceede 100%</strong></small></th>
 													  </tr>
 													</thead>
 													<tbody>
@@ -1293,7 +1293,7 @@
 															</div>
 														  </td>
 														  <td>
-															<input type="text" class="form-control"pattern="^[0-9]{1,}$" max="100" min="1" required placeholder="%">
+															<input type="text" class="form-control shares"pattern="^[0-9]{1,}$" max="100" min="1" required placeholder="%">
 														  </td>
 													 </tr>
 													 <tr>
@@ -1352,7 +1352,7 @@
 														   </div>
 														 </td>
 														 <td>
-														   <input type="text" class="form-control" placeholder="%">
+														   <input type="text" class="form-control shares" placeholder="%">
 														 </td>
 													</tr>
 													<tr>
@@ -1411,7 +1411,7 @@
 														   </div>
 														 </td>
 														 <td>
-														   <input type="text" class="form-control" placeholder="%">
+														   <input type="text" class="form-control shares" placeholder="%">
 														 </td>
 													</tr>
 													<tr>
@@ -1470,7 +1470,7 @@
 														   </div>
 														 </td>
 														 <td>
-														   <input type="text" class="form-control" placeholder="%">
+														   <input type="text" class="form-control shares" placeholder="%">
 														 </td>
 													</tr>
 													
@@ -1478,7 +1478,7 @@
 												  </table>
 
 												  <label class="mt-5"><strong>Nominees for Group Funeral Expense(GFE) Scheme; limited to Spouse, Children & Parents of the Member:</strong></label>
-												  <table class="table table-bordered">
+												  <table class="table table-bordered funeral-ben">
 													<thead>
 													  <tr>
 														  <th>#</th>
@@ -1486,7 +1486,10 @@
 														<th scope="col">ID/PP/Birth certificate No.</th>
 														<th scope="col">Relationship</th>
 														<th scope="col">DOB</th>
-														<th scope="col">Allocations(%)</th>
+														<th scope="col">
+															Allocations(%)
+															<br><small class="text-danger shares-err d-none"><strong>Shares should not exceede 100%</strong></small>
+														</th>
 													  </tr>
 													</thead>
 													<tbody>
@@ -1546,7 +1549,7 @@
 															</div>
 														  </td>
 														  <td>
-															<input type="text" class="form-control"pattern="^[0-9]{1,}$" max="100" min="1" required placeholder="%">
+															<input type="text" class="form-control shares" pattern="^[0-9]{1,}$" max="100" min="1" required placeholder="%">
 														  </td>
 													 </tr>
 													 <tr>
@@ -1605,7 +1608,7 @@
 														   </div>
 														 </td>
 														 <td>
-														   <input type="text" class="form-control" placeholder="%">
+														   <input type="text" class="form-control shares" placeholder="%">
 														 </td>
 													</tr>
 													<tr>
@@ -1664,7 +1667,7 @@
 														   </div>
 														 </td>
 														 <td>
-														   <input type="text" class="form-control" placeholder="%">
+														   <input type="text" class="form-control shares" placeholder="%">
 														 </td>
 													</tr>
 													<tr>
@@ -1723,7 +1726,7 @@
 														   </div>
 														 </td>
 														 <td>
-														   <input type="text" class="form-control" placeholder="%">
+														   <input type="text" class="form-control shares" placeholder="%">
 														 </td>
 													</tr>
 													
@@ -1849,7 +1852,7 @@
 												<div class="row">
 													<div class="col-md-4 col-sm-12">
 															<div class="form-group"> 
-																<label>Mpesa number<strong class="text-danger">*</strong></label>
+																<label>Mpesa number (Can be changed)<strong class="text-danger">*</strong></label>
 																<input type="text" class="form-control must-input mpesa-number" placeholder="Enter Mpesa number">
 															</div>
 														</div>	
@@ -1880,7 +1883,7 @@
 													<div class="col-md-4 col-sm-12">
 														<div class="form-group"> 
 															<label>Amount<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control" autofocus placeholder="KSH">
+															<input type="text" class="form-control must-input" placeholder="KSH">
 														</div>
 													</div>
 													
@@ -1889,7 +1892,7 @@
 											
 											<div class="col-12 mt-5">
 												<a class="btn btn-light btn-border mr-3 btn-outline attach-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
-												<button class="btn btn-primary btn-submit">Submit Application<i class="ml-3 zmdi zmdi-mail-reply-all flipx"></i></button>
+												<button type="submit" class="btn btn-primary btn-submit">Submit Application<i class="ml-3 zmdi zmdi-mail-reply-all flipx"></i></button>
 											</div>
 										</div>
 										</form>
@@ -2006,7 +2009,11 @@
 		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script><!-- App functions and actions -->
 		<script src="js/wow.js"></script>
         <script src="js/app.min.js"></script>
-        <script src="js/main.js"></script>	
+        <script src="js/main.js"></script>
+		<script>
+			
+			$('.membership-form').validate();
+		</script>
 		
 		
     </body>
