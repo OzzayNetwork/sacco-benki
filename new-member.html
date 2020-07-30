@@ -1798,7 +1798,7 @@
 
 										</div>
 										
-										<div class="row clearfix form-save animated fadeInRight">
+										<div class="row clearfix form-save animated fadeInRight d-none">
 											<div class="col-12">
 												<h4 class="card-title">Account savings & Activation</h4>
 												<h6 class="card-subtitle">
@@ -1806,26 +1806,32 @@
 												</h6>
 												<hr>
 											</div>
-											<div class="col-12">
-												<label><strong>Applicant chooses to pay both registration fee and the first deposit using which of the following methods:</strong></label>
+											<div class="col-md-6 col-sm-12">
+												<div class="form-group"> 
+													<label>Monthly contribution<strong class="text-danger">*</strong></label>
+													<input type="text" class="form-control" placeholder="Monthly remitance" required pattern="^[0-9]{1,10000}$">
+												</div>
+											</div>
+											<div class="col-12 radio-main-container">
+												<label><strong>Applicant would wish to activate account through which method?</strong></label>
 												
-												<div class="radio">
-													<input type="radio" required name="pay-method" id="method-mpesa">
+												<div class="radio method-mpesa" >
+													<input type="radio" value="mpesa" name="pay-method" id="method-mpesa">
 													<label class="radio__label" for="method-mpesa">Mpesa</label>
 												</div>
 												
-												<div class="radio">
-													<input type="radio" required  name="pay-method" id="method-cash">
+												<div class="radio method-cash">
+													<input type="radio" required  name="pay-method" id="method-cash" value="cash">
 													<label class="radio__label" for="method-cash">Cash or cheque</label>
 												</div>
 												
-												<div class="radio">
-													<input type="radio" required  name="pay-method" id="method-teller">
+												<div class="radio method-teller">
+													<input type="radio" required  name="pay-method" id="method-teller" value="activate at teller">
 													<label class="radio__label" for="method-teller">Will activate at teller</label>
 												</div>
 												
-												<div class="radio">
-													<input type="radio" required  name="pay-method" id="method-own">
+												<div class="radio method-own" >
+													<input type="radio" required  name="pay-method" id="method-own" value="own activation">
 													<label class="radio__label" for="method-own">Will activate at own time</label>
 												</div>
 												
@@ -1844,14 +1850,14 @@
 													<div class="col-md-4 col-sm-12">
 															<div class="form-group"> 
 																<label>Mpesa number<strong class="text-danger">*</strong></label>
-																<input type="text" class="form-control" placeholder="Enter Mpesa number">
+																<input type="text" class="form-control must-input mpesa-number" placeholder="Enter Mpesa number">
 															</div>
 														</div>	
 													
 														<div class="col-md-3 col-sm-12">
 															<div class="form-group"> 
 																<label>Amount<strong class="text-danger">*</strong></label>
-																<input type="text" class="form-control" placeholder="Amount to be paid">
+																<input type="text" class="form-control must-input mpesa-amount" placeholder="Amount to be paid">
 															</div>
 														</div>	
 													
@@ -1883,7 +1889,7 @@
 											
 											<div class="col-12 mt-5">
 												<a class="btn btn-light btn-border mr-3 btn-outline attach-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
-												<button class="btn btn-primary attach-next">Submit Application<i class="ml-3 zmdi zmdi-mail-reply-all flipx"></i></button>
+												<button class="btn btn-primary btn-submit">Submit Application<i class="ml-3 zmdi zmdi-mail-reply-all flipx"></i></button>
 											</div>
 										</div>
 										</form>

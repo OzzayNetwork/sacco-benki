@@ -383,6 +383,9 @@ function disable_attach(){
 	$('.form-attach .btn-next').attr('disabled', true).addClass('disabled');
     //alert("successfull");
 }
+function disableActivation(){
+	$('.form-save .btn-submit').attr('disabled', true).addClass('disabled');
+}
 
 
 function activate_occupation(){
@@ -679,6 +682,115 @@ function attachValidate(){
 		}
 	});
 }
+var mpesaMethodNone=$(".form-save .act-mpesa").hasClass('d-none');
+
+function hidePayMethods(){
+	$('.form-save .act-mpesa').addClass('d-none');
+	$('.form-save .act-cash').addClass('d-none');
+	mpesaMethodNone=$(".form-save .act-mpesa").hasClass('d-none');
+	//alert(mpesaMethodNone);
+
+	//alert('removed');
+}
+
+$('.form-save .radio').on('click', function(){
+	hidePayMethods();
+	checkingPayRadio();
+	if($('input[name="pay-method"]').is(':checked')) { alert("it's checked"); }
+});
+
+
+$('.form-save .method-mpesa').on('click', function(){
+	//alert("mpesa clicked");		
+	activateMpesaFields();
+	
+	
+
+	//mpesaMethodNone=$(".form-save .act-mpesa").hasClass('d-none');
+	//alert(mpesaMethodNone);
+});
+
+$('.form-save .method-cash').on('click', function(){
+	//alert("cash clicked");
+	$('.form-save .act-cash').removeClass('d-none');
+});
+checkingPayRadio();
+$('.form-save input').on('keydown', function(){
+	checkingPayRadio();
+});
+
+// $('form-save input').on('change', function(){
+// 	checkingPayRadio();
+// });
+
+
+function activateMpesaFields(){
+	$('.form-save .act-mpesa').removeClass('d-none');
+	mpesaMethodNone=$(".form-save .act-mpesa").hasClass('d-none');
+
+	$('.form-save .act-mpesa .mpesa-number').attr("pattern", "^[0-9']{9,10}$");
+	$('.form-save .act-mpesa .mpesa-amount').attr("pattern", '^[0-9]{1,1000000}$');
+	//$('.employer-opt .emp-staff-num').attr("pattern", "^[^$%?#!<>*+'\\x22]+$");
+	
+	$('.form-save .act-mpesa .must-input').each(function(index, value){
+		$(this).attr('required', '');
+	});
+
+	//alert("employee activated");
+}
+
+function checkingPayRadio(){
+	if($('.form-save input[name="pay-method"]').is(':checked')){
+		$('.form-save input').each(function(index,value){
+
+			var has_error=$(this).hasClass('error');
+			$(this).removeClass('border-danger');	
+			var has_required=$(this).attr('required');
+	
+			var field_value=$(this).val();
+			//alert("the required is "+has_required);
+			//alert("not showing employed"+employed_has_dnone);
+			
+	
+			//alert(has_required);
+			if(has_required=="required"){
+				if(field_value==""){
+					disableActivation();
+					$(this).addClass('border-danger');
+					//alert($(this).eq(index)+": employed value empty");
+					//alert("the required is "+has_required);
+					return false;
+				}
+				
+				
+			}
+			if(has_error==true){
+				disableActivation();
+				$(this).addClass('border-danger');
+				//alert(has_error);
+				return false;
+			}	
+			else{
+				console.log("we are good to go")
+				$('.form-save .btn-submit').attr('disabled', false).removeClass('disabled');
+	
+			}			
+					
+				
+			
+		});
+	}
+	else{
+		//alert("not possible");
+		disableActivation();
+	}
+	
+	
+}
+
+
+
+
 
 
 
@@ -874,6 +986,8 @@ $('#mpesa-statement').on('change', function(){
 	} 
 	
 });
+
+$('.gen-info-link').parent().siblings().children().addClass('disabled');
 
 //=====================================================================================
 //******************membership form ******************************/

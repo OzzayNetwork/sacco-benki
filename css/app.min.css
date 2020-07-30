@@ -14800,4 +14800,8 @@ a.badge-white.focus, a.badge-white:focus {
 .form-save .radio__label{
     cursor: pointer;
 }
+
+.form-save .radio{
+    width: fit-content;
+}
 /*custom budge designs*/
