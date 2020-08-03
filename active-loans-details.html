@@ -220,7 +220,6 @@
             </header>
 
               
-			
 			  <aside class="sidebar">
                 <div class="scrollbar-inner">
                     <div class="user">
@@ -278,334 +277,395 @@
                     </ul>
                 </div>
             </aside>
+            <!-- =========================== -->
+            <!-- modals -->
+            <!-- ================================= -->
+
+            <!-- decline application -->
+            <!-- Modal -->
+            <div class="modal fade" id="decline-loan-application" tabindex="-1" role="dialog" aria-labelledby="decline-loan-application" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Decline the application</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="">
+                            <form>
+                                <div class="form-group">
+                                    <label for="decline-reason">Reason for declining this application</label>
+                                    <textarea class="form-control" placeholder="Enter reason for declining ..." id="decline-reason" rows="3"></textarea>
+                                  </div>
+                            </form>
+                        </div>
+                
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger btn--icon-text"><i class="zmdi zmdi-close mr-3"></i>Decline</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- decline application -->
+
+            <!-- send for re-evaluation -->
+
+             <!-- Modal -->
+             <div class="modal fade" id="reevaluate-loan-application" tabindex="-1" role="dialog" aria-labelledby="decline-loan-application" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Send for re-evaluation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="">
+                            <form>
+                                <div class="form-group">
+                                    <label for="decline-reason">Reason for sending application for Re-evaluation</label>
+                                    <textarea class="form-control" placeholder="Enter reason ..." id="decline-reason" rows="3"></textarea>
+                                  </div>
+                            </form>
+                        </div>
+                
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-warning btn--icon-text"><i class="zmdi zmdi-refresh-sync mr-3"></i>Send for re-evaluation</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- =========================== -->
+            <!-- modals -->
+            <!-- ================================= -->
 			
-			<!--associate blinker modal-->
-			<div class="modal" id="associate" tabindex="-1" role="dialog">
-			  <div class="modal-dialog  modal-dialog-centered" role="document">
-				<div class="modal-content">
-				  <div class="modal-header">
-					<h3 class="modal-title">Associate blinker</h3>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					  <span aria-hidden="true">&times;</span>
-					</button>
-				  </div>
-				  <div class="modal-body">
-					 	<div class="col-12 p-0 request-container animated fadeIn">
-							 <div class="accounts-container">
-								<div class="blinker-prof">
-								 <a data-toggle="tooltip" title="" href="#" data-original-title="Blinker's Name"><img class="avatar-img" src="demo/img/profile-pics/2.jpg" alt=""></a>
-									<span>Blinkers Name</span>
-								</div>
-
-								  <img class="direction-gif" src="demo/img/gifs/associate2.gif">
-
-								  <div class="blinker-prof">
-								<a data-toggle="tooltip" title="" href="#" data-original-title="Gurdian's Name"><div class="avatar-char">GN</div></a>
-									<span>Gurdians Name</span>
-								</div>
-							  </div>
-						<!-- appears when its declined-->
-
-							<p>Associate <strong>John Doa</strong>(Blinker) to <strong>Jeannette Lawson</strong>(Gurdian) </p>
-					  	</div>
-					  	<div class="decline-reason animated fadeIn d-none">
-							<form>
-						  		<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<textarea class="form-control textarea-autosize" placeholder="Enter reason for declining request ..." style="overflow: hidden; overflow-wrap: break-word; height: 51px;"></textarea>
-											<i class="form-group__bar"></i>
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="modal-footer p-0">
-											<button class="btn btn-info canceldec-btn">Cancel</button>
-											<button class="btn btn-danger ">Decline</button>
-										</div>
-									</div>
-								</div>
-								
-						 	 </form>
-					  </div>
-				  </div>
-				  <div class="modal-footer">
-					<button type="button" class="btn btn-primary">Approve</button>
-					<button class="btn btn-danger decline-btn">Decline</button>
-				  </div>
-				</div>
-			  </div>
-			</div>
-			<!--associate blinker modal-->
-
             
 
             <section class="content custom-table-container">
                 <header class="content__title px-0 border-0">
 				 	<div class="row">
-						<div class="col-md-8 col-sm-12">
+						<div class="col-md-12 col-sm-12">
 							<span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">Shop Details</h1>
+							 <h1 class="text-capitalize stream_name m-0">Loan details</h1>
 							</span>
 							<div class="">
 								<ol class="breadcrumb border-0">
 									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
-									<li class="breadcrumb-item active">Shop details</li>
+									<li class="breadcrumb-item"><a href="active-loans.html">Active Loans</a></li>
+									<li class="breadcrumb-item active">Loan Details</li>
 								</ol>
 							</div>
 						</div>
-						<div class="col-4 col-sm-12 col-md-4">
-							<div class="section-header">
-								<a href="new-shop.html" class="btn btn-sm btn-primary" title="">New Shop</a>
-							</div>					
-						</div>						
+												
 					</div>
 				</header>
 				
-				<div class="row">
-					<div class="col-12">
-						<div class="card table-custom-bg">
-							<div class="col-12 profile-container">
-								<div class="profile__img">
-									<img src="demo/img/profile-pics/2.jpg" alt="">
-									<a href="#" class="zmdi zmdi-camera profile__img__edit"></a>
-								</div>
-								<div class="prof-details">
-									<h5 class="mb-0">The Big shop</h5>
-									<span>Owned By Samuel Murithe</span>
-									<p class="mt-2">
-										<span class="badge badge-soft-success">Shop is active</span>
-									</p>
+				<div class="row with-custom-header">					
+					<div class="col-sm-12 col-md-8">
+						<!-- application details start -->
+						<div class="row">
+							<div class="col-12">
+								<div class="card">
+									<div class="card-body employment-body">
+										<div class="contact-header">
+											<h4>Application Journey</h4>
+											<hr class="mb-0 mt-1">
+                                        </div>
+                                        
+                                        <div class="application-progress">
+                                            <div class="root posi">
+                                                 <div class="progresss-container">
+                                                      <ul class="progressbar">
+
+
+                                                        <small class="progress-date">3rd Jun 2020</small>
+                                                        <li class="active">Initiation
+                                                            <br><small>Initiated By Alex Wanjala</small>
+                                                        </li>
+
+
+                                                        <small class="progress-date">13Th Jun 2020</small>
+                                                        <li class="active">Loan Appraisal
+                                                            <br>
+                                                            <small>Approved by Edwin Kiploman</small>
+                                                        </li>
+
+                                                        <small class="progress-date">3rd Aug 2020</small>
+                                                        <li class="active">Loan Approval
+                                                            <br>
+                                                            <small>Approved by Andrew Kiptum</small>
+                                                        </li>                                                       
+                                                      </ul>
+                                                  </div>
+                                              </div>
+                                        </div>
+                                            <div class="contact-header">
+                                                <h4>Repayment progress</h4>
+                                                <p>bellow is the repayment progress for this loan</p>
+                                            </div>
+                                        
+                                        <div class="row my-4 bg-light">
+                                            <div class="col-sm-12 col-md-4 loan-bal">
+                                                <p class="text-muted-blue bold bold mb-1"><strong>Outstanding Balance</strong></p>
+                                                <div class="d-flex justify-content-between font-24 font-weight-light"><p class="text-info bold">KES 2,258,000</p></div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <div class=" widget-pie__item circle-container">
+                                                <span class="loan-per">3%</span>
+                                                <div><strong>Interest rate</strong></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-4">
+                                                <div class=" widget-pie__item">
+                                                    <div class="">                                            
+                                                            <div class="easy-pie-chart" data-percent="50" data-size="80" data-track-color="#b9e0ff" data-bar-color="#0262ee">
+                                                                <span class="easy-pie-chart__value">50</span>
+                                                            </div>
+                                                            <div class="widget-pie__title" style="color: #0262ee;"><strong>Repayment Progress</strong></div>                                            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                        <div class="contact-header">
+                                            <h4>Loan Application details</h4>
+                                            <p>Have a closr look at the details pertaining to this application before taking any action.</p>
+											<hr class="mb-0 mt-1">
+                                        </div>
+
+										<small class="text-muted-blue bold bold">Loan type</small>
+										<div class="d-flex justify-content-between"><p><strong>Loan type name</strong></p></div>  
+										<hr> 
+										<div class="row">
+											<div class="col-md- col-sm-12">
+												<small class="text-muted-blue bold bold">Reason for applying for the loan</small>
+												<div class="d-flex justify-content-between"><p><strong>To pay a very urgent and emergency fee for my son's Space camp graduation at Venezuela</strong></p></div>  
+												<hr> 
+                                            </div>
+                                            
+                                            <div class="col-12 mt-4">
+                                                <h4>Application Attachments</h4>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <div class="col-12">
+                                                <div class="row loan-docs">
+                                                    <label class="col-lg-3 col-sm-12 col-md-6" for="intro-letter">
+                                                        
+                                                        <div class="intro-letter " title="attach attachment letter from employer">
+                                                            <span><img src="demo/img/attachment-docs/contract.svg"></span>
+                                                            <h5>Introduction letter</h5>
+                                                            <small></small>
+                                                        </div>
+                                                    </label>
+
+                                                    <label class="col-lg-3 col-sm-12 col-md-6" for="payslip">
+                                                        
+                                                        <div class="pay-slip " title="attach the payslip (at least 3 months ago)">
+                                                            <span><img src="demo/img/attachment-docs/email.svg"></span>
+                                                            <h5>Payslip</h5>
+                                                            <small>At least 3 Months Ago</small>
+                                                        </div>
+                                                    </label>
+
+                                                    <label class="col-lg-3 col-sm-12 col-md-6 " for="bank-statement">
+                                                       
+                                                        <div class="bank-state " title="Attach bank statement(s)(At least 23 months ago)">
+                                                            <span><img src="demo/img/attachment-docs/bank.svg"></span>
+                                                            <h5>Bank statement</h5>
+                                                            <small>At least 3 Months Ago</small>
+                                                        </div>
+                                                    </label>
+
+                                                    <label for="mpesa-state" class="col-lg-3 col-sm-12 col-md-6 " title="Select mpesa statement (at least 3 months ago)">
+                                                       
+                                                        <div class="mpesa-state ">
+                                                            <span><img src="demo/img/attachment-docs/mpesa.svg"></span>
+                                                            <h5>Mpesa statement</h5>
+                                                            <small>At least 3 Months Ago</small>
+                                                        </div>
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                            <br>
+                                            <br>
+										</div>										
+										
+									</div>
 								</div>
 							</div>
-							
 						</div>
-					</div>
-					
-					<div class="col-xl-4 col-lg-4 col-md-5 col-sm-12">
+						<!-- application details end -->
+
+						
+                    </div>
+                    
+                    <div class="col-sm-12 col-md-4">
 						<div class="account-info">
-							<div>
-								<h2>Account Info</h2>                            
-							</div>
+							
 							<div class="card">
 								<div class="card-body">
-									<small class="text-muted">Owners email: </small>
-									<p>louispierce@example.com</p>                            
-									<hr>
-									<small class="text-muted">Owners Mobile: </small>
-									<p>+ 202-222-2121</p>
-									<hr>
+									<div class="contact-header">
+										<h4>Applicant's Details</h4>
+										<hr class="mb-0 mt-1">
+									</div>
+									<small class="text-muted-blue bold bold">Full Names & Date of Birth</small>
+									<div class="d-flex justify-content-between"><p><strong>Kelvin Njuguna Ndungu</strong></p> <p class="ml-3">04 Nov 1994</p></div>  
+									<hr> 
+									<small class="text-muted-blue bold bold">Marital status & Gender</small>
 									
-									<small class="text-muted">Last Transaction: </small>
-									<p class="m-b-0">October 17th, 2020</p>
+									<div class="d-flex justify-content-between"><p><strong>Very Single</strong></p><p>Male</p></div>                        
 									<hr>
-									<small class="text-muted">Created</small>
-									<p class="m-b-0">On October 17th, 2020 by <strong>The User</strong></p>
+									<small class="text-muted-blue bold">Nationality</small>
+									<p>Holy See (Vatican City State)</p>
 									<hr>
-									<small class="text-muted">Last Edited: </small>
-									<p class="m-b-0">January 17th, 2020 by <strong>John Doe</strong></p>
+									<small class="text-muted-blue bold">KRA PIN</small>
+									<p>AJHU455613</p>
 									<hr>
+									<small class="text-muted-blue bold">Registered on</small>
+									<p>22 Feb 2020 by Alex Wanjala</p>
 									
-									<small class="text-muted">All transactions</small>
-									<p class="m-b-0">53 Transactions</p>
+									
+									<div class="contact-header mt-5">
+										<h4>Contact details</h4>
+										<hr class="mb-0 mt-1">
+									</div>
+
+                                    <small class="text-muted-blue bold">Mobile phone number</small>
+									<p><a href="tel:0704549859">0704549859</a></p>
 									<hr>
-								</div
+									 <small class="text-muted-blue bold">Email address</small>
+									<p><a href="mailto:<nowiki> agentavery@sample.com">email@email.com</a></p>
+										<hr>
+									<small class="text-muted-blue bold">Postal Address</small>
+									<p>PO BOX 1234-00100 Nairobi, Kenya</p>
+									
+								</div>
 							</div>
 						</div>
-					</div>
-					</div>
-						
-					<div class="col-xl-8 col-lg-8 col-md-7 col-sm-12">
-						<div class="edit-account">
-							<div>
-								<h2>Edit account</h2>                            
-							</div>
-							<div class="col-12 p-0">
 
+						<div class="row">
+							<div class="col-12">
 								<div class="card">
 									<div class="card-body">
-										<div class="row clearfix">
-											
-											<div class="col-12">
-												<div class="font-weight-bold">Shop Owner Details</div>
-											</div>
-											
-											<div class="col-lg-4 col-md-12">
-												<div class="form-group"> 
-													<label>Owner's first name <strong class="text-danger">*</strong></label>
-													<input type="text" class="form-control" placeholder="Enter first name">
-												</div>
-											</div>
-											<div class="col-lg-5 col-md-12">
-												<div class="form-group"> 
-													<label>Owner's Other Name(s)  <strong class="text-danger">*</strong></label>
-													<input type="text" class="form-control" placeholder="Enter other name(s)">
-												</div>
-											</div>
-											<div class="col-lg-3 col-md-12">
-												<div class="form-group">
-													<label>Owners's Gender <strong class="text-danger">*</strong></label>
-													<select class="form-control">
-														<option value="">-- Select Gander --</option>
-														<option value="Male">Male</option>
-														<option value="Female">Female</option>
-													</select>
-												</div>
-											</div>
-											<div class="col-lg-4 col-md-12">
-												<div class="form-group"> 
-													<label>Owner's ID number <strong class="text-danger">*</strong></label>
-													<input type="text" class="form-control" placeholder="Enter owner's phone number">
-												</div>
-											</div>
-											<div class="col-lg-4 col-md-12">
-												<div class="form-group"> 
-													<label>Owner's Phone Number <strong class="text-danger">*</strong></label>
-													<input type="text" class="form-control" placeholder="Enter owner's phone number">
-												</div>
-											</div>
-											<div class="col-lg-4 col-md-12">
-												<div class="form-group"> 
-													<label>Owner's Email address </label>
-													<input type="email" class="form-control" placeholder="Enter email address">
-												</div>
-											</div>
-											
-											<div class="col-lg-12 col-md-12">
-												<div class="form-group"> 
-													<label>Owners area of residence</label>
-													<input type="email" class="form-control" placeholder="Enter area of residence">
-												</div>
-											</div>
-											
+										<div class="contact-header attachments-container">
+											<h4>Personal documents</h4>
 											<hr>
 											
-											<div class="col-12">
-												<div class="font-weight-bold">Shop details</div>
-											</div>
-											
-											<div class="col-lg-8 col-md-12">
-												<div class="form-group"> 
-													<label>Shop Name</label>
-													<input type="email" class="form-control" placeholder="Enter shop's name">
-												</div>
-											</div>
-											
-											<div class="col-lg-4 col-md-12">
-												<div class="form-group"> 
-													<label>Shop's Contant number</label>
-													<input type="email" class="form-control" placeholder="Enter shop's phone">
-												</div>
-											</div>
-											<div class="col-lg-6 col-md-12">
-												<div class="form-group"> 
-													<label>Shopkeeper's Name</label>
-													<input type="email" class="form-control" placeholder="Enter shop Keepers Name">
-												</div>
-											</div>
-											
-											<div class="col-lg-4 col-md-12">
-												<div class="form-group"> 
-													<label>Shopkeeper's ID number</label>
-													<input type="email" class="form-control" placeholder="Enter shop Keeper's ID No.">
-												</div>
-											</div>
-											
-											<div class="col-lg-6 col-md-12">
-												<div class="form-group"> 
-													<label>Shop's Location</label>
-													<input type="email" class="form-control" placeholder="Enter shop's phone">
-												</div>
-											</div>
-											
-											<div class="col-12">
-												<button class="btn btn-primary">Add guardian</button>
-											</div>
+											<div><p><strong class="d-flex align-items-center">1.<a href=""><i class="pe-7s-id mx-2"></i>National Id card</a></strong></p></div>  
+											 
+											<div><p><strong class="d-flex align-items-center">2.<a href=""><i class="pe-7s-note2 mx-2"></i>KRA Pin document</a></strong></p></div>  
+										
+											<div><p><strong class="d-flex align-items-center">3.<a href=""><i class="pe-7s-camera mx-2"></i>Photo image</a></strong></p></div>  
 											
 										</div>
 									</div>
 								</div>
 							</div>
-							
-							<div>
-								<h2>Transactions History</h2>                            
-							</div>
-							<div class="col-12 p-0">
+						</div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="contact-header">
+                                    <h4>Transactions history</h4>
+                                    <hr class="mb-0 mt-1">
+                                </div>
+                            
 
-								<div class="card">
-									<div class="card-body">
-										<div class="table-all animated slideInRight">
-											<div class="table-responsive">
-											<table id="data-table" class="table table-striped table-hover normal-table">
-												<thead class="thead-default">
-													<tr>
-														<th>No.</th>
-													   	<th>Transaction Details</th>
-														<th>Date & Time</th>
-													</tr>
-												</thead>
-												<tfoot>
-													<tr>
-													   <th>No.</th>
-													   	<th>Transaction Details</th>
-														<th>Date & Time</th>
-													</tr>
-												</tfoot>
-												<tbody>
-													<tr>
-														<th>HGKJLl</th>
-													   	<th>Sold items to<strong> The student's Name</strong></th>
-														<th>23 Feb 2020, 10:00PM</th>
-													</tr>
-													 <tr>
-														<th>KJKJ878</th>
-													   	<th>Withdraw money</th>
-														<th>20 Feb 2020, 10:24PM</th>
-													</tr>
-													<tr>
-														<th>HGKJLl</th>
-													   	<th>Sold items to<strong> The student's Name</strong></th>
-														<th>23 Feb 2020, 10:00PM</th>
-													</tr>
-													 <tr>
-														<th>KJKJ878</th>
-													   	<th>Withdraw money</th>
-														<th>20 Feb 2020, 10:24PM</th>
-													</tr>
-													<tr>
-														<th>HGKJLl</th>
-													   	<th>Sold items to<strong> The student's Name</strong></th>
-														<th>23 Feb 2020, 10:00PM</th>
-													</tr>
-													 <tr>
-														<th>KJKJ878</th>
-													   	<th>Withdraw money</th>
-														<th>20 Feb 2020, 10:24PM</th>
-													</tr>
-													<tr>
-														<th>HGKJLl</th>
-													   	<th>Sold items to<strong> The student's Name</strong></th>
-														<th>23 Feb 2020, 10:00PM</th>
-													</tr>
-													 <tr>
-														<th>KJKJ878</th>
-													   	<th>Withdraw money</th>
-														<th>20 Feb 2020, 10:24PM</th>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-										</div>
-									</div>
-								</div>
-							</div>	
-						</div>					
-					</div>
+                            <div class="table-responsive">
+                                <table id="data-table" class="table table-bordered table-striped">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Paid By</th>
+                                            <th>Payment Method</th>
+                                            <th>Received By</th>
+                                            <th>Date</th>
+                                            <th class="text-right">Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Paid By</th>
+                                            <th>Payment Method</th>
+                                            <th>Received By</th>
+                                            <th>Date</th>
+                                            <th class="text-right">Amount</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>4565646</td>
+                                            <td>Kelvin Njuguna</td>
+                                            <td>Over the Counter</td>
+                                            <td>Alex Wanjala</td>
+                                            <td>25Th Jun 2020</td>
+                                            <td class="text-right">Kes 96,236</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>4565646</td>
+                                            <td>Kelvin Njuguna</td>
+                                            <td>Over the Counter</td>
+                                            <td>Alex Wanjala</td>
+                                            <td>25Th Jun 2020</td>
+                                            <td class="text-right">Kes 96,236</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>4565646</td>
+                                            <td>Kelvin Njuguna</td>
+                                            <td>Over the Counter</td>
+                                            <td>Alex Wanjala</td>
+                                            <td>25Th Jun 2020</td>
+                                            <td class="text-right">Kes 96,236</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>4565646</td>
+                                            <td>Kelvin Njuguna</td>
+                                            <td>Over the Counter</td>
+                                            <td>Alex Wanjala</td>
+                                            <td>25Th Jun 2020</td>
+                                            <td class="text-right">Kes 96,236</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>4565646</td>
+                                            <td>Kelvin Njuguna</td>
+                                            <td>Over the Counter</td>
+                                            <td>Alex Wanjala</td>
+                                            <td>25Th Jun 2020</td>
+                                            <td class="text-right">Kes 96,236</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+				</div>
 						
 					
-				</div>
+						
+					
+				
                 <footer class="footer hidden-xs-down">
-                    <p>Powered by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>
+                    <p>Powered by RevenueSure</p>
                 </footer>
             </section>
         </main>

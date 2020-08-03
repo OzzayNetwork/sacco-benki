@@ -13993,8 +13993,8 @@ strong{
 /*	font-weight:;*/
 }
  .table td strong{
-	font-weight: 700;
-	color: #0255a3;
+	font-weight: bold;
+	/* color: #0255a3; */
 	cursor: pointer;
 }
 
@@ -14983,5 +14983,32 @@ th label .error{
 }
 .calc-18{
     height: calc(100% - -18px);
+}
+.loan-per{
+    height: 80px;
+    width: 80px;
+    background: #FF5722;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+.circle-container{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.loan-bal{
+    display: flex;
+    flex-flow: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+.font-24{
+    font-size: 24px !important;;
 }
 

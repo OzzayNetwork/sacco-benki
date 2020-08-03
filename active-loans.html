@@ -219,58 +219,8 @@
                 
             </header>
 
-            <aside class="sidebar">
-                <div class="scrollbar-inner">
-                    <div class="user">
-                        <div class="user__info" data-toggle="dropdown">
-                            <img class="user__img" src="demo/img/logo-files/school-logo.jpg" alt="">
-                            <div>
-                                <div class="user__name">John Mwakili</div>
-                                <div class="user__email">john@gmail.com</div>
-                            </div>
-                        </div>
-
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="my-profile.html">View Profile</a>
-                            <a class="dropdown-item d-none" href="#">Settings</a>
-                            <a class="dropdown-item" href="landing-page.html">Logout</a>
-                        </div>
-                    </div>
-
-                    <ul class="navigation">
-                        <li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-view-dashboard"></i>Home</a></li>
-						<li class="navigation__sub">
-                            <a href="#"><i class="pe-7s-id"></i>Members</a>
-                            <ul>
-                                <li><a href="members.html" title="members register">Registered Members</a></li>
-                                <li><a href="new-member.html" title="add new member">New Members</a></li>
-                            </ul>
-						</li>
-						
-						<li class="navigation__sub">
-                            <a href="#"><i class="flaticon-briefcase"></i>Accounts</a>
-                            <ul>
-                                <li><a href="account.html">Share Capital</a></li>
-                                <li><a href="account.html">Deposit account</a></li>
-								 <li><a href="account-html">Savings</a></li>
-								 <li><a href="new-account.html" title="set up new account">New account</a></li>
-                            </ul>
-						</li>
-						
-						<li class="navigation__sub">
-                            <a href="#"><i class="flaticon-money"></i>Loans</a>
-                            <ul>
-                                <li><a href="active-loans.html">Active Loans</a></li>
-                                <li><a href="ongoing-loans.html">Ongoing Applications</a></li>
-								 <li><a href="loan-application.html">New Loan application</a></li>
-								 
-                            </ul>
-						</li>
-						
-						 <li class="navigation__active mt-4"><a href="landing-page.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
-                    </ul>
-                </div>
-            </aside>
+              
+			
 			  <aside class="sidebar">
                 <div class="scrollbar-inner">
                     <div class="user">
@@ -432,12 +382,12 @@
 				 	<div class="row">
 						<div class="col-md-8 col-sm-12">
 							<span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">Ongoing Loan applications</h1>
+							 <h1 class="text-capitalize stream_name m-0">Active loans</h1>
 							</span>
 							<div class="">
 								<ol class="breadcrumb border-0">
 									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item active">Pending loan applications</li>
+									<li class="breadcrumb-item active">Active loans</li>
 								</ol>
 							</div>
 						</div>
@@ -453,26 +403,32 @@
 									<table class="table table-hover table-custom spacing8" id="data-table">
 										<thead>
 											<tr> 
-												<th>#</th>
-												<th>Full Names</th>
-												<th>Application Date</th>
-												<th>Submitted by</th>
-												<th>Application stage</th>
-												<th>Amount requesting</th>
-												<th>Actions</th>
+												<th>Acc</th>
+                                                <th>Debtor</th>
+                                                <th>Loan Type</th>
+												<th>Date approved</th>
+                                                <th>Approved by</th>
+                                                <th>Due Date</th>
+												<th>Amount paid</th>
+												<th>outstanding balance</th>
+												<th>Loan amount</th>
+                                                 <th>status</th>   
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
 												<td>
-													13132132
+													<a href="active-loans-details.html"><strong>13132132</strong></a>
 												</td>
 												<td class="text-capitalize"><a href="member-profile.html">Kelvin njjuguna</a></td>
-												<td>20 Apr 2020</td>
-												<td class="text-capitalize">Alex wanjala</td>
-												<td><span>initiation</span></td>
-												<td class="text-uppercase">KES 523,263</td>
-												<td><a href="loan-application-details.html" class="btn btn-primary">View application</a></td>
+												<td>Mpango Kubwa</td>
+												<td class="text-capitalize">5Th Jan 2020</td>
+												<td><span>Alex Wanjala</span></td>
+                                                <td class="text-uppercase">2Nd Mar 2020</td>
+                                                <td>KES 36,000</td>
+                                                <td>KES 120,000</td>
+                                                <td><strong>KES 156,000</strong></td>
+												<td><span class="badge badge-soft-success">Paying</span></td>
 											</tr>
 										</tbody>
 									</table>
