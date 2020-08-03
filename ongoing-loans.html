@@ -271,77 +271,62 @@
                     </ul>
                 </div>
             </aside>
-			<aside class="chat">
-                <div class="chat__header">
-                    <h2 class="chat__title"><strong>Associations Requests</strong><small>You have 20 notifications yet to be addressed</small></h2>
+			  <aside class="sidebar">
+                <div class="scrollbar-inner">
+                    <div class="user">
+                        <div class="user__info" data-toggle="dropdown">
+                            <img class="user__img" src="demo/img/logo-files/school-logo.jpg" alt="">
+                            <div>
+                                <div class="user__name">John Mwakili</div>
+                                <div class="user__email">john@gmail.com</div>
+                            </div>
+                        </div>
 
-                    <div class="chat__search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search...">
-                            <i class="form-group__bar"></i>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="my-profile.html">View Profile</a>
+                            <a class="dropdown-item d-none" href="#">Settings</a>
+                            <a class="dropdown-item" href="landing-page.html">Logout</a>
                         </div>
                     </div>
+
+                    <ul class="navigation">
+                        <li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-view-dashboard"></i>Home</a></li>
+						<li class="navigation__sub">
+                            <a href="#"><i class="pe-7s-id"></i>Members</a>
+                            <ul>
+                                <li><a href="members.html" title="members register">Registered Members</a></li>
+                                <li><a href="new-member.html" title="add new member">New Members</a></li>
+                            </ul>
+						</li>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="flaticon-briefcase"></i>Accounts</a>
+                            <ul>
+                                <li><a href="account.html">Share Capital</a></li>
+                                <li><a href="account.html">Deposit account</a></li>
+								 <li><a href="account-html">Savings</a></li>
+								 <li><a href="new-account.html" title="set up new account">New account</a></li>
+                            </ul>
+						</li>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="flaticon-money"></i>Loans</a>
+                            <ul>
+                                <li><a href="loan-setup.html">Loan setup</a></li>
+                                <li><a href="loan-types.html">Loan types</a></li>
+                                <li><a href="loan-application.html">New Loan application</a></li>
+                                <li><a href="active-loans.html">Active Loans</a></li>
+                                <li><a href="ongoing-loans.html">Ongoing Applications</a></li>
+                                <li><a href="re-evaluation-loan-applications.html">Under Re-evaluation</a></li>
+                                <li><a href="declined-loan-applications.html">Declined Applications</a></li>
+                                 
+								 
+                            </ul>
+						</li>
+						
+						 <li class="navigation__active mt-4"><a href="landing-page.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
+                    </ul>
                 </div>
-
-                <div class="scrollbar-inner">
-                    <div class="listview listview--hover chat__buddies">
-                        <a class="listview__item chat__available" data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/7.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-
-                        <a class="listview__item chat__available"  data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/5.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-
-                        <a class="listview__item chat__away" data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/3.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-
-                        <a class="listview__item " data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/8.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-
-                        <a class="listview__item" data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/6.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-
-                        <a class="listview__item chat__busy" data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/9.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <a href="messages.html" class="btn btn--action btn-danger d-none"><i class="zmdi zmdi-plus"></i></a>
             </aside>
 			
 			<!--associate blinker modal-->
@@ -442,72 +427,7 @@
 						</div>
 					  </div>
 					</div>
-				<!--deactivate account modal-->
-				<!--list of my guardians-->
-					<div class="modal fade" id="MyGuardians" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-					  <div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-						  <div class="modal-header">
-							<h5 class="modal-title" id="MyGuardians_title">My list Of blinkers</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							  <span aria-hidden="true">&times;</span>
-							</button>
-						  </div>
-						  <div class="modal-body">
-							  <div class="listview listview--hover">
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">Jeannette Lawson</div>
-											<p>Card is active</p>
-										</div>
-									</a>
-
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/2.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">David Villa Jacobs</div>
-											<p>Card is pending</p>
-										</div>
-									</a>
-
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/3.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">Candice Barnes</div>
-											<p>Has no funds</p>
-										</div>
-									</a>
-
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/4.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">Darla Mckinney</div>
-											<p>Waiting for card to be processed</p>
-										</div>
-									</a>
-
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/5.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">Rudolph Perez</div>
-											<p>Card deactivated</p>
-										</div>
-									</a>
-							</div>
-						  </div>
-						  <div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				<!--list of my guardians-->
+				 
                 <header class="content__title px-0 border-0">
 				 	<div class="row">
 						<div class="col-md-8 col-sm-12">

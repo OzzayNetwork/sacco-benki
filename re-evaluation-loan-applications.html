@@ -386,57 +386,64 @@
 			  </div>
 			</div>
 			<!--associate blinker modal-->
-			
-			
 
             
 
             <section class="content custom-table-container">
-				
-				<!--deactivate card modal-->
-				<div class="modal fade" id="activate-card" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-				  <div class="modal-dialog modal-dialog-centered" role="document">
-					<div class="modal-content">
-					  <div class="modal-header">
-						<h5 class="modal-title" id="deactivate-title">Send activation Request</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						  <span aria-hidden="true">&times;</span>
-						</button>
-					  </div>
-					  <div class="modal-body">
-						<p>A card acivation request will be sent to the guardian via sms, click <strong class="font-weight-bold">Send Request</strong> to confirm action.</p>
-					  </div>
-					  <div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Send Request</button>
+				<!--deactivate account-->
+					<div class="modal fade" id="deactivate-blinker" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					  <div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<h5 class="modal-title" id="deactivate-blinker-title">Block guardian account</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <span aria-hidden="true">&times;</span>
+							</button>
+						  </div>
+						  <div class="modal-body">
+							<form>
+								<h6 class="font-weight-bold mb-3">Whats the reason for blocking this account?</h6>
+								<div class="radio">
+									<input type="radio" name="reason" id="lost">
+									<label class="radio__label" for="lost">They are no longer a gurdian at the school</label>
+								</div>
+								<div class="radio">
+									<input type="radio" name="reason" id="defective">
+									<label class="radio__label" for="defective">some other reason</label>
+								</div>
+								<div class="col-lg-12 p-0 col-md-12">
+									<div class="form-group mt-3"> 
+										<label class="font-weight-bold">Write other reason</label>
+										<input type="email" class="form-control" placeholder="Enter email address">
+									</div>
+								</div>					
+
+							</form>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Block account</button>
+						  </div>
+						</div>
 					  </div>
 					</div>
-				  </div>
-				</div>
-				<!--deactivate card modal-->
-				
+				 
                 <header class="content__title px-0 border-0">
 				 	<div class="row">
 						<div class="col-md-8 col-sm-12">
 							<span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">Deactivated cards</h1>
+							 <h1 class="text-capitalize stream_name m-0">Loans to be Re-evaluated</h1>
 							</span>
 							<div class="">
 								<ol class="breadcrumb border-0">
 									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item active">Deactivated cards</li>
+									<li class="breadcrumb-item active">Loans Under Re-evaluation</li>
 								</ol>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-12">
-							<div class="section-header">
-								<a href="#" class="btn btn-sm btn-secondary" title="">Upload  Excel</a>
-								<a href="new-shop.html" class="btn btn-sm btn-primary ml-3" title="">New Card</a>
-							</div>
-							
-						</div>						
+											
 					</div>
-                </header
+				</header>
 				
 				<div class="row">
 					<div class="col-12 p-0">
@@ -446,90 +453,30 @@
 									<table class="table table-hover table-custom spacing8" id="data-table">
 										<thead>
 											<tr> 
-												<th>Acc No.</th>
-												<th>Owner</th>
-												<th>Date of issue</th>
-												<th>Date deactivated</th>
-												<th>Reason for deactivation</th>
-												<th>Deactivated by</th>
+												<th>#</th>
+                                                <th>Full Names</th>
+                                                <th>Loan type</th>
+                                                <th>Amount Requesting</th>
+												<th>Application Date</th>
+                                                <th>Date declined</th>
+                                                <th>Declined By</th>
+												<th>Reason declined</th>
 												<th>Actions</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td class="font-weight-bold">
-													HJJH32132
-												</td>
-												<td class="std_name">
-													<a href="student-profile.html" class="font-weight-bold">Kelvin Kinuthia</a>
-												</td>
-												<td>20 Jan 2020</td>
-												<td>30 Jan 2020</td>												
-												<td><span  class="font-weight-bold text-danger">Card got lost</span></td>
-												<td><span>Mr Mukalu</span></td>
 												<td>
-													<button class="btn btn-success" title="Reactivate card">Reactivate Card</button>
+													13132132
 												</td>
-											</tr>
-											<tr>
-												<td class="font-weight-bold">
-													HJJH32132
-												</td>
-												<td class="std_name">
-													<a href="student-profile.html" class="font-weight-bold">Kelvin Kinuthia</a>
-												</td>
-												<td>20 Jan 2020</td>
-												<td>30 Jan 2020</td>												
-												<td><span  class="font-weight-bold text-danger">Card got lost</span></td>
-												<td><span>Mr Mukalu</span></td>
-												<td>
-													<button class="btn btn-success" title="Reactivate card">Reactivate Card</button>
-												</td>
-											</tr>
-											<tr>
-												<td class="font-weight-bold">
-													HJJH32132
-												</td>
-												<td class="std_name">
-													<a href="student-profile.html" class="font-weight-bold">Kelvin Kinuthia</a>
-												</td>
-												<td>20 Jan 2020</td>
-												<td>30 Jan 2020</td>												
-												<td><span  class="font-weight-bold text-danger">Card got lost</span></td>
-												<td><span>Mr Mukalu</span></td>
-												<td>
-													<button class="btn btn-success" title="Reactivate card">Reactivate Card</button>
-												</td>
-											</tr>
-											<tr>
-												<td class="font-weight-bold">
-													HJJH32132
-												</td>
-												<td class="std_name">
-													<a href="student-profile.html" class="font-weight-bold">Kelvin Kinuthia</a>
-												</td>
-												<td>20 Jan 2020</td>
-												<td>30 Jan 2020</td>												
-												<td><span  class="font-weight-bold text-danger">Card got lost</span></td>
-												<td><span>Mr Mukalu</span></td>
-												<td>
-													<button class="btn btn-success" title="Reactivate card">Reactivate Card</button>
-												</td>
-											</tr>
-											<tr>
-												<td class="font-weight-bold">
-													HJJH32132
-												</td>
-												<td class="std_name">
-													<a href="student-profile.html" class="font-weight-bold">Kelvin Kinuthia</a>
-												</td>
-												<td>20 Jan 2020</td>
-												<td>30 Jan 2020</td>												
-												<td><span  class="font-weight-bold text-danger">Card got lost</span></td>
-												<td><span>Mr Mukalu</span></td>
-												<td>
-													<button class="btn btn-success" title="Reactivate card">Reactivate Card</button>
-												</td>
+												<td class="text-capitalize"><a href="member-profile.html">Kelvin njjuguna</a></td>
+                                                <td>Type name</td>
+                                                <td>KES 230,256</td>
+                                                <td>22 Aug 2020</td>
+                                                <td>27 Aug 2020</td>
+												<td class="text-capitalize">Alex wanjala</td>
+												<td><span>Submited wrong information</span></td>												
+												<td><a href="re-evaluation-loan-application-details.html" class="btn btn-primary">View application</a></td>
 											</tr>
 										</tbody>
 									</table>
@@ -637,7 +584,8 @@
 		
 		<script src="js/highcharts/highcharts-more.js"></script>
 		<!--owl corousel-->
-		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script><!-- App functions and actions -->
+		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
+		<!-- App functions and actions -->
 		<script src="js/wow.js"></script>
         <script src="js/app.min.js"></script>
         <script src="js/main.js"></script>		

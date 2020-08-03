@@ -14915,6 +14915,21 @@ th label .error{
   background: #3aac5d;
   color: white
   }
+
+  .progressbar li.active + li:before, .progressbar li.active-danger:before{
+    border-color: #dc3545!important;
+    background: #dc3545!important;
+    color: white
+    }
+
+    .progressbar li.active + li:before, .progressbar li.evaluate-active:before{
+        border-color: #ffc721!important;
+        background: #ffc721!important;
+        color: white
+        }
+
+   
+
   .progresss-container{
     background: #f3f3f3;
     padding-top: 1rem;
