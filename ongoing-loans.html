@@ -405,137 +405,160 @@
             
 
             <section class="content custom-table-container">
+				<!--deactivate account-->
+					<div class="modal fade" id="deactivate-blinker" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					  <div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<h5 class="modal-title" id="deactivate-blinker-title">Block guardian account</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <span aria-hidden="true">&times;</span>
+							</button>
+						  </div>
+						  <div class="modal-body">
+							<form>
+								<h6 class="font-weight-bold mb-3">Whats the reason for blocking this account?</h6>
+								<div class="radio">
+									<input type="radio" name="reason" id="lost">
+									<label class="radio__label" for="lost">They are no longer a gurdian at the school</label>
+								</div>
+								<div class="radio">
+									<input type="radio" name="reason" id="defective">
+									<label class="radio__label" for="defective">some other reason</label>
+								</div>
+								<div class="col-lg-12 p-0 col-md-12">
+									<div class="form-group mt-3"> 
+										<label class="font-weight-bold">Write other reason</label>
+										<input type="email" class="form-control" placeholder="Enter email address">
+									</div>
+								</div>					
+
+							</form>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Block account</button>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				<!--deactivate account modal-->
+				<!--list of my guardians-->
+					<div class="modal fade" id="MyGuardians" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					  <div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<h5 class="modal-title" id="MyGuardians_title">My list Of blinkers</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <span aria-hidden="true">&times;</span>
+							</button>
+						  </div>
+						  <div class="modal-body">
+							  <div class="listview listview--hover">
+									<a class="listview__item">
+										<img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="">
+
+										<div class="listview__content">
+											<div class="listview__heading">Jeannette Lawson</div>
+											<p>Card is active</p>
+										</div>
+									</a>
+
+									<a class="listview__item">
+										<img src="demo/img/profile-pics/2.jpg" class="listview__img" alt="">
+
+										<div class="listview__content">
+											<div class="listview__heading">David Villa Jacobs</div>
+											<p>Card is pending</p>
+										</div>
+									</a>
+
+									<a class="listview__item">
+										<img src="demo/img/profile-pics/3.jpg" class="listview__img" alt="">
+
+										<div class="listview__content">
+											<div class="listview__heading">Candice Barnes</div>
+											<p>Has no funds</p>
+										</div>
+									</a>
+
+									<a class="listview__item">
+										<img src="demo/img/profile-pics/4.jpg" class="listview__img" alt="">
+
+										<div class="listview__content">
+											<div class="listview__heading">Darla Mckinney</div>
+											<p>Waiting for card to be processed</p>
+										</div>
+									</a>
+
+									<a class="listview__item">
+										<img src="demo/img/profile-pics/5.jpg" class="listview__img" alt="">
+
+										<div class="listview__content">
+											<div class="listview__heading">Rudolph Perez</div>
+											<p>Card deactivated</p>
+										</div>
+									</a>
+							</div>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				<!--list of my guardians-->
                 <header class="content__title px-0 border-0">
 				 	<div class="row">
 						<div class="col-md-8 col-sm-12">
 							<span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">New guardian</h1>
+							 <h1 class="text-capitalize stream_name m-0">Ongoing Loan applications</h1>
 							</span>
 							<div class="">
 								<ol class="breadcrumb border-0">
 									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item"><a href="parent.html">Guardians</a></li>
-									<li class="breadcrumb-item active">New Guardian</li>
+									<li class="breadcrumb-item active">Pending loan applications</li>
 								</ol>
 							</div>
 						</div>
-						<div class="col-4 col-sm-12 col-md-4">
-							<div class="section-header">
-								<a href="#" class="btn btn-sm btn-primary" title="">Upload multiple Blinkers records</a>
-							</div>					
-						</div>						
+											
 					</div>
 				</header>
 				
 				<div class="row">
-					
-					<div class="col-xl-4 col-lg-4 col-md-5 col-sm-12">
-						<div class="account-info">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Guardian registration directions</h4>
-									<h6 class="card-subtitle">Fill in the form, the fields with a <strong class="text-danger">*</strong> are mandatory fields</h6>
-									<hr>
-									<div class="form-img">
-										<img class="img" src="demo/img/form-svgs/gurdian.svg">
-									</div>
-									
-									<p>
-										Once you are through with filling in the form, a message with the android application link will be sent to the guardian for downloading.  
-									</p>
-									<div class="notes">
-										<p>
-										It is also important to note that a <strong>Blinker (Student)</strong> can only be fully registered once their respectivve guardian is already registered with the systme, therefoire it is important you register the gurdian first bfore you register the student.
-									</p>
-									</div>
+					<div class="col-12 p-0">
+						<div class="card table-custom-bg">
+							<div class="card-body">
+								<div class="table-responsive">
+									<table class="table table-hover table-custom spacing8" id="data-table">
+										<thead>
+											<tr> 
+												<th>#</th>
+												<th>Full Names</th>
+												<th>Application Date</th>
+												<th>Application stage</th>
+												<th>Amount requesting</th>
+												<th>Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													13132132
+												</td>
+												<td class="text-capitalize">Kelvin njjuguna</td>
+												<td>20 Apr 2020</td>
+												<td><span>initiation</span></td>
+												<td class="text-uppercase">KES 523,263</td>
+												<td><a href="#">View application</a></td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
 							</div>
 						</div>
 					</div>
-						
-					<div class="col-xl-8 col-lg-8 col-md-7 col-sm-12">
-						<div class=create-form>
-							<div class="col-12 p-0">
-								<div class="card">
-									<div class="card-body">
-										<h4 class="card-title">Guardians registration Form</h4>
-										<h6 class="card-subtitle">Fill in The form bellow coorrectly so as to have the Guardian registered</h6>
-										<hr>
-										<div class="row clearfix">
-											<div class="col-lg-3 col-md-12">
-												<div class="form-group">                                                
-													<div class="form-group">
-														<label>Title  <strong class="text-danger">*</strong></label>
-													<select class="form-control">
-														<option value="">-- Select title --</option>
-														<option value="Mr">Mr</option>
-														<option value="Ms">Ms</option>
-														<option value="Mrs">Mrs</option>
-													</select>
-												</div>
-												</div>
-											</div>
-											<div class="col-lg-4 col-md-12">
-												<div class="form-group"> 
-													<label>Guardian's First name  <strong class="text-danger">*</strong></label>
-													<input type="text" class="form-control" placeholder="Enter first name">
-												</div>
-											</div>
-											<div class="col-lg-5 col-md-12">
-												<div class="form-group"> 
-													<label>Other Name(s)  <strong class="text-danger">*</strong></label>
-													<input type="text" class="form-control" placeholder="Guardians other name(s)">
-												</div>
-											</div>
-											<div class="col-lg-4 col-md-12">
-												<div class="form-group">
-													<label>Guardian's Gender <strong class="text-danger">*</strong></label>
-													<select class="form-control">
-														<option value="">-- Select Gander --</option>
-														<option value="Male">Male</option>
-														<option value="Female">Female</option>
-													</select>
-												</div>
-											</div>
-											<div class="col-lg-4 col-md-12">
-												<div class="form-group"> 
-													<label>Phone Number <strong class="text-danger">*</strong></label>
-													<input type="text" class="form-control" placeholder="Enter guardians phone number">
-												</div>
-											</div>
-											<div class="col-lg-4 col-md-12">
-												<div class="form-group"> 
-													<label>Guardians Email address  <strong class="text-danger">*</strong></label>
-													<input type="email" class="form-control" placeholder="Enter email address">
-												</div>
-											</div>
-											
-											<div class="col-lg-4 col-md-12">
-												<div class="form-group"> 
-													<label>Area of residence  <strong class="text-danger">*</strong></label>
-													<input type="email" class="form-control" placeholder="Enter area of recsidence">
-												</div>
-											</div>
-											<div class="col-lg-4 col-md-12">
-												<div class="form-group"> 
-													<label>Postal address </label>
-													<input type="email" class="form-control" placeholder="Enter postal address">
-												</div>
-											</div>
-											
-											
-											<div class="col-12">
-												<button class="btn btn-primary">Add guardian</button>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>					
-					</div>
 				</div>
-						
                 <footer class="footer hidden-xs-down">
                     <p>Powered by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>
                 </footer>
@@ -635,7 +658,8 @@
 		
 		<script src="js/highcharts/highcharts-more.js"></script>
 		<!--owl corousel-->
-		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script><!-- App functions and actions -->
+		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
+		<!-- App functions and actions -->
 		<script src="js/wow.js"></script>
         <script src="js/app.min.js"></script>
         <script src="js/main.js"></script>		

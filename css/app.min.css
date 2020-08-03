@@ -14572,7 +14572,12 @@ td .badge{
 .form-brn .table thead th{
     border: 2px solid #0321393b;
 }
-.form-attach .img-container{
+.loan-docs h5{
+    font-size: 12px;
+    text-transform: capitalize;
+    margin-top: 1rem;
+}
+.form-attach .img-container, .loan-docs label>div{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14935,4 +14940,10 @@ th label .error{
   .attachments-container strong a{
       display: flex;
       align-items: center;
+  }
+  .loan-docs img{
+      height: 40px;
+  }
+  .font-light{
+      font-weight: 300 !important;
   }

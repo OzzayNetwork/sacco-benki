@@ -405,262 +405,172 @@
             
 
             <section class="content custom-table-container">
-				<!--deactivate account-->
-					<div class="modal fade" id="deactivate-blinker" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-					  <div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-						  <div class="modal-header">
-							<h5 class="modal-title" id="deactivate-blinker-title">Block guardian account</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							  <span aria-hidden="true">&times;</span>
-							</button>
-						  </div>
-						  <div class="modal-body">
-							<form>
-								<h6 class="font-weight-bold mb-3">Whats the reason for blocking this account?</h6>
-								<div class="radio">
-									<input type="radio" name="reason" id="lost">
-									<label class="radio__label" for="lost">They are no longer a gurdian at the school</label>
-								</div>
-								<div class="radio">
-									<input type="radio" name="reason" id="defective">
-									<label class="radio__label" for="defective">some other reason</label>
-								</div>
-								<div class="col-lg-12 p-0 col-md-12">
-									<div class="form-group mt-3"> 
-										<label class="font-weight-bold">Write other reason</label>
-										<input type="email" class="form-control" placeholder="Enter email address">
-									</div>
-								</div>					
-
-							</form>
-						  </div>
-						  <div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-primary">Block account</button>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				<!--deactivate account modal-->
-				<!--list of my guardians-->
-					<div class="modal fade" id="MyGuardians" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-					  <div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-						  <div class="modal-header">
-							<h5 class="modal-title" id="MyGuardians_title">My list Of blinkers</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							  <span aria-hidden="true">&times;</span>
-							</button>
-						  </div>
-						  <div class="modal-body">
-							  <div class="listview listview--hover">
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">Jeannette Lawson</div>
-											<p>Card is active</p>
-										</div>
-									</a>
-
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/2.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">David Villa Jacobs</div>
-											<p>Card is pending</p>
-										</div>
-									</a>
-
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/3.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">Candice Barnes</div>
-											<p>Has no funds</p>
-										</div>
-									</a>
-
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/4.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">Darla Mckinney</div>
-											<p>Waiting for card to be processed</p>
-										</div>
-									</a>
-
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/5.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">Rudolph Perez</div>
-											<p>Card deactivated</p>
-										</div>
-									</a>
-							</div>
-						  </div>
-						  <div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				<!--list of my guardians-->
                 <header class="content__title px-0 border-0">
 				 	<div class="row">
 						<div class="col-md-8 col-sm-12">
 							<span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">Registered Blinkers (Students)</h1>
+							 <h1 class="text-capitalize stream_name m-0">Loan Application</h1>
 							</span>
 							<div class="">
 								<ol class="breadcrumb border-0">
 									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item active">Blinkers</li>
+									<li class="breadcrumb-item active">Loan Application form</li>
 								</ol>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-12">
-							<div class="section-header">
-								<a href="#" class="btn btn-sm btn-secondary" title="">Upload Student's Excel</a>
-								<a href="new-student.html" class="btn btn-sm btn-primary ml-3" title="">New Blinker</a>
-							</div>
-							
-						</div>						
+											
 					</div>
 				</header>
 				
 				<div class="row">
-					<div class="col-12 p-0">
-						<div class="card table-custom-bg">
-							<div class="card-body">
-								<div class="table-responsive">
-									<table class="table table-hover table-custom spacing8" id="data-table">
-										<thead>
-											<tr> 
-												<th></th>
-												<th>Blinker Particulars</th>
-												<th>Recent Transaction</th>
-												<th>Assigned To</th>
-												<th>Status</th>
-												<th>Has card</th>
-												<th>Actions</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td class="w60">
-
-													<span  title="" href="#"><img class="avatar-img" src="demo/img/profile-pics/3.jpg" alt=""></span>												
-												</td>
-												<td class="the_blinkers">
-													<p class="mb-0"><a href="student-profile.html" class="font-weight-bold">Scott Ortega</a></p>
-													<a href="tel:070235689" title="">ACC# 46589</a>
-												</td>
-												<td>
-													<span>22 May 2020.</span>
-												</td>
-												<td><strong class="my_guardians" data-toggle="modal" data-target="#MyGuardians">3 Gurdians</strong></td>
-												<td><span class="badge badge-soft-success">Active</span></td>
-												<td><span class="badge badge-soft-success text-uppercase">YES</span></td>
-												<td>
-													<span class="icon_pencil-edit icon" title="Edit shop details"></span>
-													
-													<button class="btn btn-danger btn--icon-text ml-2 deactivate-blinker" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-blinker"><i class="zmdi zmdi-block"></i> Block Account</button>
-												</td>
-											</tr>
-											<tr>
-												<td class="w60">
-													<span title="" href="#"><div class="avatar-char">SO</div></span>
-												</td>
-												<td class="the_blinkers">
-													<p class="mb-0"><a href="student-profile.html" class="font-weight-bold">Scott Ortega</a></p>
-													<a href="tel:070235689" title="">ACC# 132313</a>
-												</td>
-												<td>
-													<span>3 May 2020</span>
-												</td>
-												<td><strong class="my_guardians" data-toggle="modal" data-target="#MyGuardians">Mr Kelvin Doe</strong></td>
-												<td><span class="badge badge-soft-danger">Inctive</span></td>
-												<td><span class="badge badge-soft-danger text-uppercase">no</span></td>
-												<td>
-													<button class="btn btn-danger mr-3" title="Gurdian will get account activation request">Prompt for activation</button>
-													<button class="btn btn-warning" title="Submit students details for Card processing">Process Card</button>
-													<span class="icon_pencil-edit icon" title="Edit shop details"></span>
-													<button class="btn btn-danger btn--icon-text ml-2 deactivate-blinker" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-blinker"><i class="zmdi zmdi-block"></i> Block Account</button>
-												</td>
-											</tr>
-											<tr>
-												<td class="w60">
-													<span title="" href="#"><div class="avatar-char">SO</div></span>
-												</td>
-												<td class="the_blinkers">
-													<p class="mb-0"><a href="student-profile.html" class="font-weight-bold">Scott Ortega</a></p>
-													<a href="tel:070235689" title="">ACC# 463366</a>
-												</td>                                    
-												<td>
-													<span>3 May 2020</span>
-												</td>
-												<td><strong class="my_guardians" data-toggle="modal" data-target="#MyGuardians">Mr Kelvin Doe</strong></td>
-												<td><span class="badge badge-soft-warning">Insufficient Funds</span></td>
-												<td><span class="badge badge-soft-warning text-uppercase">processing</span></td>
-												<td>
-													<button class="btn btn-info mr-3" title="Gurdian will get a funds deposit request">Request for funds</button>
-													<button class="btn btn-success" title="issue student with card">Issue Card</button>
-													<span class="icon_pencil-edit icon" title="Edit shop details"></span>
-													<button class="btn btn-danger btn--icon-text ml-2 deactivate-blinker" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-blinker"><i class="zmdi zmdi-block"></i> Block Account</button>
-												</td>
-											</tr>
-											<tr>
-												<td class="w60">
-													<span title="" href="#"><div class="avatar-char">SO</div></span>
-												</td>
-												<td class="the_blinkers">
-													<p class="mb-0"><a href="student-profile.html" class="font-weight-bold">Scott Ortega</a></p>
-													<a href="tel:070235689" title="">ACC# 465456</a>
-												</td>
-												<td>
-													<span>2 May 2020</span>
-												</td>
-												<td><strong class="my_guardians" data-toggle="modal" data-target="#MyGuardians">15 Guardian(s)</strong></td>
-												<td><span class="badge badge-soft-warning">Insufficient Funds</span></td>
-												<td><span class="badge badge-soft-warning text-uppercase">processing</span></td>
-												<td>
-													<button class="btn btn-info mr-3" title="Gurdian will get a funds deposit request">Request for funds</button>
-													<button class="btn btn-success" title="Issue stuudent with card">Issue card</button>
-													<span class="icon_pencil-edit icon" title="Edit shop details"></span>
-													<button class="btn btn-danger btn--icon-text ml-2 deactivate-blinker" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-blinker"><i class="zmdi zmdi-block"></i> Block Account</button>
-												</td>
-											</tr>
-											<tr>
-												<td class="w60">
-													<span title="" href="#"><div class="avatar-char">SO</div></span>
-												</td>
-												<td class="the_blinkers">
-													<p class="mb-0"><a href="student-profile.html" class="font-weight-bold">Scott Ortega</a></p>
-													<a href="tel:070235689" title="">ACC# 5646</a>
-												</td>
-												<td>
-													<span>1 May 2020 </span>
-												</td>
-												<td class="my_guardians" data-toggle="modal" data-target="#MyGuardians">2 Guardians</td>
-												<td><span class="badge badge-soft-warning">Insufficient Funds</span></td>
-												<td><span class="badge badge-soft-warning text-uppercase">processing</span></td>
-												<td>
-													<button class="btn btn-info mr-3" title="Gurdian will get a funds deposit request">Request for funds</button>
-													<button class="btn btn-success" title="Issue student with card">Issue Card</button>
-													<span class="icon_pencil-edit icon" title="Edit shop details"></span>
-													<button class="btn btn-danger btn--icon-text ml-2 deactivate-blinker" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-blinker"><i class="zmdi zmdi-block"></i> Block Account</button>
-												</td>
-											</tr>
-										</tbody>
-									</table>
+					
+					<div class="col-xl-4 col-lg-4 col-md-5 col-sm-12">
+						<div class="account-info">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Loan application</h4>
+									<h6 class="card-subtitle">Fill in the form, the fields with a <strong class="text-danger">*</strong> are mandatory fields</h6>
+									<hr>
+									<div class="form-img">
+										<img class="img" src="demo/img/form-svgs/loan.svg">
+									</div>
+									
+									<p>
+										Once you are through with the submission of this application, a loan application procedure will be updated for the applicant. 
+									</p>
+									<div class="notes">
+										<p>
+                                            If the applicant is employed, they must accompany the application with an introduction letter and their payslip covering the past three months or more
+									    </p>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+						
+					<div class="col-xl-8 col-lg-8 col-md-7 col-sm-12">
+						<div class=create-form>
+							<div class="col-12 p-0">
+								<div class="card">
+									<div class="card-body">
+										<h4 class="card-title">Loan application form</h4>
+										<h6 class="card-subtitle">Fill in the form bellow</h6>
+										<hr>
+										<div class="row clearfix">
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group"> 
+                                                            <label>Member's Number<strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control" placeholder="Enter Membership Number" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <div class="form-group">                                                
+                                                            <div class="form-group">
+                                                                <label>Loan type<strong class="text-danger">*</strong></label>
+                                                            <select class="form-control">
+                                                                <option value="0">-- Select loan Type --</option>
+                                                                <option value="Mr">Loan type 1</option>
+                                                                <option value="Ms">Loan type 2</option>
+                                                                <option value="Mrs">loan type 3</option>
+                                                                <option value="Mrs">.../option>
+                                                            </select>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label><strong>Applicant Is employed</strong></label>
+                                                            <br>
+                                                            <div class="toggle-switch">
+                                                                <input type="checkbox" class="toggle-switch__checkbox" checked>
+                                                                <i class="toggle-switch__helper"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                   
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="loan-reason">Reason for applying for the loan</label>
+                                                    <textarea placeholder="Enter reason" class="form-control" id="loan-reason" rows="9"></textarea>
+                                                  </div>
+                                            </div>
+
+                                            <br>
+                                            <div class="col-12">
+                                             <h5>Supporting documents</h5>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <div class="col-12">
+                                                <div class="row loan-docs">
+                                                    <label class="col-lg-3 col-sm-12 col-md-6" for="intro-letter">
+                                                        <input type="file" id="inro-letter" class="d-none"> 
+                                                        <div class="intro-letter border-danger" title="attach attachment letter from employer">
+                                                            <span><img src="demo/img/attachment-docs/contract.svg"></span>
+                                                            <h5>Introduction letter</h5>
+                                                            <small></small>
+                                                        </div>
+                                                    </label>
+
+                                                    <label class="col-lg-3 col-sm-12 col-md-6" for="payslip">
+                                                        <input type="file" id="payslip" class="d-none">
+                                                        <div class="pay-slip border-danger" title="attach the payslip (at least 3 months ago)">
+                                                            <span><img src="demo/img/attachment-docs/email.svg"></span>
+                                                            <h5>Payslip</h5>
+                                                            <small>At least 3 Months Ago</small>
+                                                        </div>
+                                                    </label>
+
+                                                    <label class="col-lg-3 col-sm-12 col-md-6 " for="bank-statement">
+                                                        <input type="file" id="bank-statement" class="d-none">
+                                                        <div class="bank-state border-danger" title="Attach bank statement(s)(At least 23 months ago)">
+                                                            <span><img src="demo/img/attachment-docs/bank.svg"></span>
+                                                            <h5>Bank statement</h5>
+                                                            <small>At least 3 Months Ago</small>
+                                                        </div>
+                                                    </label>
+
+                                                    <label for="mpesa-state" class="col-lg-3 col-sm-12 col-md-6 " title="Select mpesa statement (at least 3 months ago)">
+                                                        <input type="file" id="mpesa-state" class="d-none">
+                                                        <div class="mpesa-state border-danger">
+                                                            <span><img src="demo/img/attachment-docs/mpesa.svg"></span>
+                                                            <h5>Mpesa statement</h5>
+                                                            <small>At least 3 Months Ago</small>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="form-group"> 
+                                                    <label>Amount applying for<strong class="text-danger">*</strong></label>
+                                                    <input type="text" class="form-control font-30 px-4 font-light py-4" placeholder="Enter amount applying for" required>
+                                                </div>
+                                            </div>
+
+                                           
+
+                                           
+											
+											<div class="col-12">
+												<button class="btn btn-primary btn--icon-text"> Submit Application <i class="ml-3 zmdi zmdi-mail-reply-all flipx"></i></button>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>					
+					</div>
 				</div>
+						
                 <footer class="footer hidden-xs-down">
                     <p>Powered by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>
                 </footer>
@@ -760,8 +670,7 @@
 		
 		<script src="js/highcharts/highcharts-more.js"></script>
 		<!--owl corousel-->
-		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
-		<!-- App functions and actions -->
+		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script><!-- App functions and actions -->
 		<script src="js/wow.js"></script>
         <script src="js/app.min.js"></script>
         <script src="js/main.js"></script>		
