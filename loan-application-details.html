@@ -85,7 +85,7 @@
 
                                 <div class="listview__scroll scrollbar-inner">
                                     <a href="new-parent.html" class="listview__item">
-                                        <img src="demo/img/some-icons/parent.jpg" class="listview__img" alt="">
+                                        <img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="">
                                         <div class="listview__content">
                                             <div class="listview__heading">Parents (Gurdian) Account</div>
                                             <p>Create a new parent's account</p>
@@ -93,7 +93,7 @@
                                     </a>
 
                                     <a href="new-student.html" class="listview__item">
-                                        <img src="demo/img/some-icons/student.jpg" class="listview__img" alt="">
+                                        <img src="demo/img/profile-pics/2.jpg" class="listview__img" alt="">
 
                                         <div class="listview__content">
                                             <div class="listview__heading">Student's Account (Blinker)</div>
@@ -102,7 +102,7 @@
                                     </a>
 
                                     <a href="new-shop.html" class="listview__item">
-                                        <img src="demo/img/some-icons/shop.jpg" class="listview__img" alt="">
+                                        <img src="demo/img/profile-pics/3.jpg" class="listview__img" alt="">
 
                                         <div class="listview__content">
                                             <div class="listview__heading">Tack Shop</div>
@@ -210,7 +210,7 @@
                         </div>
                     </li>
                     <li class="" >
-                        <a href="#" data-ma-action="aside-open" data-ma-target=".chat" data-toggle="tooltip" data-original-title="Associate Blinker Requests" class="top-nav__notify">
+                        <a href="new-parent.html" data-ma-action="aside-open" data-ma-target=".chat" data-toggle="tooltip" data-original-title="Associate Blinker Requests" class="top-nav__notify">
                             <i class="zmdi zmdi-accounts-add"></i>
                         </a>
                     </li>
@@ -405,164 +405,228 @@
             
 
             <section class="content custom-table-container">
-				<!--deactivate account-->
-					<div class="modal fade" id="deactivate-blinker" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-					  <div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-						  <div class="modal-header">
-							<h5 class="modal-title" id="deactivate-blinker-title">Block guardian account</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							  <span aria-hidden="true">&times;</span>
-							</button>
-						  </div>
-						  <div class="modal-body">
-							<form>
-								<h6 class="font-weight-bold mb-3">Whats the reason for blocking this account?</h6>
-								<div class="radio">
-									<input type="radio" name="reason" id="lost">
-									<label class="radio__label" for="lost">They are no longer a gurdian at the school</label>
-								</div>
-								<div class="radio">
-									<input type="radio" name="reason" id="defective">
-									<label class="radio__label" for="defective">some other reason</label>
-								</div>
-								<div class="col-lg-12 p-0 col-md-12">
-									<div class="form-group mt-3"> 
-										<label class="font-weight-bold">Write other reason</label>
-										<input type="email" class="form-control" placeholder="Enter email address">
-									</div>
-								</div>					
-
-							</form>
-						  </div>
-						  <div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-primary">Block account</button>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				<!--deactivate account modal-->
-				<!--list of my guardians-->
-					<div class="modal fade" id="MyGuardians" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-					  <div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-						  <div class="modal-header">
-							<h5 class="modal-title" id="MyGuardians_title">My list Of blinkers</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							  <span aria-hidden="true">&times;</span>
-							</button>
-						  </div>
-						  <div class="modal-body">
-							  <div class="listview listview--hover">
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">Jeannette Lawson</div>
-											<p>Card is active</p>
-										</div>
-									</a>
-
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/2.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">David Villa Jacobs</div>
-											<p>Card is pending</p>
-										</div>
-									</a>
-
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/3.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">Candice Barnes</div>
-											<p>Has no funds</p>
-										</div>
-									</a>
-
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/4.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">Darla Mckinney</div>
-											<p>Waiting for card to be processed</p>
-										</div>
-									</a>
-
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/5.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">Rudolph Perez</div>
-											<p>Card deactivated</p>
-										</div>
-									</a>
-							</div>
-						  </div>
-						  <div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				<!--list of my guardians-->
                 <header class="content__title px-0 border-0">
 				 	<div class="row">
-						<div class="col-md-8 col-sm-12">
+						<div class="col-md-12 col-sm-12">
 							<span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">Ongoing Loan applications</h1>
+							 <h1 class="text-capitalize stream_name m-0">Loan application details</h1>
 							</span>
 							<div class="">
 								<ol class="breadcrumb border-0">
 									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item active">Pending loan applications</li>
+									<li class="breadcrumb-item"><a href="ongoing-loans.html">Ongoing Applications</a></li>
+									<li class="breadcrumb-item active">loan Application for Kelvin Njuguna</li>
 								</ol>
 							</div>
 						</div>
-											
+												
 					</div>
 				</header>
 				
-				<div class="row">
-					<div class="col-12 p-0">
-						<div class="card table-custom-bg">
-							<div class="card-body">
-								<div class="table-responsive">
-									<table class="table table-hover table-custom spacing8" id="data-table">
-										<thead>
-											<tr> 
-												<th>#</th>
-												<th>Full Names</th>
-												<th>Application Date</th>
-												<th>Submitted by</th>
-												<th>Application stage</th>
-												<th>Amount requesting</th>
-												<th>Actions</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>
-													13132132
-												</td>
-												<td class="text-capitalize"><a href="member-profile.html">Kelvin njjuguna</a></td>
-												<td>20 Apr 2020</td>
-												<td class="text-capitalize">Alex wanjala</td>
-												<td><span>initiation</span></td>
-												<td class="text-uppercase">KES 523,263</td>
-												<td><a href="loan-application-details.html" class="btn btn-primary">View application</a></td>
-											</tr>
-										</tbody>
-									</table>
+				<div class="row with-custom-header">					
+					<div class="col-sm-12 col-md-8">
+						<!-- application details start -->
+						<div class="row">
+							<div class="col-12">
+								<div class="card calc-18">
+									<div class="card-body employment-body">
+										<div class="contact-header">
+											<h4>Application Progress</h4>
+											<hr class="mb-0 mt-1">
+                                        </div>
+                                        
+                                        <div class="application-progress">
+                                            <div class="root posi">
+                                                 <div class="progresss-container">
+                                                      <ul class="progressbar">
+
+
+                                                        <small class="progress-date">3rd Jun 2020</small>
+                                                        <li class="active">Initiation
+                                                            <br><small>Initiated By Alex Wanjala</small>
+                                                        </li>
+
+
+                                                        <small class="progress-date">13Th Jun 2020</small>
+                                                        <li class="active">Loan Appraisal
+                                                            <br>
+                                                            <small>Approved by Edwin Kiploman</small>
+                                                        </li>
+
+                                                        <small class="progress-date d-none">3rd Jun 2020</small>
+                                                        <li>Loan Approval
+                                                            <br>
+                                                            <small>Pending</small>
+                                                        </li>                                                       
+                                                      </ul>
+                                                  </div>
+                                              </div>
+                                        </div>
+
+                                        <div class="contact-header">
+                                            <h4>Loan Application details</h4>
+                                            <p>Have a closr look at the details pertaining to this application before taking any action.</p>
+											<hr class="mb-0 mt-1">
+                                        </div>
+
+										<small class="text-muted-blue bold bold">Loan type</small>
+										<div class="d-flex justify-content-between"><p><strong>Loan type name</strong></p></div>  
+										<hr> 
+										<div class="row">
+											<div class="col-md- col-sm-12">
+												<small class="text-muted-blue bold bold">Reason for applying for the loan</small>
+												<div class="d-flex justify-content-between"><p><strong>To pay a very urgent and emergency fee for my son's Space camp graduation at Venezuela</strong></p></div>  
+												<hr> 
+                                            </div>
+                                            
+                                            <div class="col-12 mt-4">
+                                                <h4>Application Attachments</h4>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <div class="col-12">
+                                                <div class="row loan-docs">
+                                                    <label class="col-lg-3 col-sm-12 col-md-6" for="intro-letter">
+                                                        
+                                                        <div class="intro-letter " title="attach attachment letter from employer">
+                                                            <span><img src="demo/img/attachment-docs/contract.svg"></span>
+                                                            <h5>Introduction letter</h5>
+                                                            <small></small>
+                                                        </div>
+                                                    </label>
+
+                                                    <label class="col-lg-3 col-sm-12 col-md-6" for="payslip">
+                                                        
+                                                        <div class="pay-slip " title="attach the payslip (at least 3 months ago)">
+                                                            <span><img src="demo/img/attachment-docs/email.svg"></span>
+                                                            <h5>Payslip</h5>
+                                                            <small>At least 3 Months Ago</small>
+                                                        </div>
+                                                    </label>
+
+                                                    <label class="col-lg-3 col-sm-12 col-md-6 " for="bank-statement">
+                                                       
+                                                        <div class="bank-state " title="Attach bank statement(s)(At least 23 months ago)">
+                                                            <span><img src="demo/img/attachment-docs/bank.svg"></span>
+                                                            <h5>Bank statement</h5>
+                                                            <small>At least 3 Months Ago</small>
+                                                        </div>
+                                                    </label>
+
+                                                    <label for="mpesa-state" class="col-lg-3 col-sm-12 col-md-6 " title="Select mpesa statement (at least 3 months ago)">
+                                                       
+                                                        <div class="mpesa-state ">
+                                                            <span><img src="demo/img/attachment-docs/mpesa.svg"></span>
+                                                            <h5>Mpesa statement</h5>
+                                                            <small>At least 3 Months Ago</small>
+                                                        </div>
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                            <br>
+                                            <br>
+											
+
+											<div class="col-md-12 col-sm-12 mt-4">
+                                                <h5 class="text-muted-blue bold bold mb-1">Amount applying for</h5>
+												
+												<div class="d-flex justify-content-between font-36 font-weight-light"><p>KES 2,258,000</p></div>  
+												
+                                            </div>
+                                            
+                                            <div class="col-md-12 col-sm-12 mt-4">
+                                                <h5 class="text-muted-blue bold bold mb-1">Actions</h5>	
+                                                <p>Select any of the following buttons based on your observation on this particular applications.</p>									
+                                                
+                                                <button class="btn btn-danger btn--icon-text">Decline application <i class="zmdi zmdi-close"></i></button>
+                                                <button class="btn btn-warning btn--icon-text mx-4">Send for revaluation <i class="zmdi zmdi-refresh-sync"></i></button>
+                                                <button class="btn btn-success btn--icon-text">Approve for next stage <i class="ml-3 zmdi zmdi-mail-reply-all flipx"></i></button>
+											</div>
+
+										</div>										
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- application details end -->
+
+						
+                    </div>
+                    
+                    <div class="col-sm-12 col-md-4">
+						<div class="account-info">
+							
+							<div class="card">
+								<div class="card-body">
+									<div class="contact-header">
+										<h4>Applicant's Details</h4>
+										<hr class="mb-0 mt-1">
+									</div>
+									<small class="text-muted-blue bold bold">Full Names & Date of Birth</small>
+									<div class="d-flex justify-content-between"><p><strong>Kelvin Njuguna Ndungu</strong></p> <p class="ml-3">04 Nov 1994</p></div>  
+									<hr> 
+									<small class="text-muted-blue bold bold">Marital status & Gender</small>
+									
+									<div class="d-flex justify-content-between"><p><strong>Very Single</strong></p><p>Male</p></div>                        
+									<hr>
+									<small class="text-muted-blue bold">Nationality</small>
+									<p>Holy See (Vatican City State)</p>
+									<hr>
+									<small class="text-muted-blue bold">KRA PIN</small>
+									<p>AJHU455613</p>
+									<hr>
+									<small class="text-muted-blue bold">Registered on</small>
+									<p>22 Feb 2020 by Alex Wanjala</p>
+									
+									
+									<div class="contact-header mt-5">
+										<h4>Contact details</h4>
+										<hr class="mb-0 mt-1">
+									</div>
+
+                                    <small class="text-muted-blue bold">Mobile phone number</small>
+									<p><a href="tel:0704549859">0704549859</a></p>
+									<hr>
+									 <small class="text-muted-blue bold">Email address</small>
+									<p><a href="mailto:<nowiki> agentavery@sample.com">email@email.com</a></p>
+										<hr>
+									<small class="text-muted-blue bold">Postal Address</small>
+									<p>PO BOX 1234-00100 Nairobi, Kenya</p>
+									
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="contact-header attachments-container">
+											<h4>Personal documents</h4>
+											<hr>
+											
+											<div><p><strong class="d-flex align-items-center">1.<a href=""><i class="pe-7s-id mx-2"></i>National Id card</a></strong></p></div>  
+											 
+											<div><p><strong class="d-flex align-items-center">2.<a href=""><i class="pe-7s-note2 mx-2"></i>KRA Pin document</a></strong></p></div>  
+										
+											<div><p><strong class="d-flex align-items-center">3.<a href=""><i class="pe-7s-camera mx-2"></i>Photo image</a></strong></p></div>  
+											
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+						
+					
+						
+					
+				
                 <footer class="footer hidden-xs-down">
-                    <p>Powered by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>
+                    <p>Powered by RevenueSure</p>
                 </footer>
             </section>
         </main>
@@ -660,8 +724,7 @@
 		
 		<script src="js/highcharts/highcharts-more.js"></script>
 		<!--owl corousel-->
-		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
-		<!-- App functions and actions -->
+		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script><!-- App functions and actions -->
 		<script src="js/wow.js"></script>
         <script src="js/app.min.js"></script>
         <script src="js/main.js"></script>		

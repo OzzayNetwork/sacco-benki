@@ -14850,7 +14850,7 @@ th label .error{
   }
   .progressbar li{
     float: left;
-      width: 20%;
+      width: 33.33333%;
       position: relative;
       text-align: center;
       list-style: none;
@@ -14916,11 +14916,14 @@ th label .error{
   color: white
   }
   .progresss-container{
-      background: #f3f3f3;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      /* color: black; */
-      padding-top: 1rem;
+    background: #f3f3f3;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    /* color: black; */
+    padding-top: 1rem;
+    padding: 2rem;
+    overflow: hidden;
+    padding-top: 3rem;
   }
 
   .text-muted-blue{
@@ -14947,3 +14950,23 @@ th label .error{
   .font-light{
       font-weight: 300 !important;
   }
+  .root {
+    position: relative;
+    width: 100%;
+    height: 175px;
+}
+.progress-date{
+    position: absolute;
+    text-align: center;
+    top: 15px;
+    width: 29%;
+    font-weight: bold;
+    color: green;
+}
+.font-36{
+    font-size: 36px !important;
+}
+.calc-18{
+    height: calc(100% - -18px);
+}
+
