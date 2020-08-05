@@ -4320,7 +4320,7 @@ background-position:0 0
     height: 5px;
     font-size: .75rem;
     background-color: #e9ecef;
-    border-radius: 2px
+    border-radius: 2px;
 }
 .media, .progress-bar {
     display: -webkit-box;
@@ -13600,8 +13600,9 @@ ul.jqtree-tree ul.jqtree_common {
 	top: 0;
     left: 0;
     background:rgba(242,107,44,0.82);
-	background:linear-gradient(to top,#f26b2cd9, #000000a1);
-	z-index: -1;
+	background:linear-gradient(to top,rgb(40 43 47 / 91%), #000000e0);
+    z-index: -1;
+    border-right: 2px solid #FF5722;
 	
 }
 .user__email {
@@ -13659,7 +13660,8 @@ ul.jqtree-tree ul.jqtree_common {
     left: 0;
     background: rgba(242,107,44,0.95);
 	background:linear-gradient(to left,#f26b2c, #000000f0);
-	z-index: -1;
+    z-index: -1;
+    background: rgb(16 16 16);
 	
 }
 
@@ -15017,4 +15019,32 @@ th label .error{
 .badge-round{
     border-radius: 30px;
 }
+.dark-body .border-bottom{
+    border-color: rgb(165, 168, 173);
+}
 
+.mon-container strong {
+    font-size: 14px;
+}
+
+.mon-container small {
+    font-size: 12px;
+}
+
+
+.icon-in-bg {
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.mon-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
