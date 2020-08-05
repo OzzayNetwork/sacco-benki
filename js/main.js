@@ -208,6 +208,85 @@ $(window).on('load', function(){
 	
 	
 });
+//=====================================================================================
+//****************** Disbursement functions ******************************/
+//=====================================================================================
+
+//selecting mpesa funtion
+$('.lab-mpesa-opt').on('click', function(){
+showMpesaSendLoan();
+});
+function showMpesaSendLoan(){
+	$('.sendToMpesaOptions').removeClass('d-none').siblings('.send-options').addClass('d-none');
+	console.log('mpesa');
+}
+
+//selecting send to account
+$('.sendMethods .lab-acc').on('click', function(){
+	showAccountSendLoan();
+})
+function showAccountSendLoan(){
+	$('.sendToAccountOptions').removeClass('d-none').siblings('.send-options').addClass('d-none');
+	console.log('mpesa');
+}
+
+function hideOtherAccountAccounts(){
+	$('.memberAccounts .otherAccountContainer').addClass('d-none');
+	
+}
+$('.memberAccounts .my-account').on('click', function(){
+	hideOtherAccountAccounts();
+})
+
+
+
+function otherAccountAccounts(){
+	$('.memberAccounts .otherAccountContainer').removeClass('d-none');
+	
+}
+$('.memberAccounts .otherAccount-lab').on('click', function(){
+	otherAccountAccounts();	
+});
+
+//selecting split method
+$('.sendMethods .lab-split').on('click', function(){
+	showSplitSendLoan();
+})
+function showSplitSendLoan(){
+	$('.splitOption').removeClass('d-none').siblings('.send-options').addClass('d-none');
+	console.log('mpesa');
+}
+
+function hideOtherAccountSplit(){
+	$('.splitMemberAccounts .otherAccountContainer').addClass('d-none');
+}
+
+function showOtherAccountSplit(){
+	$('.splitMemberAccounts .otherAccountContainer').removeClass('d-none');
+}
+
+$('.splitMemberAccounts .my-account').on('click', function(){
+	hideOtherAccountSplit();
+});
+
+$('.splitMemberAccounts .other-lab').on('click', function(){
+	showOtherAccountSplit();
+});
+
+
+
+
+
+
+
+
+
+
+
+//=====================================================================================
+//****************** Disbursement functions ******************************/
+//=====================================================================================
+
 
 
 //=====================================================================================
@@ -1111,6 +1190,39 @@ $('.gen-info-link').parent().siblings().children().addClass('disabled');
 //=====================================================================================
 //******************membership form ******************************/
 //=====================================================================================
+
+
+//================================================================================
+//*************************** account setup********************************** */
+//================================================================================
+
+
+show_limit();
+$('.acc-form .check-limit').on('click', function(){
+	
+show_limit();
+});
+
+function show_limit(){
+	
+	if($('.acc-form .check-limit').is(':checked')){
+		$('.acc-form .acc-limit').removeClass('d-none');
+		$('.acc-form .acc-limit').children('input').attr('required', '');
+	}
+	else{
+		$('.acc-form .acc-limit').addClass('d-none');
+		$('.acc-form .acc-limit').children('input').removeAttr( "required" );
+	
+	}
+}
+
+
+
+
+//================================================================================
+//*************************** account setup********************************** */
+//================================================================================
+
 
 
 //owl initializer

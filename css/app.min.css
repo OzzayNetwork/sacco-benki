@@ -14850,7 +14850,7 @@ th label .error{
   }
   .progressbar li{
     float: left;
-      width: 33.33333%;
+      width: 25%;
       position: relative;
       text-align: center;
       list-style: none;
@@ -14974,7 +14974,7 @@ th label .error{
     position: absolute;
     text-align: center;
     top: 15px;
-    width: 29%;
+    width: 22%;
     font-weight: bold;
     color: green;
 }
@@ -15013,5 +15013,8 @@ th label .error{
 }
 .radias-0{
     border-radius: 0px !important;
+}
+.badge-round{
+    border-radius: 30px;
 }
 
