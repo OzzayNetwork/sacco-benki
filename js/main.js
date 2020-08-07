@@ -10,6 +10,10 @@ $(window).on('load', function(){
 	$('.this-year').text(moment().format('YYYY'));
 	$('.this-month').text(moment().format('MMMM'));
 	$('.month-abr').text(moment().format('MMM'));
+
+	$('.full-month').text(moment().format('MMMM'));
+	$('.full-year').text(moment().format('YYYY'));
+	$('.today-full').text(moment().format("MMM Do YY"));
 	
 //	custom day time picker
 	$('#daily_date').on('change', function(){
