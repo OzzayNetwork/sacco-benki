@@ -9709,8 +9709,11 @@ button, input, optgroup, select, textarea {
 .navigation-trigger {
     float: left;
     padding: 2rem 2rem 2rem 2.4rem;
-    margin-left: -2rem;
-    cursor: pointer
+    /* margin-left: -2rem; */
+    cursor: pointer;
+    background: black;
+    padding-left: 13px;
+    height: 72px;
 }
 .navigation-trigger.toggled .navigation-trigger__inner {
     -webkit-transform: rotate(180deg);
@@ -15207,6 +15210,7 @@ th label .error{
     width: 270px;
     padding-left: 2rem;
     border-bottom: 1px solid #ffffff26;
+    padding-top: 9px;
    
 }
 .header{
