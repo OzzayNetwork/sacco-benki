@@ -15048,3 +15048,122 @@ th label .error{
     align-items: center;
     justify-content: center;
 }
+.font-16{
+    font-size: 16px !important;
+}
+.payment-method-container, .loan-details{
+    padding: 2rem;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+}
+
+.payment-methods{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.payment-methods li{
+    display: flex;
+    padding: 15px 20px;
+    color: #979696;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #9796967d;
+    text-transform: capitalize;
+    margin-right: 1rem;
+    font-size: 18px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.payment-methods li:hover{
+    color: #ef6723;
+    border-color: #ef6723;
+}
+.payment-methods li i{
+    font-size: 3rem;
+    margin-right: 1.5rem;
+}
+.payment-methods li.active{
+    color: white;
+    border-color: #ef6723;
+    background-color: #ef6723;
+}
+.payment-method-container .contact-header h4,.loan-details .contact-header h4{
+    text-transform: uppercase;
+    font-size: medium;
+}
+
+.payment-method-container form strong{
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.payment-method-container form{
+    margin-top: 3rem;;
+}
+.payment-method-container form input{
+    font-size: 15px;
+    padding: 20px;
+    border-radius: 1px;
+    border-color: #BDBDBD;
+}
+.payment-method-container form button{
+    padding: 15px;
+}
+.loan-bala{
+    padding: 2rem;
+    background: #E0E0E0;
+    margin-top: -5px;
+    color: black;
+}
+.loan-bala h2{
+    font-weight: 300;
+}
+
+.loan-products-table tr td:last-child, .loan-products-table tr th:last-child{
+    text-align: right;
+}
+
+/* light theme */
+.light-body h1, .light-card h4{
+    color: #4a4c4e;
+}
+
+.light-body{
+    background: #f1f4f6 !important;
+}
+.light-body .card-body{
+    background: #fff;
+    border: 1px solid #e1e8ed;
+    color: #17191c;
+    border-radius: 3px;
+}
+
+.light-body h4{
+    color: #17191c;
+}
+.new-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.new-card i{
+    font-size: 70px;
+    margin: 0px;
+    padding: 0px;
+}
+.new-card h4{
+    font-size: 28px;
+    font-weight: 900;
+}
+.font-19{
+    font-size: 19px !important;
+}
+.font-weight-bolder{
+    font-weight: 900 !important;
+}

@@ -129,7 +129,7 @@
 						
 						<li class="navigation__sub">
                             <a href="#"><i class="flaticon-money"></i>Loans</a>
-                            <ul>
+                           <ul>
                                 <li class=""><a href="loan-setup.html">Loan setup</a></li>
                                 <li class="d-none"><a href="loan-types.html">Loan types</a></li>
                                 <li><a href="loan-application.html">New Loan application</a></li>
@@ -137,7 +137,7 @@
                                 <li><a href="ongoing-loans.html">Ongoing Applications</a></li>
                                 <li><a href="re-evaluation-loan-applications.html">Under Re-evaluation</a></li>
                                 <li><a href="declined-loan-applications.html">Declined Applications</a></li>
-                                 
+                                <li><a href="loan-types.html">Loan products</a></li>
 								 
                             </ul>
 						</li>
@@ -147,63 +147,7 @@
                 </div>
             </aside>
 			
-			<!--associate blinker modal-->
-			<div class="modal" id="associate" tabindex="-1" role="dialog">
-			  <div class="modal-dialog  modal-dialog-centered" role="document">
-				<div class="modal-content">
-				  <div class="modal-header">
-					<h3 class="modal-title">Associate blinker</h3>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					  <span aria-hidden="true">&times;</span>
-					</button>
-				  </div>
-				  <div class="modal-body">
-					 	<div class="col-12 p-0 request-container animated fadeIn">
-							 <div class="accounts-container">
-								<div class="blinker-prof">
-								 <a data-toggle="tooltip" title="" href="#" data-original-title="Blinker's Name"><img class="avatar-img" src="demo/img/profile-pics/2.jpg" alt=""></a>
-									<span>Blinkers Name</span>
-								</div>
-
-								  <img class="direction-gif" src="demo/img/gifs/associate2.gif">
-
-								  <div class="blinker-prof">
-								<a data-toggle="tooltip" title="" href="#" data-original-title="Gurdian's Name"><div class="avatar-char">GN</div></a>
-									<span>Gurdians Name</span>
-								</div>
-							  </div>
-						<!-- appears when its declined-->
-
-							<p>Associate <strong>John Doa</strong>(Blinker) to <strong>Jeannette Lawson</strong>(Gurdian) </p>
-					  	</div>
-					  	<div class="decline-reason animated fadeIn d-none">
-							<form>
-						  		<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<textarea class="form-control textarea-autosize" placeholder="Enter reason for declining request ..." style="overflow: hidden; overflow-wrap: break-word; height: 51px;"></textarea>
-											<i class="form-group__bar"></i>
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="modal-footer p-0">
-											<button class="btn btn-info canceldec-btn">Cancel</button>
-											<button class="btn btn-danger ">Decline</button>
-										</div>
-									</div>
-								</div>
-								
-						 	 </form>
-					  </div>
-				  </div>
-				  <div class="modal-footer">
-					<button type="button" class="btn btn-primary">Approve</button>
-					<button class="btn btn-danger decline-btn">Decline</button>
-				  </div>
-				</div>
-			  </div>
-			</div>
-			<!--associate blinker modal-->
+			
 
             
 
@@ -273,14 +217,13 @@
 											<tr> 
 												<th>Acc</th>
                                                 <th>Debtor</th>
-                                                <th>Loan Type</th>
-												<th>Date approved</th>
+                                                <th>Type</th>
                                                 <th>Approved by</th>
                                                 <th>Due Date</th>
-												<th>Amount paid</th>
-												<th>outstanding balance</th>
-												<th>Loan amount</th>
-                                                 <th>status</th>   
+												<th>Paid</th>
+												<th>Current balance</th>
+                                                 <th>status</th> 
+                                                 <th>Actions</th>  
 											</tr>
 										</thead>
 										<tbody>
@@ -290,13 +233,12 @@
 												</td>
 												<td class="text-capitalize"><a href="member-profile.html">Kelvin njjuguna</a></td>
 												<td>Mpango Kubwa</td>
-												<td class="text-capitalize">5Th Jan 2020</td>
 												<td><span>Alex Wanjala</span></td>
                                                 <td class="text-uppercase">2Nd Mar 2020</td>
-                                                <td>KES 36,000</td>
                                                 <td>KES 120,000</td>
                                                 <td><strong>KES 156,000</strong></td>
-												<td><span class="badge badge-soft-success badge-round">Performing</span></td>
+                                                <td><span class="badge badge-soft-success badge-round">Performing</span></td>
+                                                <td><a href="active-loans-details.html" class="btn btn-info btn--icon-text text-white btn-sm d-flex align-items-center"><i class="zmdi zmdi-eye"></i>View</a><a href="repay-loan.html" class="btn btn-success ml-3 btn--icon-text btn-sm text-white d-flex align-items-center"><i class="zmdi zmdi-money"></i>Repayment</a></td>
 											</tr>
 										</tbody>
 									</table>

@@ -379,13 +379,14 @@
 				 	<div class="row">
 						<div class="col-md-12 col-sm-12">
 							<span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">Loan application details</h1>
+							 <h1 class="text-capitalize stream_name m-0">Loan repayment</h1>
 							</span>
 							<div class="">
 								<ol class="breadcrumb border-0">
 									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
 									<li class="breadcrumb-item"><a href="ongoing-loans.html">Ongoing Applications</a></li>
-									<li class="breadcrumb-item active">loan Application for Kelvin Njuguna</li>
+                                    <li class="breadcrumb-item active"><a href="active-loans.html">loan Details for Kelvin Njuguna</a></li>
+                                    <li class="breadcrumb-item active">Loan repayment</li>
 								</ol>
 							</div>
 						</div>
@@ -394,207 +395,122 @@
 				</header>
 				
 				<div class="row with-custom-header">					
-					<div class="col-sm-12 col-md-8">
-						<!-- application details start -->
-						<div class="row">
-							<div class="col-12">
-								<div class="card calc-18">
-									<div class="card-body employment-body">
-										<div class="contact-header">
-											<h4>Application Progress</h4>
-											<hr class="mb-0 mt-1">
-                                        </div>
-                                        
-                                        <div class="application-progress">
-                                            <div class="root posi">
-                                                 <div class="progresss-container">
-                                                      <ul class="progressbar">
-
-
-                                                        <small class="progress-date">3rd Jun 2020</small>
-                                                        <li class="active">Initiation
-                                                            <br><small>Initiated By Alex Wanjala</small>
-                                                        </li>
-
-
-                                                        <small class="progress-date">13Th Jun 2020</small>
-                                                        <li class="active">Loan Appraisal
-                                                            <br>
-                                                            <small>Approved by Edwin Kiploman</small>
-                                                        </li>
-
-                                                        <small class="progress-date">3rd Jun 2020</small>
-                                                        <li class="active">Loan Approval
-                                                            <br>
-                                                            <small>Approved by Otati Wasawa</small>
-                                                        </li>
-                                                        
-                                                        <small class="progress-date d-none">3rd Jun 2020</small>
-                                                        <li>Disbursement
-                                                            <br>
-                                                            <small>Pending ...</small>
-                                                        </li>  
-                                                      </ul>
-                                                  </div>
-                                              </div>
-                                        </div>
-
-                                        <div class="contact-header">
-                                            <h4>Loan Application details</h4>
-                                            <p>Have a closr look at the details pertaining to this application before taking any action.</p>
-											<hr class="mb-0 mt-1">
-                                        </div>
-
-										<small class="text-muted-blue bold bold">Loan type</small>
-										<div class="d-flex justify-content-between"><p><strong>Loan type name</strong></p></div>  
-										<hr> 
-										<div class="row">
-											<div class="col-md- col-sm-12">
-												<small class="text-muted-blue bold bold">Reason for applying for the loan</small>
-												<div class="d-flex justify-content-between"><p><strong>To pay a very urgent and emergency fee for my son's Space camp graduation at Venezuela</strong></p></div>  
-												<hr> 
+					<div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-8 col-sm-12">
+                                        <div class="payment-method-container">
+                                            <div class="contact-header mb-5">
+                                                <h4>Select Repayment method</h4>
+                                                <hr>
                                             </div>
-                                            
-                                            <div class="col-12 mt-4">
-                                                <h4>Application Attachments</h4>
-                                            </div>
-                                            <br>
-                                            <br>
-                                            <div class="col-12">
-                                                <div class="row loan-docs">
-                                                    <label class="col-lg-3 col-sm-12 col-md-6" for="intro-letter">
-                                                        
-                                                        <div class="intro-letter " title="attach attachment letter from employer">
-                                                            <span><img src="demo/img/attachment-docs/contract.svg"></span>
-                                                            <h5>Introduction letter</h5>
-                                                            <small></small>
-                                                        </div>
-                                                    </label>
+                                            <ul class="payment-methods">
+                                                <li class="active mpesa-option"><i class="pe-7s-phone"></i>mobile money</li>
+                                                <li class="cash-option"><i class="pe-7s-cash"></i>Cash</li>
+                                            </ul>
+                                            <form class="with-mpesa animated fade-in">
+                                                <div class="row" >
 
-                                                    <label class="col-lg-3 col-sm-12 col-md-6" for="payslip">
-                                                        
-                                                        <div class="pay-slip " title="attach the payslip (at least 3 months ago)">
-                                                            <span><img src="demo/img/attachment-docs/email.svg"></span>
-                                                            <h5>Payslip</h5>
-                                                            <small>At least 3 Months Ago</small>
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group"> 
+                                                            <label>
+                                                                <strong>Who is paying</strong>  <strong class="text-danger">*</strong>
+                                                                <p><small>Applicable if the one making payment is not the debtor</small></p>
+                                                            </label>                                                            
+                                                            <input type="text" class="form-control" placeholder="Enter name">
                                                         </div>
-                                                    </label>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group"> 
+                                                            <label>
+                                                                <strong>Amount</strong>  <strong class="text-danger">*</strong>
+                                                                <p><small>Request from the client</small></p>
+                                                            </label>                                                            
+                                                            <input type="text" class="form-control" placeholder="Enter Amount">
+                                                        </div>
+                                                    </div>
 
-                                                    <label class="col-lg-3 col-sm-12 col-md-6 " for="bank-statement">
-                                                       
-                                                        <div class="bank-state " title="Attach bank statement(s)(At least 23 months ago)">
-                                                            <span><img src="demo/img/attachment-docs/bank.svg"></span>
-                                                            <h5>Bank statement</h5>
-                                                            <small>At least 3 Months Ago</small>
+                                                    <div class="col-12">
+                                                        <div class="form-group"> 
+                                                            <label><strong>Phone Number</strong>  <strong class="text-danger">*</strong></label>                                                            
+                                                            <input type="text" class="form-control" placeholder="Eg 0712345678">
                                                         </div>
-                                                    </label>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <button class="btn btn-success">Send payment request<i class="ml-3 zmdi zmdi-mail-reply-all flipx"></i></button>
+                                                        <button class="btn btn-light btn-border mx-3 btn--icon-text" type="reset">Clear form <i class="pe-7s-trash mr-2"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
 
-                                                    <label for="mpesa-state" class="col-lg-3 col-sm-12 col-md-6 " title="Select mpesa statement (at least 3 months ago)">
-                                                       
-                                                        <div class="mpesa-state ">
-                                                            <span><img src="demo/img/attachment-docs/mpesa.svg"></span>
-                                                            <h5>Mpesa statement</h5>
-                                                            <small>At least 3 Months Ago</small>
+                                            <form class="over-counter animated fade-in d-none">
+                                                <div class="row">
+
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group"> 
+                                                            <label>
+                                                                <strong>Who is paying</strong>  <strong class="text-danger">*</strong>
+                                                                <p><small>Applicable if the one making payment is not the debtor</small></p>
+                                                            </label>                                                            
+                                                            <input type="text" class="form-control" placeholder="Enter Name">
                                                         </div>
-                                                    </label>
+                                                    </div>
+
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group"> 
+                                                            <label>
+                                                                <strong>Amount</strong>  <strong class="text-danger">*</strong>
+                                                                <p><small>How much have you received from the guardian?</small></p>
+                                                            </label>                                                            
+                                                            <input type="text" class="form-control" placeholder="Enter Amount">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <button class="btn btn-success">OK<i class="zmdi zmdi-check-all ml-3"></i></button>
+                                                        <button class="btn btn-light btn-border mx-3 btn--icon-text" type="reset">Clear form <i class="pe-7s-trash mr-2"></i></button>
+                                                    </div>
+
                                                 </div>
 
-                                            </div>
-                                            <br>
-                                            <br>
-											
+                                            </form>
+                                        </div>
+                                    </div>
 
-											<div class="col-md-12 col-sm-12 mt-4">
-                                                <h5 class="text-muted-blue bold bold mb-1">Amount applying for</h5>
-												
-												<div class="d-flex justify-content-between font-36 font-weight-light"><p>KES 2,258,000</p></div>  
-												
+                                    <div class="col-sm-12 col-md-6 col-lg-4">
+                                        <div class="loan-details">
+                                            <div class="contact-header">
+                                                <h4>Loan Details</h4>
+                                                <hr>
                                             </div>
+                                            <small class="text-muted-blue bold bold">Debtor's Name</small>
+                                            <div class="d-flex justify-content-between"><p><strong>Kelvin Njuguna Ndungu</strong></p></div>  
+                                            <hr>
+                                            <small class="text-muted-blue bold bold">Loan Name</small>
+                                            <div class="d-flex justify-content-between"><p><strong>Bingwa loan</strong></p></div>
+                                            <hr>
+                                            <small class="text-muted-blue bold bold">Interest Rate</small>
+                                            <div class="d-flex justify-content-between"><p><strong>2% Per Month on current Balance</strong></p></div>
+
+                                            <hr>
+                                            <small class="text-muted-blue bold bold">Last repayment</small>
+                                            <div class="d-flex justify-content-between"><p><strong>20Th Aug 2020</strong></p></div>
                                             
-                                            <div class="col-md-12 col-sm-12 mt-4">
-                                                <h5 class="text-muted-blue bold bold mb-1">Actions</h5>	
-                                                <p>Select any of the following buttons based on your observation on this particular applications.</p>									
-                                                
-                                                <button class="btn btn-danger btn--icon-text" data-toggle="modal" data-target="#decline-loan-application"><i class="zmdi zmdi-close mr-3"></i> Decline application </button>
-                                                <button class="btn btn-warning btn--icon-text mx-4" data-toggle="modal" data-target="#reevaluate-loan-application"> <i class="zmdi zmdi-refresh-sync mr-3"></i> Send for revaluation</button>
-                                                <button class="btn btn-success btn--icon-text disburse-funds" data-toggle="modal" data-target="#disburse-loan">Disburse funds <i class="ml-3 ti-share"></i></button>
-											</div>
+                                        </div>
+                                        <div class="loan-bala">
+                                            <small class="text-muted-blue bold bold">Current Balance</small>
+									        <div class="d-flex justify-content-between"><h2>KES 258,203</h2></div>
+                                        </div>
 
-										</div>										
-										
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- application details end -->
-
-						
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="col-sm-12 col-md-4">
-						<div class="account-info">
-							
-							<div class="card">
-								<div class="card-body">
-									<div class="contact-header">
-										<h4>Applicant's Details</h4>
-										<hr class="mb-0 mt-1">
-									</div>
-									<small class="text-muted-blue bold bold">Full Names & Date of Birth</small>
-									<div class="d-flex justify-content-between"><p><strong>Kelvin Njuguna Ndungu</strong></p> <p class="ml-3">04 Nov 1994</p></div>  
-									<hr> 
-									<small class="text-muted-blue bold bold">Marital status & Gender</small>
-									
-									<div class="d-flex justify-content-between"><p><strong>Very Single</strong></p><p>Male</p></div>                        
-									<hr>
-									<small class="text-muted-blue bold">Nationality</small>
-									<p>Holy See (Vatican City State)</p>
-									<hr>
-									<small class="text-muted-blue bold">KRA PIN</small>
-									<p>AJHU455613</p>
-									<hr>
-									<small class="text-muted-blue bold">Registered on</small>
-									<p>22 Feb 2020 by Alex Wanjala</p>
-									
-									
-									<div class="contact-header mt-5">
-										<h4>Contact details</h4>
-										<hr class="mb-0 mt-1">
-									</div>
-
-                                    <small class="text-muted-blue bold">Mobile phone number</small>
-									<p><a href="tel:0704549859">0704549859</a></p>
-									<hr>
-									 <small class="text-muted-blue bold">Email address</small>
-									<p><a href="mailto:<nowiki> agentavery@sample.com">email@email.com</a></p>
-										<hr>
-									<small class="text-muted-blue bold">Postal Address</small>
-									<p>PO BOX 1234-00100 Nairobi, Kenya</p>
-									
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-12">
-								<div class="card">
-									<div class="card-body">
-										<div class="contact-header attachments-container">
-											<h4>Personal documents</h4>
-											<hr>
-											
-											<div><p><strong class="d-flex align-items-center">1.<a href=""><i class="pe-7s-id mx-2"></i>National Id card</a></strong></p></div>  
-											 
-											<div><p><strong class="d-flex align-items-center">2.<a href=""><i class="pe-7s-note2 mx-2"></i>KRA Pin document</a></strong></p></div>  
-										
-											<div><p><strong class="d-flex align-items-center">3.<a href=""><i class="pe-7s-camera mx-2"></i>Photo image</a></strong></p></div>  
-											
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+                  
 				</div>
 						
 					

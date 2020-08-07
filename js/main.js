@@ -297,6 +297,25 @@ $('.splitMemberAccounts .other-lab').on('click', function(){
 //=====================================================================================
 
 
+//=========================================================
+// repayment modes
+//========================================================
+$('.payment-method-container .mpesa-option').on('click', function(){
+	$(this).addClass('active').siblings().removeClass('active');
+	$('.payment-method-container .with-mpesa').removeClass('d-none').siblings('form').addClass('d-none');
+
+});
+
+$('.payment-method-container .cash-option').on('click', function(){
+	$(this).addClass('active').siblings().removeClass('active');
+	$('.payment-method-container .over-counter').removeClass('d-none').siblings('form').addClass('d-none');
+	
+});
+
+//=========================================================
+// repayment modes
+//========================================================
+
 
 //=====================================================================================
 //******************membership form ******************************/
@@ -994,6 +1013,7 @@ function checkingPayRadio(){
 	
 	
 }
+
 
 
 

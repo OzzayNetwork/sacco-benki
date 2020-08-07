@@ -128,7 +128,7 @@
 						
 						<li class="navigation__sub">
                             <a href="#"><i class="flaticon-money"></i>Loans</a>
-                            <ul>
+                           <ul>
                                 <li class=""><a href="loan-setup.html">Loan setup</a></li>
                                 <li class="d-none"><a href="loan-types.html">Loan types</a></li>
                                 <li><a href="loan-application.html">New Loan application</a></li>
@@ -136,7 +136,7 @@
                                 <li><a href="ongoing-loans.html">Ongoing Applications</a></li>
                                 <li><a href="re-evaluation-loan-applications.html">Under Re-evaluation</a></li>
                                 <li><a href="declined-loan-applications.html">Declined Applications</a></li>
-                                 
+                                <li><a href="loan-types.html">Loan products</a></li>
 								 
                             </ul>
 						</li>
@@ -145,67 +145,6 @@
                     </ul>
                 </div>
             </aside>
-			
-			<!--associate blinker modal-->
-			<div class="modal" id="associate" tabindex="-1" role="dialog">
-			  <div class="modal-dialog  modal-dialog-centered" role="document">
-				<div class="modal-content">
-				  <div class="modal-header">
-					<h3 class="modal-title">Associate blinker</h3>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					  <span aria-hidden="true">&times;</span>
-					</button>
-				  </div>
-				  <div class="modal-body">
-					 	<div class="col-12 p-0 request-container animated fadeIn">
-							 <div class="accounts-container">
-								<div class="blinker-prof">
-								 <a data-toggle="tooltip" title="" href="#" data-original-title="Blinker's Name"><img class="avatar-img" src="demo/img/profile-pics/2.jpg" alt=""></a>
-									<span>Blinkers Name</span>
-								</div>
-
-								  <img class="direction-gif" src="demo/img/gifs/associate2.gif">
-
-								  <div class="blinker-prof">
-								<a data-toggle="tooltip" title="" href="#" data-original-title="Gurdian's Name"><div class="avatar-char">GN</div></a>
-									<span>Gurdians Name</span>
-								</div>
-							  </div>
-						<!-- appears when its declined-->
-
-							<p>Associate <strong>John Doa</strong>(Blinker) to <strong>Jeannette Lawson</strong>(Gurdian) </p>
-					  	</div>
-					  	<div class="decline-reason animated fadeIn d-none">
-							<form>
-						  		<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<textarea class="form-control textarea-autosize" placeholder="Enter reason for declining request ..." style="overflow: hidden; overflow-wrap: break-word; height: 51px;"></textarea>
-											<i class="form-group__bar"></i>
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="modal-footer p-0">
-											<button class="btn btn-info canceldec-btn">Cancel</button>
-											<button class="btn btn-danger ">Decline</button>
-										</div>
-									</div>
-								</div>
-								
-						 	 </form>
-					  </div>
-				  </div>
-				  <div class="modal-footer">
-					<button type="button" class="btn btn-primary">Approve</button>
-					<button class="btn btn-danger decline-btn">Decline</button>
-				  </div>
-				</div>
-			  </div>
-			</div>
-			<!--associate blinker modal-->
-
-            
-
             <section class="content custom-table-container">
                 <header class="content__title px-0 border-0">
 				 	<div class="row">
@@ -485,7 +424,100 @@
                         <!-- beneficiaries -->
 
 						
-					</div>
+                    </div>
+                    
+                    <div class="col-sm-12 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="contact-header">
+                                    <h4>Member Accounts details</h4>
+                                    <hr class="mb-0 mt-1">
+                                </div>
+
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Acc No.</th>
+                                        <th scope="col">Account Name</th>
+                                        <th scope="col">Date registered</th>
+                                        <th scope="col">Registered by</th>
+                                        
+                                        <th scope="col">Amount</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">125623</th>
+                                        <td>Share Capital</td>
+                                        <td>1st Jun 2020</td>
+                                        <td>Karanja Kamau</td>
+                                        <th>KES 20,000</th>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">2025896</th>
+                                        <td>Fixed Deposit</td>
+                                        <td>1st Jun 2020</td>
+                                        <td>Karanja Kamau</td>
+                                        <th>KES 10,000</th>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">3023589</th>
+                                        <td>Investment Plus</td>
+                                        <td>14th Jul 2020</td>
+                                        <td>John Kimoptho</td>
+                                        <th>KES 50,020</th>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="contact-header">
+                                    <h4>Loans by  the member</h4>
+                                    <hr class="mb-0 mt-1">
+                                </div>
+
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Loan Product</th>
+                                        <th scope="col">Date Disbursed</th>
+                                        <th scope="col">Disbursed by</th>
+                                        <th scope="col">Amount Disbursed</th>
+                                        <th scope="col">Current Balance</th>
+                                        <th scope="col">Actions</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                     
+                                        <td>Development Loan</td>
+                                        <td>1st Jun 2020</td>
+                                        <td>Karanja Kamau</td>
+                                        <th>KES 15,000</th>
+                                        <th>KES 3,060</th>
+                                        <td><a class="btn btn-info btn-sm" href="active-loans-details.html">View</a></td>
+                                      </tr>
+                                      <tr>
+                                        
+                                        <td>Instant Loan</td>
+                                        <td>23rd Jul 2020</td>
+                                        <td>Karanja Kamau</td>
+                                        <th>KES 4,000</th>
+                                        <th>KES 460</th>
+                                        <td><a class="btn btn-info btn-sm" href="active-loans-details.html">View</a></td>
+                                      </tr>                                     
+                                    </tbody>
+                                  </table>
+
+                            </div>
+                        </div>
+                    </div>
 					</div>
 						
 					
