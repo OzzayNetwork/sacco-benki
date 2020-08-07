@@ -160,104 +160,83 @@
             
 
             <section class="content custom-table-container">
+				
                 <header class="content__title px-0 border-0">
 				 	<div class="row">
 						<div class="col-md-8 col-sm-12">
 							<span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">New Account Set Up</h1>
+							 <h1 class="text-capitalize stream_name m-0">Deposit transactions</h1>
 							</span>
 							<div class="">
 								<ol class="breadcrumb border-0">
 									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item active">New account set up</li>
+									<li class="breadcrumb-item active">Deposit transactions</li>
 								</ol>
 							</div>
 						</div>
-											
+						<div class="col-4 col-sm-12 col-md-4">
+							<div class="section-header">
+								<a href="new-member.html" class="btn btn-sm btn-primary" title="">New Member</a>
+							</div>					
+						</div>						
 					</div>
-				</header>
+                </header
 				
-			<div class="card">
-                
-                <div class="card-body">
-                    <div class="contact-header">
-                        <h4>Account set up form</h4>
-                        <p>Fill in the form bellow so as to create a New account</p>
-                        <hr class="mb-0 mt-1">
-                    </div>
-                    <div class="row">					
-                        <form class="col-12 acc-form">
-                            <div class="new-loan-form row">
-                                <div class="col-md-12">
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-6">
-                                            <div class="form-group"> 
-                                                <label>Account name<strong class="text-danger">*</strong></label>
-                                                <input type="text" class="form-control" placeholder="Enter the Account's Name" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+				<div class="row">
+					<div class="col-12 p-0">
+						<div class="card table-custom-bg">
+							<div class="card-body">
+								<div class="table-responsive">
+									<table class="table table-hover table-custom spacing8" id="data-table">
+										<thead>
+											<tr> 
+												<th>Acc No.</th>
+                                                <th>Deposit done By</th>
+                                                <th>Deposited Via</th>
+                                                <th>Attended by</th>
+                                                <th>Date</th>
+												<th>Amount</th>
+												<th>Actions</th>												
+											</tr>
+										</thead>
+										<tbody class="line-4">
+											<tr>
+												<td class="w60">
+													14523689
+												</td>
+                                                <td><a title="" href="member-profile.html">Kelvin Njuguna</a></td>	
+                                                <td>Over the counter</td>
+												<td>Attended by Alex Wanjala</td>
+                                                <td class="text-capitalize">1st Jun 2020</td>
+                                                <td>KSH 6,253</td>	
+												<td>
+                                                    <button data-toggle="tooltip" data-original-title="Print" class="btn btn-primary btn--icon font-19"><a><i class="zmdi zmdi-print"></i></a></button>
+                                                    <button data-toggle="tooltip" data-original-title="Download" class="btn btn-primary btn--icon font-19 mx-3"><a><i class="zmdi zmdi-download"></i></a></button>
 
-                                <div class="col-12">
-                                    <div class="row">
-                                        <div class="col-12 mt-4 mb-3">
-                                            <h5>Account nature and characteristics</h5>
-                                            <p>Check on the radio buttons where applicable</p>
-                                       </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label><strong>Is the Account debitable</strong></label>
-                                        <br>
-                                        <div class="toggle-switch">
-                                            <input type="checkbox" class="toggle-switch__checkbox" checked>
-                                            <i class="toggle-switch__helper"></i>
-                                        </div>
-                                    </div>
-
-                                    
-
-                                    <div class="form-group">
-                                        <label><strong>Make it a default account</strong></label>
-                                        <br>
-                                        <div class="toggle-switch">
-                                            <input type="checkbox" class="toggle-switch__checkbox">
-                                            <i class="toggle-switch__helper"></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label><strong>Account has deposit limit</strong></label>
-                                        <br>
-                                        <div class="toggle-switch">
-                                            <input type="checkbox" class="toggle-switch__checkbox check-limit">
-                                            <i class="toggle-switch__helper"></i>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <div class="form-group d-none acc-limit"> 
-                                                <label>Deposit Limit<strong class="text-danger">*</strong></label>
-                                                <input type="text" class="form-control" placeholder="Enter deposit limit">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                                               
-                            </div>	
-                            
-                           
-                               <button class="btn btn-primary btn--icon-text text-capitalize">Create account <i class="zmdi zmdi-check-all mr-2"></i></button>
-                               <button class="btn btn-light btn-border mx-3 btn--icon-text" type="reset">Clear form <i class="pe-7s-trash mr-2"></i></button>
-                               
-                           
-                        </form>
-                    </div>
-                </div>
-            </div>
-						
+												</td>								
+                                            </tr>
+                                            <tr>
+												<td class="w60">
+													14523689
+												</td>
+                                                <td><a title="" href="member-profile.html">Amos Kimo</a></td>	
+                                                <td>Over the counter</td>	
+												<td>Attended by Phylis Luthuli</td>
+                                                <td class="text-capitalize">1st Jun 2020</td>
+                                                <td>KSH 36,253</td>	
+												<td>
+                                                    <button data-toggle="tooltip" data-original-title="Print" class="btn btn-primary btn--icon font-19"><a><i class="zmdi zmdi-print"></i></a></button>
+                                                    <button data-toggle="tooltip" data-original-title="Download" class="btn btn-primary btn--icon font-19 mx-3"><a><i class="zmdi zmdi-download"></i></a></button>
+												</td>								
+											</tr>											
+										
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
                 <footer class="footer hidden-xs-down">
                     <p>Powered by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>
                 </footer>
@@ -353,20 +332,14 @@
 		<script src="vendors/highcharts/drilldown.js"></script>
 		<script src="vendors/highcharts/exporting.js"></script>
 		<script src="vendors/highcharts/export-data.js"></script>
-        <script src="vendors/highcharts/accesibility.js"></script>
-        
-        <!--form validation-->
-		<script src="vendors/jq-validation/jquery.validate.min.js"></script>
-		<script src="vendors/jq-validation/additional-methods.min.js"></script>
+		<script src="vendors/highcharts/accesibility.js"></script>
 		
 		<script src="js/highcharts/highcharts-more.js"></script>
 		<!--owl corousel-->
 		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script><!-- App functions and actions -->
 		<script src="js/wow.js"></script>
         <script src="js/app.min.js"></script>
-        <script src="js/main.js"></script>	
-        
-       
+        <script src="js/main.js"></script>		
     </body>
 
 <!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:43 GMT -->
