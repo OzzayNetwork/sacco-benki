@@ -15163,8 +15163,10 @@ th label .error{
 }
 .new-card{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    flex-flow: row-reverse;
+    /* margin-right: 0.5rem;*/
 }
 .new-card i{
     font-size: 35px;
@@ -15237,4 +15239,9 @@ tbody td a.btn{
 }
 .text-light{
     font-weight: 300;
+}
+
+.rounded-circle i img{
+    height: 30px;
+    margin-bottom: 6px;
 }
