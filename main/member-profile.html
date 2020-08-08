@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:03 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel='icon' href='demo/img/icon_3.png' type='image/x-icon'/ >
+
+		<!-- Vendor styles -->
+		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.theme.default.css">
+	
+		<!--flat icon-->
+		<link rel="stylesheet" href="css/flaticon/font/flaticon.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_4.css">
+
+	
+
+        <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
+        <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
+        <link rel="stylesheet" href="vendors/select2/css/select2.min.css">
+        <link rel="stylesheet" href="vendors/dropzone/dropzone.css">
+        <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
+        <link rel="stylesheet" href="vendors/trumbowyg/ui/trumbowyg.min.css">
+        <link rel="stylesheet" href="vendors/flatpickr/flatpickr.min.css" />
+        <link rel="stylesheet" href="vendors/rateyo/jquery.rateyo.min.css">
+        <link rel="stylesheet" href="vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="css/app.min.css">
+    </head>
+
+    <body data-ma-theme="green">
+        <main class="main">
+            <div class="page-loader">
+                <div class="page-loader__spinner">
+                    <svg class="d-none" viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                    </svg>
+					<img src="demo/img/gifs/preloader.gif">
+                </div>
+				<span class="powerd-container">
+					<strong class="mb-2">Sacco Benki By</strong>
+					<img src="demo/img/logo-files/nouveta-orange.svg">
+					
+				</span>
+            </div>
+
+             <header class="header">
+                <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+                    <div class="navigation-trigger__inner">
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                    </div>
+                </div>
+
+                <div class="header__logo hidden-sm-down">
+                    <h1><a href="index.html"><img class="the-logo" src="demo/img/logo-files/sacco-orange.png"></a></h1>
+                </div>
+                <h2 class="ml-4 text-white text-uppercase mb-0 text-light">Super Sacco</h2>
+
+                <form class="search">
+                    <div class="search__inner d-none">
+                        <input type="text" class="search__text d-none" placeholder="Search through the dashboard">
+                        <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+                    </div>
+                </form>
+				
+				<ul class="top-nav">
+                    <li class="hidden-xl-up"><a href="#" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
+					
+					<li data-toggle="tooltip" data-original-title="Notifications" class="dropdown top-nav__notifications">
+                        <a href="#" data-toggle="dropdown"  class="top-nav__notify" >
+                            <i class="zmdi zmdi-notifications"></i>
+                        </a>                       
+                    </li>
+                    
+                </ul>
+
+                
+            </header>             
+
+			  
+			 <aside class="sidebar">
+                <div class="scrollbar-inner">
+                    <div class="user">
+                        <div class="user__info" data-toggle="dropdown">
+                            <img class="user__img" src="demo/img/icon-rules.png" alt="">
+                            <div>
+                                <div class="user__name">John Mwakili</div>
+                                <div class="user__email">john@gmail.com</div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="my-profile.html">View Profile</a>
+                            <a class="dropdown-item d-none" href="#">Settings</a>
+                            <a class="dropdown-item" href="landing-page.html">Logout</a>
+                        </div>
+                    </div>
+
+                    <ul class="navigation">
+                        <li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-view-dashboard"></i>Home</a></li>
+						<li class="navigation__sub">
+                            <a href="#"><i class="pe-7s-id"></i>Members</a>
+                            <ul>
+                                <li><a href="members.html" title="members register">Registered Members</a></li>
+                                <li><a href="new-member.html" title="add new member">RegisterNew Members</a></li>
+                            </ul>
+						</li>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="flaticon-briefcase"></i>Accounts</a>
+                            <ul>
+                                <li class="d-none"><a href="account.html">Share Capital</a></li>
+                                <li class="d-none"><a href="account.html">Deposit account</a></li>
+								 <li class="d-none"><a href="account-html">Savings</a></li>
+								 <li><a href="new-account.html" title="set up new account">New account setup</a></li>
+                            </ul>
+						</li>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="flaticon-money"></i>Loans</a>
+                           <ul>
+                                <li class=""><a href="loan-setup.html">Loan setup</a></li>
+                                <li class="d-none"><a href="loan-types.html">Loan types</a></li>
+                                <li><a href="loan-application.html">New Loan application</a></li>
+                                <li><a href="active-loans.html">Active Loans</a></li>
+                                <li><a href="ongoing-loans.html">Ongoing Applications</a></li>
+                                <li><a href="re-evaluation-loan-applications.html">Under Re-evaluation</a></li>
+                                <li><a href="declined-loan-applications.html">Declined Applications</a></li>
+                                <li><a href="loan-types.html">Loan products</a></li>
+								 
+                            </ul>
+                        </li>
+                        
+                        <li class="navigation__sub">
+                            <a href="#"><i class="zmdi zmdi-swap"></i>Transactions</a>
+                            <ul>
+                                <li class=""><a href="deposits.html">Deposits</a></li>
+                                <li class=""><a href="withdrawals.html">Withdrawals</a></li>
+                            </ul>
+						</li>
+						
+						 <li class="navigation__active mt-4"><a href="landing-page.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <section class="content custom-table-container">
+                <header class="content__title px-0 border-0">
+				 	<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<span class="rev-title-container">
+							 <h1 class="text-capitalize stream_name m-0">Registered Member details</h1>
+							</span>
+							<div class="">
+								<ol class="breadcrumb border-0">
+									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+									<li class="breadcrumb-item"><a href="members.html">Registered members</a></li>
+									<li class="breadcrumb-item active">Member details</li>
+								</ol>
+							</div>
+						</div>
+												
+					</div>
+                </header>
+                <div class="col-12 py-3 member-navs-container">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active member-info" href="#">Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link member-loans" href="#">Loans & Accounts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link member-statements" href="#">Statements</a>
+                        </li>                        
+                    </ul>
+                    <hr>
+                </div>
+				
+				<div class="row with-custom-header slideInLeft animated  member-info">
+					<div class="col-sm-12 col-md-4 a">
+						<div class="account-info">
+							
+							<div class="card">
+								<div class="card-body">
+									<div class="contact-header">
+										<h4>Personal Details</h4>
+										<hr class="mb-0 mt-1">
+									</div>
+									<small class="text-muted-blue bold bold">Full Names & Date of Birth</small>
+									<div class="d-flex justify-content-between"><p><strong>Kelvin Njuguna Ndungu</strong></p> <p class="ml-3">04 Nov 1994</p></div>  
+									<hr> 
+									<small class="text-muted-blue bold bold">Marital status & Gender</small>
+									
+									<div class="d-flex justify-content-between"><p><strong>Very Single</strong></p><p>Male</p></div>                        
+									<hr>
+									<small class="text-muted-blue bold">Nationality</small>
+									<p>Holy See (Vatican City State)</p>
+									<hr>
+									<small class="text-muted-blue bold">KRA PIN</small>
+									<p>AJHU455613</p>
+									<hr>
+									<small class="text-muted-blue bold">Registered on</small>
+									<p>22 Feb 2020 by Alex Wanjala</p>
+									
+									
+									<div class="contact-header mt-5">
+										<h4>Contact details</h4>
+										<hr class="mb-0 mt-1">
+									</div>
+
+                                    <small class="text-muted-blue bold">Mobile phone number</small>
+									<p><a href="tel:0704549859">0704549859</a></p>
+									<hr>
+									 <small class="text-muted-blue bold">Email address</small>
+									<p><a href="mailto:<nowiki> agentavery@sample.com">email@email.com</a></p>
+										<hr>
+									<small class="text-muted-blue bold">Postal Address</small>
+									<p>PO BOX 1234-00100 Nairobi, Kenya</p>
+									
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="contact-header attachments-container">
+											<h4>Attachments</h4>
+											<hr>
+											
+											<div><p><strong class="d-flex align-items-center">1.<a href=""><i class="pe-7s-id mx-2"></i>National Id card</a></strong></p></div>  
+											 
+											<div><p><strong class="d-flex align-items-center">2.<a href=""><i class="pe-7s-note2 mx-2"></i>KRA Pin document</a></strong></p></div>  
+										
+											<div><p><strong class="d-flex align-items-center">3.<a href=""><i class="pe-7s-camera mx-2"></i>Photo image</a></strong></p></div>  
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="col-sm-12 col-md-8">
+						<!-- if its employment show this -->
+						<div class="row">
+							<div class="col-12">
+								<div class="card">
+									<div class="card-body employment-body">
+										<div class="contact-header">
+											<h4>Occupation/Source of Income details</h4>
+											<hr class="mb-0 mt-1">
+										</div>
+
+										<small class="text-muted-blue bold bold">Occupation/Employment</small>
+										<div class="d-flex justify-content-between"><p><strong>Employment At Nouveta LTD since 1st</strong></p></div>  
+										<hr> 
+										<div class="row">
+											<div class="col-md-6 col-sm-12">
+												<small class="text-muted-blue bold bold">Position of employment</small>
+												<div class="d-flex justify-content-between"><p><strong>Graphic & Web designer</strong></p></div>  
+												<hr> 
+											</div>
+
+											<div class="col-md-6 col-sm-12">
+												<small class="text-muted-blue bold bold">Staff No.</small>
+												<div class="d-flex justify-content-between"><p><strong>Nouv 18</strong></p></div>  
+												<hr> 
+											</div>
+
+											<div class="col-md-6 col-sm-12">
+												<small class="text-muted-blue bold bold">Gross Income</small>
+												<div class="d-flex justify-content-between"><p><strong>KES 859,230</strong></p></div>  
+												 
+											</div>
+
+											<div class="col-md-6 col-sm-12">
+												<small class="text-muted-blue bold bold">Date of employment</small>
+												<div class="d-flex justify-content-between"><p><strong>1 Jul 2020</strong></p></div>  
+												
+											</div>
+
+										</div>										
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end of employemt as occupation -->
+						<!-- if its business show this business details -->
+						<div class="row d-none">
+							<div class="col-12">
+								<div class="card">
+									<div class="card-body business-body">
+										<div class="contact-header">
+											<h4>Occupation/Source of Income details</h4>
+											<hr class="mb-0 mt-1">
+										</div>
+	
+										<small class="text-muted-blue bold bold">Business name</small>
+										<div class="d-flex justify-content-between"><p><strong>The big boss man</strong></p></div>  
+										<hr> 
+										<div class="row">
+											<div class="col-md-6 col-sm-12">
+												<small class="text-muted-blue bold bold">Business Location</small>
+												<div class="d-flex justify-content-between"><p><strong>Planet venus</strong></p></div>  
+												<hr> 
+											</div>
+	
+											<div class="col-md-6 col-sm-12">
+												<small class="text-muted-blue bold bold">Business address</small>
+												<div class="d-flex justify-content-between"><p><strong>Along Kryptonite Avenue, next to the fort of solitude</strong></p></div>  
+												<hr> 
+											</div>											
+	
+											<div class="col-md-12 col-sm-12">
+												<small class="text-muted-blue bold bold">Nature of business</small>
+												<div class="d-flex justify-content-between"><p><strong>Conquering of planets and kingdoms</strong></p></div>  
+												 <hr>
+											</div>
+											
+											<div class="col-md-12 col-sm-12">
+												<small class="text-muted-blue bold bold">Business monthly income</small>
+												<div class="d-flex justify-content-between"><p><strong>KES 589,569,000</strong></p></div>  
+												
+											</div>
+	
+											
+	
+										</div>										
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- business details -->
+                        <!-- beneficiaries -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+									<div class="card-body business-body">
+										<div class="contact-header">
+                                            <h4>Beneficiaries</h4>
+                                            <p>A list of beneficiaries for this member</p>
+											<hr class="mb-0 mt-1">
+                                        </div>
+                                        <p><strong>Nominees for Deposits/Benefits in the event of Death:</strong></p>
+                                        <table class="table table-striped">
+                                            <thead>
+                                              <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Full Names</th>
+                                                <th scope="col">ID/PP/Birth certificate No.</th>
+                                                <th scope="col">Relationship</th>
+                                                <th scope="col">DOB</th>
+                                                <th scope="col">Allocations</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <th scope="row">1</th>
+                                                <td>Kelvin Njuguna Ndungu</td>
+                                                <td>31839322</td>
+                                                <td>23 Nov 1996</td>
+                                                <td>Chairman</td>
+                                                <th>33%</th>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">2</th>
+                                                <td>Kelvin Njuguna Ndungu</td>
+                                                <td>31839322</td>
+                                                <td>23 Nov 1996</td>
+                                                <td>Chairman</td>
+                                                <th>33%</th>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">3</th>
+                                                <td>Kelvin Njuguna Ndungu</td>
+                                                <td>31839322</td>
+                                                <td>23 Nov 1996</td>
+                                                <td>Chairman</td>
+                                                <th>33%</th>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                          <br>
+                                          <br>
+	
+                                          <p><strong>Nominees for Group Funeral Expense(GFE) Scheme; limited to Spouse, Children & Parents of the Member:</strong></p>
+                                          <table class="table table-striped">
+                                              <thead>
+                                                <tr>
+                                                  <th scope="col">#</th>
+                                                  <th scope="col">Full Names</th>
+                                                  <th scope="col">ID/PP/Birth certificate No.</th>
+                                                  <th scope="col">Relationship</th>
+                                                  <th scope="col">DOB</th>
+                                                  <th scope="col">Allocations</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <th scope="row">1</th>
+                                                  <td class="text-capitalize">Alex wanjala</td>
+                                                  <td>31839322</td>
+                                                  <td>23 Nov 1996</td>
+                                                  <td>Chairman</td>
+                                                  <th>33%</th>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">2</th>
+                                                  <td>Kelvin Njuguna Ndungu</td>
+                                                  <td>31839322</td>
+                                                  <td>23 Nov 1996</td>
+                                                  <td>Chairman</td>
+                                                  <th>33%</th>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">3</th>
+                                                  <td>Kelvin Njuguna Ndungu</td>
+                                                  <td>31839322</td>
+                                                  <td>23 Nov 1996</td>
+                                                  <td>Chairman</td>
+                                                  <th>33%</th>
+                                                </tr>
+                                              </tbody>
+                                            </table>										
+										
+									</div>
+								</div>
+
+                            </div>
+                        </div>
+                        <!-- beneficiaries -->
+
+						
+                    </div>
+                  </div>
+                  <div class="row with-custom-header slideInLeft animated d-none member-acc-loans">
+
+                    <div class="col-12 ">
+                        <div class="card">
+                            <div class="card-body">
+                               <div class="loans-acc-member">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="p-5">
+                                                <div class="contact-header">
+                                                    <h4>Member Accounts details</h4>
+                                                </div>
+                
+                                                <table class="table">
+                                                    <thead>
+                                                      <tr>
+                                                        <th scope="col">Acc No.</th>
+                                                        <th scope="col">Account Name</th>
+                                                        <th scope="col">Date registered</th>
+                                                        <th scope="col">Registered by</th>
+                                                        
+                                                        <th scope="col">Amount</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <th scope="row">125623</th>
+                                                        <td>Share Capital</td>
+                                                        <td>1st Jun 2020</td>
+                                                        <td>Karanja Kamau</td>
+                                                        <th>KES 20,000</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="row">2025896</th>
+                                                        <td>Fixed Deposit</td>
+                                                        <td>1st Jun 2020</td>
+                                                        <td>Karanja Kamau</td>
+                                                        <th>KES 10,000</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="row">3023589</th>
+                                                        <td>Investment Plus</td>
+                                                        <td>14th Jul 2020</td>
+                                                        <td>John Kimoptho</td>
+                                                        <th>KES 50,020</th>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <div class="p-5">
+                                            
+                                                <div class="contact-header">
+                                                    <h4>Loans by  the member</h4>
+                                                </div>
+                
+                                                <table class="table">
+                                                    <thead>
+                                                      <tr>
+                                                        <th scope="col">Loan Product</th>
+                                                        <th scope="col">Date Disbursed</th>
+                                                        <th scope="col">Disbursed by</th>
+                                                        <th scope="col">Amount Disbursed</th>
+                                                        <th scope="col">Current Balance</th>
+                                                        <th scope="col">Actions</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                     
+                                                        <td>Development Loan</td>
+                                                        <td>1st Jun 2020</td>
+                                                        <td>Karanja Kamau</td>
+                                                        <th>KES 15,000</th>
+                                                        <th>KES 3,060</th>
+                                                        <td><a class="btn btn-info btn-sm" href="active-loans-details.html">View</a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        
+                                                        <td>Instant Loan</td>
+                                                        <td>23rd Jul 2020</td>
+                                                        <td>Karanja Kamau</td>
+                                                        <th>KES 4,000</th>
+                                                        <th>KES 460</th>
+                                                        <td><a class="btn btn-info btn-sm" href="active-loans-details.html">View</a></td>
+                                                      </tr>                                     
+                                                    </tbody>
+                                                  </table>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="row with-custom-header transactions-member slideInLeft animated d-none">
+
+                    <div class="col-12 ">
+                        <div class="card">
+                            <div class="card-body">
+                               <div class="">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="p-5">
+                                                <div class="contact-header">
+                                                    <h4>Statements</h4>
+                                                </div>
+                
+                                                <table id="data-table" class="table">
+                                                    <thead>
+                                                      <tr>
+                                                        <th scope="col">Acc No.</th>
+                                                        <th scope="col">Transactions DeDateDate registered</th>
+                                                        <th>Date</th>
+                                                        <th scope="col">Amount</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Deposit from 254704549859. Ref Number:DGGFDB321564</th>
+                                                        <th>1st jul 2020</th>
+                                                        <th scope="col">KES 3,000</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="col">46461</th>
+                                                        <th scope="col">Cash withdrawal Via the counter</th>
+                                                        <th>21st Jul 2020</th>
+                                                        <th scope="col">KES 33,010</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa withdrawal via Mpesa. Phone 254704549859. Ref Number:FKJKH32113</th>
+                                                        <th>22nd Jul 2020</th>
+                                                        <th scope="col">KES 11,000</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Deposit from 254704549859. Ref Number:FSDFSD454</th>
+                                                        <th>25TH Jul 2020</th>
+                                                        <th scope="col">KES 520</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Deposit from 254704549859. Ref Number:DFGDFG23132</th>
+                                                        <th>1st Jan 2020</th>
+                                                        <th scope="col">KES 702</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Deposit from 254704549859. Ref Number:FSSDF21545</th>
+                                                        <th>2nd Jan 2020</th>
+                                                        <th scope="col">KES 5,670</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Deposit from 254704549859. Ref Number:FHFYU1321653</th>
+                                                        <th>14th Feb 2020</th>
+                                                        <th scope="col">KES 425</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Airtel Money withdrawal: Phone Number 25435658956 Ref Number:SDFSDF64654</th>
+                                                        <th>16th Jan 2020</th>
+                                                        <th scope="col">KES 2,500</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="col">664564</th>
+                                                        <th scope="col">Airtel Money withdrawal: Phone Number 25435658956 Ref Number:SDFSD5465465</th>
+                                                        <th>22nd Feb 2020</th>
+                                                        <th scope="col">KES 420</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="col">664564</th>
+                                                        <th scope="col">Airtel Money withdrawal: Phone Number 25435658956 Ref Number:DSFSD132321</th>
+                                                        <th>28th feb 2020</th>
+                                                        <th scope="col">KES 300</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="col">664564</th>
+                                                        <th scope="col">Cash withdrawal via the counter</th>
+                                                        <th>1st Mar 2020</th>
+                                                        <th scope="col">&nbsp;KES 2,523</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="col">664564</th>
+                                                        <th scope="col">Cash deposit via the counter&nbsp;</th>
+                                                        <th>6th Mar 2020</th>
+                                                        <th scope="col">KES 520</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="col">664564</th>
+                                                        <th scope="col">Airtel Money withdrawal: Phone Number 25435658956 Ref Number:TYRFT6789</th>
+                                                        <th>22nd Mar 2020</th>
+                                                        <th scope="col">KES 8,203</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Airtel money deposi. Phone Num 2547342358250. Ref Number:GTYHUU1321653</th>
+                                                        <th>17th Mar 2020</th>
+                                                        <th scope="col">KES 3,620</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Deposit from 254704549859. Ref Number:UUYTH2548123</th>
+                                                        <th>2nd Apr 2020&nbsp;</th>
+                                                        <th scope="col">KES 1,200</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Deposit from 254704549859. Ref Number:RTYG52632</th>
+                                                        <th>17ths Apr 2020</th>
+                                                        <th scope="col">KES 2,020</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Deposit from 254704549859. Ref Number:HFHGF45466</th>
+                                                        <th>16th Apr 2020</th>
+                                                        <th scope="col">KES 210</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Withdrawal from 254704549859. Ref Number:FHFYDFFDG56563</th>
+                                                        <th>1st jul 2020</th>
+                                                        <th scope="col">KES 120</th>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                        </div>
+                                    </div>                                 
+                                    
+                                </div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+                   </div>
+						
+					
+						
+					
+				
+                <footer class="footer hidden-xs-down">
+					<center><a class="nouveta-logoo" href="https://nouveta.tech/"><img src="demo/img/logo-files/logo2.png" target="new"></center></a></center>
+                    <p>Powered by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>
+                </footer>
+            </section>
+        </main>
+
+        <!-- Older IE warning message -->
+            <!--[if IE]>
+                <div class="ie-warning">
+                    <h1>Warning!!</h1>
+                    <p>You are using an outdated version of Internet Explorer, please upgrade to any of the following web browsers to access this website.</p>
+
+                    <div class="ie-warning__downloads">
+                        <a href="http://www.google.com/chrome">
+                            <img src="img/browsers/chrome.png" alt="">
+                        </a>
+
+                        <a href="https://www.mozilla.org/en-US/firefox/new">
+                            <img src="img/browsers/firefox.png" alt="">
+                        </a>
+
+                        <a href="http://www.opera.com">
+                            <img src="img/browsers/opera.png" alt="">
+                        </a>
+
+                        <a href="https://support.apple.com/downloads/safari">
+                            <img src="img/browsers/safari.png" alt="">
+                        </a>
+
+                        <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">
+                            <img src="img/browsers/edge.png" alt="">
+                        </a>
+
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="img/browsers/ie.png" alt="">
+                        </a>
+                    </div>
+                    <p>Sorry for the inconvenience!</p>
+                </div>
+            <![endif]-->
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="vendors/jquery/jquery.min.js"></script>
+        <script src="vendors/popper.js/popper.min.js"></script>
+        <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+        <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+
+        <script src="vendors/flot/jquery.flot.js"></script>
+        <script src="vendors/flot/jquery.flot.resize.js"></script>
+        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+        <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
+        <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
+        <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
+        <script src="vendors/salvattore/salvattore.min.js"></script>
+        <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+		
+		 <script src="vendors/jquery-mask-plugin/jquery.mask.min.js"></script>
+        <script src="vendors/select2/js/select2.full.min.js"></script>
+        <script src="vendors/dropzone/dropzone.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/nouislider/nouislider.min.js"></script>
+        <script src="vendors/trumbowyg/trumbowyg.min.js"></script>
+        <script src="vendors/flatpickr/flatpickr.min.js"></script>
+        <script src="vendors/rateyo/jquery.rateyo.min.js"></script>
+        <script src="vendors/jquery-text-counter/textcounter.min.js"></script>
+        <script src="vendors/autosize/autosize.min.js"></script>
+        <script src="vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+		
+		
+        <!-- Vendors: Data tables -->
+        <script src="vendors/datatables/jquery.dataTables.min.js"></script>
+        <script src="vendors/datatables-buttons/dataTables.buttons.min.js"></script>
+        <script src="vendors/datatables-buttons/buttons.print.min.js"></script>
+        <script src="vendors/jszip/jszip.min.js"></script>
+        <script src="vendors/datatables-buttons/buttons.html5.min.js"></script>
+
+        <!-- Charts and maps-->
+        <script src="demo/js/flot-charts/curved-line.js"></script>
+        <script src="demo/js/flot-charts/dynamic.js"></script>
+        <script src="demo/js/flot-charts/line.js"></script>
+        <script src="demo/js/flot-charts/chart-tooltips.js"></script>
+        <script src="demo/js/other-charts.js"></script>
+        <script src="demo/js/jqvmap.js"></script>
+		
+		<!--high chart-->
+		
+		<script src="vendors/highcharts/highchart.js"></script>
+		<script src="vendors/highcharts/data.js"></script>
+		<script src="vendors/highcharts/drilldown.js"></script>
+		<script src="vendors/highcharts/exporting.js"></script>
+		<script src="vendors/highcharts/export-data.js"></script>
+		<script src="vendors/highcharts/accesibility.js"></script>
+		
+		<script src="js/highcharts/highcharts-more.js"></script>
+		<!--owl corousel-->
+		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script><!-- App functions and actions -->
+		<script src="js/wow.js"></script>
+        <script src="js/app.min.js"></script>
+        <script src="js/main.js"></script>		
+    </body>
+
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:43 GMT -->
+</html>
