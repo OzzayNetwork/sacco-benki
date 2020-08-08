@@ -15223,3 +15223,18 @@ th label .error{
 .font-12{
     font-size: 12px !important;
 }
+.calc-34{
+    height: calc(100% - 34px);
+}
+tbody td a{
+    text-decoration: underline;
+    color: #5E5E5E;
+}
+
+tbody td a.btn{
+    text-decoration: none;
+    color: white;
+}
+.text-light{
+    font-weight: 300;
+}

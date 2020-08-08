@@ -14,6 +14,14 @@ $(window).on('load', function(){
 	$('.full-month').text(moment().format('MMMM'));
 	$('.full-year').text(moment().format('YYYY'));
 	$('.today-full').text(moment().format("MMM Do YY"));
+
+	const today = moment();
+		const otherday=moment()
+		const too_date = otherday.endOf('week');	
+		const from_date = today.startOf('week');			
+		const the_date=from_date.format("DD, MMM")+' To '+too_date.format("DD, MMM");
+		$('.week-full').text(the_date);
+		//alert(from_date);
 	
 //	custom day time picker
 	$('#daily_date').on('change', function(){
