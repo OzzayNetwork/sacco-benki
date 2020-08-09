@@ -89,7 +89,7 @@
             </header>             
 
 			  
-			 <aside class="sidebar">
+			  <aside class="sidebar">
                 <div class="scrollbar-inner">
                     <div class="user">
                         <div class="user__info" data-toggle="dropdown">
@@ -122,14 +122,15 @@
                             <ul>
                                 <li class="d-none"><a href="account.html">Share Capital</a></li>
                                 <li class="d-none"><a href="account.html">Deposit account</a></li>
-								 <li class="d-none"><a href="account-html">Savings</a></li>
+                                 <li class="d-none"><a href="account-html">Savings</a></li>
+                                 <li><a href="accounts-list.html" title="set up new account">Sacco accounts</a></li>
 								 <li><a href="new-account.html" title="set up new account">New account setup</a></li>
                             </ul>
 						</li>
 						
 						<li class="navigation__sub">
                             <a href="#"><i class="flaticon-money"></i>Loans</a>
-                           <ul>
+                            <ul>
                                 <li class=""><a href="loan-setup.html">Loan setup</a></li>
                                 <li class="d-none"><a href="loan-types.html">Loan types</a></li>
                                 <li><a href="loan-application.html">New Loan application</a></li>
@@ -140,24 +141,100 @@
                                 <li><a href="loan-types.html">Loan products</a></li>
 								 
                             </ul>
-                        </li>
-                        
-                        <li class="navigation__sub">
-                            <a href="#"><i class="zmdi zmdi-swap"></i>Transactions</a>
-                            <ul>
-                                <li class=""><a href="deposits.html">Deposits</a></li>
-                                <li class=""><a href="withdrawals.html">Withdrawals</a></li>
-                            </ul>
 						</li>
 						
 						 <li class="navigation__active mt-4"><a href="landing-page.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
                     </ul>
                 </div>
             </aside>
+
+            <!-- modals -->
+            <!-- Modal -->
+          <div class="modal fade" id="freezeAccount" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Freeze accounts</h5>
+
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Select an account you would like to deactivate</p>
+                  <div>
+
+                    <table class="table">
+                      <thead class="border-top-0">
+                        <tr>
+                          <th>
+                              <div class="checkbox">
+                                <input type="checkbox" id="customCheck1">
+                                <label class="checkbox__label" for="customCheck1"></label>
+                            </div>
+                          </th>
+                          <th scope="col">Acc No.</th>
+                          <th scope="col">Account Name</th>
+                          <th scope="col">Amount</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>
+                              <div class="checkbox">
+                                <input type="checkbox" id="customCheck2">
+                                <label class="checkbox__label" for="customCheck2"></label>
+                              </div>
+                          </th>
+                          <th scope="row">125623</th>
+                          <td>Share Capital</td>
+                          <th>KES 20,000</th>
+                        </tr>
+                        <tr>
+                          <th>
+                            <div class="checkbox">
+                              <input type="checkbox" id="customCheck3">
+                              <label class="checkbox__label" for="customCheck3"></label>
+                             </div>
+                          </th>
+                          <th scope="row">2025896</th>
+                          <td>Fixed Deposit</td>
+                          <th>KES 10,000</th>
+                        </tr>
+                        <tr>
+                          <th>
+                              <div class="checkbox">
+                                <input type="checkbox" id="customCheck4">
+                                <label class="checkbox__label" for="customCheck4"></label>
+                            </div>
+                          </th>
+                          <th scope="row">3023589</th>
+                          <td>Investment Plus</td>
+                          <th>KES 50,020</th>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div>
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Reason for freezing account(s)</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter reason ..." rows="3"></textarea>
+                    </div>
+                  </div>
+                 
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary text-capitalize">Freeze account</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- modals -->
             <section class="content custom-table-container">
                 <header class="content__title px-0 border-0">
 				 	<div class="row">
-						<div class="col-md-12 col-sm-12">
+						<div class="col-md-7 col-sm-12">
 							<span class="rev-title-container">
 							 <h1 class="text-capitalize stream_name m-0">Registered Member details</h1>
 							</span>
@@ -168,7 +245,10 @@
 									<li class="breadcrumb-item active">Member details</li>
 								</ol>
 							</div>
-						</div>
+            </div>
+            <div class="col-sm-12 col-md-5 d-flex justify-content-end">
+              <button class="btn btn-primary h-40" data-toggle="modal" data-target="#freezeAccount">Freeze account/Accounts</button>
+            </div>
 												
 					</div>
                 </header>
