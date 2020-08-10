@@ -243,20 +243,21 @@
 				 	<div class="row">
 						<div class="col-md-8 col-sm-12">
 							<span class="rev-title-container">
-                                <h1 class="text-capitalize stream_name m-0">Share Capital member's list</h1>
+                                <h1 class="text-capitalize stream_name m-0">Account Details for 4582263</h1>
                                </span>
 							<div class="">
 								<ol class="breadcrumb border-0">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item"><a href="accounts-list.html">Sacco accounts</a></li>
-                                    <li class="breadcrumb-item active">Share capital</li>
+                                    <li class="breadcrumb-item"><a href="accounts-members.html">Share capital</a></li>
+                                    <li class="breadcrumb-item active">Account details</li>
                                     
 								</ol>
 							</div>
 						</div>
 						<div class="col-4 col-sm-12 col-md-4">
 							<div class="section-header">
-								<a href="new-member.html" class="btn btn-sm btn-primary" title="">Register New Member</a>
+								<button class="btn btn-sm btn-danger" title="" data-toggle="modal" data-target="#freezeAcc">Freeze this account</button>
 							</div>					
 						</div>						
 					</div>
@@ -264,41 +265,183 @@
 				
 				<div class="row">
 					<div class="col-12 p-0">
-						<div class="card table-custom-bg">
+						<div class="card ">
 							<div class="card-body">
+
+                                <div class="contact-header mb-4">
+                                    <h4 class="mb-3">Account Details</h4>
+                                    <hr class="mb-0 mt-1">
+                                </div>
+                                <div class="row mb-5">
+                                    <div class="col-md-4 col-sm-12">
+                                        <small class="text-muted-blue bold bold">Owner's Name</small>
+									    <div class="d-flex justify-content-between"><p><strong>Kelvin Njuguna Ndungu</strong></p></div>  
+									
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-12">
+                                        <small class="text-muted-blue bold bold">Owner's Email</small>
+									    <div class="d-flex justify-content-between"><p><strong><a href="mailto:kelvinnjuguna99@gmail.com" title="send  email to the member"><i class="zmdi zmdi-email mr-3"></i>kelvinnjuguna99@gmail.com</a></strong></p></div>  
+									
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <small class="text-muted-blue bold bold">Owner's Phone</small>
+									    <div class="d-flex justify-content-between"><p><strong><a href="tel:0704549859" title="call the member"><i class="zmdi zmdi-phone mr-3"></i>0704549859</a></strong></p></div>  
+									
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <small class="text-muted-blue bold bold">Account creation Date</small>
+									    <div class="d-flex justify-content-between"><p><strong>22nd Jul 2020</strong></p></div>  
+									
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <small class="text-muted-blue bold bold">Account created by</small>
+									    <div class="d-flex justify-content-between"><p><strong>Alex Wanjala</strong></p></div>  
+									
+                                    </div>
+                                    <div class="col-12">
+                                        <hr>
+                                    </div>
+
+                                    <div class="col-md-12 col-sm-12">
+                                        <small class="text-muted-blue bold bold">Account balance</small>
+									    <div class="d-flex justify-content-between"><h4 class="font-weight-lighter font-xx-large">KSH 39,850.00</h4></div>  
+									
+                                    </div>
+                                    <div class="col-12">
+                                        <hr>
+                                    </div>
+
+                                   <div class="col-12">
+                                    <div class="contact-header mt-4">
+                                        <h4 class="mb-3">Transactions History</h4>
+                                       
+                                    </div>
+                                   </div>
+                                </div>
+
 								<div class="table-responsive">
-									<table class="table table-hover table-custom spacing8" id="data-table">
-										<thead>
-											<tr> 
-												<th>Acc No</th>
-												<th>Name</th>
-												<th>Phone</th>
-												<th>Date created</th>
-												<th>Created By</th>
-												<th>Amount</th>
-												<th>Actions</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-                                                <td class="w60">
-													12566253
-												</td>
-												<td class="w60">
-													<a title="" href="member-profile.html">Amos Wele</a>
-												</td>
-                                                <td><a href="tel:0702663857">0702663857</a></td>	
-                                                <td>3rd Aug 2020</td>
-												<td>Alex Wanjala</td>
-												<td class="text-capitalize">KES 25,200</td>		
-												<td>
-                                                    <button class="btn btn-danger mr-2" data-toggle="modal" data-target="#freezeAcc">Freeze account</button>
-													<a href="account-member-details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
-												</td>								
-											</tr>											
-											
-										</tbody>
-									</table>
+									
+                                    <table id="data-table" class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Acc No.</th>
+                                            <th scope="col">Transactions DeDateDate registered</th>
+                                            <th>Date</th>
+                                            <th class="amount-rt" scope="col">Amount</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Deposit from 254704549859. Ref Number:DGGFDB321564</th>
+                                            <th>1st jul 2020</th>
+                                            <th class="amount-rt" scope="col">KES 3,000</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">46461</th>
+                                            <th scope="col">Cash withdrawal Via the counter</th>
+                                            <th>21st Jul 2020</th>
+                                            <th class="amount-rt" scope="col">KES 33,010</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa withdrawal via Mpesa. Phone 254704549859. Ref Number:FKJKH32113</th>
+                                            <th>22nd Jul 2020</th>
+                                            <th class="amount-rt" scope="col">KES 11,000</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Deposit from 254704549859. Ref Number:FSDFSD454</th>
+                                            <th>25TH Jul 2020</th>
+                                            <th class="amount-rt" scope="col">KES 520</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Deposit from 254704549859. Ref Number:DFGDFG23132</th>
+                                            <th>1st Jan 2020</th>
+                                            <th class="amount-rt" scope="col">KES 702</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Deposit from 254704549859. Ref Number:FSSDF21545</th>
+                                            <th>2nd Jan 2020</th>
+                                            <th class="amount-rt" scope="col">KES 5,670</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Deposit from 254704549859. Ref Number:FHFYU1321653</th>
+                                            <th>14th Feb 2020</th>
+                                            <th class="amount-rt" scope="col">KES 425</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Airtel Money withdrawal: Phone Number 25435658956 Ref Number:SDFSDF64654</th>
+                                            <th>16th Jan 2020</th>
+                                            <th class="amount-rt" scope="col">KES 2,500</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">664564</th>
+                                            <th scope="col">Airtel Money withdrawal: Phone Number 25435658956 Ref Number:SDFSD5465465</th>
+                                            <th>22nd Feb 2020</th>
+                                            <th class="amount-rt" scope="col">KES 420</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">664564</th>
+                                            <th scope="col">Airtel Money withdrawal: Phone Number 25435658956 Ref Number:DSFSD132321</th>
+                                            <th>28th feb 2020</th>
+                                            <th class="amount-rt" scope="col">KES 300</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">664564</th>
+                                            <th scope="col">Cash withdrawal via the counter</th>
+                                            <th>1st Mar 2020</th>
+                                            <th class="amount-rt" scope="col">KES 2,523</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">664564</th>
+                                            <th scope="col">Cash deposit via the counter</th>
+                                            <th>6th Mar 2020</th>
+                                            <th class="amount-rt" scope="col">KES 520</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">664564</th>
+                                            <th scope="col">Airtel Money withdrawal: Phone Number 25435658956 Ref Number:TYRFT6789</th>
+                                            <th>22nd Mar 2020</th>
+                                            <th class="amount-rt" scope="col">KES 8,203</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Airtel money deposi. Phone Num 2547342358250. Ref Number:GTYHUU1321653</th>
+                                            <th>17th Mar 2020</th>
+                                            <th class="amount-rt" scope="col">KES 3,620</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Deposit from 254704549859. Ref Number:UUYTH2548123</th>
+                                            <th>2nd Apr 2020</th>
+                                            <th class="amount-rt" scope="col">KES 1,200</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Deposit from 254704549859. Ref Number:RTYG52632</th>
+                                            <th>17ths Apr 2020</th>
+                                            <th class="amount-rt" scope="col">KES 2,020</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Deposit from 254704549859. Ref Number:HFHGF45466</th>
+                                            <th>16th Apr 2020</th>
+                                            <th class="amount-rt" scope="col">KES 210</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Withdrawal from 254704549859. Ref Number:FHFYDFFDG56563</th>
+                                            <th>1st jul 2020</th>
+                                            <th class="amount-rt" scope="col">KES 120</th>
+                                          </tr>
+                                        </tbody>
+                                      </table>
 								</div>
 							</div>
 						</div>

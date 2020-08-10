@@ -52,7 +52,58 @@
 					
 				</span>
             </div>
+			<!-- create account -->
+			<div class="modal fade" id="new-member-account2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <h5 class="modal-title" id="exampleModalLongTitle">Kelvin Njuguna's New Account</h5>
+					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					  </button>
+					</div>
+					<div class="modal-body">
+						<p>Select the new <strong>account(s)</strong> you would like to create for the member.</p>
 
+						<div class="form-group">
+							<label for="member-no">Member's Number</label>
+							<input type="text" class="form-control" id="member-no" aria-describedby="emailHelp" placeholder="Enter member's number">
+							<small id="emailHelp" class="form-text text-muted">Error Message goes here</small>
+						  </div>
+
+						<h6 class="mb-3">List of available accounts:</h6>
+						<div>
+							<div class="checkbox">
+								<input type="checkbox" id="account-type1">
+								<label class="checkbox__label" for="account-type1">Share Capital</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" id="account-type2">
+								<label class="checkbox__label" for="account-type2">Share deposit</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" id="account-type3">
+								<label class="checkbox__label" for="account-type3">Loan & Interests</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" id="account-type4">
+								<label class="checkbox__label" for="account-type4">Clearing</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" id="account-type5">
+								<label class="checkbox__label" for="account-type5">FOSA</label>
+							</div>
+
+						</div>
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					  <button type="button" class="btn btn-primary">Create Account(s)</button>
+					</div>
+				  </div>
+				</div>
+				</div>
+			<!-- create account -->
             <header class="header">
                 <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
                     <div class="navigation-trigger__inner">
@@ -75,6 +126,7 @@
                 </form>
 				
 				<ul class="top-nav">
+					<li><button data-toggle="modal" data-target="#new-member-account2" class="btn btn-light text-black"><i class="zmdi zmdi-plus mr-2"></i>New Member Account</button></li>
                     <li class="hidden-xl-up"><a href="#" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
 					
 					<li data-toggle="tooltip" data-original-title="Notifications" class="dropdown top-nav__notifications">
@@ -147,7 +199,59 @@
 						 <li class="navigation__active mt-4"><a href="landing-page.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
                     </ul>
                 </div>
-            </aside>
+			</aside>
+			
+			<!-- modals -->
+
+			<div class="modal fade" id="new-member-account" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <h5 class="modal-title" id="exampleModalLongTitle">Kelvin Njuguna's New Account</h5>
+					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					  </button>
+					</div>
+					<div class="modal-body">
+						<p>Select the new <strong>account(s)</strong> you would like to create for the member.</p>
+
+						<h6 class="mb-3">List of available accounts:</h6>
+						<div>
+							<div class="checkbox">
+								<input type="checkbox" id="acc1">
+								<label class="checkbox__label" for="acc1">Share Capital</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" id="acc2">
+								<label class="checkbox__label" for="acc2">Share deposit</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" id="acc4">
+								<label class="checkbox__label" for="acc4">Loan & Interests</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" id="acc5">
+								<label class="checkbox__label" for="acc5">Clearing</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" id="acc6">
+								<label class="checkbox__label" for="acc6">FOSA</label>
+							</div>
+
+						</div>
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					  <button type="button" class="btn btn-primary">Create Account(s)</button>
+					</div>
+				  </div>
+				</div>
+				</div>
+
+				
+
+
+			<!-- modals -->
 			
 			
 
@@ -200,12 +304,12 @@
 												</td>
 												<td><a href="tel:0702663857">0702663857</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">amoswele@gmail.com</a></td>
-												<td>5 Accounts</td>	
+												<td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Alex Wanjala</td>
 												<td class="text-capitalize">1st Jun 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											
 											<tr>
@@ -214,11 +318,11 @@
 												</td>
 												<td><a href="tel:0702365985">0702365985</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">sharon@gmail.com</a></td>
-												<td>5 Accounts</td>	
+												<td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Karanja Kamau</td>
 												<td class="text-capitalize">22nd Jun 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
 												</td>								
 											</tr>
 
@@ -228,12 +332,12 @@
 												</td>
 												<td><a href="tel:0702365972">0704525252</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">cate@gmail.com</a></td>
-												<td>5 Accounts</td>	
+												<td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Karanja Kamau</td>
 												<td class="text-capitalize">22nd Jun 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -241,12 +345,12 @@
 												</td>
 												<td><a href="tel:0702365972">0702525252</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">stones@gmail.com</a></td>
-												<td>2 Accounts</td>	
+												<td>2 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Karanja Kamau</td>
 												<td class="text-capitalize">22nd Jun 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -254,12 +358,12 @@
 												</td>
 												<td><a href="tel:0702365962">0702365962</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">gina@gmail.com</a></td>
-												<td>2 Accounts</td>	
+												<td>2 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Karanja Kamau</td>
 												<td class="text-capitalize">22nd Jun 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -267,12 +371,12 @@
 												</td>
 												<td><a href="tel:0702365962">0702365962</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">jib@gmail.com</a></td>
-												<td>2 Accounts</td>	
+												<td>2 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Karanja Kamau</td>
 												<td class="text-capitalize">22nd Jun 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -280,12 +384,12 @@
 												</td>
 												<td><a href="tel:0702365325">0702365325</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">job@gmail.com</a></td>
-												<td>4 Accounts</td>	
+												<td>4 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Karanja Kamau</td>
 												<td class="text-capitalize">22nd Jun 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -293,12 +397,12 @@
 												</td>
 												<td><a href="tel:0702361234">0702361234</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">apundo@gmail.com</a></td>
-												<td>4 Accounts</td>	
+												<td>4 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>John Kimotho</td>
 												<td class="text-capitalize">22nd Jun 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -306,12 +410,12 @@
 												</td>
 												<td><a href="tel:0702323056">0702323056</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">moses@gmail.com</a></td>
-												<td>4 Accounts</td>	
+												<td>4 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>John Kimotho</td>
 												<td class="text-capitalize">22nd Jun 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -319,12 +423,12 @@
 												</td>
 												<td><a href="tel:0702323202">0702323202</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">jane@gmail.com</a></td>
-												<td>5 Accounts</td>	
+												<td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>John Kimotho</td>
 												<td class="text-capitalize">22nd Jun 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -332,12 +436,12 @@
 												</td>
 												<td><a href="tel:0702323859">0702323859</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">jean@gmail.com</a></td>
-												<td>5 Accounts</td>	
+												<td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Andrew Rua</td>
 												<td class="text-capitalize">22nd Jun 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -345,12 +449,12 @@
 												</td>
 												<td><a href="tel:0702323888">0702323888</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">dennis@gmail.com</a></td>
-												<td>5 Accounts</td>	
+												<td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Andrew Rua</td>
 												<td class="text-capitalize">22nd Jun 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -358,12 +462,12 @@
 												</td>
 												<td><a href="tel:0702323852">0705252563</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">kin@gmail.com</a></td>
-												<td>5 Accounts</td>	
+												<td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Andrew Rua</td>
 												<td class="text-capitalize">22nd Jun 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -371,12 +475,12 @@
 												</td>
 												<td><a href="tel:0702323852">0702323852</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-												<td>5 Accounts</td>	
+												<td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Edwin Kipkoiiung</td>
 												<td class="text-capitalize">22nd Jun 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -384,12 +488,12 @@
 												</td>
 												<td><a href="tel:0702323555">0702323555</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-												<td>8 Accounts</td>	
+												<td>8 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Edwin Kipkoiiung</td>
 												<td class="text-capitalize">22nd Jun 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -397,12 +501,12 @@
 												</td>
 												<td><a href="tel:0702323523">0702323523</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-												<td>8 Accounts</td>	
+												<td>8 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Edwin Kipkoiiung</td>
 												<td class="text-capitalize">5th Jul 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -410,12 +514,12 @@
 												</td>
 												<td><a href="tel:0702323111">0702323111</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-												<td>8 Accounts</td>	
+												<td>8 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Nita Oria</td>
 												<td class="text-capitalize">5th Jul 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -423,12 +527,12 @@
 												</td>
 												<td><a href="tel:0702323333">0702323333</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-												<td>6 Accounts</td>	
+												<td>6 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Nita Oria</td>
 												<td class="text-capitalize">5th Jul 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -436,12 +540,12 @@
 												</td>
 												<td><a href="tel:0702323237">0702323237</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-												<td>6 Accounts</td>	
+												<td>6 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Ben Kimkoi</td>
 												<td class="text-capitalize">10th Jul 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -449,12 +553,12 @@
 												</td>
 												<td><a href="tel:0702323856">0702323856</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-												<td>6 Accounts</td>	
+												<td>6 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Ben Kimkoi</td>
 												<td class="text-capitalize">10th Jul 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -462,12 +566,12 @@
 												</td>
 												<td><a href="tel:0702323586">0702323586</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-												<td>3 Accounts</td>	
+												<td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Ben Kimkoi</td>
 												<td class="text-capitalize">10th Jul 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -475,12 +579,12 @@
 												</td>
 												<td><a href="tel:0702663395">0702663395</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-												<td>3 Accounts</td>	
+												<td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Alex Wanjala</td>
 												<td class="text-capitalize">10th Jul 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -488,12 +592,12 @@
 												</td>
 												<td><a href="tel:0702663322">0702663322</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-												<td>3 Accounts</td>	
+												<td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Alex Wanjala</td>
 												<td class="text-capitalize">3rd Jul 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -501,12 +605,12 @@
 												</td>
 												<td><a href="tel:0702663355">0702663355</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-												<td>3 Accounts</td>	
+												<td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Alex Wanjala</td>
 												<td class="text-capitalize">3rd Jul 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -514,12 +618,12 @@
 												</td>
 												<td><a href="tel:0702663310">0702663310</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">kelin@gmail.com</a></td>
-												<td>3 Accounts</td>	
+												<td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Alex Wanjala</td>
 												<td class="text-capitalize">3rd Jul 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 											<tr>
 												<td class="w60">
@@ -527,12 +631,12 @@
 												</td>
 												<td><a href="tel:0702663333">0702663333</a></td>	
 												<td><a href="mailto:kelvinnjuguna99@gmail.com">john@gmail.com</a></td>
-												<td>3 Accounts</td>	
+												<td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>	
 												<td>Alex Wanjala</td>
 												<td class="text-capitalize">13th Jul 2020</td>		
 												<td>
-													<a href="member-profile.html" class="btn btn-primary">View profile</a>
-												</td>								
+													<a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+												</td>							
 											</tr>
 										</tbody>
 									</table>

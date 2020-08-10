@@ -8764,10 +8764,10 @@ select.form-control {
     pointer-events: none
 }
 .checkbox>input[type=checkbox]:checked~.checkbox__label:before, .checkbox>input[type=radio]:checked~.checkbox__label:before, .radio>input[type=checkbox]:checked~.checkbox__label:before, .radio>input[type=radio]:checked~.checkbox__label:before {
-    background-color: #0160a2
+    background-color: #f26b29
 }
 .checkbox>input[type=checkbox]:checked~.checkbox__label:before, .checkbox>input[type=checkbox]:checked~.radio__label:before, .checkbox>input[type=radio]:checked~.checkbox__label:before, .checkbox>input[type=radio]:checked~.radio__label:before, .radio>input[type=checkbox]:checked~.checkbox__label:before, .radio>input[type=checkbox]:checked~.radio__label:before, .radio>input[type=radio]:checked~.checkbox__label:before, .radio>input[type=radio]:checked~.radio__label:before {
-    border-color: #0160a2
+    border-color: #f26b29
 }
 .checkbox>input[type=checkbox]:checked~.checkbox__label:after, .checkbox>input[type=checkbox]:checked~.radio__label:after, .checkbox>input[type=radio]:checked~.checkbox__label:after, .checkbox>input[type=radio]:checked~.radio__label:after, .radio>input[type=checkbox]:checked~.checkbox__label:after, .radio>input[type=checkbox]:checked~.radio__label:after, .radio>input[type=radio]:checked~.checkbox__label:after, .radio>input[type=radio]:checked~.radio__label:after {
     -webkit-transform: scale(1);
@@ -15264,4 +15264,10 @@ tbody td a.btn{
 }
 .checkbox__label{
     cursor: pointer;
+}
+.font-xx-large{
+font-size: xx-large;;
+}
+.amount-rt{
+    text-align: right !important;
 }
