@@ -53,7 +53,7 @@
 				</span>
             </div>
 
-           <!-- create account -->
+          <!-- create account -->
 			<div class="modal fade" id="new-member-account2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered" role="document">
 				  <div class="modal-content">
@@ -144,6 +144,7 @@
             </header>
 
               
+			
 			  <aside class="sidebar">
                 <div class="scrollbar-inner">
                     <div class="user">
@@ -203,306 +204,254 @@
                     </ul>
                 </div>
             </aside>
-            <!-- =========================== -->
-            <!-- modals -->
-            <!-- ================================= -->
 
-            <!-- decline application -->
             <!-- Modal -->
-            <div class="modal fade" id="decline-loan-application" tabindex="-1" role="dialog" aria-labelledby="decline-loan-application" aria-hidden="true">
+            <!-- freezde account -->
+            <div class="modal fade" id="freezeAcc" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Decline the application</h5>
+                    <h5 class="modal-title">Freeze account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="search-member ">
+                                <h6>Enter account number in order to continue:</h6>
+                                <div class="form-group  mb-2 d-flex">
+                                    <input type="Text" class="form-control" id="inputPassword2" placeholder="Enter account Number">
+                                    <button class="btn btn-primary btn--icon-text"><i class="zmdi zmdi-search"></i>Search</button>
+                                  </div>
+                            </div>
+
+                            <!-- show this when the account details have been fetched -->
+
+                            <div class="fetched-details">
+                                <h6 class="mt-4">Account Details</h6>
+                                <hr>
+                                <div class="">
+                                    <small class="text-muted-blue bold bold">Owner's Full Names</small>
+                                    <div class="d-flex justify-content-between"><p><strong>Kelvin Njuguna Ndungu</strong></p></div>  
+                                </div>
+
+                                <div class="">
+                                    <small class="text-muted-blue bold bold">Account type</small>
+                                    <div class="d-flex justify-content-between"><p><strong>Share Capital</strong></p></div>  
+                                </div>
+
+                                <div class="">
+                                    <small class="text-muted-blue bold bold">Current Account Balance</small>
+                                    <div class="d-flex justify-content-between"><p><strong>KES 23,520</strong></p></div>  
+                                    
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1"><strong>Reason for freezing this account</strong></label>
+                                    <textarea placeholder="Enter reason ..." class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                  </div>
+                            </div>
+                           
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- show this when the account details have been fetched -->
+                    <button type="button" class="btn btn-danger d-none">Freeze account</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            
+             <!-- unfreeze account -->
+             <div class="modal fade" id="un-freezeAcc" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title">Unfreeze Account</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                     </div>
                     <div class="modal-body">
                         <div class="">
-                            <form>
-                                <div class="form-group">
-                                    <label for="decline-reason">Reason for declining this application</label>
-                                    <textarea class="form-control" placeholder="Enter reason for declining ..." id="decline-reason" rows="3"></textarea>
-                                  </div>
-                            </form>
+                            <h5 class="modal-title" id="exampleModalLongTitle">Unfreeze Acc No. 12358952</h5>
+                            <div class="notes my-3">
+                                This account was frozen on <strong>22ND Aug 2020</strong> at <strong>10:03 AM</strong> by <strong> Alex Wanjala</strong>. For the reason of; <strong>suspected illegal activities</strong>
+                                
+                            </div>   
+                            
+                                <h5>Are you sure you want to unfreeze this account?</h5>                         
                         </div>
-                
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-danger btn--icon-text"><i class="zmdi zmdi-close mr-3"></i>Decline</button>
+                    <button type="button" class="btn btn-success">Yes Unfreeze The Account</button>
                     </div>
                 </div>
                 </div>
             </div>
-
-            <!-- decline application -->
-
-            <!-- send for re-evaluation -->
-
-             <!-- Modal -->
-             <div class="modal fade" id="reevaluate-loan-application" tabindex="-1" role="dialog" aria-labelledby="decline-loan-application" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Send for re-evaluation</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="">
-                            <form>
-                                <div class="form-group">
-                                    <label for="decline-reason">Reason for sending application for Re-evaluation</label>
-                                    <textarea class="form-control" placeholder="Enter reason ..." id="decline-reason" rows="3"></textarea>
-                                  </div>
-                            </form>
-                        </div>
-                
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-warning btn--icon-text"><i class="zmdi zmdi-refresh-sync mr-3"></i>Send for re-evaluation</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-
-            <!-- =========================== -->
-            <!-- modals -->
-            <!-- ================================= -->
 			
+
             
 
             <section class="content custom-table-container">
+				
                 <header class="content__title px-0 border-0">
 				 	<div class="row">
-						<div class="col-md-12 col-sm-12">
+						<div class="col-md-8 col-sm-12">
 							<span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">Loan application details</h1>
-							</span>
+                                <h1 class="text-capitalize stream_name m-0">Frozen Accounts</h1>
+                               </span>
 							<div class="">
 								<ol class="breadcrumb border-0">
-									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item"><a href="ongoing-loans.html">Ongoing Applications</a></li>
-									<li class="breadcrumb-item active">loan Application for Kelvin Njuguna</li>
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="accounts-list.html">Sacco accounts</a></li>
+                                    <li class="breadcrumb-item active">Frozen Accounts</li>
+                                    
 								</ol>
 							</div>
 						</div>
-												
+						<div class="col-4 col-sm-12 col-md-4">
+							<div class="section-header">
+								<button  class="btn btn-danger" data-toggle="modal" data-target="#freezeAcc" title="">Freeze An account</button>
+							</div>					
+						</div>						
 					</div>
-				</header>
+                </header
 				
-				<div class="row with-custom-header">					
-					<div class="col-sm-12 col-md-8">
-						<!-- application details start -->
-						<div class="row">
-							<div class="col-12">
-								<div class="card calc-18">
-									<div class="card-body employment-body">
-										<div class="contact-header">
-											<h4>Application Progress</h4>
-											<hr class="mb-0 mt-1">
-                                        </div>
-                                        
-                                        <div class="application-progress">
-                                            <div class="root posi">
-                                                 <div class="progresss-container">
-                                                      <ul class="progressbar">
-
-
-                                                        <small class="progress-date">3rd Jun 2020</small>
-                                                        <li class="active">Initiation
-                                                            <br><small>Initiated By Alex Wanjala</small>
-                                                        </li>
-
-
-                                                        <small class="progress-date">13Th Jun 2020</small>
-                                                        <li class="active">Loan Appraisal
-                                                            <br>
-                                                            <small>Approved by Edwin Kiploman</small>
-                                                        </li>
-
-                                                        <small class="progress-date d-none">3rd Jun 2020</small>
-                                                        <li>Loan Approval
-                                                            <br>
-                                                            <small>Pending</small>
-                                                        </li> 
-                                                        
-                                                        <small class="progress-date d-none">3rd Jun 2020</small>
-                                                        <li>Disbursement
-                                                            <br>
-                                                            <small>Pending ...</small>
-                                                        </li>  
-                                                      </ul>
-                                                  </div>
-                                              </div>
-                                        </div>
-
-                                        <div class="contact-header">
-                                            <h4>Loan Application details</h4>
-                                            <p>Have a closr look at the details pertaining to this application before taking any action.</p>
-											<hr class="mb-0 mt-1">
-                                        </div>
-
-										<small class="text-muted-blue bold bold">Loan type</small>
-										<div class="d-flex justify-content-between"><p><strong>Loan type name</strong></p></div>  
-										<hr> 
-										<div class="row">
-											<div class="col-md- col-sm-12">
-												<small class="text-muted-blue bold bold">Reason for applying for the loan</small>
-												<div class="d-flex justify-content-between"><p><strong>To pay a very urgent and emergency fee for my son's Space camp graduation at Venezuela</strong></p></div>  
-												<hr> 
-                                            </div>
-                                            
-                                            <div class="col-12 mt-4">
-                                                <h4>Application Attachments</h4>
-                                            </div>
-                                            <br>
-                                            <br>
-                                            <div class="col-12">
-                                                <div class="row loan-docs">
-                                                    <label class="col-lg-3 col-sm-12 col-md-6" for="intro-letter">
-                                                        
-                                                        <div class="intro-letter " title="attach attachment letter from employer">
-                                                            <span><img src="demo/img/attachment-docs/contract.svg"></span>
-                                                            <h5>Introduction letter</h5>
-                                                            <small></small>
-                                                        </div>
-                                                    </label>
-
-                                                    <label class="col-lg-3 col-sm-12 col-md-6" for="payslip">
-                                                        
-                                                        <div class="pay-slip " title="attach the payslip (at least 3 months ago)">
-                                                            <span><img src="demo/img/attachment-docs/email.svg"></span>
-                                                            <h5>Payslip</h5>
-                                                            <small>At least 3 Months Ago</small>
-                                                        </div>
-                                                    </label>
-
-                                                    <label class="col-lg-3 col-sm-12 col-md-6 " for="bank-statement">
-                                                       
-                                                        <div class="bank-state " title="Attach bank statement(s)(At least 23 months ago)">
-                                                            <span><img src="demo/img/attachment-docs/bank.svg"></span>
-                                                            <h5>Bank statement</h5>
-                                                            <small>At least 3 Months Ago</small>
-                                                        </div>
-                                                    </label>
-
-                                                    <label for="mpesa-state" class="col-lg-3 col-sm-12 col-md-6 " title="Select mpesa statement (at least 3 months ago)">
-                                                       
-                                                        <div class="mpesa-state ">
-                                                            <span><img src="demo/img/attachment-docs/mpesa.svg"></span>
-                                                            <h5>Mpesa statement</h5>
-                                                            <small>At least 3 Months Ago</small>
-                                                        </div>
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <br>
-                                            <br>
+				<div class="row">
+					<div class="col-12 p-0">
+						<div class="card table-custom-bg">
+							<div class="card-body">
+								<div class="table-responsive">
+									<table class="table table-hover table-custom spacing8" id="data-table">
+										<thead>
+											<tr> 
+												<th>Acc No</th>
+												<th>Name</th>
+												<th>Date Frozen</th>
+                                                <th>Frozen By</th>
+                                                <th>Reason</th>
+												<th>Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+                                            <tr>
+                                                <td class="w60">
+													12566253
+												</td>
+												<td class="w60">
+													<a title="" href="member-profile.html">Amos Wele</a>
+												</td>
+                                                <td>3rd Aug 2020 10:52 AM</td>
+                                                <td>Alex Wanjala</td>
+                                                <td>Suspected illegal activities</td>
+												<td>
+                                                    <button class="btn btn-success mr-2" data-toggle="modal" data-target="#un-freezeAcc">Unfreeze account</button>
+													<a href="frozen-account-member-details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
+												</td>								
+                                            </tr>
+                                            <tr>
+                                                <td class="w60">
+													12566253
+												</td>
+												<td class="w60">
+													<a title="" href="member-profile.html">Amos Wele</a>
+												</td>
+                                                <td>3rd Aug 2020 10:52 AM</td>
+                                                <td>Alex Wanjala</td>
+                                                <td>Suspected illegal activities</td>
+												<td>
+                                                    <button class="btn btn-success mr-2" data-toggle="modal" data-target="#un-freezeAcc">Unfreeze account</button>
+													<a href="frozen-account-member-details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
+												</td>								
+                                            </tr>
+                                            <tr>
+                                                <td class="w60">
+													12566253
+												</td>
+												<td class="w60">
+													<a title="" href="member-profile.html">Amos Wele</a>
+												</td>
+                                                <td>3rd Aug 2020 10:52 AM</td>
+                                                <td>Alex Wanjala</td>
+                                                <td>Suspected illegal activities</td>
+												<td>
+                                                    <button class="btn btn-success mr-2" data-toggle="modal" data-target="#un-freezeAcc">Unfreeze account</button>
+													<a href="frozen-account-member-details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
+												</td>								
+                                            </tr>
+                                            <tr>
+                                                <td class="w60">
+													12566253
+												</td>
+												<td class="w60">
+													<a title="" href="member-profile.html">Amos Wele</a>
+												</td>
+                                                <td>3rd Aug 2020 10:52 AM</td>
+                                                <td>Alex Wanjala</td>
+                                                <td>Suspected illegal activities</td>
+												<td>
+                                                    <button class="btn btn-success mr-2" data-toggle="modal" data-target="#un-freezeAcc">Unfreeze account</button>
+													<a href="frozen-account-member-details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
+												</td>								
+                                            </tr>
+                                            <tr>
+                                                <td class="w60">
+													12566253
+												</td>
+												<td class="w60">
+													<a title="" href="member-profile.html">Amos Wele</a>
+												</td>
+                                                <td>3rd Aug 2020 10:52 AM</td>
+                                                <td>Alex Wanjala</td>
+                                                <td>Suspected illegal activities</td>
+												<td>
+                                                    <button class="btn btn-success mr-2" data-toggle="modal" data-target="#un-freezeAcc">Unfreeze account</button>
+													<a href="frozen-account-member-details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
+												</td>								
+                                            </tr>
+                                            <tr>
+                                                <td class="w60">
+													12566253
+												</td>
+												<td class="w60">
+													<a title="" href="member-profile.html">Amos Wele</a>
+												</td>
+                                                <td>3rd Aug 2020 10:52 AM</td>
+                                                <td>Alex Wanjala</td>
+                                                <td>Suspected illegal activities</td>
+												<td>
+                                                    <button class="btn btn-success mr-2" data-toggle="modal" data-target="#un-freezeAcc">Unfreeze account</button>
+													<a href="frozen-account-member-details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
+												</td>								
+                                            </tr>
+                                            <tr>
+                                                <td class="w60">
+													12566253
+												</td>
+												<td class="w60">
+													<a title="" href="member-profile.html">Amos Wele</a>
+												</td>
+                                                <td>3rd Aug 2020 10:52 AM</td>
+                                                <td>Alex Wanjala</td>
+                                                <td>Suspected illegal activities</td>
+												<td>
+                                                    <button class="btn btn-success mr-2" data-toggle="modal" data-target="#un-freezeAcc">Unfreeze account</button>
+													<a href="frozen-account-member-details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
+												</td>								
+                                            </tr>
 											
-
-											<div class="col-md-12 col-sm-12 mt-4">
-                                                <h5 class="text-muted-blue bold bold mb-1">Amount applying for</h5>
-												
-												<div class="d-flex justify-content-between font-36 font-weight-light"><p>KES 2,258,000</p></div>  
-												
-                                            </div>
-                                            
-                                            <div class="col-md-12 col-sm-12 mt-4">
-                                                <h5 class="text-muted-blue bold bold mb-1">Actions</h5>	
-                                                <p>Select any of the following buttons based on your observation on this particular applications.</p>									
-                                                
-                                                <button class="btn btn-danger btn--icon-text" data-toggle="modal" data-target="#decline-loan-application"><i class="zmdi zmdi-close mr-3"></i> Decline application </button>
-                                                <button class="btn btn-warning btn--icon-text mx-4" data-toggle="modal" data-target="#reevaluate-loan-application"> <i class="zmdi zmdi-refresh-sync mr-3"></i> Send for revaluation</button>
-                                                <button class="btn btn-success btn--icon-text">Approve for next stage <i class="ml-3 zmdi zmdi-mail-reply-all flipx"></i></button>
-											</div>
-
-										</div>										
-										
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- application details end -->
-
-						
-                    </div>
-                    
-                    <div class="col-sm-12 col-md-4">
-						<div class="account-info">
-							
-							<div class="card">
-								<div class="card-body">
-									<div class="contact-header">
-										<h4>Applicant's Details</h4>
-										<hr class="mb-0 mt-1">
-									</div>
-									<small class="text-muted-blue bold bold">Full Names & Date of Birth</small>
-									<div class="d-flex justify-content-between"><p><strong>Kelvin Njuguna Ndungu</strong></p> <p class="ml-3">04 Nov 1994</p></div>  
-									<hr> 
-									<small class="text-muted-blue bold bold">Marital status & Gender</small>
-									
-									<div class="d-flex justify-content-between"><p><strong>Very Single</strong></p><p>Male</p></div>                        
-									<hr>
-									<small class="text-muted-blue bold">Nationality</small>
-									<p>Holy See (Vatican City State)</p>
-									<hr>
-									<small class="text-muted-blue bold">KRA PIN</small>
-									<p>AJHU455613</p>
-									<hr>
-									<small class="text-muted-blue bold">Registered on</small>
-									<p>22 Feb 2020 by Alex Wanjala</p>
-									
-									
-									<div class="contact-header mt-5">
-										<h4>Contact details</h4>
-										<hr class="mb-0 mt-1">
-									</div>
-
-                                    <small class="text-muted-blue bold">Mobile phone number</small>
-									<p><a href="tel:0704549859">0704549859</a></p>
-									<hr>
-									 <small class="text-muted-blue bold">Email address</small>
-									<p><a href="mailto:<nowiki> agentavery@sample.com">email@email.com</a></p>
-										<hr>
-									<small class="text-muted-blue bold">Postal Address</small>
-									<p>PO BOX 1234-00100 Nairobi, Kenya</p>
-									
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-12">
-								<div class="card">
-									<div class="card-body">
-										<div class="contact-header attachments-container">
-											<h4>Personal documents</h4>
-											<hr>
-											
-											<div><p><strong class="d-flex align-items-center">1.<a href=""><i class="pe-7s-id mx-2"></i>National Id card</a></strong></p></div>  
-											 
-											<div><p><strong class="d-flex align-items-center">2.<a href=""><i class="pe-7s-note2 mx-2"></i>KRA Pin document</a></strong></p></div>  
-										
-											<div><p><strong class="d-flex align-items-center">3.<a href=""><i class="pe-7s-camera mx-2"></i>Photo image</a></strong></p></div>  
-											
-										</div>
-									</div>
+										</tbody>
+									</table>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-						
-					
-						
-					
-				
                 <footer class="footer hidden-xs-down">
 					<center><a class="nouveta-logoo" href="https://nouveta.tech/"><img src="demo/img/logo-files/logo2.png" target="new"></center></a></center>
                     <p>Powered by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>

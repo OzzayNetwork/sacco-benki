@@ -4102,8 +4102,8 @@ background-color:#adb5bd
 .badge {
     display: inline-block;
     padding: .5rem 1rem;
-    font-size: 90%;
-    font-weight: 500;
+    /* font-size: 90%; */
+    font-weight: bold;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
@@ -15270,4 +15270,22 @@ font-size: xx-large;;
 }
 .amount-rt{
     text-align: right !important;
+}
+.font-14{
+    font-size: 14px !important;
+}
+.modal-body .search-member input{
+    font-size: 15px;
+    padding: 20px;
+    border-radius: 1px;
+    border-color: #BDBDBD;
+}
+
+.modal-body .search-member button{
+    flex-flow: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    font-size: 15px;;
 }

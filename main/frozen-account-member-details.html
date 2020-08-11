@@ -53,7 +53,7 @@
 				</span>
             </div>
 
-           <!-- create account -->
+          <!-- create account -->
 			<div class="modal fade" id="new-member-account2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered" role="document">
 				  <div class="modal-content">
@@ -144,6 +144,7 @@
             </header>
 
               
+			
 			  <aside class="sidebar">
                 <div class="scrollbar-inner">
                     <div class="user">
@@ -203,306 +204,302 @@
                     </ul>
                 </div>
             </aside>
-            <!-- =========================== -->
-            <!-- modals -->
-            <!-- ================================= -->
 
-            <!-- decline application -->
             <!-- Modal -->
-            <div class="modal fade" id="decline-loan-application" tabindex="-1" role="dialog" aria-labelledby="decline-loan-application" aria-hidden="true">
+            <!-- freezde account -->
+            <div class="modal fade" id="freezeAcc" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Decline the application</h5>
+                    <h5 class="modal-title">Freeze account</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                     </div>
                     <div class="modal-body">
                         <div class="">
-                            <form>
-                                <div class="form-group">
-                                    <label for="decline-reason">Reason for declining this application</label>
-                                    <textarea class="form-control" placeholder="Enter reason for declining ..." id="decline-reason" rows="3"></textarea>
-                                  </div>
-                            </form>
+                            <h5 class="modal-title" id="exampleModalLongTitle">Acc No. 12358952</h5>
+                            <div class="notes my-3">
+                                you must specify reason for freezing this account before you continue
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1"><strong>Reason for freezing this account</strong></label>
+                                <textarea placeholder="Enter reason ..." class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                              </div>
                         </div>
-                
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-danger btn--icon-text"><i class="zmdi zmdi-close mr-3"></i>Decline</button>
+                    <button type="button" class="btn btn-danger">Freeze account</button>
                     </div>
                 </div>
                 </div>
             </div>
 
-            <!-- decline application -->
-
-            <!-- send for re-evaluation -->
-
-             <!-- Modal -->
-             <div class="modal fade" id="reevaluate-loan-application" tabindex="-1" role="dialog" aria-labelledby="decline-loan-application" aria-hidden="true">
+             <!-- unfreeze account -->
+             <div class="modal fade" id="un-freezeAcc" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Send for re-evaluation</h5>
+                    <h5 class="modal-title">Unfreeze Account</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                     </div>
                     <div class="modal-body">
                         <div class="">
-                            <form>
-                                <div class="form-group">
-                                    <label for="decline-reason">Reason for sending application for Re-evaluation</label>
-                                    <textarea class="form-control" placeholder="Enter reason ..." id="decline-reason" rows="3"></textarea>
-                                  </div>
-                            </form>
+                            <h5 class="modal-title" id="exampleModalLongTitle">Unfreeze Acc No. 12358952</h5>
+                            <div class="notes my-3">
+                                This account was frozen on <strong>22ND Aug 2020</strong> at <strong>10:03 AM</strong> by <strong> Alex Wanjala</strong>. For the reason of; <strong>suspected illegal activities</strong>
+                                
+                            </div>   
+                            
+                                <h5>Are you sure you want to unfreeze this account?</h5>                         
                         </div>
-                
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-warning btn--icon-text"><i class="zmdi zmdi-refresh-sync mr-3"></i>Send for re-evaluation</button>
+                    <button type="button" class="btn btn-success">Yes Unfreeze The Account</button>
                     </div>
                 </div>
                 </div>
             </div>
-
-            <!-- =========================== -->
-            <!-- modals -->
-            <!-- ================================= -->
 			
+			
+
             
 
             <section class="content custom-table-container">
+				
                 <header class="content__title px-0 border-0">
 				 	<div class="row">
-						<div class="col-md-12 col-sm-12">
+						<div class="col-md-8 col-sm-12">
 							<span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">Loan application details</h1>
-							</span>
+                                <h1 class="text-capitalize stream_name m-0">Account Details for 4582263</h1>
+                               </span>
 							<div class="">
 								<ol class="breadcrumb border-0">
-									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item"><a href="ongoing-loans.html">Ongoing Applications</a></li>
-									<li class="breadcrumb-item active">loan Application for Kelvin Njuguna</li>
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="accounts-list.html">Sacco accounts</a></li>
+                                    <li class="breadcrumb-item"><a href="accounts-members.html">Share capital</a></li>
+                                    <li class="breadcrumb-item active">Account details</li>
+                                    
 								</ol>
 							</div>
 						</div>
-												
+						<div class="col-4 col-sm-12 col-md-4">
+							<div class="section-header">
+								<button class="btn btn-sm btn-success" title="" data-toggle="modal" data-target="#freezeAcc">Unfreeze this account</button>
+							</div>					
+						</div>						
 					</div>
-				</header>
+                </header
 				
-				<div class="row with-custom-header">					
-					<div class="col-sm-12 col-md-8">
-						<!-- application details start -->
-						<div class="row">
-							<div class="col-12">
-								<div class="card calc-18">
-									<div class="card-body employment-body">
-										<div class="contact-header">
-											<h4>Application Progress</h4>
-											<hr class="mb-0 mt-1">
-                                        </div>
-                                        
-                                        <div class="application-progress">
-                                            <div class="root posi">
-                                                 <div class="progresss-container">
-                                                      <ul class="progressbar">
+				<div class="row">
+					<div class="col-12 p-0">
+						<div class="card ">
+							<div class="card-body">
 
+                                <div class="contact-header mb-4">
+                                    <h4 class="mb-3">Account Details  <span class="badge-pill badge badge-soft-danger ml-3 text-uppercase font-14">Frozen</span></h4>
+                                    <hr class="mb-0 mt-1">
+                                </div>
+                                <div class="row mb-5">
 
-                                                        <small class="progress-date">3rd Jun 2020</small>
-                                                        <li class="active">Initiation
-                                                            <br><small>Initiated By Alex Wanjala</small>
-                                                        </li>
+                                    <!-- show if account is frozen -->
 
-
-                                                        <small class="progress-date">13Th Jun 2020</small>
-                                                        <li class="active">Loan Appraisal
-                                                            <br>
-                                                            <small>Approved by Edwin Kiploman</small>
-                                                        </li>
-
-                                                        <small class="progress-date d-none">3rd Jun 2020</small>
-                                                        <li>Loan Approval
-                                                            <br>
-                                                            <small>Pending</small>
-                                                        </li> 
-                                                        
-                                                        <small class="progress-date d-none">3rd Jun 2020</small>
-                                                        <li>Disbursement
-                                                            <br>
-                                                            <small>Pending ...</small>
-                                                        </li>  
-                                                      </ul>
-                                                  </div>
-                                              </div>
-                                        </div>
-
-                                        <div class="contact-header">
-                                            <h4>Loan Application details</h4>
-                                            <p>Have a closr look at the details pertaining to this application before taking any action.</p>
-											<hr class="mb-0 mt-1">
-                                        </div>
-
-										<small class="text-muted-blue bold bold">Loan type</small>
-										<div class="d-flex justify-content-between"><p><strong>Loan type name</strong></p></div>  
-										<hr> 
-										<div class="row">
-											<div class="col-md- col-sm-12">
-												<small class="text-muted-blue bold bold">Reason for applying for the loan</small>
-												<div class="d-flex justify-content-between"><p><strong>To pay a very urgent and emergency fee for my son's Space camp graduation at Venezuela</strong></p></div>  
-												<hr> 
-                                            </div>
-                                            
-                                            <div class="col-12 mt-4">
-                                                <h4>Application Attachments</h4>
-                                            </div>
-                                            <br>
-                                            <br>
-                                            <div class="col-12">
-                                                <div class="row loan-docs">
-                                                    <label class="col-lg-3 col-sm-12 col-md-6" for="intro-letter">
-                                                        
-                                                        <div class="intro-letter " title="attach attachment letter from employer">
-                                                            <span><img src="demo/img/attachment-docs/contract.svg"></span>
-                                                            <h5>Introduction letter</h5>
-                                                            <small></small>
-                                                        </div>
-                                                    </label>
-
-                                                    <label class="col-lg-3 col-sm-12 col-md-6" for="payslip">
-                                                        
-                                                        <div class="pay-slip " title="attach the payslip (at least 3 months ago)">
-                                                            <span><img src="demo/img/attachment-docs/email.svg"></span>
-                                                            <h5>Payslip</h5>
-                                                            <small>At least 3 Months Ago</small>
-                                                        </div>
-                                                    </label>
-
-                                                    <label class="col-lg-3 col-sm-12 col-md-6 " for="bank-statement">
-                                                       
-                                                        <div class="bank-state " title="Attach bank statement(s)(At least 23 months ago)">
-                                                            <span><img src="demo/img/attachment-docs/bank.svg"></span>
-                                                            <h5>Bank statement</h5>
-                                                            <small>At least 3 Months Ago</small>
-                                                        </div>
-                                                    </label>
-
-                                                    <label for="mpesa-state" class="col-lg-3 col-sm-12 col-md-6 " title="Select mpesa statement (at least 3 months ago)">
-                                                       
-                                                        <div class="mpesa-state ">
-                                                            <span><img src="demo/img/attachment-docs/mpesa.svg"></span>
-                                                            <h5>Mpesa statement</h5>
-                                                            <small>At least 3 Months Ago</small>
-                                                        </div>
-                                                    </label>
+                                    <div class="col-12 mb-5">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-5 col-lg-4">
+                                                <small class="text-muted-blue bold bold">Reason for account being frozen</small>
+                                                <br>
+                                                <div class="badge badge-soft-danger mt-2 p-3 font-weight-normal">
+                                                    This account was frozen by <strong class="text-capitalize">Alex wanjala</strong> on <strong class="">25Th June 2020</strong> at <strong class="text-uppercase">10:03 AM</strong> for the reason of ; <strong>Suspected illegal activities.</strong>
                                                 </div>
-
                                             </div>
-                                            <br>
-                                            <br>
-											
-
-											<div class="col-md-12 col-sm-12 mt-4">
-                                                <h5 class="text-muted-blue bold bold mb-1">Amount applying for</h5>
-												
-												<div class="d-flex justify-content-between font-36 font-weight-light"><p>KES 2,258,000</p></div>  
-												
-                                            </div>
-                                            
-                                            <div class="col-md-12 col-sm-12 mt-4">
-                                                <h5 class="text-muted-blue bold bold mb-1">Actions</h5>	
-                                                <p>Select any of the following buttons based on your observation on this particular applications.</p>									
-                                                
-                                                <button class="btn btn-danger btn--icon-text" data-toggle="modal" data-target="#decline-loan-application"><i class="zmdi zmdi-close mr-3"></i> Decline application </button>
-                                                <button class="btn btn-warning btn--icon-text mx-4" data-toggle="modal" data-target="#reevaluate-loan-application"> <i class="zmdi zmdi-refresh-sync mr-3"></i> Send for revaluation</button>
-                                                <button class="btn btn-success btn--icon-text">Approve for next stage <i class="ml-3 zmdi zmdi-mail-reply-all flipx"></i></button>
-											</div>
-
-										</div>										
-										
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- application details end -->
-
-						
-                    </div>
-                    
-                    <div class="col-sm-12 col-md-4">
-						<div class="account-info">
-							
-							<div class="card">
-								<div class="card-body">
-									<div class="contact-header">
-										<h4>Applicant's Details</h4>
-										<hr class="mb-0 mt-1">
-									</div>
-									<small class="text-muted-blue bold bold">Full Names & Date of Birth</small>
-									<div class="d-flex justify-content-between"><p><strong>Kelvin Njuguna Ndungu</strong></p> <p class="ml-3">04 Nov 1994</p></div>  
-									<hr> 
-									<small class="text-muted-blue bold bold">Marital status & Gender</small>
+                                        </div>
+                
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <small class="text-muted-blue bold bold">Owner's Name</small>
+									    <div class="d-flex justify-content-between"><p><strong>Kelvin Njuguna Ndungu</strong></p></div>  
 									
-									<div class="d-flex justify-content-between"><p><strong>Very Single</strong></p><p>Male</p></div>                        
-									<hr>
-									<small class="text-muted-blue bold">Nationality</small>
-									<p>Holy See (Vatican City State)</p>
-									<hr>
-									<small class="text-muted-blue bold">KRA PIN</small>
-									<p>AJHU455613</p>
-									<hr>
-									<small class="text-muted-blue bold">Registered on</small>
-									<p>22 Feb 2020 by Alex Wanjala</p>
-									
-									
-									<div class="contact-header mt-5">
-										<h4>Contact details</h4>
-										<hr class="mb-0 mt-1">
-									</div>
+                                    </div>
 
-                                    <small class="text-muted-blue bold">Mobile phone number</small>
-									<p><a href="tel:0704549859">0704549859</a></p>
-									<hr>
-									 <small class="text-muted-blue bold">Email address</small>
-									<p><a href="mailto:<nowiki> agentavery@sample.com">email@email.com</a></p>
-										<hr>
-									<small class="text-muted-blue bold">Postal Address</small>
-									<p>PO BOX 1234-00100 Nairobi, Kenya</p>
+                                    <div class="col-md-4 col-sm-12">
+                                        <small class="text-muted-blue bold bold">Owner's Email</small>
+									    <div class="d-flex justify-content-between"><p><strong><a href="mailto:kelvinnjuguna99@gmail.com" title="send  email to the member"><i class="zmdi zmdi-email mr-3"></i>kelvinnjuguna99@gmail.com</a></strong></p></div>  
 									
-								</div>
-							</div>
-						</div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <small class="text-muted-blue bold bold">Owner's Phone</small>
+									    <div class="d-flex justify-content-between"><p><strong><a href="tel:0704549859" title="call the member"><i class="zmdi zmdi-phone mr-3"></i>0704549859</a></strong></p></div>  
+									
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <small class="text-muted-blue bold bold">Account creation Date</small>
+									    <div class="d-flex justify-content-between"><p><strong>22nd Jul 2020</strong></p></div>  
+									
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <small class="text-muted-blue bold bold">Account created by</small>
+									                      <div class="d-flex justify-content-between"><p><strong>Alex Wanjala</strong></p></div>  
+									
+                                    </div>
 
-						<div class="row">
-							<div class="col-12">
-								<div class="card">
-									<div class="card-body">
-										<div class="contact-header attachments-container">
-											<h4>Personal documents</h4>
-											<hr>
-											
-											<div><p><strong class="d-flex align-items-center">1.<a href=""><i class="pe-7s-id mx-2"></i>National Id card</a></strong></p></div>  
-											 
-											<div><p><strong class="d-flex align-items-center">2.<a href=""><i class="pe-7s-note2 mx-2"></i>KRA Pin document</a></strong></p></div>  
-										
-											<div><p><strong class="d-flex align-items-center">3.<a href=""><i class="pe-7s-camera mx-2"></i>Photo image</a></strong></p></div>  
-											
-										</div>
-									</div>
+                                    <div class="col-md-4 col-sm-12">
+                                      <small class="text-muted-blue bold bold">Account status</small>
+                                      <div class="d-flex justify-content-between"><p><span class="badge badge-pill badge-soft-danger">Frozen</span></p></div>  
+                
+                                  </div>
+                                    <div class="col-12">
+                                        <hr>
+                                    </div>
+
+                                    <div class="col-md-12 col-sm-12">
+                                        <small class="text-muted-blue bold bold">Account balance</small>
+									    <div class="d-flex justify-content-between"><h4 class="font-weight-lighter font-xx-large">KSH 39,850.00</h4></div>  
+									
+                                    </div>
+                                    <div class="col-12">
+                                        <hr>
+                                    </div>
+
+                                   <div class="col-12">
+                                    <div class="contact-header mt-4">
+                                        <h4 class="mb-3">Transactions History</h4>
+                                       
+                                    </div>
+                                   </div>
+                                </div>
+
+								<div class="table-responsive">
+									
+                                    <table id="data-table" class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Acc No.</th>
+                                            <th scope="col">Transactions DeDateDate registered</th>
+                                            <th>Date</th>
+                                            <th class="amount-rt" scope="col">Amount</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Deposit from 254704549859. Ref Number:DGGFDB321564</th>
+                                            <th>1st jul 2020</th>
+                                            <th class="amount-rt" scope="col">KES 3,000</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">46461</th>
+                                            <th scope="col">Cash withdrawal Via the counter</th>
+                                            <th>21st Jul 2020</th>
+                                            <th class="amount-rt" scope="col">KES 33,010</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa withdrawal via Mpesa. Phone 254704549859. Ref Number:FKJKH32113</th>
+                                            <th>22nd Jul 2020</th>
+                                            <th class="amount-rt" scope="col">KES 11,000</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Deposit from 254704549859. Ref Number:FSDFSD454</th>
+                                            <th>25TH Jul 2020</th>
+                                            <th class="amount-rt" scope="col">KES 520</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Deposit from 254704549859. Ref Number:DFGDFG23132</th>
+                                            <th>1st Jan 2020</th>
+                                            <th class="amount-rt" scope="col">KES 702</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Deposit from 254704549859. Ref Number:FSSDF21545</th>
+                                            <th>2nd Jan 2020</th>
+                                            <th class="amount-rt" scope="col">KES 5,670</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Deposit from 254704549859. Ref Number:FHFYU1321653</th>
+                                            <th>14th Feb 2020</th>
+                                            <th class="amount-rt" scope="col">KES 425</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Airtel Money withdrawal: Phone Number 25435658956 Ref Number:SDFSDF64654</th>
+                                            <th>16th Jan 2020</th>
+                                            <th class="amount-rt" scope="col">KES 2,500</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">664564</th>
+                                            <th scope="col">Airtel Money withdrawal: Phone Number 25435658956 Ref Number:SDFSD5465465</th>
+                                            <th>22nd Feb 2020</th>
+                                            <th class="amount-rt" scope="col">KES 420</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">664564</th>
+                                            <th scope="col">Airtel Money withdrawal: Phone Number 25435658956 Ref Number:DSFSD132321</th>
+                                            <th>28th feb 2020</th>
+                                            <th class="amount-rt" scope="col">KES 300</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">664564</th>
+                                            <th scope="col">Cash withdrawal via the counter</th>
+                                            <th>1st Mar 2020</th>
+                                            <th class="amount-rt" scope="col">KES 2,523</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">664564</th>
+                                            <th scope="col">Cash deposit via the counter</th>
+                                            <th>6th Mar 2020</th>
+                                            <th class="amount-rt" scope="col">KES 520</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">664564</th>
+                                            <th scope="col">Airtel Money withdrawal: Phone Number 25435658956 Ref Number:TYRFT6789</th>
+                                            <th>22nd Mar 2020</th>
+                                            <th class="amount-rt" scope="col">KES 8,203</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Airtel money deposi. Phone Num 2547342358250. Ref Number:GTYHUU1321653</th>
+                                            <th>17th Mar 2020</th>
+                                            <th class="amount-rt" scope="col">KES 3,620</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Deposit from 254704549859. Ref Number:UUYTH2548123</th>
+                                            <th>2nd Apr 2020</th>
+                                            <th class="amount-rt" scope="col">KES 1,200</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Deposit from 254704549859. Ref Number:RTYG52632</th>
+                                            <th>17ths Apr 2020</th>
+                                            <th class="amount-rt" scope="col">KES 2,020</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Deposit from 254704549859. Ref Number:HFHGF45466</th>
+                                            <th>16th Apr 2020</th>
+                                            <th class="amount-rt" scope="col">KES 210</th>
+                                          </tr>
+                                          <tr>
+                                            <th scope="col">231321313</th>
+                                            <th scope="col">Mpesa Withdrawal from 254704549859. Ref Number:FHFYDFFDG56563</th>
+                                            <th>1st jul 2020</th>
+                                            <th class="amount-rt" scope="col">KES 120</th>
+                                          </tr>
+                                        </tbody>
+                                      </table>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-						
-					
-						
-					
-				
                 <footer class="footer hidden-xs-down">
 					<center><a class="nouveta-logoo" href="https://nouveta.tech/"><img src="demo/img/logo-files/logo2.png" target="new"></center></a></center>
                     <p>Powered by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>

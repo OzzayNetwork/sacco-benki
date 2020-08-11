@@ -53,24 +53,26 @@
 				</span>
             </div>
 
-           <!-- create account -->
+          <!-- create account -->
 			<div class="modal fade" id="new-member-account2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered" role="document">
 				  <div class="modal-content">
 					<div class="modal-header">
-					  <h5 class="modal-title" id="exampleModalLongTitle">Kelvin Njuguna's New Account</h5>
+					  <h5 class="modal-title" id="exampleModalLongTitle">New Account</h5>
 					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					  </button>
 					</div>
 					<div class="modal-body">
-						<p>Select the new <strong>account(s)</strong> you would like to create for the member.</p>
 
 						<div class="form-group">
 							<label for="member-no">Member's Number</label>
-							<input type="text" class="form-control" id="member-no" aria-describedby="emailHelp" placeholder="Enter member's number">
-							<small id="emailHelp" class="form-text text-muted">Error Message goes here</small>
+							<input type="text" class="form-control" id="member-no" placeholder="Enter member's number to continue" required>
+							<small id="emailHelp" class="form-text text-danger d-none">Error Message goes here</small>
 						  </div>
+
+						  <p>Select the new <strong>account(s)</strong> you would like to create for the member.</p>
+
 
 						<h6 class="mb-3">List of available accounts:</h6>
 						<div>
@@ -177,7 +179,8 @@
                                 <li class="d-none"><a href="account.html">Share Capital</a></li>
                                 <li class="d-none"><a href="account.html">Deposit account</a></li>
                                  <li class="d-none"><a href="account-html">Savings</a></li>
-                                 <li><a href="accounts-list.html" title="set up new account">Sacco accounts</a></li>
+                                 <li><a href="accounts-list.html" title="set up new account">Sacco Accounts</a></li>
+                                 <li><a href="frozen-accounts.html" title="set up new account">Frozen Accounts</a></li>
 								 <li><a href="new-account.html" title="set up new account">New account setup</a></li>
                             </ul>
 						</li>

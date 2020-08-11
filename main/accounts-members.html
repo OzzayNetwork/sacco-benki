@@ -53,24 +53,26 @@
 				</span>
             </div>
 
-           <!-- create account -->
+          <!-- create account -->
 			<div class="modal fade" id="new-member-account2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered" role="document">
 				  <div class="modal-content">
 					<div class="modal-header">
-					  <h5 class="modal-title" id="exampleModalLongTitle">Kelvin Njuguna's New Account</h5>
+					  <h5 class="modal-title" id="exampleModalLongTitle">New Account</h5>
 					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					  </button>
 					</div>
 					<div class="modal-body">
-						<p>Select the new <strong>account(s)</strong> you would like to create for the member.</p>
 
 						<div class="form-group">
 							<label for="member-no">Member's Number</label>
-							<input type="text" class="form-control" id="member-no" aria-describedby="emailHelp" placeholder="Enter member's number">
-							<small id="emailHelp" class="form-text text-muted">Error Message goes here</small>
+							<input type="text" class="form-control" id="member-no" placeholder="Enter member's number to continue" required>
+							<small id="emailHelp" class="form-text text-danger d-none">Error Message goes here</small>
 						  </div>
+
+						  <p>Select the new <strong>account(s)</strong> you would like to create for the member.</p>
+
 
 						<h6 class="mb-3">List of available accounts:</h6>
 						<div>
@@ -177,7 +179,8 @@
                                 <li class="d-none"><a href="account.html">Share Capital</a></li>
                                 <li class="d-none"><a href="account.html">Deposit account</a></li>
                                  <li class="d-none"><a href="account-html">Savings</a></li>
-                                 <li><a href="accounts-list.html" title="set up new account">Sacco accounts</a></li>
+                                 <li><a href="accounts-list.html" title="set up new account">Sacco Accounts</a></li>
+                                 <li><a href="frozen-accounts.html" title="set up new account">Frozen Accounts</a></li>
 								 <li><a href="new-account.html" title="set up new account">New account setup</a></li>
                             </ul>
 						</li>
@@ -232,7 +235,36 @@
                 </div>
                 </div>
             </div>
-			
+            
+            
+             <!-- unfreeze account -->
+             <div class="modal fade" id="un-freezeAcc" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title">Unfreeze Account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Unfreeze Acc No. 12358952</h5>
+                            <div class="notes my-3">
+                                This account was frozen on <strong>22ND Aug 2020</strong> at <strong>10:03 AM</strong> by <strong> Alex Wanjala</strong>. For the reason of; <strong>suspected illegal activities</strong>
+                                
+                            </div>   
+                            
+                                <h5>Are you sure you want to unfreeze this account?</h5>                         
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Yes Unfreeze The Account</button>
+                    </div>
+                </div>
+                </div>
+            </div>
 			
 
             
@@ -274,7 +306,8 @@
 												<th>Name</th>
 												<th>Phone</th>
 												<th>Date created</th>
-												<th>Created By</th>
+                                                <th>Created By</th>
+                                                <th>Status</th>
 												<th>Amount</th>
 												<th>Actions</th>
 											</tr>
@@ -289,13 +322,68 @@
 												</td>
                                                 <td><a href="tel:0702663857">0702663857</a></td>	
                                                 <td>3rd Aug 2020</td>
-												<td>Alex Wanjala</td>
+                                                <td>Alex Wanjala</td>
+                                                <th><span class="badge badge-pill badge-soft-success">Active</span></th>
 												<td class="text-capitalize">KES 25,200</td>		
 												<td>
                                                     <button class="btn btn-danger mr-2" data-toggle="modal" data-target="#freezeAcc">Freeze account</button>
 													<a href="account-member-details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
 												</td>								
-											</tr>											
+                                            </tr>	
+                                            
+                                            <tr>
+                                                <td class="w60">
+													12566253
+												</td>
+												<td class="w60">
+													<a title="" href="member-profile.html">Amos Wele</a>
+												</td>
+                                                <td><a href="tel:0702663857">0702663857</a></td>	
+                                                <td>3rd Aug 2020</td>
+                                                <td>Alex Wanjala</td>
+                                                <th><span class="badge badge-pill badge-soft-danger">Frozen</span></th>
+												<td class="text-capitalize">KES 25,200</td>		
+												<td>
+                                                    <button class="btn btn-success mr-2" data-toggle="modal" data-target="#un-freezeAcc">Unfreeze account</button>
+													<a href="frozen-account-member-details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
+												</td>								
+                                            </tr>	
+                                            
+                                            <tr>
+                                                <td class="w60">
+													12566253
+												</td>
+												<td class="w60">
+													<a title="" href="member-profile.html">Amos Wele</a>
+												</td>
+                                                <td><a href="tel:0702663857">0702663857</a></td>	
+                                                <td>3rd Aug 2020</td>
+                                                <td>Alex Wanjala</td>
+                                                <th><span class="badge badge-pill badge-soft-success">Active</span></th>
+												<td class="text-capitalize">KES 25,200</td>		
+												<td>
+                                                    <button class="btn btn-danger mr-2" data-toggle="modal" data-target="#freezeAcc">Freeze account</button>
+													<a href="account-member-details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
+												</td>								
+                                            </tr>	
+                                            
+                                            <tr>
+                                                <td class="w60">
+													12566253
+												</td>
+												<td class="w60">
+													<a title="" href="member-profile.html">Amos Wele</a>
+												</td>
+                                                <td><a href="tel:0702663857">0702663857</a></td>	
+                                                <td>3rd Aug 2020</td>
+                                                <td>Alex Wanjala</td>
+                                                <th><span class="badge badge-pill badge-soft-warning">Dormant</span></th>
+												<td class="text-capitalize">KES 25,200</td>		
+												<td>
+                                                    <button class="btn btn-danger mr-2" data-toggle="modal" data-target="#freezeAcc">Freeze account</button>
+													<a href="account-member-details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
+												</td>								
+											</tr>	
 											
 										</tbody>
 									</table>

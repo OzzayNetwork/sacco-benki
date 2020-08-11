@@ -53,24 +53,26 @@
 				</span>
             </div>
 
-           <!-- create account -->
+          <!-- create account -->
 			<div class="modal fade" id="new-member-account2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered" role="document">
 				  <div class="modal-content">
 					<div class="modal-header">
-					  <h5 class="modal-title" id="exampleModalLongTitle">Kelvin Njuguna's New Account</h5>
+					  <h5 class="modal-title" id="exampleModalLongTitle">New Account</h5>
 					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					  </button>
 					</div>
 					<div class="modal-body">
-						<p>Select the new <strong>account(s)</strong> you would like to create for the member.</p>
 
 						<div class="form-group">
 							<label for="member-no">Member's Number</label>
-							<input type="text" class="form-control" id="member-no" aria-describedby="emailHelp" placeholder="Enter member's number">
-							<small id="emailHelp" class="form-text text-muted">Error Message goes here</small>
+							<input type="text" class="form-control" id="member-no" placeholder="Enter member's number to continue" required>
+							<small id="emailHelp" class="form-text text-danger d-none">Error Message goes here</small>
 						  </div>
+
+						  <p>Select the new <strong>account(s)</strong> you would like to create for the member.</p>
+
 
 						<h6 class="mb-3">List of available accounts:</h6>
 						<div>
@@ -177,7 +179,8 @@
                                 <li class="d-none"><a href="account.html">Share Capital</a></li>
                                 <li class="d-none"><a href="account.html">Deposit account</a></li>
                                  <li class="d-none"><a href="account-html">Savings</a></li>
-                                 <li><a href="accounts-list.html" title="set up new account">Sacco accounts</a></li>
+                                 <li><a href="accounts-list.html" title="set up new account">Sacco Accounts</a></li>
+                                 <li><a href="frozen-accounts.html" title="set up new account">Frozen Accounts</a></li>
 								 <li><a href="new-account.html" title="set up new account">New account setup</a></li>
                             </ul>
 						</li>
@@ -243,10 +246,13 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Account name</th>
-                                            <th>Default Account</th>
+                                            <th>Default</th>
                                             <th>Debitable</th>
                                             <th>Deposit limit</th>
                                             <th>Members</th>
+                                            <th>Active</th>
+                                            <th>Inactive</th>
+                                            <th>Frozen</th>
                                             <th>Amount</th>
                                         </tr>
                                         </thead>
@@ -259,6 +265,9 @@
 
                                             <td>KES 500,000</td>
                                             <td>12 <a href="accounts-members.html" class="btn btn-primary ml-4 btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View</a></td>
+                                            <th><span class="badge badge-soft-success badge-pill">3</span></th>
+                                            <th><span class="badge badge-soft-warning badge-pill">5</span></th>
+                                            <th><span class="badge badge-soft-danger badge-pill">4</span></th>
                                             <td>KES 20,230,560</td>
                                             
                                         </tr>
@@ -268,8 +277,11 @@
                                             <td><span class="badge badge-pill badge-soft-danger px-3">NO</span></td>
                                             <td><span class="badge badge-pill badge-soft-success px-3">YES</span></td>
 
-                                            <td>KES 500,000</td>
+                                            <td>Nill</td>
                                             <td>12 <a href="accounts-members.html" class="btn btn-primary ml-4 btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View</a></td>
+                                            <th><span class="badge badge-soft-success badge-pill">3</span></th>
+                                            <th><span class="badge badge-soft-warning badge-pill">5</span></th>
+                                            <th><span class="badge badge-soft-danger badge-pill">4</span></th>
                                             <td>KES 20,230,560</td>
                                         </tr>
                                         <tr>
@@ -280,6 +292,9 @@
 
                                             <td>KES 500,000</td>
                                             <td>12 <a href="accounts-members.html" class="btn btn-primary ml-4 btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View</a></td>
+                                            <th><span class="badge badge-soft-success badge-pill">3</span></th>
+                                            <th><span class="badge badge-soft-warning badge-pill">5</span></th>
+                                            <th><span class="badge badge-soft-danger badge-pill">4</span></th>
                                             <td>KES 20,230,560</td>
                                         </tr>
                                         <tr>
@@ -290,6 +305,9 @@
 
                                             <td>KES 500,000</td>
                                             <td>12 <a href="accounts-members.html" class="btn btn-primary ml-4 btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View</a></td>
+                                            <th><span class="badge badge-soft-success badge-pill">3</span></th>
+                                            <th><span class="badge badge-soft-warning badge-pill">5</span></th>
+                                            <th><span class="badge badge-soft-danger badge-pill">4</span></th>
                                             <td>KES 20,230,560</td>
                                         </tr>
                                         <tr>
@@ -300,6 +318,9 @@
 
                                             <td>KES 500,000</td>
                                             <td>12 <a href="accounts-members.html" class="btn btn-primary ml-4 btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View</a></td>
+                                            <th><span class="badge badge-soft-success badge-pill">3</span></th>
+                                            <th><span class="badge badge-soft-warning badge-pill">5</span></th>
+                                            <th><span class="badge badge-soft-danger badge-pill">4</span></th>
                                             <td>KES 20,230,560</td>
                                         </tr>
                                         
