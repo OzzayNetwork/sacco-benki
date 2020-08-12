@@ -13634,7 +13634,7 @@ ul.jqtree-tree ul.jqtree_common {
     transition: background-color .3s, color .3s;
     font-weight: 300;
     display: block;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
 }
 .content__title {
     margin-bottom: 1rem;
@@ -15266,7 +15266,7 @@ tbody td a.btn{
     cursor: pointer;
 }
 .font-xx-large{
-font-size: xx-large;;
+font-size: xx-large !important;
 }
 .amount-rt{
     text-align: right !important;
@@ -15288,4 +15288,10 @@ font-size: xx-large;;
     align-items: center;
     border-radius: 0;
     font-size: 15px;;
+}
+.font-large{
+    font-size: large !important;
+}
+.font-xxx-large{
+    font-size: xxx-large !important;
 }
