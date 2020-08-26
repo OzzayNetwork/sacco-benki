@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:03 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel='icon' href='demo/img/icon_3.png' type='image/x-icon'/ >
+
+		<!-- Vendor styles -->
+		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.theme.default.css">
+	
+		<!--flat icon-->
+		<link rel="stylesheet" href="css/flaticon/font/flaticon.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_4.css">
+
+	
+
+        <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
+        <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
+        <link rel="stylesheet" href="vendors/select2/css/select2.min.css">
+        <link rel="stylesheet" href="vendors/dropzone/dropzone.css">
+        <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
+        <link rel="stylesheet" href="vendors/trumbowyg/ui/trumbowyg.min.css">
+        <link rel="stylesheet" href="vendors/flatpickr/flatpickr.min.css" />
+        <link rel="stylesheet" href="vendors/rateyo/jquery.rateyo.min.css">
+        <link rel="stylesheet" href="vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="css/app.min.css">
+    </head>
+
+    <body data-ma-theme="green">
+        <main class="main">
+            <div class="page-loader">
+                <div class="page-loader__spinner">
+                    <svg class="d-none" viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                    </svg>
+					<img src="demo/img/gifs/preloader.gif">
+                </div>
+				<span class="powerd-container">
+					<strong class="mb-2">Sacco Benki By</strong>
+					<img src="demo/img/logo-files/nouveta-orange.svg">
+					
+				</span>
+            </div>
+
+          <!-- create account -->
+			<div class="modal fade" id="new-member-account2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <h5 class="modal-title" id="exampleModalLongTitle">New Account</h5>
+					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					  </button>
+					</div>
+					<div class="modal-body">
+
+						<div class="form-group">
+							<label for="member-no">Member's Number</label>
+							<input type="text" class="form-control" id="member-no" placeholder="Enter member's number to continue" required>
+							<small id="emailHelp" class="form-text text-danger d-none">Error Message goes here</small>
+						  </div>
+
+						  <p>Select the new <strong>account(s)</strong> you would like to create for the member.</p>
+
+
+						<h6 class="mb-3">List of available accounts:</h6>
+						<div>
+							<div class="checkbox">
+								<input type="checkbox" id="account-type1">
+								<label class="checkbox__label" for="account-type1">Share Capital</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" id="account-type2">
+								<label class="checkbox__label" for="account-type2">Share deposit</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" id="account-type3">
+								<label class="checkbox__label" for="account-type3">Loan & Interests</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" id="account-type4">
+								<label class="checkbox__label" for="account-type4">Clearing</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" id="account-type5">
+								<label class="checkbox__label" for="account-type5">FOSA</label>
+							</div>
+
+						</div>
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					  <button type="button" class="btn btn-primary">Create Account(s)</button>
+					</div>
+				  </div>
+				</div>
+				</div>
+			<!-- create account -->
+            <header class="header">
+                <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+                    <div class="navigation-trigger__inner">
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                    </div>
+                </div>
+
+                <div class="header__logo hidden-sm-down">
+                    <h1><a href="index.html"><img class="the-logo" src="demo/img/logo-files/sacco-orange.png"></a></h1>
+                </div>
+                <h2 class="ml-4 text-white text-uppercase mb-0 text-light">Super Sacco</h2>
+
+                <form class="search">
+                    <div class="search__inner d-none">
+                        <input type="text" class="search__text d-none" placeholder="Search through the dashboard">
+                        <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+                    </div>
+                </form>
+				
+				<ul class="top-nav">
+					<li><button data-toggle="modal" data-target="#new-member-account2" class="btn btn-light text-black"><i class="zmdi zmdi-plus mr-2"></i>New Member Account</button></li>
+                    <li class="hidden-xl-up"><a href="#" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
+					
+					<li data-toggle="tooltip" data-original-title="Notifications" class="dropdown top-nav__notifications">
+                        <a href="#" data-toggle="dropdown"  class="top-nav__notify" >
+                            <i class="zmdi zmdi-notifications"></i>
+                        </a>                       
+                    </li>
+                    
+                </ul>
+
+                
+            </header>
+
+              
+			
+			    <aside class="sidebar">
+                <div class="scrollbar-inner">
+                    <div class="user">
+                        <div class="user__info" data-toggle="dropdown">
+                            <img class="user__img" src="demo/img/icon-rules.png" alt="">
+                            <div>
+                                <div class="user__name">John Mwakili</div>
+                                <div class="user__email">john@gmail.com</div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="my-profile.html">View Profile</a>
+                            <a class="dropdown-item d-none" href="#">Settings</a>
+                            <a class="dropdown-item" href="landing-page.html">Logout</a>
+                        </div>
+                    </div>
+
+                    <ul class="navigation">
+                        <li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-view-dashboard"></i>Home</a></li>
+						<li class="navigation__sub">
+                            <a href="#"><i class="pe-7s-id"></i>Members</a>
+                            <ul>
+                                <li><a href="members.html" title="members register">Registered Members</a></li>
+                                <li><a href="new-member.html" title="add new member">RegisterNew Members</a></li>
+                            </ul>
+						</li>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="flaticon-briefcase"></i>Accounts</a>
+                            <ul>
+                                <li class="d-none"><a href="account.html">Share Capital</a></li>
+                                <li class="d-none"><a href="account.html">Deposit account</a></li>
+                                 <li class="d-none"><a href="account-html">Savings</a></li>
+                                 <li><a href="accounts-list.html" title="set up new account">Sacco Accounts</a></li>
+                                 <li><a href="frozen-accounts.html" title="set up new account">Frozen Accounts</a></li>
+								 <li><a href="new-account.html" title="set up new account">New account setup</a></li>
+                            </ul>
+						</li>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="flaticon-money"></i>Loans</a>
+                            <ul>
+                                <li class=""><a href="loan-setup.html">Loan setup</a></li>
+                                <li class="d-none"><a href="loan-types.html">Loan types</a></li>
+                                <li><a href="loan-application.html">New Loan application</a></li>
+                                <li><a href="loan-appraisal.html">Awaiting Appraisal</a></li>
+                                <li><a href="loan-approval.html">Awaiting Approval</a></li>
+                                <li><a href="loan-disbursment.html">Awaiting Disbursement</a></li>
+
+                                <li><a href="active-loans.html">Active Loans</a></li>
+                                <li><a href="ongoing-loans.html">Ongoing Applications</a></li>
+                                <li><a href="re-evaluation-loan-applications.html">Under Re-evaluation</a></li>
+                                <li><a href="declined-loan-applications.html">Declined Applications</a></li>
+                                <li><a href="loan-types.html">Loan products</a></li>
+								 
+                            </ul>
+                        </li>
+                        												
+						<li class="navigation__sub">
+                            <a href="#"><i class="zmdi zmdi-swap"></i>Transactions</a>
+                            <ul>
+                                <li><a href="all-transactions.html">All</a></li>
+                                <li><a href="deposit-transactions.html">Deposits</a></li>
+                                <li><a href="withdraw-transactions.html">Withdrawals</a></li>
+								 
+                            </ul>
+						</li>
+						
+						
+						 <li class="navigation__active mt-4"><a href="landing-page.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+			
+			
+
+            
+
+            <section class="content custom-table-container">
+				<!--deactivate account-->
+					<div class="modal fade" id="deactivate-blinker" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					  <div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<h5 class="modal-title" id="deactivate-blinker-title">Block guardian account</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <span aria-hidden="true">&times;</span>
+							</button>
+						  </div>
+						  <div class="modal-body">
+							<form>
+								<h6 class="font-weight-bold mb-3">Whats the reason for blocking this account?</h6>
+								<div class="radio">
+									<input type="radio" name="reason" id="lost">
+									<label class="radio__label" for="lost">They are no longer a gurdian at the school</label>
+								</div>
+								<div class="radio">
+									<input type="radio" name="reason" id="defective">
+									<label class="radio__label" for="defective">some other reason</label>
+								</div>
+								<div class="col-lg-12 p-0 col-md-12">
+									<div class="form-group mt-3"> 
+										<label class="font-weight-bold">Write other reason</label>
+										<input type="email" class="form-control" placeholder="Enter email address">
+									</div>
+								</div>					
+
+							</form>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Block account</button>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				 
+                <header class="content__title px-0 border-0">
+				 	<div class="row">
+						<div class="col-md-8 col-sm-12">
+							<span class="rev-title-container">
+							 <h1 class="text-capitalize stream_name m-0">Declined Loan applications</h1>
+							</span>
+							<div class="">
+								<ol class="breadcrumb border-0">
+									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+									<li class="breadcrumb-item active">Declined loan applications</li>
+								</ol>
+							</div>
+						</div>
+											
+					</div>
+				</header>
+				
+				<div class="row">
+					<div class="col-12 p-0">
+						<div class="card table-custom-bg">
+							<div class="card-body">
+								<div class="table-responsive">
+									<table class="table table-hover table-custom spacing8" id="data-table">
+										<thead>
+											<tr> 
+												<th>#</th>
+                                                <th>Full Names</th>
+                                                <th>Loan type</th>
+                                                <th>Amount Requesting</th>
+												<th>Application Date</th>
+                                                <th>Date declined</th>
+                                                <th>Declined By</th>
+												<th>Reason declined</th>
+												<th>Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													13132132
+												</td>
+												<td class="text-capitalize"><a href="member-profile.html">Kelvin njjuguna</a></td>
+                                                <td>Type name</td>
+                                                <td>KES 230,256</td>
+                                                <td>22 Aug 2020</td>
+                                                <td>27 Aug 2020</td>
+												<td class="text-capitalize">Alex wanjala</td>
+												<td><span>Submited wrong information</span></td>												
+												<td><a href="declined-loan-application-details.html" class="btn btn-primary">View application</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                <footer class="footer hidden-xs-down">
+					<center><a class="nouveta-logoo" href="https://nouveta.tech/"><img src="demo/img/logo-files/logo2.png" target="new"></center></a></center>
+                    <p>Powered by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>
+                </footer>
+            </section>
+        </main>
+
+        <!-- Older IE warning message -->
+            <!--[if IE]>
+                <div class="ie-warning">
+                    <h1>Warning!!</h1>
+                    <p>You are using an outdated version of Internet Explorer, please upgrade to any of the following web browsers to access this website.</p>
+
+                    <div class="ie-warning__downloads">
+                        <a href="http://www.google.com/chrome">
+                            <img src="img/browsers/chrome.png" alt="">
+                        </a>
+
+                        <a href="https://www.mozilla.org/en-US/firefox/new">
+                            <img src="img/browsers/firefox.png" alt="">
+                        </a>
+
+                        <a href="http://www.opera.com">
+                            <img src="img/browsers/opera.png" alt="">
+                        </a>
+
+                        <a href="https://support.apple.com/downloads/safari">
+                            <img src="img/browsers/safari.png" alt="">
+                        </a>
+
+                        <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">
+                            <img src="img/browsers/edge.png" alt="">
+                        </a>
+
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="img/browsers/ie.png" alt="">
+                        </a>
+                    </div>
+                    <p>Sorry for the inconvenience!</p>
+                </div>
+            <![endif]-->
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="vendors/jquery/jquery.min.js"></script>
+        <script src="vendors/popper.js/popper.min.js"></script>
+        <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+        <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+
+        <script src="vendors/flot/jquery.flot.js"></script>
+        <script src="vendors/flot/jquery.flot.resize.js"></script>
+        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+        <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
+        <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
+        <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
+        <script src="vendors/salvattore/salvattore.min.js"></script>
+        <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+		
+		 <script src="vendors/jquery-mask-plugin/jquery.mask.min.js"></script>
+        <script src="vendors/select2/js/select2.full.min.js"></script>
+        <script src="vendors/dropzone/dropzone.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/nouislider/nouislider.min.js"></script>
+        <script src="vendors/trumbowyg/trumbowyg.min.js"></script>
+        <script src="vendors/flatpickr/flatpickr.min.js"></script>
+        <script src="vendors/rateyo/jquery.rateyo.min.js"></script>
+        <script src="vendors/jquery-text-counter/textcounter.min.js"></script>
+        <script src="vendors/autosize/autosize.min.js"></script>
+        <script src="vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+		
+		
+        <!-- Vendors: Data tables -->
+        <script src="vendors/datatables/jquery.dataTables.min.js"></script>
+        <script src="vendors/datatables-buttons/dataTables.buttons.min.js"></script>
+        <script src="vendors/datatables-buttons/buttons.print.min.js"></script>
+        <script src="vendors/jszip/jszip.min.js"></script>
+        <script src="vendors/datatables-buttons/buttons.html5.min.js"></script>
+
+        <!-- Charts and maps-->
+        <script src="demo/js/flot-charts/curved-line.js"></script>
+        <script src="demo/js/flot-charts/dynamic.js"></script>
+        <script src="demo/js/flot-charts/line.js"></script>
+        <script src="demo/js/flot-charts/chart-tooltips.js"></script>
+        <script src="demo/js/other-charts.js"></script>
+        <script src="demo/js/jqvmap.js"></script>
+		
+		<!--high chart-->
+		
+		<script src="vendors/highcharts/highchart.js"></script>
+		<script src="vendors/highcharts/data.js"></script>
+		<script src="vendors/highcharts/drilldown.js"></script>
+		<script src="vendors/highcharts/exporting.js"></script>
+		<script src="vendors/highcharts/export-data.js"></script>
+		<script src="vendors/highcharts/accesibility.js"></script>
+		
+		<script src="js/highcharts/highcharts-more.js"></script>
+		<!--owl corousel-->
+		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
+		<!-- App functions and actions -->
+		<script src="js/wow.js"></script>
+        <script src="js/app.min.js"></script>
+        <script src="js/main.js"></script>		
+    </body>
+
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:43 GMT -->
+</html>
