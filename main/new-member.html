@@ -1,348 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
+<script src="include-sidebar-script.js"></script>
+
+
 <!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:03 GMT -->
+
 <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
-		<link rel='icon' href='demo/img/icon_3.png' type='image/x-icon'/ >
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<!-- Vendor styles -->
-		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.carousel.min.css">
-		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.theme.default.css">
-	
-		<!--flat icon-->
-		<link rel="stylesheet" href="css/flaticon/font/flaticon.css">
-		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
-		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
-		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
-		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_4.css">
+    <link rel='icon' href='demo/img/icon_3.png' type='image/x-icon' />
 
-	
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.theme.default.css">
 
-        <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
-        <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
-        <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
-        <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
-        <link rel="stylesheet" href="vendors/select2/css/select2.min.css">
-        <link rel="stylesheet" href="vendors/dropzone/dropzone.css">
-        <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
-        <link rel="stylesheet" href="vendors/trumbowyg/ui/trumbowyg.min.css">
-        <link rel="stylesheet" href="vendors/flatpickr/flatpickr.min.css" />
-        <link rel="stylesheet" href="vendors/rateyo/jquery.rateyo.min.css">
-        <link rel="stylesheet" href="vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+    <!--flat icon-->
+    <link rel="stylesheet" href="css/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
+    <link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
+    <link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
+    <link rel="stylesheet" href="css/icon_fonts/css/icon_set_4.css">
 
-        <!-- App styles -->
-        <link rel="stylesheet" href="css/app.min.css">
-    </head>
 
-    <body data-ma-theme="green">
-        <main class="main">
-            <div class="page-loader">
-                <div class="page-loader__spinner">
-                    <svg class="d-none" viewBox="25 25 50 50">
+
+    <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
+    <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
+    <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="vendors/select2/css/select2.min.css">
+    <link rel="stylesheet" href="vendors/dropzone/dropzone.css">
+    <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
+    <link rel="stylesheet" href="vendors/trumbowyg/ui/trumbowyg.min.css">
+    <link rel="stylesheet" href="vendors/flatpickr/flatpickr.min.css" />
+    <link rel="stylesheet" href="vendors/rateyo/jquery.rateyo.min.css">
+    <link rel="stylesheet" href="vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body data-ma-theme="green">
+    <main class="main">
+        <div class="page-loader">
+            <div class="page-loader__spinner">
+                <svg class="d-none" viewBox="25 25 50 50">
                         <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
                     </svg>
-					<img src="demo/img/gifs/preloader.gif">
-                </div>
-				<span class="powerd-container">
+                <img src="demo/img/gifs/preloader.gif">
+            </div>
+            <span class="powerd-container">
 					<strong class="mb-2">Sacco Benki By</strong>
 					<img src="demo/img/logo-files/nouveta-orange.svg">
 					
 				</span>
-            </div>
+        </div>
 
-          <!-- create account -->
-			<div class="modal fade" id="new-member-account2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered" role="document">
-				  <div class="modal-content">
-					<div class="modal-header">
-					  <h5 class="modal-title" id="exampleModalLongTitle">New Account</h5>
-					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <!-- create account -->
+        <div class="modal fade" id="new-member-account2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">New Account</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					  </button>
-					</div>
-					<div class="modal-body">
-
-						<div class="form-group">
-							<label for="member-no">Member's Number</label>
-							<input type="text" class="form-control" id="member-no" placeholder="Enter member's number to continue" required>
-							<small id="emailHelp" class="form-text text-danger d-none">Error Message goes here</small>
-						  </div>
-
-						  <p>Select the new <strong>account(s)</strong> you would like to create for the member.</p>
-
-
-						<h6 class="mb-3">List of available accounts:</h6>
-						<div>
-							<div class="checkbox">
-								<input type="checkbox" id="account-type1">
-								<label class="checkbox__label" for="account-type1">Share Capital</label>
-							</div>
-							<div class="checkbox">
-								<input type="checkbox" id="account-type2">
-								<label class="checkbox__label" for="account-type2">Share deposit</label>
-							</div>
-							<div class="checkbox">
-								<input type="checkbox" id="account-type3">
-								<label class="checkbox__label" for="account-type3">Loan & Interests</label>
-							</div>
-							<div class="checkbox">
-								<input type="checkbox" id="account-type4">
-								<label class="checkbox__label" for="account-type4">Clearing</label>
-							</div>
-							<div class="checkbox">
-								<input type="checkbox" id="account-type5">
-								<label class="checkbox__label" for="account-type5">FOSA</label>
-							</div>
-
-						</div>
-					</div>
-					<div class="modal-footer">
-					  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					  <button type="button" class="btn btn-primary">Create Account(s)</button>
-					</div>
-				  </div>
-				</div>
-				</div>
-			<!-- create account -->
-            <header class="header">
-                <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
-                    <div class="navigation-trigger__inner">
-                        <i class="navigation-trigger__line"></i>
-                        <i class="navigation-trigger__line"></i>
-                        <i class="navigation-trigger__line"></i>
                     </div>
-                </div>
+                    <div class="modal-body">
 
-                <div class="header__logo hidden-sm-down">
-                    <h1><a href="index.html"><img class="the-logo" src="demo/img/logo-files/sacco-orange.png"></a></h1>
-                </div>
-                <h2 class="ml-4 text-white text-uppercase mb-0 text-light">Super Sacco</h2>
+                        <div class="form-group">
+                            <label for="member-no">Member's Number</label>
+                            <input type="text" class="form-control" id="member-no" placeholder="Enter member's number to continue" required>
+                            <small id="emailHelp" class="form-text text-danger d-none">Error Message goes here</small>
+                        </div>
 
-                <form class="search">
-                    <div class="search__inner d-none">
-                        <input type="text" class="search__text d-none" placeholder="Search through the dashboard">
-                        <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
-                    </div>
-                </form>
-				
-				<ul class="top-nav">
-					<li><button data-toggle="modal" data-target="#new-member-account2" class="btn btn-light text-black"><i class="zmdi zmdi-plus mr-2"></i>New Member Account</button></li>
-                    <li class="hidden-xl-up"><a href="#" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
-					
-					<li data-toggle="tooltip" data-original-title="Notifications" class="dropdown top-nav__notifications">
-                        <a href="#" data-toggle="dropdown"  class="top-nav__notify" >
-                            <i class="zmdi zmdi-notifications"></i>
-                        </a>                       
-                    </li>
-                    
-                </ul>
+                        <p>Select the new <strong>account(s)</strong> you would like to create for the member.</p>
 
-                
-            </header>
 
-              
-			
-			    <aside class="sidebar">
-                <div class="scrollbar-inner">
-                    <div class="user">
-                        <div class="user__info" data-toggle="dropdown">
-                            <img class="user__img" src="demo/img/icon-rules.png" alt="">
-                            <div>
-                                <div class="user__name">John Mwakili</div>
-                                <div class="user__email">john@gmail.com</div>
+                        <h6 class="mb-3">List of available accounts:</h6>
+                        <div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="account-type1">
+                                <label class="checkbox__label" for="account-type1">Share Capital</label>
                             </div>
-                        </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="account-type2">
+                                <label class="checkbox__label" for="account-type2">Share deposit</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="account-type3">
+                                <label class="checkbox__label" for="account-type3">Loan & Interests</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="account-type4">
+                                <label class="checkbox__label" for="account-type4">Clearing</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="account-type5">
+                                <label class="checkbox__label" for="account-type5">FOSA</label>
+                            </div>
 
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="my-profile.html">View Profile</a>
-                            <a class="dropdown-item d-none" href="#">Settings</a>
-                            <a class="dropdown-item" href="landing-page.html">Logout</a>
                         </div>
                     </div>
-
-                    <ul class="navigation">
-                        <li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-view-dashboard"></i>Home</a></li>
-						<li class="navigation__sub">
-                            <a href="#"><i class="pe-7s-id"></i>Members</a>
-                            <ul>
-                                <li><a href="members.html" title="members register">Registered Members</a></li>
-                                <li><a href="new-member.html" title="add new member">RegisterNew Members</a></li>
-                            </ul>
-						</li>
-						
-						<li class="navigation__sub">
-                            <a href="#"><i class="flaticon-briefcase"></i>Accounts</a>
-                            <ul>
-                                <li class="d-none"><a href="account.html">Share Capital</a></li>
-                                <li class="d-none"><a href="account.html">Deposit account</a></li>
-                                 <li class="d-none"><a href="account-html">Savings</a></li>
-                                 <li><a href="accounts-list.html" title="set up new account">Sacco Accounts</a></li>
-                                 <li><a href="frozen-accounts.html" title="set up new account">Frozen Accounts</a></li>
-								 <li><a href="new-account.html" title="set up new account">New account setup</a></li>
-                            </ul>
-						</li>
-						
-						<li class="navigation__sub">
-                            <a href="#"><i class="flaticon-money"></i>Loans</a>
-                            <ul>
-                                <li class=""><a href="loan-setup.html">Loan setup</a></li>
-                                <li class="d-none"><a href="loan-types.html">Loan types</a></li>
-                                <li><a href="loan-application.html">New Loan application</a></li>
-                                <li><a href="loan-appraisal.html">Awaiting Appraisal</a></li>
-                                <li><a href="loan-approval.html">Awaiting Approval</a></li>
-                                <li><a href="loan-disbursment.html">Awaiting Disbursement</a></li>
-
-                                <li><a href="active-loans.html">Active Loans</a></li>
-                                <li><a href="ongoing-loans.html">Ongoing Applications</a></li>
-                                <li><a href="re-evaluation-loan-applications.html">Under Re-evaluation</a></li>
-                                <li><a href="declined-loan-applications.html">Declined Applications</a></li>
-                                <li><a href="loan-types.html">Loan products</a></li>
-								 
-                            </ul>
-						</li>
-																		
-						<li class="navigation__sub">
-                            <a href="#"><i class="zmdi zmdi-swap"></i>Transactions</a>
-                            <ul>
-                                <li><a href="all-transactions.html">All</a></li>
-                                <li><a href="deposit-transactions.html">Deposits</a></li>
-                                <li><a href="withdraw-transactions.html">Withdrawals</a></li>
-								 
-                            </ul>
-						</li>
-						
-						
-						 <li class="navigation__active mt-4"><a href="landing-page.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
-                    </ul>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Create Account(s)</button>
+                    </div>
                 </div>
-            </aside>
+            </div>
+        </div>
+        <!-- create account -->
+        <header class="header">
+            <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+                <div class="navigation-trigger__inner">
+                    <i class="navigation-trigger__line"></i>
+                    <i class="navigation-trigger__line"></i>
+                    <i class="navigation-trigger__line"></i>
+                </div>
+            </div>
 
-			
-			
+            <div class="header__logo hidden-sm-down">
+                <h1>
+                    <a href="index.html"><img class="the-logo" src="demo/img/logo-files/sacco-orange.png"></a>
+                </h1>
+            </div>
+            <h2 class="ml-4 text-white text-uppercase mb-0 text-light">Super Sacco</h2>
 
-            
+            <form class="search">
+                <div class="search__inner d-none">
+                    <input type="text" class="search__text d-none" placeholder="Search through the dashboard">
+                    <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+                </div>
+            </form>
 
-            <section class="content custom-table-container">
-                <header class="content__title px-0 border-0">
-				 	<div class="row">
-						<div class="col-md-8 col-sm-12">
-							<span class="rev-title-container">
+            <ul class="top-nav">
+                <li><button data-toggle="modal" data-target="#new-member-account2" class="btn btn-light text-black"><i class="zmdi zmdi-plus mr-2"></i>New Member Account</button></li>
+                <li class="hidden-xl-up"><a href="#" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
+
+                <li data-toggle="tooltip" data-original-title="Notifications" class="dropdown top-nav__notifications">
+                    <a href="#" data-toggle="dropdown" class="top-nav__notify">
+                        <i class="zmdi zmdi-notifications"></i>
+                    </a>
+                </li>
+
+            </ul>
+
+
+        </header>
+
+
+
+        <!-- Side bar -->
+        <aside class="sidebar">
+            <div w3-include-html="nav-bar.html"></div>
+        </aside>
+
+        <section class="content custom-table-container">
+            <header class="content__title px-0 border-0">
+                <div class="row">
+                    <div class="col-md-8 col-sm-12">
+                        <span class="rev-title-container">
 							 <h1 class="text-capitalize stream_name m-0">Member registration</h1>
 							</span>
-							<div class="">
-								<ol class="breadcrumb border-0">
-									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item"><a href="#">Members</a></li>
-									<li class="breadcrumb-item active">Member registration</li>
-								</ol>
-							</div>
-						</div>
-						<div class="col-4 col-sm-12 col-md-4">
-							<div class="section-header">
-								<a href="#" class="btn btn-sm btn-primary" title="">Download registration form</a>
-							</div>					
-						</div>						
-					</div>
-				</header>
-				
-				<div class="row">
-					
-					<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-none">
-						<div class="account-info">
-							<div class="card">
-								<div class="card-body">
-									
-									<h4 class="card-title">User registration Guidelines</h4>
-									<h6 class="card-subtitle">Fill in the form, the fields with a <strong class="text-danger">*</strong> are mandatory fields</h6>
-									<hr>
-									<div class="form-img">
-										<img class="img" src="demo/img/form-svgs/users.svg">
-									</div>
-									
-									<div class="notes">
-										<p>
-										Once all the required fields have been entered and form submited, an account password will be sent to the user from where he,she will use to login and start using the system.
-									</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-						
-					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-						<div class="create-form">
-							<div class="col-12 p-0">
-								<div class="card">
-									<div class="card-body">
-										<div class="mb-3">
-											<ul class="nav nav-pills">
-												<li class="nav-item">
-													<a class="nav-link active gen-info-link" href="#"><i class="pe-7s-user mr-2"></i>Generall Information</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link occupation-link disabled" href="#"><i class="pe-7s-portfolio mr-2"></i>Occupation</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link ben-link disabled" href="#"><i class="pe-7s-users mr-2"></i>Beneficiaries</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link doc-link disabled" href="#"><i class="pe-7s-note2 mr-2"></i>Documents</a>
-												</li>
-												<li class="nav-item ">
-													<a class="nav-link disabled save-link" href="#"><i class="pe-7s-piggy mr-2"></i>Start saving</a>
-												</li>
-											</ul>
-										</div>
-										<hr>
-										
-										<form class="membership-form">
-											<div class="row clearfix form-gen-information animated fadeInRight">
-											<div class="col-12">
-												<h4 class="card-title">General information</h4>
-												<h6 class="card-subtitle">Enter the form bellow. Fields with <strong class="text-danger">(*)</strong> are required.</h6>
-												<hr>
-											</div>
-											<div class="col-md-4 col-sm-12">
-												<div class="form-group"> 
-													<label>First name  <strong class="text-danger">*</strong></label>
-													<input type="text"  class="form-control validate" pattern="^[a-zA-Z]{2,30}$" minlength="2" autofocus placeholder="Enter first name" required>
-												</div>
-											</div>
-											<div class="col-md-4 col-sm-12">
-												<div class="form-group"> 
-													<label>SurName  <strong class="text-danger">*</strong></label>
-													<input type="text" class="form-control validate" pattern="^[a-zA-Z']{2,30}$" minlength="2"  placeholder="Enter surname" required>
-												</div>
-											</div>
-											<div class="col-md-4 col-sm-12">
-												<div class="form-group"> 
-													<label>Other Name(s)</label>
-													<input type="text" class="form-control validate" pattern="^[0-9a-zA-Z'\s]{2,100}$" minlength="2"  placeholder="Enter other name(s)">
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="row">
-													<div class="col-md-4 col-sm-12">
-														<div class="form-group"> 
-															<label>ID Number/Passport Number  <strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control validate" pattern="^[0-9a-zA-Z'\s]{2,100}$"  minlength="2" placeholder="Enter ID Number" required>
-														</div>													
-													</div>
-													
-													<div class="col-md-4 col-sm-12">
-														<div class="form-group"> 
-															<label>KRA Pin  <strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control validate" pattern="^[0-9a-zA-Z'\s]{2,100}$" placeholder="Enter KRA pin"  minlength="2" required>
-														</div>
-													</div>
-													
-													<div class="col-md-4 col-sm-12">
-														<div class="form-group"> 
-															<label>Nationality<strong class="text-danger">*</strong></label>
-															<select name="" id="" title="please select your nationality" class="form-control nationality-form" placeholder="Nationality">
+                        <div class="">
+                            <ol class="breadcrumb border-0">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Members</a></li>
+                                <li class="breadcrumb-item active">Member registration</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-12 col-md-4">
+                        <div class="section-header">
+                            <a href="#" class="btn btn-sm btn-primary" title="">Download registration form</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="row">
+
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-none">
+                    <div class="account-info">
+                        <div class="card">
+                            <div class="card-body">
+
+                                <h4 class="card-title">User registration Guidelines</h4>
+                                <h6 class="card-subtitle">Fill in the form, the fields with a <strong class="text-danger">*</strong> are mandatory fields</h6>
+                                <hr>
+                                <div class="form-img">
+                                    <img class="img" src="demo/img/form-svgs/users.svg">
+                                </div>
+
+                                <div class="notes">
+                                    <p>
+                                        Once all the required fields have been entered and form submited, an account password will be sent to the user from where he,she will use to login and start using the system.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="create-form">
+                        <div class="col-12 p-0">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item">
+                                                <a class="nav-link active gen-info-link" href="#"><i class="pe-7s-user mr-2"></i>Generall Information</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link occupation-link disabled" href="#"><i class="pe-7s-portfolio mr-2"></i>Occupation</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link ben-link disabled" href="#"><i class="pe-7s-users mr-2"></i>Beneficiaries</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link doc-link disabled" href="#"><i class="pe-7s-note2 mr-2"></i>Documents</a>
+                                            </li>
+                                            <li class="nav-item ">
+                                                <a class="nav-link disabled save-link" href="#"><i class="pe-7s-piggy mr-2"></i>Start saving</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+
+                                    <form class="membership-form">
+                                        <div class="row clearfix form-gen-information animated fadeInRight">
+                                            <div class="col-12">
+                                                <h4 class="card-title">General information</h4>
+                                                <h6 class="card-subtitle">Enter the form bellow. Fields with <strong class="text-danger">(*)</strong> are required.</h6>
+                                                <hr>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label>First name  <strong class="text-danger">*</strong></label>
+                                                    <input type="text" class="form-control validate" pattern="^[a-zA-Z]{2,30}$" minlength="2" autofocus placeholder="Enter first name" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label>SurName  <strong class="text-danger">*</strong></label>
+                                                    <input type="text" class="form-control validate" pattern="^[a-zA-Z']{2,30}$" minlength="2" placeholder="Enter surname" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label>Other Name(s)</label>
+                                                    <input type="text" class="form-control validate" pattern="^[0-9a-zA-Z'\s]{2,100}$" minlength="2" placeholder="Enter other name(s)">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>ID Number/Passport Number  <strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control validate" pattern="^[0-9a-zA-Z'\s]{2,100}$" minlength="2" placeholder="Enter ID Number" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>KRA Pin  <strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control validate" pattern="^[0-9a-zA-Z'\s]{2,100}$" placeholder="Enter KRA pin" minlength="2" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>Nationality<strong class="text-danger">*</strong></label>
+                                                            <select name="" id="" title="please select your nationality" class="form-control nationality-form" placeholder="Nationality">
 																<option value="0">-- select nationality --</option>
 																<option value="AF">Afghanistan</option>
 																<option value="AL">Albania</option>
@@ -584,36 +515,36 @@
 																<option value="ZW">Zimbabwe</option>
 
 															</select>
-														</div>
-													</div>
-												</div>
-											</div>
-											
-											<div class="col-md-4 col-sm-12">
-												<div class="form-group">
-													<label>Gender <strong class="text-danger">*</strong></label>
-													<select class="form-control gender-form">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label>Gender <strong class="text-danger">*</strong></label>
+                                                    <select class="form-control gender-form">
 														<option value="0" selected>-- Select Gender --</option>
 														<option value="Male">Male</option>
 														<option value="Female">Female</option>
 													</select>
-												</div>
-											</div>
-											 <div class="col-sm-12 col-md-4">
-												<label>Date of Birth</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <label>Date of Birth</label>
 
-												<div class="input-group">
-													<div class="input-group-prepend">
-														<span class="input-group-text"><i class="pe-7s-date"></i></span>
-													</div>
-													<input type="date" class="form-control hidden-md-up dob2 d-none"  placeholder="Pick a date">
-													<input type="text" class="form-control date-picker  dob1" required placeholder="Pick a date">
-												</div>
-											</div>
-											<div class="col-md-4 col-sm-12">
-												<div class="form-group"> 
-													<label>Marital status<strong class="text-danger">*</strong></label>
-													<select name="" id="" title="please select your " class="form-control status-form" placeholder="Gender">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                    </div>
+                                                    <input type="date" class="form-control hidden-md-up dob2 d-none" placeholder="Pick a date">
+                                                    <input type="text" class="form-control date-picker  dob1" required placeholder="Pick a date">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label>Marital status<strong class="text-danger">*</strong></label>
+                                                    <select name="" id="" title="please select your " class="form-control status-form" placeholder="Gender">
 														<option value="0" selected>---Select Marital status--</option>
 														<option value="1">Single</option>
 														<option value="2">Married</option>
@@ -622,37 +553,37 @@
 														<option value="5">Widow</option>
 
 													</select>
-												</div>
-											</div>
-											<hr>
-											<div class="col-12">
-												<p class="text-success">Contact information</p>
-											</div>
-											
-											<div class="col-md-4 col-sm-12">
-												<div class="form-group"> 
-													<label>Postal address <strong class="text-danger">*</strong></label>
-													<input type="text" class="form-control posta-form validate" pattern="^[0-9']{1,100000000000000000}$" minlength="1"  required placeholder="Enter the postal address">
-												</div>
-											</div>
-											<div class="col-md-4 col-sm-12">
-												<div class="form-group"> 
-													<label>Postal code <strong class="text-danger">*</strong></label>
-													<input type="text" required class="form-control validate" pattern="^[0-9']{1,10000000000}$" minlength="1" placeholder="Enter the postal code">
-												</div>
-											</div>
-											
-											<div class="col-md-4 col-sm-12">
-												<div class="form-group"> 
-													<label>City<strong class="text-danger">*</strong></label>
-													<input type="text" class="form-control city-form" required pattern="^[0-9a-zA-Z'\s]{2,100}$" minlength="1"  placeholder="Enter the city name">
-												</div>
-											</div>
-											
-											<div class="col-md-4 col-sm-12">
-												<div class="form-group"> 
-													<label>Country<strong class="text-danger">*</strong></label>
-													<select name="" id="" title="please select your postal country" class="form-control country-form" placeholder="Country">
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="col-12">
+                                                <p class="text-success">Contact information</p>
+                                            </div>
+
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label>Postal address <strong class="text-danger">*</strong></label>
+                                                    <input type="text" class="form-control posta-form validate" pattern="^[0-9']{1,100000000000000000}$" minlength="1" required placeholder="Enter the postal address">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label>Postal code <strong class="text-danger">*</strong></label>
+                                                    <input type="text" required class="form-control validate" pattern="^[0-9']{1,10000000000}$" minlength="1" placeholder="Enter the postal code">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label>City<strong class="text-danger">*</strong></label>
+                                                    <input type="text" class="form-control city-form" required pattern="^[0-9a-zA-Z'\s]{2,100}$" minlength="1" placeholder="Enter the city name">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label>Country<strong class="text-danger">*</strong></label>
+                                                    <select name="" id="" title="please select your postal country" class="form-control country-form" placeholder="Country">
 														<option value="0">-- Select country --</option>
 														<option value="AF">Afghanistan</option>
 														<option value="AL">Albania</option>
@@ -895,179 +826,180 @@
 														<option value="ZW">Zimbabwe</option>
 
 													</select>
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="row">
-													<div class="col-md-6 col-sm-12">
-														<div class="form-group"> 
-															<label>Phone Number<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control phone-num validate" pattern="^[0-9']{10,11}$" minlength="9" required placeholder="Enter phone number">
-														</div>													
-													</div>
-													
-													<div class="col-md-6 col-sm-12">
-														<div class="form-group"> 
-															<label>Email address<strong class="text-danger">*</strong></label>
-															<input type="email" class="form-control email-input validate" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" id="id1"  required placeholder="email@email.com">
-															
-														</div>
-													</div>
-													
-													
-												</div>
-											</div>
-											
-											<div class="col-12">
-												<a class="btn btn-primary occupation-next btn-next text-white" >Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
-											</div>
-											
-											
-											
-										</div>
-										
-										<div class="row clearfix form-occupation animated fadeInRight d-none">
-											<div class="col-md-12">
-												<h4 class="card-title">Occupation</h4>
-											<h6 class="card-subtitle">Enter the form bellow. Fields with <strong class="text-danger">(*)</strong> are required.</h6>
-											<hr>
-											</div>
-											<div class="col-md-6 col-sm-12">
-												<div class="form-group"> 
-													<label>Select source of income<strong class="text-danger">*</strong></label>
-													<select title="please select your source of income" class="form-control occupation-text" placeholder="Gender">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>Phone Number<strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control phone-num validate" pattern="^[0-9']{10,11}$" minlength="9" required placeholder="Enter phone number">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>Email address<strong class="text-danger">*</strong></label>
+                                                            <input type="email" class="form-control email-input validate" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$"
+                                                                id="id1" required placeholder="email@email.com">
+
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <a class="btn btn-primary occupation-next btn-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
+                                            </div>
+
+
+
+                                        </div>
+
+                                        <div class="row clearfix form-occupation animated fadeInRight d-none">
+                                            <div class="col-md-12">
+                                                <h4 class="card-title">Occupation</h4>
+                                                <h6 class="card-subtitle">Enter the form bellow. Fields with <strong class="text-danger">(*)</strong> are required.</h6>
+                                                <hr>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label>Select source of income<strong class="text-danger">*</strong></label>
+                                                    <select title="please select your source of income" class="form-control occupation-text" placeholder="Gender">
 														<option selected="selected" value="0">-- select source of income --</option>
 														<option  value="Employment">Employment</option>
 														<option value="Business">Business</option>
 														<option value="Pension">Pension</option>
 
 													</select>
-												</div>
-											</div>
-											
-											<div class="col-12 employer-opt animated fadeIn d-none">
-												<div class="row">
-													<div class="col-md-6 col-sm-12">
-														<div class="form-group"> 
-															<label>Emoployer<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control must-input emp-employer" placeholder="Enter employers name">
-														</div>
-													</div>
-													
-													<div class="col-sm-12 col-md-6">
-														<div class="form-group"> 
-															<label>Position of employment<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control emp-position must-input" placeholder="Enter position">
-														</div>
-													</div>
-													
-													<div class="col-md-6 col-sm-12">
-														<div class="form-group"> 
-															<label>Payroll/Staff number<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control emp-staff-num must-input"  placeholder="Enter staff number or pay roll number">
-														</div>
-													</div>
-													
-													 <div class="col-sm-12 col-md-6">
-														<label>date of employment</label>
+                                                </div>
+                                            </div>
 
-														<div class="input-group">
-															<div class="input-group-prepend">
-																<span class="input-group-text"><i class="pe-7s-date"></i></span>
-															</div>
-<!--															<input type="date" class="form-control hidden-md-up" placeholder="Pick a date">-->
-															<input type="text" class="form-control date-picker must-input emp-date" placeholder="Pick a date">
-														</div>
-													</div>
-													
-													<div class="col-md-6 col-sm-12">
-														<div class="form-group"> 
-															<label>Gross monthly Income<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control must-input emp-income" placeholder="Enter monthly income">
-														</div>
-													</div>
-													
-												</div>
-											</div>
-											<div class="col-12 business-opt animated fadeIn d-none">
-												<div class="row">
-													<div class="col-md-6 col-sm-12">
-														<div class="form-group"> 
-															<label>Business name<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control must-input business-name" placeholder="Enter business name">
-														</div>
-													</div>
-													
-													<div class="col-sm-12 col-md-6">
-														<div class="form-group"> 
-															<label>Business address<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control must-input business-address" placeholder="Enter address">
-														</div>
-													</div>
-													
-													<div class="col-md-6 col-sm-12">
-														<div class="form-group"> 
-															<label>Nature of business<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control must-input business-nature" placeholder="Enter nature of the business">
-														</div>
-													</div>
-													<div class="col-md-6 col-sm-12">
-														<div class="form-group"> 
-															<label>Business location<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control business-location must-input" placeholder="Enter location">
-														</div>
-													</div>
-													
-													 
-													
-													<div class="col-md-6 col-sm-12">
-														<div class="form-group"> 
-															<label>Business monthly income<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control must-input business-income" placeholder="Enter monthly income">
-														</div>
-													</div>
-												</div>
-											</div>
+                                            <div class="col-12 employer-opt animated fadeIn d-none">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>Emoployer<strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control must-input emp-employer" placeholder="Enter employers name">
+                                                        </div>
+                                                    </div>
 
-											<div class="col-12">
-												<a class="btn btn-light btn-border mr-3 btn-outline gen-prev btn-prev "><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
-												<a class="btn btn-primary btn-next ben-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
-											</div>
-											
-										</div>
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Position of employment<strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control emp-position must-input" placeholder="Enter position">
+                                                        </div>
+                                                    </div>
 
-										<div class="row clearfix form-ben animated fadeInRight d-none">
-											<div class="col-12">
-												<h4 class="card-title">Beneficiaries</h4>
-												<h6 class="card-subtitle">Specify atleast <strong class="text-danger">one beneficiary</strong> for each</h6>
-												<hr>
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>Payroll/Staff number<strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control emp-staff-num must-input" placeholder="Enter staff number or pay roll number">
+                                                        </div>
+                                                    </div>
 
-												<label><strong>Nominees for Deposits/Benefits in the event of Death:</strong></label>
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <label>date of employment</label>
 
-												<table class="table table-bordered deposit-ben">
-													<thead>
-													  <tr>
-														  <th>#</th>
-														<th scope="col">Names</th>
-														<th scope="col">ID/PP/Birth certificate No.</th>
-														<th scope="col">Relationship</th>
-														<th scope="col">DOB</th>
-														<th scope="col" class="">Allocations(%)<br><small class="text-danger shares-err d-none"><strong>Shares should not exceede 100%</strong></small></th>
-													  </tr>
-													</thead>
-													<tbody>
-													 <tr>
-														 <th>
-															 <strong>1</strong>
-														 </th>
-														<td>
-															<input type="text" class="form-control" placeholder="Full name"pattern="^[a-zA-Z'\s]{2,100}$" minlength="2" required>
-														  </td>
-														  <td>
-															<input type="text" class="form-control" placeholder="Enter Number" pattern="^[0-9a-zA-Z'\s]{2,100}$" required>
-														  </td>
-														  <td>
-															<select title="please select relationship" class="form-control ben1-relationship required-check" style="width:200px;">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                            </div>
+                                                            <!--															<input type="date" class="form-control hidden-md-up" placeholder="Pick a date">-->
+                                                            <input type="text" class="form-control date-picker must-input emp-date" placeholder="Pick a date">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>Gross monthly Income<strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control must-input emp-income" placeholder="Enter monthly income">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-12 business-opt animated fadeIn d-none">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>Business name<strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control must-input business-name" placeholder="Enter business name">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Business address<strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control must-input business-address" placeholder="Enter address">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>Nature of business<strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control must-input business-nature" placeholder="Enter nature of the business">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>Business location<strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control business-location must-input" placeholder="Enter location">
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>Business monthly income<strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control must-input business-income" placeholder="Enter monthly income">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <a class="btn btn-light btn-border mr-3 btn-outline gen-prev btn-prev "><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
+                                                <a class="btn btn-primary btn-next ben-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row clearfix form-ben animated fadeInRight d-none">
+                                            <div class="col-12">
+                                                <h4 class="card-title">Beneficiaries</h4>
+                                                <h6 class="card-subtitle">Specify atleast <strong class="text-danger">one beneficiary</strong> for each</h6>
+                                                <hr>
+
+                                                <label><strong>Nominees for Deposits/Benefits in the event of Death:</strong></label>
+
+                                                <table class="table table-bordered deposit-ben">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th scope="col">Names</th>
+                                                            <th scope="col">ID/PP/Birth certificate No.</th>
+                                                            <th scope="col">Relationship</th>
+                                                            <th scope="col">DOB</th>
+                                                            <th scope="col" class="">Allocations(%)<br><small class="text-danger shares-err d-none"><strong>Shares should not exceede 100%</strong></small></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>
+                                                                <strong>1</strong>
+                                                            </th>
+                                                            <td>
+                                                                <input type="text" class="form-control" placeholder="Full name" pattern="^[a-zA-Z'\s]{2,100}$" minlength="2" required>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control" placeholder="Enter Number" pattern="^[0-9a-zA-Z'\s]{2,100}$" required>
+                                                            </td>
+                                                            <td>
+                                                                <select title="please select relationship" class="form-control ben1-relationship required-check" style="width:200px;">
 																<option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
 																<option value="Assistant Chairperson">Assistant Chairperson</option>
 																<option value="Aunt">Aunt</option>
@@ -1101,32 +1033,32 @@
 																<option value="Wife">Wife</option>
 												
 															</select>
-														  </td>
-														  <td>
-															<div class="input-group">
-																<div class="input-group-prepend">
-																	<span class="input-group-text"><i class="pe-7s-date"></i></span>
-																</div>
-<!--																<input type="date" class="form-control hidden-md-up" placeholder="Pick a date">-->
-																<input type="text" class="form-control date-picker" placeholder="Pick a date" required>
-															</div>
-														  </td>
-														  <td>
-															<input type="text" class="form-control shares"pattern="^[0-9]{1,}$" max="100" min="1" required placeholder="%">
-														  </td>
-													 </tr>
-													 <tr>
-														<th>
-															<strong>2</strong>
-														</th>
-													   <td>
-														   <input type="text" class="form-control" placeholder="Full name">
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="Enter Number">
-														 </td>
-														 <td>
-														   <select title="please select relationship" class="form-control" style="width:200px;">
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                                    </div>
+                                                                    <!--																<input type="date" class="form-control hidden-md-up" placeholder="Pick a date">-->
+                                                                    <input type="text" class="form-control date-picker" placeholder="Pick a date" required>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control shares" pattern="^[0-9]{1,}$" max="100" min="1" required placeholder="%">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <strong>2</strong>
+                                                            </th>
+                                                            <td>
+                                                                <input type="text" class="form-control" placeholder="Full name">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control" placeholder="Enter Number">
+                                                            </td>
+                                                            <td>
+                                                                <select title="please select relationship" class="form-control" style="width:200px;">
 															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
 															   <option value="Assistant Chairperson">Assistant Chairperson</option>
 															   <option value="Aunt">Aunt</option>
@@ -1160,32 +1092,32 @@
 															   <option value="Wife">Wife</option>
 											   
 														   </select>
-														 </td>
-														 <td>
-														   <div class="input-group">
-															   <div class="input-group-prepend">
-																   <span class="input-group-text"><i class="pe-7s-date"></i></span>
-															   </div>
-															   <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-															   <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
-														   </div>
-														 </td>
-														 <td>
-														   <input type="text" class="form-control shares" placeholder="%">
-														 </td>
-													</tr>
-													<tr>
-														<th>
-															<strong>3</strong>
-														</th>
-													   <td>
-														   <input type="text" class="form-control" placeholder="Full name">
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="Enter Number">
-														 </td>
-														 <td>
-														   <select title="please select relationship" class="form-control" style="width:200px;">
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                                    </div>
+                                                                    <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
+                                                                    <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control shares" placeholder="%">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <strong>3</strong>
+                                                            </th>
+                                                            <td>
+                                                                <input type="text" class="form-control" placeholder="Full name">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control" placeholder="Enter Number">
+                                                            </td>
+                                                            <td>
+                                                                <select title="please select relationship" class="form-control" style="width:200px;">
 															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
 															   <option value="Assistant Chairperson">Assistant Chairperson</option>
 															   <option value="Aunt">Aunt</option>
@@ -1219,32 +1151,32 @@
 															   <option value="Wife">Wife</option>
 											   
 														   </select>
-														 </td>
-														 <td>
-														   <div class="input-group">
-															   <div class="input-group-prepend">
-																   <span class="input-group-text"><i class="pe-7s-date"></i></span>
-															   </div>
-															   <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-															   <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
-														   </div>
-														 </td>
-														 <td>
-														   <input type="text" class="form-control shares" placeholder="%">
-														 </td>
-													</tr>
-													<tr>
-														<th>
-															<strong>4</strong>
-														</th>
-													   <td>
-														   <input type="text" class="form-control" placeholder="Full name">
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="Enter Number">
-														 </td>
-														 <td>
-														   <select title="please select relationship" class="form-control" style="width:200px;">
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                                    </div>
+                                                                    <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
+                                                                    <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control shares" placeholder="%">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <strong>4</strong>
+                                                            </th>
+                                                            <td>
+                                                                <input type="text" class="form-control" placeholder="Full name">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control" placeholder="Enter Number">
+                                                            </td>
+                                                            <td>
+                                                                <select title="please select relationship" class="form-control" style="width:200px;">
 															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
 															   <option value="Assistant Chairperson">Assistant Chairperson</option>
 															   <option value="Aunt">Aunt</option>
@@ -1278,52 +1210,52 @@
 															   <option value="Wife">Wife</option>
 											   
 														   </select>
-														 </td>
-														 <td>
-														   <div class="input-group">
-															   <div class="input-group-prepend">
-																   <span class="input-group-text"><i class="pe-7s-date"></i></span>
-															   </div>
-															   <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-															   <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
-														   </div>
-														 </td>
-														 <td>
-														   <input type="text" class="form-control shares" placeholder="%">
-														 </td>
-													</tr>
-													
-													</tbody>
-												  </table>
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                                    </div>
+                                                                    <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
+                                                                    <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control shares" placeholder="%">
+                                                            </td>
+                                                        </tr>
 
-												  <label class="mt-5"><strong>Nominees for Group Funeral Expense(GFE) Scheme; limited to Spouse, Children & Parents of the Member:</strong></label>
-												  <table class="table table-bordered funeral-ben">
-													<thead>
-													  <tr>
-														  <th>#</th>
-														<th scope="col">Names</th>
-														<th scope="col">ID/PP/Birth certificate No.</th>
-														<th scope="col">Relationship</th>
-														<th scope="col">DOB</th>
-														<th scope="col">
-															Allocations(%)
-															<br><small class="text-danger shares-err d-none"><strong>Shares should not exceede 100%</strong></small>
-														</th>
-													  </tr>
-													</thead>
-													<tbody>
-													 <tr>
-														 <th>
-															 <strong>1</strong>
-														 </th>
-														<td>
-															<input type="text" class="form-control" placeholder="Full name" pattern="^[a-zA-Z'\s]{2,100}$" minlength="2" required>
-														  </td>
-														  <td>
-															<input type="text" class="form-control" placeholder="Enter Number" pattern="^[0-9a-zA-Z'\s]{2,100}$"  required>
-														  </td>
-														  <td>
-															<select title="please select relationship" class="form-control ben2-relationship required-check" style="width:200px;">
+                                                    </tbody>
+                                                </table>
+
+                                                <label class="mt-5"><strong>Nominees for Group Funeral Expense(GFE) Scheme; limited to Spouse, Children & Parents of the Member:</strong></label>
+                                                <table class="table table-bordered funeral-ben">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th scope="col">Names</th>
+                                                            <th scope="col">ID/PP/Birth certificate No.</th>
+                                                            <th scope="col">Relationship</th>
+                                                            <th scope="col">DOB</th>
+                                                            <th scope="col">
+                                                                Allocations(%)
+                                                                <br><small class="text-danger shares-err d-none"><strong>Shares should not exceede 100%</strong></small>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>
+                                                                <strong>1</strong>
+                                                            </th>
+                                                            <td>
+                                                                <input type="text" class="form-control" placeholder="Full name" pattern="^[a-zA-Z'\s]{2,100}$" minlength="2" required>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control" placeholder="Enter Number" pattern="^[0-9a-zA-Z'\s]{2,100}$" required>
+                                                            </td>
+                                                            <td>
+                                                                <select title="please select relationship" class="form-control ben2-relationship required-check" style="width:200px;">
 																<option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
 																<option value="Assistant Chairperson">Assistant Chairperson</option>
 																<option value="Aunt">Aunt</option>
@@ -1357,32 +1289,32 @@
 																<option value="Wife">Wife</option>
 												
 															</select>
-														  </td>
-														  <td>
-															<div class="input-group">
-																<div class="input-group-prepend">
-																	<span class="input-group-text"><i class="pe-7s-date"></i></span>
-																</div>
-<!--																<input type="date" class="form-control hidden-md-up" placeholder="Pick a date">-->
-																<input type="text" class="form-control date-picker" placeholder="Pick a date" required>
-															</div>
-														  </td>
-														  <td>
-															<input type="text" class="form-control shares" pattern="^[0-9]{1,}$" max="100" min="1" required placeholder="%">
-														  </td>
-													 </tr>
-													 <tr>
-														<th>
-															<strong>2</strong>
-														</th>
-													   <td>
-														   <input type="text" class="form-control" placeholder="Full name">
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="Enter Number">
-														 </td>
-														 <td>
-														   <select title="please select relationship" class="form-control" style="width:200px;">
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                                    </div>
+                                                                    <!--																<input type="date" class="form-control hidden-md-up" placeholder="Pick a date">-->
+                                                                    <input type="text" class="form-control date-picker" placeholder="Pick a date" required>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control shares" pattern="^[0-9]{1,}$" max="100" min="1" required placeholder="%">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <strong>2</strong>
+                                                            </th>
+                                                            <td>
+                                                                <input type="text" class="form-control" placeholder="Full name">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control" placeholder="Enter Number">
+                                                            </td>
+                                                            <td>
+                                                                <select title="please select relationship" class="form-control" style="width:200px;">
 															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
 															   <option value="Assistant Chairperson">Assistant Chairperson</option>
 															   <option value="Aunt">Aunt</option>
@@ -1416,32 +1348,32 @@
 															   <option value="Wife">Wife</option>
 											   
 														   </select>
-														 </td>
-														 <td>
-														   <div class="input-group">
-															   <div class="input-group-prepend">
-																   <span class="input-group-text"><i class="pe-7s-date"></i></span>
-															   </div>
-															   <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-															   <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
-														   </div>
-														 </td>
-														 <td>
-														   <input type="text" class="form-control shares" placeholder="%">
-														 </td>
-													</tr>
-													<tr>
-														<th>
-															<strong>3</strong>
-														</th>
-													   <td>
-														   <input type="text" class="form-control" placeholder="Full name">
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="Enter Number">
-														 </td>
-														 <td>
-														   <select title="please select relationship" class="form-control" style="width:200px;">
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                                    </div>
+                                                                    <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
+                                                                    <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control shares" placeholder="%">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <strong>3</strong>
+                                                            </th>
+                                                            <td>
+                                                                <input type="text" class="form-control" placeholder="Full name">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control" placeholder="Enter Number">
+                                                            </td>
+                                                            <td>
+                                                                <select title="please select relationship" class="form-control" style="width:200px;">
 															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
 															   <option value="Assistant Chairperson">Assistant Chairperson</option>
 															   <option value="Aunt">Aunt</option>
@@ -1475,32 +1407,32 @@
 															   <option value="Wife">Wife</option>
 											   
 														   </select>
-														 </td>
-														 <td>
-														   <div class="input-group">
-															   <div class="input-group-prepend">
-																   <span class="input-group-text"><i class="pe-7s-date"></i></span>
-															   </div>
-															   <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-															   <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
-														   </div>
-														 </td>
-														 <td>
-														   <input type="text" class="form-control shares" placeholder="%">
-														 </td>
-													</tr>
-													<tr>
-														<th>
-															<strong>4</strong>
-														</th>
-													   <td>
-														   <input type="text" class="form-control" placeholder="Full name">
-														 </td>
-														 <td>
-														   <input type="text" class="form-control" placeholder="Enter Number">
-														 </td>
-														 <td>
-														   <select title="please select relationship" class="form-control" style="width:200px;">
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                                    </div>
+                                                                    <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
+                                                                    <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control shares" placeholder="%">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <strong>4</strong>
+                                                            </th>
+                                                            <td>
+                                                                <input type="text" class="form-control" placeholder="Full name">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control" placeholder="Enter Number">
+                                                            </td>
+                                                            <td>
+                                                                <select title="please select relationship" class="form-control" style="width:200px;">
 															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
 															   <option value="Assistant Chairperson">Assistant Chairperson</option>
 															   <option value="Aunt">Aunt</option>
@@ -1534,40 +1466,40 @@
 															   <option value="Wife">Wife</option>
 											   
 														   </select>
-														 </td>
-														 <td>
-														   <div class="input-group">
-															   <div class="input-group-prepend">
-																   <span class="input-group-text"><i class="pe-7s-date"></i></span>
-															   </div>
-															   <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
-															   <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
-														   </div>
-														 </td>
-														 <td>
-														   <input type="text" class="form-control shares" placeholder="%">
-														 </td>
-													</tr>
-													
-													</tbody>
-												  </table>
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                                    </div>
+                                                                    <input type="date" class="form-control hidden-md-up" placeholder="Pick a date">
+                                                                    <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Pick a date">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control shares" placeholder="%">
+                                                            </td>
+                                                        </tr>
 
-											</div>
-											
-											<div class="col-12">
-												<a class="btn btn-light btn-border mr-3 btn-outline occ-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
-												<a class="btn btn-primary attach-next btn-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
-											</div>
-										</div>
+                                                    </tbody>
+                                                </table>
 
-										<div class="row clearfix form-attach animated fadeInRight d-none">
-											<div class="col-12">
-												<h4 class="card-title">Attachments</h4>
-												<h6 class="card-subtitle">Attach official documents for the applicant here.</h6>
-												<hr>
+                                            </div>
 
-											</div>
-											<label class="col-sm-12 col-md-3 form-attach" for="nat-id">
+                                            <div class="col-12">
+                                                <a class="btn btn-light btn-border mr-3 btn-outline occ-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
+                                                <a class="btn btn-primary attach-next btn-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+
+                                        <div class="row clearfix form-attach animated fadeInRight d-none">
+                                            <div class="col-12">
+                                                <h4 class="card-title">Attachments</h4>
+                                                <h6 class="card-subtitle">Attach official documents for the applicant here.</h6>
+                                                <hr>
+
+                                            </div>
+                                            <label class="col-sm-12 col-md-3 form-attach" for="nat-id">
 												<div class="id-container img-container">
 													<span><img src="demo/img/attachment-docs/identification.svg"></span>
 													<h5>Nat ID card</h5>
@@ -1578,7 +1510,7 @@
 												</div>
 											</label>
 
-											<label class="col-sm-12 col-md-3" for="kra-pin">
+                                            <label class="col-sm-12 col-md-3" for="kra-pin">
 												<div class="kra-container img-container">
 													<span><img src="demo/img/attachment-docs/tax.svg"></span>
 													<h5>KRA pin</h5>
@@ -1589,7 +1521,7 @@
 												</div>
 											</label>
 
-											<label  class="col-sm-12 col-md-3" for="mpesa-statement">
+                                            <label class="col-sm-12 col-md-3" for="mpesa-statement">
 												<div class="mpesa-statement-container img-container">
 													<span><img src="demo/img/attachment-docs/mpesa.svg"></span>
 													<h5>Mpesa statement</h5>
@@ -1600,7 +1532,7 @@
 												</div>
 											</label>
 
-											<label class="col-sm-12 col-md-3" for="user-photo">
+                                            <label class="col-sm-12 col-md-3" for="user-photo">
 												<div class="user-photo-container img-container">
 													<span><img src="demo/img/attachment-docs/portrait.svg"></span>
 													<h5>Attach photo</h5>
@@ -1611,126 +1543,129 @@
 												</div>
 											</label>
 
-											
-											<div class="col-12 mt-5">
-												<a class="btn btn-light btn-border mr-3 btn-outline ben-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
-												<a class="btn btn-primary fund-next text-white btn-next">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
-											</div>
-											
 
-										</div>
-										
-										<div class="row clearfix form-save animated fadeInRight d-none">
-											<div class="col-12">
-												<h4 class="card-title">Account savings & Activation</h4>
-												<h6 class="card-subtitle">
-													Use this potion to make the first saving and enable account activation
-												</h6>
-												<hr>
-											</div>
-											<div class="col-md-6 col-sm-12">
-												<div class="form-group"> 
-													<label>Monthly contribution<strong class="text-danger">*</strong></label>
-													<input type="text" class="form-control" placeholder="Monthly remitance" required pattern="^[0-9]{1,10000}$">
-												</div>
-											</div>
-											<div class="col-12 radio-main-container">
-												<label><strong>Applicant would wish to activate account through which method?</strong></label>
-												
-												<div class="radio method-mpesa" >
-													<input type="radio" value="mpesa" name="pay-method" id="method-mpesa">
-													<label class="radio__label" for="method-mpesa">Mpesa</label>
-												</div>
-												
-												<div class="radio method-cash">
-													<input type="radio" required  name="pay-method" id="method-cash" value="cash">
-													<label class="radio__label" for="method-cash">Cash or cheque</label>
-												</div>
-												
-												<div class="radio method-teller">
-													<input type="radio" required  name="pay-method" id="method-teller" value="activate at teller">
-													<label class="radio__label" for="method-teller">Will activate at teller</label>
-												</div>
-												
-												<div class="radio method-own" >
-													<input type="radio" required  name="pay-method" id="method-own" value="own activation">
-													<label class="radio__label" for="method-own">Will activate at own time</label>
-												</div>
-												
-												<div class="row">
-													<div class="col-md-6 col-sm-12 my-5">
-														<div class="notes">
-															<p>
-																Kindly note the member registration fee is <strong>KES 1,000.</strong> If the applicant will choose to pay more, the additional amount will be credited to his account.
-															</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="act-mpesa col-12 animated fadeIn d-none">
-												<div class="row">
-													<div class="col-md-4 col-sm-12">
-															<div class="form-group"> 
-																<label>Mpesa number (Can be changed)<strong class="text-danger">*</strong></label>
-																<input type="text" class="form-control must-input mpesa-number" placeholder="Enter Mpesa number">
-															</div>
-														</div>	
-													
-														<div class="col-md-3 col-sm-12">
-															<div class="form-group"> 
-																<label>Amount<strong class="text-danger">*</strong></label>
-																<input type="text" class="form-control must-input mpesa-amount" placeholder="Amount to be paid">
-															</div>
-														</div>	
-													
-														
-													
-														<div class="col-sm-12 col-md-auto">
-															<div class="form-group"> 
-																<label class="opacity-0">request<strong class="text-danger">*</strong></label>
-																<button class="btn btn-success d-flex align-items-center" title="click to send payment request">Send payment request <i class="ml-3 arrow_carrot-2right" style="font-size: 20px;" ></i></button>
-															</div>
-														</div>	
-												</div>
-											</div>
-											
-											<div class="act-cash col-12 animated fadeIn d-none">
-												<div class="row">
-													<div class="col-12">
-														<p><strong>How much money have you received from the applicant</strong></p>
-													</div>
-													<div class="col-md-4 col-sm-12">
-														<div class="form-group"> 
-															<label>Amount<strong class="text-danger">*</strong></label>
-															<input type="text" class="form-control must-input" placeholder="KSH">
-														</div>
-													</div>
-													
-												</div>
-											</div>
-											
-											<div class="col-12 mt-5">
-												<a class="btn btn-light btn-border mr-3 btn-outline attach-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
-												<button type="submit" class="btn btn-primary btn-submit">Submit Application<i class="ml-3 zmdi zmdi-mail-reply-all flipx"></i></button>
-											</div>
-										</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>					
-					</div>
-				</div>
-						
-                <footer class="footer hidden-xs-down">
-					<center><a class="nouveta-logoo" href="https://nouveta.tech/"><img src="demo/img/logo-files/logo2.png" target="new"></center></a></center>
-                    <p>Powered by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>
-                </footer>
-            </section>
-        </main>
+                                            <div class="col-12 mt-5">
+                                                <a class="btn btn-light btn-border mr-3 btn-outline ben-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
+                                                <a class="btn btn-primary fund-next text-white btn-next">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
+                                            </div>
 
-        <!-- Older IE warning message -->
-            <!--[if IE]>
+
+                                        </div>
+
+                                        <div class="row clearfix form-save animated fadeInRight d-none">
+                                            <div class="col-12">
+                                                <h4 class="card-title">Account savings & Activation</h4>
+                                                <h6 class="card-subtitle">
+                                                    Use this potion to make the first saving and enable account activation
+                                                </h6>
+                                                <hr>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label>Monthly contribution<strong class="text-danger">*</strong></label>
+                                                    <input type="text" class="form-control" placeholder="Monthly remitance" required pattern="^[0-9]{1,10000}$">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 radio-main-container">
+                                                <label><strong>Applicant would wish to activate account through which method?</strong></label>
+
+                                                <div class="radio method-mpesa">
+                                                    <input type="radio" value="mpesa" name="pay-method" id="method-mpesa">
+                                                    <label class="radio__label" for="method-mpesa">Mpesa</label>
+                                                </div>
+
+                                                <div class="radio method-cash">
+                                                    <input type="radio" required name="pay-method" id="method-cash" value="cash">
+                                                    <label class="radio__label" for="method-cash">Cash or cheque</label>
+                                                </div>
+
+                                                <div class="radio method-teller">
+                                                    <input type="radio" required name="pay-method" id="method-teller" value="activate at teller">
+                                                    <label class="radio__label" for="method-teller">Will activate at teller</label>
+                                                </div>
+
+                                                <div class="radio method-own">
+                                                    <input type="radio" required name="pay-method" id="method-own" value="own activation">
+                                                    <label class="radio__label" for="method-own">Will activate at own time</label>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-12 my-5">
+                                                        <div class="notes">
+                                                            <p>
+                                                                Kindly note the member registration fee is <strong>KES 1,000.</strong> If the applicant will choose to pay more, the additional amount will be credited to his account.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="act-mpesa col-12 animated fadeIn d-none">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>Mpesa number (Can be changed)<strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control must-input mpesa-number" placeholder="Enter Mpesa number">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>Amount<strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control must-input mpesa-amount" placeholder="Amount to be paid">
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="col-sm-12 col-md-auto">
+                                                        <div class="form-group">
+                                                            <label class="opacity-0">request<strong class="text-danger">*</strong></label>
+                                                            <button class="btn btn-success d-flex align-items-center" title="click to send payment request">Send payment request <i class="ml-3 arrow_carrot-2right" style="font-size: 20px;" ></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="act-cash col-12 animated fadeIn d-none">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <p><strong>How much money have you received from the applicant</strong></p>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>Amount<strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control must-input" placeholder="KSH">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 mt-5">
+                                                <a class="btn btn-light btn-border mr-3 btn-outline attach-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
+                                                <button type="submit" class="btn btn-primary btn-submit">Submit Application<i class="ml-3 zmdi zmdi-mail-reply-all flipx"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer hidden-xs-down">
+                <center>
+                    <a class="nouveta-logoo" href="https://nouveta.tech/"><img src="demo/img/logo-files/logo2.png" target="new"></center>
+                </a>
+                </center>
+                <p>Powered by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>
+            </footer>
+        </section>
+    </main>
+
+    <!-- Older IE warning message -->
+    <!--[if IE]>
                 <div class="ie-warning">
                     <h1>Warning!!</h1>
                     <p>You are using an outdated version of Internet Explorer, please upgrade to any of the following web browsers to access this website.</p>
@@ -1764,79 +1699,85 @@
                 </div>
             <![endif]-->
 
-        <!-- Javascript -->
-        <!-- Vendors -->
-        <script src="vendors/jquery/jquery.min.js"></script>
-        <script src="vendors/popper.js/popper.min.js"></script>
-        <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
-        <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-        <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+    <!-- Javascript -->
+    <!-- Vendors -->
+    <script src="vendors/jquery/jquery.min.js"></script>
+    <script src="vendors/popper.js/popper.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
 
-        <script src="vendors/flot/jquery.flot.js"></script>
-        <script src="vendors/flot/jquery.flot.resize.js"></script>
-        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
-        <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
-        <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
-        <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
-        <script src="vendors/salvattore/salvattore.min.js"></script>
-        <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
-        <script src="vendors/moment/moment.min.js"></script>
-        <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
-		
-		 <script src="vendors/jquery-mask-plugin/jquery.mask.min.js"></script>
-        <script src="vendors/select2/js/select2.full.min.js"></script>
-        <script src="vendors/dropzone/dropzone.min.js"></script>
-        <script src="vendors/moment/moment.min.js"></script>
-        <script src="vendors/nouislider/nouislider.min.js"></script>
-        <script src="vendors/trumbowyg/trumbowyg.min.js"></script>
-        <script src="vendors/flatpickr/flatpickr.min.js"></script>
-        <script src="vendors/rateyo/jquery.rateyo.min.js"></script>
-        <script src="vendors/jquery-text-counter/textcounter.min.js"></script>
-        <script src="vendors/autosize/autosize.min.js"></script>
-        <script src="vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
-		
-		
-        <!-- Vendors: Data tables -->
-        <script src="vendors/datatables/jquery.dataTables.min.js"></script>
-        <script src="vendors/datatables-buttons/dataTables.buttons.min.js"></script>
-        <script src="vendors/datatables-buttons/buttons.print.min.js"></script>
-        <script src="vendors/jszip/jszip.min.js"></script>
-        <script src="vendors/datatables-buttons/buttons.html5.min.js"></script>
+    <script src="vendors/flot/jquery.flot.js"></script>
+    <script src="vendors/flot/jquery.flot.resize.js"></script>
+    <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+    <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
+    <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
+    <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="vendors/salvattore/salvattore.min.js"></script>
+    <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
+    <script src="vendors/moment/moment.min.js"></script>
+    <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
 
-        <!-- Charts and maps-->
-        <script src="demo/js/flot-charts/curved-line.js"></script>
-        <script src="demo/js/flot-charts/dynamic.js"></script>
-        <script src="demo/js/flot-charts/line.js"></script>
-        <script src="demo/js/flot-charts/chart-tooltips.js"></script>
-        <script src="demo/js/other-charts.js"></script>
-        <script src="demo/js/jqvmap.js"></script>
-		
-		<!--high chart-->
-		
-		<script src="vendors/highcharts/highchart.js"></script>
-		<script src="vendors/highcharts/data.js"></script>
-		<script src="vendors/highcharts/drilldown.js"></script>
-		<script src="vendors/highcharts/exporting.js"></script>
-		<script src="vendors/highcharts/export-data.js"></script>
-		<script src="vendors/highcharts/accesibility.js"></script>
-		
-		<!--form validation-->
-		<script src="vendors/jq-validation/jquery.validate.min.js"></script>
-		<script src="vendors/jq-validation/additional-methods.min.js"></script>
-		
-		<script src="js/highcharts/highcharts-more.js"></script>
-		<!--owl corousel-->
-		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script><!-- App functions and actions -->
-		<script src="js/wow.js"></script>
-        <script src="js/app.min.js"></script>
-        <script src="js/main.js"></script>
-		<script>
-			
-			$('.membership-form').validate();
-		</script>
-		
-		
-    </body>
+    <script src="vendors/jquery-mask-plugin/jquery.mask.min.js"></script>
+    <script src="vendors/select2/js/select2.full.min.js"></script>
+    <script src="vendors/dropzone/dropzone.min.js"></script>
+    <script src="vendors/moment/moment.min.js"></script>
+    <script src="vendors/nouislider/nouislider.min.js"></script>
+    <script src="vendors/trumbowyg/trumbowyg.min.js"></script>
+    <script src="vendors/flatpickr/flatpickr.min.js"></script>
+    <script src="vendors/rateyo/jquery.rateyo.min.js"></script>
+    <script src="vendors/jquery-text-counter/textcounter.min.js"></script>
+    <script src="vendors/autosize/autosize.min.js"></script>
+    <script src="vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+
+
+    <!-- Vendors: Data tables -->
+    <script src="vendors/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables-buttons/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables-buttons/buttons.print.min.js"></script>
+    <script src="vendors/jszip/jszip.min.js"></script>
+    <script src="vendors/datatables-buttons/buttons.html5.min.js"></script>
+
+    <!-- Charts and maps-->
+    <script src="demo/js/flot-charts/curved-line.js"></script>
+    <script src="demo/js/flot-charts/dynamic.js"></script>
+    <script src="demo/js/flot-charts/line.js"></script>
+    <script src="demo/js/flot-charts/chart-tooltips.js"></script>
+    <script src="demo/js/other-charts.js"></script>
+    <script src="demo/js/jqvmap.js"></script>
+
+    <!--high chart-->
+
+    <script src="vendors/highcharts/highchart.js"></script>
+    <script src="vendors/highcharts/data.js"></script>
+    <script src="vendors/highcharts/drilldown.js"></script>
+    <script src="vendors/highcharts/exporting.js"></script>
+    <script src="vendors/highcharts/export-data.js"></script>
+    <script src="vendors/highcharts/accesibility.js"></script>
+
+    <!--form validation-->
+    <script src="vendors/jq-validation/jquery.validate.min.js"></script>
+    <script src="vendors/jq-validation/additional-methods.min.js"></script>
+
+    <script src="js/highcharts/highcharts-more.js"></script>
+    <!--owl corousel-->
+    <script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
+    <!-- App functions and actions -->
+    <script src="js/wow.js"></script>
+    <script src="js/app.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $('.membership-form').validate();
+    </script>
+
+    <!-- Html include -->
+    <script>
+        includeHTML();
+    </script>
+
+
+</body>
 
 <!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:43 GMT -->
+
 </html>
