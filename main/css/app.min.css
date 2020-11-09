@@ -14356,7 +14356,7 @@ header .section-header{
 }
 
 .custom-table-container .card--fullscreen{
-	osition: fixed;
+	position: fixed;
     top: 0;
     left: 0;
     width: 100%;
