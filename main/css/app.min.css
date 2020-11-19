@@ -9122,7 +9122,7 @@ select.form-control {
 }
 .nav-tabs .nav-link {
     border: 0;
-    color: #434343;
+    color:#434343b8;
     position: relative;
     font-size: 1rem;
     transition: color .4s;
@@ -9135,7 +9135,7 @@ select.form-control {
     width: 100%;
     left: 0;
     bottom: 0;
-    background-color: #0553A1;
+    background-color: #ed6b2e;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     transition: -webkit-transform .4s;
@@ -9150,7 +9150,8 @@ select.form-control {
     transform: scaleX(1)
 }
 .nav-tabs:not([class*=nav-tabs--]) .nav-link.active {
-    color: #0553A1
+    color: #f36c2a;
+    font-weight: bold;
 }
 .tab-content {
     padding: 1.5rem 0
@@ -13940,8 +13941,8 @@ thead tr, tfoot tr{
 }
 
 .highcharts-axis .highcharts-axis-title, .highcharts-yaxis .highcharts-axis-title, .highcharts-axis-labels text, .highcharts-xaxis-labels text{
-	color: rgba(255,255,255,0.5) !important;
-	fill:rgba(255,255,255,0.5) !important;
+	color: rgb(32 48 70) !important;
+	fill:rgb(32 48 70) !important;
 }
 
 .highcharts-drilldown-axis-label{
@@ -15295,4 +15296,34 @@ font-size: xx-large !important;
 }
 .font-xxx-large{
     font-size: xxx-large !important;
+}
+.custom-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.custom-card-header .actions--inverse {
+    display: flex;
+    align-items: center;
+}
+.custom-card-header h4 {
+    margin: 0px;
+    padding: 0px;
+    font-size: large;
+    font-weight: bold;
+}
+.new-header{
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.new-header .nav-tabs .nav-link{
+    padding-top: calc((3.75rem - 1em * 1.5) / 2) !important;
+    padding-bottom: calc((3.75rem - 1em * 1.5) / 2) !important;
+}
+.new-header .card-header-tabs{
+    margin-bottom: -1px;
+}
+.new-header h4{
+    margin-bottom: 0px;
 }
