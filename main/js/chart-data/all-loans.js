@@ -28,6 +28,7 @@ Highcharts.chart('all-loans', {
     },
 
     xAxis: {
+        crosshair: true,
         type: 'category',
         lineColor: '#12263f',
         lineWidth: 1,

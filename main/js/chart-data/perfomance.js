@@ -53,10 +53,28 @@ Highcharts.chart('perfomance', {
         crosshair: true
     },
     yAxis: {
+
+        gridLineColor: '#95aac9',
+        gridLineDashStyle: 'ShortDot',
+        gridLineWidth: 0.3,
         min: 0,
+
         title: {
-            text: 'Collections in (KES)'
+            text: 'Cash in KES',
+            labels: {
+                style: {
+                    color: '#12263f'
+                }
+            }
+        },
+        stackLabels: {
+            enabled: false,
+            style: {
+                fontWeight: 'bold',
+                color: '#12263f'
+            }
         }
+
     },
     tooltip: {
         headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
