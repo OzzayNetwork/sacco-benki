@@ -15340,3 +15340,6 @@ font-size: xx-large !important;
 .progress-bar-danger, .bg-danger{
 	background-color: #dc3545!important;
 }
+.comparison-graph-card{
+    height: calc(100% - 15px ) !important;
+}
