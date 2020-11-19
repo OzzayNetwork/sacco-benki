@@ -4,7 +4,7 @@ $(window).on('load', function(){
 
 	var to_day=moment().format('ddd, MMMM Do YYYY');
 	$('.date-range-text').text(to_day);
-	$('.today').text(moment().format("MMM Do YY"));
+	$('.today').text(moment().format("MMM Do YYYY"));
 	
 	$('.year-abr').text(moment().format('YY'));
 	$('.this-year').text(moment().format('YYYY'));
