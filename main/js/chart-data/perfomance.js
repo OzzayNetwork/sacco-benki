@@ -6,23 +6,23 @@ Highcharts.chart('perfomance', {
     title: {
         text: 'Collections performance',
 		style: {
-            color: '#a5a8ad'
+            color: '#12263f'
         }
     },
     subtitle: {
-        text: 'Comparisons between this year, last year and the current target collections',
+        text: 'Comparisons between expenses, Gross Profit & the current target collections',
 		style: {
-            color: '#a5a8ad'
+            color: '#12263f'
         }
     },
 	 legend: {
         enabled: true,
         backgroundColor: 'transparent',
-		 color: '#a5a8ad',
+		 color: '#12263f',
 		  itemStyle: {
 //                 fontSize:'35px',
 //                 font: '35pt Trebuchet MS, Verdana, sans-serif',
-                 color: '#a5a8ad'
+                 color: '#12263f'
               },
               itemHoverStyle: {
                  color: 'white'
@@ -31,7 +31,7 @@ Highcharts.chart('perfomance', {
                  color: '#444'
               },
         style: {
-            color: '#a5a8ad',
+            color: '#12263f',
 
         }
     },
@@ -53,10 +53,28 @@ Highcharts.chart('perfomance', {
         crosshair: true
     },
     yAxis: {
+
+        gridLineColor: '#95aac9',
+        gridLineDashStyle: 'ShortDot',
+        gridLineWidth: 0.3,
         min: 0,
+
         title: {
-            text: 'Collections in (KES)'
+            text: 'Cash in KES',
+            labels: {
+                style: {
+                    color: '#12263f'
+                }
+            }
+        },
+        stackLabels: {
+            enabled: false,
+            style: {
+                fontWeight: 'bold',
+                color: '#12263f'
+            }
         }
+
     },
     tooltip: {
         headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
