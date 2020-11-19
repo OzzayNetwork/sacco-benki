@@ -1,93 +1,43 @@
 
 			Highcharts.chart('active-loans', {
                 chart: {
-                    plotBackgroundColor: null,
-                    plotBorderWidth: 0,
-                    plotShadow: false,
+                    type: 'bar',
                     backgroundColor: 'transparent'
                 },
                 title: {
-                    text: null,
-                    align: 'center',
-                    verticalAlign: 'middle',
-                    y: 60,
+                    text: 'Loan Gurantors',
                     style: {
-                            color: '#a5a8ad'
-                        }
-                },
-                tooltip: {
-                    pointFormat: '{series.name}: <b>{point.percentage:.1f} %</b>'
-                },
-                accessibility: {
-                    point: {
-                        valueSuffix: '%'
+                        color: '#12263f'
                     }
                 },
-                plotOptions: {
-                    pie: {
-                        dataLabels: {
-                            enabled: true,
-                           
-                            style: {
-                                fontWeight: 'bold',
-                                color: 'white',
-                                color: 'black',
-                                
-                                font: '600 14px "Muli", sans-serif'
-                            }
-                            
-                            
-                        },
-                        startAngle: -90,
-                        endAngle: 90,
-                        center: ['50%', '75%'],
-                        size: '110%',
-                        borderWidth: 0,
-                            
+                xAxis: {
+                    categories: ['Wezesha', 'Boresha', 'Morgage Loan', 'Elimu Loan', 'Car Loan']
+                },
+                yAxis: {
+                    gridLineColor: '#95aac9',
+                    gridLineDashStyle: 'ShortDot',
+                    gridLineWidth: 0.3,
+                    min: 0,
+                    title: {
+                        text: 'Value Of Loans Given'
                     }
                 },
                 legend: {
-                        enabled: true
-                    },
-                    
-                    legend: {        
-                    borderWidth: 0,
-                    backgroundColor: 'transparent',
-                    borderColor: '#CCC',
-                    borderWidth: 1,
-                    itemStyle: {
-                        color: 'white',
-                        font: '600 12px "Muli", sans-serif'
-                    },
-                    itemHoverStyle: {
-                        color: '#a7dbd8',
-                        font: '600 14px "Muli", sans-serif'
-                    },
+                    reversed: true
                 },
-                    
-            
+                plotOptions: {
+                    series: {
+                        stacking: 'normal'
+                    }
+                },
                 series: [{
-                    type: 'pie',
-                    name: 'Percentage',
-                    innerSize: '50%',
-                    // data: [
-                    //     [name: 'Recovered Loans', y: 5119362, color: 'green'],
-                    // 	[name: 'Unpaid Loans', y: 15250600, color: 'red'],			
-                    // ],
-            
-                    data: [{
-                        name: 'Loans with guarantors',
-                        y: 15119362,
-                        color: '#09af00' // green
-                    },
-                    {
-                        name: 'Loans without guarantors',
-                        y: 15250600,
-                        color: '#fc1808' // red
-                    },                          
-            
-            
-                    ]
+                    name: 'With Guarantors',
+                    data: [52132, 33212, 41213, 72321, 21312],
+                    color:'#06af00'
+                }, {
+                    name: 'Without Garantors',
+                    data: [25654, 24353, 33454, 34532, 64571],
+                    color: '#fc1909'
                 }]
             });
             
