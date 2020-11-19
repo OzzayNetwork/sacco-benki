@@ -26,6 +26,10 @@ Highcharts.chart('loanSummary', {
         allowPointSelect: true,
         cursor: 'pointer',
         colors: pieColors,
+        startAngle: 90,
+        endAngle: 90,
+        center: ['50%', '75%'],
+        size: '75%'
     },
       series: {
           dataLabels: {
@@ -43,6 +47,7 @@ Highcharts.chart('loanSummary', {
   series: [
       {
           name: "Loan Statuses",
+          innerSize: '50%',
           colorByPoint: true,
           data: [
               {
