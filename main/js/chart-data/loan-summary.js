@@ -4,7 +4,8 @@ var pieColors = ['#09AF00', '#1aadce', '#808080', '#FFFF00', '#FC1808'];
 // Create the chart
 Highcharts.chart('loanSummary', {
   chart: {
-      type: 'pie'
+      type: 'pie',
+      backgroundColor: 'transparent'
   },
   title: {
       text: 'Loaning summary statuses'
