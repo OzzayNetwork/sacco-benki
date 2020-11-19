@@ -1279,7 +1279,16 @@ function show_limit(){
 //*************************** account setup********************************** */
 //================================================================================
 
+//filtering gross profit
 
+
+$('.loanBreakdown').on('click', function(){
+	$('#loanBreakdown').removeClass('d-none').siblings().addClass('d-none');
+});
+
+$('.allLoans').on('click', function(){
+	$('#all-loans').removeClass('d-none').siblings().addClass('d-none');
+})
 
 //owl initializer
 $(document).ready(function(){
