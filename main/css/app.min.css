@@ -14591,6 +14591,7 @@ td .badge{
     text-transform: capitalize;
     margin-top: 1rem;
 }
+
 .form-attach .img-container, .loan-docs label>div{
     display: flex;
     justify-content: center;
