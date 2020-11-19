@@ -15327,3 +15327,16 @@ font-size: xx-large !important;
 .new-header h4{
     margin-bottom: 0px;
 }
+
+
+/*progressbar colors*/
+.progress-bar-success {
+    background-color: #5CB65F !important;
+}
+
+.progress-bar-warning {
+    background-color: #FFA117 !important;
+}
+.progress-bar-danger, .bg-danger{
+	background-color: #dc3545!important;
+}

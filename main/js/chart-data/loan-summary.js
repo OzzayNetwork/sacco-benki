@@ -1,3 +1,6 @@
+// Make monochrome colors
+var pieColors = ['#09AF00', '#1aadce', '#808080', '#FFFF00', '#FC1808'];
+
 // Create the chart
 Highcharts.chart('loanSummary', {
   chart: {
@@ -18,6 +21,11 @@ Highcharts.chart('loanSummary', {
   },
 
   plotOptions: {
+    pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        colors: pieColors,
+    },
       series: {
           dataLabels: {
               enabled: true,

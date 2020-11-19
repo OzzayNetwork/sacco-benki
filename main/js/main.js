@@ -1272,6 +1272,34 @@ function show_limit(){
 	}
 }
 
+	//collection trends
+	var diff=$('.trend h4').text();
+	//		diff=diff.replace(',', '');
+		var count = (diff.match(/,/g) || []).length;
+	
+		var i;
+		count=count+1;
+		for (i = 0; i<count; i++) {
+		 diff=diff.replace(',', '')
+		}
+		
+		diff=parseInt(diff);
+	
+		if(diff>0){
+			$('.trend h4').addClass('text-success');
+			$('.trend i').addClass(' zmdi-trending-up');
+		}
+	
+		if(diff<0){
+			$('.trend h4').addClass('text-danger');
+			$('.trend i').addClass('zmdi-trending-down');
+		}
+	
+		if(diff==0){
+			$('.trend h4').addClass('text-info');
+			$('.trend i').addClass('zmdi-dot-circle');
+		}
+
 
 
 
