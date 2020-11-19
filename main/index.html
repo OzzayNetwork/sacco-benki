@@ -21,8 +21,15 @@
 		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
 		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
 		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_4.css">
+		<link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/">
+		<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="http://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
 
-	
+
+
+		<!-- // Add the new slick-theme.css if you want the default styling -->
+		<link rel="stylesheet" href="vendors/slick/slick.css"/>
+		<link rel="stylesheet" href="vendors/slick/slick-theme.css"/>	
 
         <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
         <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
@@ -275,42 +282,78 @@
 						</div>
 					</div>
 
-					<div class="col-lg-5 col-sm-12" style="padding-bottom: 2.2rem;">
-						<div class="card h-100">	
-							<div class="card-body">
-								<div class="">
-									<h2>Today's Collection summary <span class="today"></span></h2>
-								</div>
-								<div class="row text-center">
-									<div class="col-6 border-right pb-4 pt-4 today-collections">
-										<label class="mb-0">Total Collected</label>
-										<h4 class="font-light">2,498,306</h4>
+					<div class="col-sm-12 col-md-5 col-lg-5">
+						<div class="row">
+							<div class="col-12 mb-4">
+								<div class="card float-stats">
+									<div>
+										<i class="flaticon-loan-3"></i>
 									</div>
-									<div href="#" class="col-6 pb-4 pt-4 trend">
-										<label class="mb-0">From yesterday</label>
-										<h4 class="font-light"><i class="zmdi  mr-2"></i>-7,703,177‬</h4>
-									</div>
+									<div class="stat-text">
+										<p>Loan Float</p>
+										<h3>11,000,000</h3>
+									</div>                                            
 								</div>
 							</div>
-							<div class="card-body the-streams h-100">
-								<a href="#">
-									<div class="form-group" data-toggle="tooltip" data-original-title="0.00%">
-										<label class="d-block"><span class="stream-name text-success">Gross Profit</span><span class="float-right text-success">2,490,006</span></label>
-										<div class="progress progress-xxs">
-											<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%;"></div>
+
+							<div class="col-12">
+							   <div class="card statistics-container">
+								   <span class="control-buttons">
+										<span class="card-prev material-icons">navigate_before</span>
+										<span class="card-next material-icons">navigate_before</span>
+								   </span>
+								   <div class="statistics">
+										<div class="card loan-stats stat-logged">
+											<div>
+												<i class="mdi mdi-account-arrow-right-outline"></i>
+											</div>
+											<div class="stat-text">
+												<p>New Member</p>
+												<h3>50</h3>
+											</div>                                            
+										</div>
+										<div class="card loan-stats stat-queries">
+											<div>
+												<i class="mdi mdi-arrow-top-right"></i>
+											</div>
+											<div class="stat-text">
+												<p> Gross Profit</p>
+												<h3>11,000</h3>
+											</div>                                            
+										</div>
+										<div class="card loan-stats stat-compliant">
+											<div>
+												<i class="mdi mdi-bank-transfer-in"></i>
+											</div>
+											<div class="stat-text">
+												<p>Member Deposit</p>
+												<h3>3,201</h3>
+											</div>                                            
+										</div>
+										<div class="card loan-stats stat-non-compliant">
+											<div>
+												<i class="mdi mdi-arrow-up-bold-outline"></i>
+											</div>
+											<div class="stat-text">
+												<p>Highest Performing Loan</p>
+												<h3>30</h3>
+											</div>                                            
+										</div>
+										<div class="card loan-stats stat-due-clamping">
+											<div>
+												<i class="mdi mdi-account-arrow-left-outline"></i>
+											</div>
+											<div class="stat-text">
+												<p>Member Exits</p>
+												<h3>31</h3>
+
+											</div>                                            
 										</div>
 									</div>
-								</a>
-								<a href="#">
-									<div class="form-group" data-toggle="tooltip" data-original-title="0.00%">
-										<label class="d-block"><span class="stream-name text-danger">Expenses</span><span class="float-right text-danger">825,300</span></label>
-										<div class="progress progress-xxs">
-											<div class="progress-bar  progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
-										</div>
-									</div>
-								</a>
+							   </div>
 							</div>
 						</div>
+
 					</div>
 				</div>
 
@@ -1097,7 +1140,7 @@
 		<!-- <script src="js/highcharts/highcharts-more.js"></script> -->
 		<!--owl corousel-->
 		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
-
+		<script src="vendors/slick/slick.min.js"></script>
 
         <!-- App functions and actions -->
      	<script src="js/wow.js"></script>

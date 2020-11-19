@@ -15340,6 +15340,463 @@ font-size: xx-large !important;
 .progress-bar-danger, .bg-danger{
 	background-color: #dc3545!important;
 }
+
 .comparison-graph-card{
-    height: calc(100% - 15px ) !important;
+    height: calc(100% - 0px ) !important;
+}
+
+
+.carousel-highlight-items h4{
+    color: #FFFFFF !important;
+    font-weight: 300;
+}
+
+.carousel-highlight-items h2{
+    color: #FFFFFF !important;
+    letter-spacing: .2em;
+    font-weight: 800;
+}
+
+.glow {
+    color: #fff;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2d5f40, 0 0 40px #2d5f40, 0 0 50px #2d5f40, 0 0 60px #2d5f40, 0 0 70px #2d5f40;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #f0f0f0, 0 0 40px #f0f0f0, 0 0 50px #f0f0f0, 0 0 60px #f0f0f0, 0 0 70px #f0f0f0, 0 0 80px #f0f0f0;
+    }
+  }
+
+  /* Float */
+  .float-stats{
+    padding: 2rem;
+    display: flex !important;
+    background: white;
+    color: black !important;
+    flex-flow: row;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+    margin-bottom:0px;
+}
+.float-stats h3{
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+.float-stats i{
+    font-size: 60px;
+    margin-right: 2rem;
+}
+
+.float-stats p{
+    margin: 0px;
+    padding: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+.float-stats .stat-text{
+    display: flex;
+    flex-flow: column;
+    align-items: baseline;
+    justify-content: flex-end;
+}
+.float-stats div{
+    position: relative;
+   
+}
+.float-stats div:first-child{
+    margin-left: 4.5rem;
+}
+
+.float-stats div:last-child{
+    margin-right: 4.5rem;
+}
+
+
+  /* Float */
+
+  /* Loan */
+
+.loan-stats{
+    padding: 2rem;
+    display: flex !important;
+    background: black;
+    color: white !important;
+    flex-flow: row;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+    margin-bottom:0px;
+}
+.loan-stats h3{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+.loan-stats i{
+    font-size: 72px;
+    margin-right: 2rem;
+}
+
+.loan-stats p{
+    margin: 0px;
+    padding: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+.loan-stats .stat-text{
+    display: flex;
+    flex-flow: column;
+    align-items: baseline;
+    justify-content: flex-end;
+}
+
+/* Index Page */
+
+.index-loan-stats{
+    padding: 2rem;
+    display: flex !important;
+    background: black;
+    color: white !important;
+    font-family: 'Montserrat', sans-serif;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom:0px;
+}
+.index-loan-stats h3{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+.index-loan-stats i{
+    font-size: 50px;
+    margin-right: 1.5rem;
+    margin-left: .2rem;
+    z-index: 100;
+    color: white !important;
+
+}
+
+.index-loan-stats p{
+    margin: 0px;
+    padding: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+.index-loan-stats .stat-text{
+    display: flex;
+    flex-flow: column;
+    align-items: baseline;
+    justify-content: flex-end;
+    z-index: 10;
+}
+
+.index-control-buttons span{
+    position: absolute;
+    color: white;
+    top: 42%;
+    font-size: large;
+    opacity: 0.5;
+    cursor: pointer;
+    transition-duration: 0.8s;
+}
+.index-control-buttons span:hover{
+    opacity: 1;
+    color: #fff;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    
+}
+
+.index-control-buttons .card-prev{
+    left:1rem;
+    z-index: 100;
+}
+
+.index-control-buttons .card-next{
+    right:1rem;
+    transform: scale(-1);
+    z-index: 100;
+}
+
+.index-control-buttons .card-next:hover{
+    transform: scale(-1.2);
+}
+
+.index-control-buttons .card-prev:hover{
+    transform: scale(1.2);
+}
+
+/* Index Page */
+
+.stat-logged{
+    position: relative;
+    background-image: url("../images/red_cars.jpg");
+    background-attachment: inherit;
+    background-size: cover;
+    background-position: center;
+}
+.stat-logged:before{
+    display: flex;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    position: absolute;
+    background: #0d48a16b;
+    background-image:linear-gradient(to left, #0d48a16b, #0d48a1);
+   
+}
+
+.stat-queries{
+    position: relative;
+    background-image: url("../images/loan-logged.jpg");
+    background-attachment: inherit;
+    background-size: cover;
+    background-position: center;
+}
+.stat-queries:before{
+    display: flex;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    position: absolute;
+    background: #0d48a16b;
+    background-image:linear-gradient(to left, #0d28a16b, #1666c0);
+   
+}
+
+.stat-compliant{
+    position: relative;
+    background-image: url("../images/loan_meter.jpg");
+    background-attachment: inherit;
+    background-size: cover;
+    background-position: center;
+}
+.stat-compliant:before{
+    display: flex;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    position: absolute;
+    background: #0d48a16b;
+    background-image:linear-gradient(to left, #03bdf538, #00431d);
+   
+}
+
+.stat-non-compliant{
+    position: relative;
+    background-image: url("../images/meter.jpg");
+    background-attachment: inherit;
+    background-size: cover;
+    background-position: center;
+}
+.stat-non-compliant:before{
+    display: flex;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    position: absolute;
+    background: #0d48a16b;
+    background-image:linear-gradient(to left, #f58c0338, #ffc400);
+   
+}
+
+.stat-due-clamping{
+    position: relative;
+    background-image: url("../images/non_compliant.jpeg");
+    background-attachment: inherit;
+    background-size: cover;
+    background-position: center;
+}
+.stat-due-clamping:before{
+    display: flex;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    position: absolute;
+    background: #0d48a16b;
+    background-image:linear-gradient(to left, #f5030338, #ff0202);
+   
+}
+
+.stat-clamped{
+    position: relative;
+    background-image: url("../images/loan-lot.jpg");
+    background-attachment: inherit;
+    background-size: cover;
+    background-position: center;
+}
+.stat-clamped:before{
+    display: flex;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    position: absolute;
+    background: #0d48a16b;
+    background-image:linear-gradient(to left, #f5b40338, #ffaf02);
+   
+}
+
+.stat-offstreet-revenue{
+    position: relative;
+    background-image: url("../images/loan-space.jpg");
+    background-attachment: inherit;
+    background-size: cover;
+    background-position: center;
+}
+.stat-offstreet-revenue:before{
+    display: flex;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    position: absolute;
+    background: #0d48a16b;
+    background-image:linear-gradient(to left, #03f50338, #00431d);
+   
+}
+
+.stat-country-bus-revenue{
+    position: relative;
+    background-image: url("../images/loan.jpg");
+    background-attachment: inherit;
+    background-size: cover;
+    background-position: center;
+}
+.stat-country-bus-revenue:before{
+    display: flex;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    position: absolute;
+    background: #0d48a16b;
+    background-image:linear-gradient(to left, #70f50338, #00431d);
+   
+}
+
+.stat-inactive-agents{
+    position: relative;
+    background-image: url("../images/valet.jpg");
+    background-attachment: inherit;
+    background-size: cover;
+    background-position: center;
+}
+.stat-inactive-agents:before{
+    display: flex;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    position: absolute;
+    background: #0d48a16b;
+    background-image:linear-gradient(to left, #f5840338, #ff0000);
+   
+}
+
+.loan-stats div{
+    position: relative;
+   
+}
+.loan-stats div:first-child{
+    margin-left: 4.5rem;
+}
+
+.loan-stats div:last-child{
+    margin-right: 4.5rem;
+}
+
+.statistics{
+    width: 100%;
+    height: 100%;
+}
+
+.statistics-container{
+    position: relative;
+}
+.control-buttons span{
+    position: absolute;
+    color: white;
+    top: 33%;
+    font-size: 58px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition-duration: 0.8s;
+}
+.control-buttons span:hover{
+    opacity: 1;
+    color: #fff;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    
+}
+
+.control-buttons .card-prev{
+    left:1rem;
+    z-index: 20;
+}
+
+.control-buttons .card-next{
+    right:1rem;
+    transform: scale(-1);
+    z-index: 100;
+}
+
+.control-buttons .card-next:hover{
+    transform: scale(-1.2);
+}
+
+.control-buttons .card-prev:hover{
+    transform: scale(1.2);
+}
+
+.slick-dotted.slick-slider{
+    margin-bottom: 0px;
+}
+.slick-dots{
+    bottom:13px;
+}
+.slick-dots li button::before {
+    color: white;
+}
+.slick-dots li.slick-active button::before {
+    opacity: .75;
+    color: white;
+}
+.offline-agent{
+    display: flex;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    background-color: red;
 }
