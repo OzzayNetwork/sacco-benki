@@ -1301,6 +1301,20 @@ function show_limit(){
 		}
 
 
+// Slick
+$(function(){
+	$('.statistics').slick({
+		autoplay: true,
+		dots:true,
+		arrows:true,
+		prevArrow: $('.card-prev'),
+		nextArrow: $('.card-next '),
+		centerMode:false,
+		pauseOnFocus: true,
+		});
+	});
+
+
 
 
 //================================================================================
