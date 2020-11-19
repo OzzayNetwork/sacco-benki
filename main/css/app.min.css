@@ -15539,14 +15539,14 @@ font-size: xx-large !important;
 
 /* Index Page */
 
-.stat-logged{
+.stat-member{
     position: relative;
-    background-image: url("../images/red_cars.jpg");
+    background-image: url("../demo/img/bg/hands.jpg");
     background-attachment: inherit;
     background-size: cover;
     background-position: center;
 }
-.stat-logged:before{
+.stat-member:before{
     display: flex;
     content: "";
     width: 100%;
@@ -15559,14 +15559,14 @@ font-size: xx-large !important;
    
 }
 
-.stat-queries{
+.stat-profit{
     position: relative;
-    background-image: url("../images/loan-logged.jpg");
+    background-image: url("../demo/img/bg/money.jpg");
     background-attachment: inherit;
     background-size: cover;
     background-position: center;
 }
-.stat-queries:before{
+.stat-profit:before{
     display: flex;
     content: "";
     width: 100%;
@@ -15579,14 +15579,14 @@ font-size: xx-large !important;
    
 }
 
-.stat-compliant{
+.stat-deposit{
     position: relative;
-    background-image: url("../images/loan_meter.jpg");
+    background-image: url("../demo/img/bg/deposit.jpg");
     background-attachment: inherit;
     background-size: cover;
     background-position: center;
 }
-.stat-compliant:before{
+.stat-deposit:before{
     display: flex;
     content: "";
     width: 100%;
@@ -15599,14 +15599,14 @@ font-size: xx-large !important;
    
 }
 
-.stat-non-compliant{
+.stat-performing{
     position: relative;
-    background-image: url("../images/meter.jpg");
+    background-image: url("../demo/img/bg/economy.jpg");
     background-attachment: inherit;
     background-size: cover;
     background-position: center;
 }
-.stat-non-compliant:before{
+.stat-performing:before{
     display: flex;
     content: "";
     width: 100%;
@@ -15619,14 +15619,14 @@ font-size: xx-large !important;
    
 }
 
-.stat-due-clamping{
+.stat-exit{
     position: relative;
-    background-image: url("../images/non_compliant.jpeg");
+    background-image: url("../demo/img/bg/exit.jpg");
     background-attachment: inherit;
     background-size: cover;
     background-position: center;
 }
-.stat-due-clamping:before{
+.stat-exit:before{
     display: flex;
     content: "";
     width: 100%;
@@ -15639,85 +15639,6 @@ font-size: xx-large !important;
    
 }
 
-.stat-clamped{
-    position: relative;
-    background-image: url("../images/loan-lot.jpg");
-    background-attachment: inherit;
-    background-size: cover;
-    background-position: center;
-}
-.stat-clamped:before{
-    display: flex;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0px;
-    position: absolute;
-    background: #0d48a16b;
-    background-image:linear-gradient(to left, #f5b40338, #ffaf02);
-   
-}
-
-.stat-offstreet-revenue{
-    position: relative;
-    background-image: url("../images/loan-space.jpg");
-    background-attachment: inherit;
-    background-size: cover;
-    background-position: center;
-}
-.stat-offstreet-revenue:before{
-    display: flex;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0px;
-    position: absolute;
-    background: #0d48a16b;
-    background-image:linear-gradient(to left, #03f50338, #00431d);
-   
-}
-
-.stat-country-bus-revenue{
-    position: relative;
-    background-image: url("../images/loan.jpg");
-    background-attachment: inherit;
-    background-size: cover;
-    background-position: center;
-}
-.stat-country-bus-revenue:before{
-    display: flex;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0px;
-    position: absolute;
-    background: #0d48a16b;
-    background-image:linear-gradient(to left, #70f50338, #00431d);
-   
-}
-
-.stat-inactive-agents{
-    position: relative;
-    background-image: url("../images/valet.jpg");
-    background-attachment: inherit;
-    background-size: cover;
-    background-position: center;
-}
-.stat-inactive-agents:before{
-    display: flex;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0px;
-    position: absolute;
-    background: #0d48a16b;
-    background-image:linear-gradient(to left, #f5840338, #ff0000);
-   
-}
 
 .loan-stats div{
     position: relative;
