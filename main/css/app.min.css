@@ -15721,3 +15721,28 @@ font-size: xx-large !important;
     width: 12px;
     background-color: red;
 }
+.top-5-table .table td, .table th{
+    border-top: 1px solid #06af0066;
+
+}
+
+.bottom-5-table .table td, .table th{
+    border-top: 1px solid #fc19093d;
+
+}
+.top-5-table .table-hover tbody tr:hover,.top-5-table .table-striped tbody tr:nth-of-type(odd){
+    background-color: #06af0033;
+}
+
+
+
+.bottom-5-table .table-hover tbody tr:hover,.bottom-5-table .table-striped tbody tr:nth-of-type(odd){
+    background-color: #fc190926;
+}
+
+.bottom-5-table tr td:last-child, .bottom-5-table tr th:last-child, .top-5-table tr td:last-child, .top-5-table tr th:last-child{
+    font-weight: bold;
+    color: black;
+}
+
+
