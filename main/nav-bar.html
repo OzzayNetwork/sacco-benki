@@ -31,8 +31,10 @@
             <a href="#"><i class="mdi mdi-account-cash"></i>Front Office</a>
             <ul>
                 <li><a href="deposit-cash.html" title="deposit cash to members account">Deposit Cash</a></li>
-                <li><a href="new-member.html" title="withdraw cash from member's account">Withdraw Cash</a></li>
-                <li><a href="new-member.html" title="Get member statements">Member Statements</a></li>
+                <li><a href="#" title="Get member statements"  data-toggle="modal" data-target="#searchMember">Member statements</a></li>
+                <li><a href="new-member.html"title="withdraw cash from member's account">Withdraw Cash</a></li>
+
+                
             </ul>
         </li>
         
@@ -91,3 +93,55 @@
          <li class="navigation__active mt-4"><a href="landing-page.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
     </ul>
 </div>
+
+<!-- universal modals -->
+
+<!-- search for member -->
+<div class="modal fade" id="searchMember" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+              <div class="col-12">
+                  <p>Enter member number in order to continue</p>
+              </div>
+              <div class="col-12">
+                  <div class="form-group">
+                      <label>Member Number</label>
+                      <input type="text" class="form-control form-control-lg" placeholder="Enter Account Number">
+                  </div>
+              </div>
+
+              <div class="col-6">
+                  <div class="form-group">
+                      <label><strong>Date from</strong></label>
+                      <input type="text" class="form-control date-picker hidden-sm-down flatpickr-input" placeholder="Select Date from" readonly>
+                  </div>
+              </div>
+
+              <div class="col-6">
+                <div class="form-group">
+                    <label><strong>Date to</strong></label>
+                    <input type="text" class="form-control form-control date-picker hidden-sm-down flatpickr-input" readonly placeholder="Select Date To">
+                </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="member-statements.html" type="button" class="btn btn-primary btn--icon-text"><i class="zmdi zmdi-search"></i>search</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Button trigger modal -->
+
+  
