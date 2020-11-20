@@ -493,7 +493,7 @@
 				</div>
 
 
-				<div class="row clearfix d-none">
+				<div class="row clearfix d-non">
 					<div class="col-12">
 						<div class="card">
 							<div class="card-header new-header">
@@ -505,7 +505,7 @@
 									</h4>
 									</div>
 	
-									<div class="col-auto">
+									<div class="col-auto opacity-0">
 									<!-- Tabs -->
 									<ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
 										<li class="nav-item">
@@ -523,41 +523,45 @@
 								</div> 
 								<!-- / .row -->				
 								</div>
+								<div class="card-body">
+									<div class="row">
+										<div class="col-sm-12 col-md-6 col-lg-5">
+											<div id="loanSummary" class="highChartStyles animated fade-in-up" style="height: 300px; "></div>
+
+										</div>
+										<div class="col-sm-12 col-md-6 col-lg-7">
+											<div id="active-loans" style="height: 300px"></div>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer text-center">
+									<div class="row clearfix text-left">
+											<div class="col-12 d-flex flex-wrap">
+												<div class="mr-3">
+											
+													<span>Value of unpaid Loans</span>
+													<h6>KES 20,369,962</h6>
+												</div>
+												<div class="mr-3 ">
+													<span>Members with Loans</span>.
+													<h6>1295</h6>
+												</div>
+
+												<div class="mr-3 ">
+													<span>Members without Loans</span>.
+													<h6>129</h6>
+												</div>
+
+												<div class="mr-3 ">
+													<span>Default rate</span>.
+													<h6><span class="badge-pill badge-soft-danger">74.87%</span></h6>
+												</div>
+											</div>
+									</div>
+								</div>
 						</div>
 					</div>
 
-					<div class="col-sm-12 col-lg-6">
-            
-						<!-- Orders -->
-						<div class="card">
-						  <div class="card-body">                
-							<!-- Chart -->
-							<div class="">
-								<h2>Loan Statuses</h2>
-							</div> 
-							  <div class="chart">
-								<div id="loanSummary" class="highChartStyles animated fade-in-up" style="height: 300px; "></div>
-							  </div>
-							<!-- <div class="chart">
-							  <canvas id="transaction-data" class="chart-canvas"></canvas>
-							</div> -->
-						  </div>
-						</div>
-			
-					  </div>
-
-
-					<div class="col-lg-6 col-sm-12">
-						<div class="card user_statistics calc-34">
-							
-							<div class="card-body"> 
-								<div class="">
-									<h2>loans summary</h2>
-								</div>                           
-								<div id="active-loans" style="height: 300px"></div>
-							</div>
-						</div>
-					</div>
 				</div>
 
 				<div class="row">

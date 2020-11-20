@@ -1340,7 +1340,7 @@ $('.submit-mpesa').on('click', function(){
 		window.open("/main/receipt/withdraw-receipt.html");
 		// alert('Opening nigga');
 	  }
-	  setTimeout(openReceipt, 7000);
+	  setTimeout(openReceipt, 5000);
 
 })
 
