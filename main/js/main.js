@@ -1330,6 +1330,18 @@ $('.loanBreakdown').on('click', function(){
 
 $('.allLoans').on('click', function(){
 	$('#all-loans').removeClass('d-none').siblings().addClass('d-none');
+});
+
+//mpesa loader
+
+$('.submit-mpesa').on('click', function(){
+
+	function openReceipt(){
+		window.open("/main/receipt/withdraw-receipt.html");
+		// alert('Opening nigga');
+	  }
+	  setTimeout(openReceipt, 7000);
+
 })
 
 //owl initializer
