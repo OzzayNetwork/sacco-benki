@@ -15218,11 +15218,27 @@ th label .error{
 
 .nav-amounts {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-left: 4rem;
     padding-left: 2rem;
     padding-top: 0.3rem;
+}
+
+.nav-amounts > li > i {
+    font-size: 50px;
+}
+
+
+.nav-amounts > li > div > span {
+    color: rgba(255,255,255,.5)!important;
+    font-size: 11px;
+}
+
+.nav-amounts > li > div > h5 {
+    color: white;
+    font-weight: 800;
 }
 .header{
     padding-left: 0px;
