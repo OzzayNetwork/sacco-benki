@@ -23,9 +23,14 @@ Highcharts.chart('all-loans', {
     plotOptions: {
         series: {
             borderWidth: 0,
-            borderColor: '#f26b2cf2'
+            borderColor: '#f26b2cf2',
+            animation: {
+                duration: 2000
+            }
         }
     },
+
+    
 
     xAxis: {
         crosshair: true,
@@ -103,6 +108,11 @@ Highcharts.chart('all-loans', {
     },
 
     series: [{
+        animation: {
+            duration: 5000,
+            // Uses Math.easeOutBounce
+            easing: 'easeOutBounce'
+        },
         name: "Monthly Transactions",
         colorByPoint: false,
 		color: '#f26b2cf2', // blue

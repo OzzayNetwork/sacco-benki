@@ -1338,6 +1338,8 @@ $('.submit-mpesa').on('click', function(){
 
 	function openReceipt(){
 		window.open("/main/receipt/withdraw-receipt.html");
+		$('#mpesa-payment').modal('hide');
+		location.reload();
 		// alert('Opening nigga');
 	  }
 	  setTimeout(openReceipt, 5000);
