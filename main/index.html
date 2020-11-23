@@ -129,7 +129,23 @@
                 <div class="header__logo hidden-sm-down">
                     <h1><a href="index.html"><img class="the-logo" src="demo/img/logo-files/sacco-orange.png"></a></h1>
                 </div>
-                <h2 class="ml-4 text-white text-uppercase mb-0 text-light">Super Sacco</h2>
+				<h2 class="ml-4 text-white text-uppercase mb-0 text-light">Super Sacco</h2>
+				
+				<ul class="top-nav nav-amounts">
+        
+                    <li class="mr-4">
+                        <span class="text-uppercase font-11px">Debit Acc Balance</span>
+                        <h5 class="text-uppercase font-weight-bold pb-0" id="yestedays_revenue">Kes 51,235,000</h5>
+                    </li>
+                   
+                    <li class="border-left border-white-opacity-7 pl-4">
+                        <span class=" text-uppercase font-11px d-flex align-items-center" style="height: 19px;">Credit Acc Balance 
+                            </span>
+                        <h5 class="text-uppercase font-weight-bold pb-0" id="todays_revenue">Kes 21,235,000</h5>
+        
+                    </li>
+                    
+                </ul>
 
                 <form class="search">
                     <div class="search__inner d-none">
@@ -1113,6 +1129,24 @@
 			
 					  </div>
 				</div>
+
+				<div class="row">
+					<div class="col-sm-12 col-md-6 col-lg-6 ">
+						<div class="card">
+							<div class="card-body">
+								<div id="members-activity" style="height: 300px"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-6">
+						<div class="card">
+							<div class="card-body">
+								<div id="transaction-activity" style="height: 300px"></div>
+							</div>
+						</div>
+
+					</div>
+				</div>
                 <footer class="footer hidden-xs-down">
 					<center><a class="nouveta-logoo" href="https://nouveta.tech/"><img src="demo/img/logo-files/logo2.png" target="new"></center></a></center>
                     <p>Powered by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>
@@ -1231,6 +1265,9 @@
 		<script src="js/chart-data/perfomance.js"></script>
 		<script src="js/chart-data/ongoing-loans.js"></script>
 		<script src="js/chart-data/transaction-data.js"></script>
+		<script src="js/chart-data/members-activity.js"></script>
+		<script src="js/chart-data/transaction-activity.js"></script>
+
 		<script src="js/chart-data/thisMonthLoanPerfomance.js"></script>
 
 		<!-- <script src="js/highcharts/highcharts-more.js"></script> -->
