@@ -15812,4 +15812,15 @@ font-size: xx-large !important;
   }
 }
 
+.calc-30{
+    height: calc(100% - 30px);
+}
+
+.mdi-form-left{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
