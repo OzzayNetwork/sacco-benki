@@ -15226,6 +15226,11 @@ th label .error{
     padding-top: 0.3rem;
 }
 
+.nav-amounts > li {
+    display: flex;
+    align-items: center;
+}
+
 .nav-amounts > li > i {
     font-size: 50px;
 }
