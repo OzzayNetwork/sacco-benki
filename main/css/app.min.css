@@ -13636,6 +13636,9 @@ ul.jqtree-tree ul.jqtree_common {
     font-weight: 300;
     display: block;
     letter-spacing: 0px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
 }
 .content__title {
     margin-bottom: 1rem;
