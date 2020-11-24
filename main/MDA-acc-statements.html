@@ -56,7 +56,6 @@
 					
 				</span>
         </div>
-
         <!-- create account -->
         <div class="modal fade" id="new-member-account2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -68,15 +67,13 @@
 					  </button>
                     </div>
                     <div class="modal-body">
+                        <p>Select the new <strong>account(s)</strong> you would like to create for the member.</p>
 
                         <div class="form-group">
                             <label for="member-no">Member's Number</label>
-                            <input type="text" class="form-control" id="member-no" placeholder="Enter member's number to continue" required>
-                            <small id="emailHelp" class="form-text text-danger d-none">Error Message goes here</small>
+                            <input type="text" class="form-control" id="member-no" aria-describedby="emailHelp" placeholder="Enter member's number">
+                            <small id="emailHelp" class="form-text text-muted">Error Message goes here</small>
                         </div>
-
-                        <p>Select the new <strong>account(s)</strong> you would like to create for the member.</p>
-
 
                         <h6 class="mb-3">List of available accounts:</h6>
                         <div>
@@ -111,36 +108,6 @@
             </div>
         </div>
         <!-- create account -->
-        <!-- deleting modal -->
-        <div class="modal fade" id="removeMDA" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-danger text-white py-3">
-                <h5 class="modal-title text-white" id="exampleModalLongTitle">Remove MDA</h5>
-                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <h4>Yellow Bananana</h4>
-                    <div class="warning-container">
-                        <img src="demo/img/form-svgs/forbidden.png">
-                    <p class="font-16">
-                        Are you sure you want to remove this MDA?
-                        Notice, you cant reverse the changes.
-                    </p>
-                    </div>
-                    
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-outline-dark" data-dismiss="modal">No, Dont remove</button>
-                <button type="button" class="btn btn-danger btn--icon-text text-white"> <i class="ti-trash mr-3" ></i>Yes, I want to remove it</button>
-                </div>
-            </div>
-            </div>
-        </div>
-        <!-- deleting modal -->
-
         <header class="header">
             <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
                 <div class="navigation-trigger__inner">
@@ -184,100 +151,58 @@
             <div w3-include-html="nav-bar.html"></div>
         </aside>
 
-        <!-- Modal -->
-        <!-- freezde account -->
-        <div class="modal fade" id="freezeAcc" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <!-- modals -->
+
+        <div class="modal fade" id="new-member-account" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Freeze account</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Kelvin Njuguna's New Account</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+						<span aria-hidden="true">&times;</span>
+					  </button>
                     </div>
                     <div class="modal-body">
-                        <form>
-                            <div class="search-member ">
-                                <h6>Enter account number in order to continue:</h6>
-                                <div class="form-group  mb-2 d-flex">
-                                    <input type="Text" class="form-control" id="inputPassword2" placeholder="Enter account Number">
-                                    <button class="btn btn-primary btn--icon-text"><i class="zmdi zmdi-search"></i>Search</button>
-                                </div>
+                        <p>Select the new <strong>account(s)</strong> you would like to create for the member.</p>
+
+                        <h6 class="mb-3">List of available accounts:</h6>
+                        <div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="acc1">
+                                <label class="checkbox__label" for="acc1">Share Capital</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="acc2">
+                                <label class="checkbox__label" for="acc2">Share deposit</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="acc4">
+                                <label class="checkbox__label" for="acc4">Loan & Interests</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="acc5">
+                                <label class="checkbox__label" for="acc5">Clearing</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="acc6">
+                                <label class="checkbox__label" for="acc6">FOSA</label>
                             </div>
 
-                            <!-- show this when the account details have been fetched -->
-
-                            <div class="fetched-details">
-                                <h6 class="mt-4">Account Details</h6>
-                                <hr>
-                                <div class="">
-                                    <small class="text-muted-blue bold bold">Owner's Full Names</small>
-                                    <div class="d-flex justify-content-between">
-                                        <p><strong>Kelvin Njuguna Ndungu</strong></p>
-                                    </div>
-                                </div>
-
-                                <div class="">
-                                    <small class="text-muted-blue bold bold">Account type</small>
-                                    <div class="d-flex justify-content-between">
-                                        <p><strong>Share Capital</strong></p>
-                                    </div>
-                                </div>
-
-                                <div class="">
-                                    <small class="text-muted-blue bold bold">Current Account Balance</small>
-                                    <div class="d-flex justify-content-between">
-                                        <p><strong>KES 23,520</strong></p>
-                                    </div>
-
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="exampleFormControlTextarea1"><strong>Reason for freezing this account</strong></label>
-                                    <textarea placeholder="Enter reason ..." class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                </div>
-                            </div>
-
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <!-- show this when the account details have been fetched -->
-                        <button type="button" class="btn btn-danger d-none">Freeze account</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- unfreeze account -->
-        <div class="modal fade" id="un-freezeAcc" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Unfreeze Account</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Unfreeze Acc No. 12358952</h5>
-                            <div class="notes my-3">
-                                This account was frozen on <strong>22ND Aug 2020</strong> at <strong>10:03 AM</strong> by <strong> Alex Wanjala</strong>. For the reason of; <strong>suspected illegal activities</strong>
-
-                            </div>
-
-                            <h5>Are you sure you want to unfreeze this account?</h5>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success">Yes Unfreeze The Account</button>
+                        <button type="button" class="btn btn-primary">Create Account(s)</button>
                     </div>
                 </div>
             </div>
         </div>
+
+
+
+
+        <!-- modals -->
+
 
 
 
@@ -288,117 +213,173 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-12">
                         <span class="rev-title-container">
-                                <h1 class="text-capitalize stream_name m-0">List of MDAs</h1>
-                               </span>
+							 <h1 class="text-capitalize stream_name m-0">Member Statements</h1>
+							</span>
                         <div class="">
                             <ol class="breadcrumb border-0">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Reports</a></li>
-                                <li class="breadcrumb-item active">Registered MDAs</li>
-
+                                <li class="breadcrumb-item"><a href="MDA-List.html">Registered MDAs</a></li>
+                                <li class="breadcrumb-item"><a href="MDA-Details.html">MDA's Accounts</a></li>
+                                <li class="breadcrumb-item active">Member Num: 23568985</li>
                             </ol>
                         </div>
                     </div>
-                    <div class="col-4 col-sm-12 col-md-4">
+                    <div class="col-4 col-sm-12 col-md-4 d-none">
                         <div class="section-header">
-                            <button class="btn btn-danger" data-toggle="modal" data-target="#freezeAcc" title="">Freeze An account</button>
+                            <a href="new-member.html" class="btn btn-sm btn-primary" title="">Register New Member</a>
                         </div>
                     </div>
                 </div>
-            </header <div class="row">
-            <div class="col-12 p-0">
-                <div class="card table-custom-bg">
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-hover table-custom spacing8" id="data-table">
-                                <thead>
-                                    <tr>
-                                        <th>MDA Name</th>
-                                        <th>Members</th>
-                                        <th>Date Frozen</th>
-                                        <th>Created by</th>
-                                        <th>Market</th>
-                                        <th>Amount Borrowed</th>
-                                        <th>Amount Repaid</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="w60">
-                                            Avacado Movers
-                                        </td>
-                                        <td class="w60">
-                                            <a title="" href="member-profile.html">12</a>
-                                        </td>
-                                        <td>3rd Aug 2020 10:52 AM</td>
-                                        <td>Alex Wanjala</td>
-                                        <td>Nchiru Market</td>
-                                        <td>KES 130,000</td>
-                                        <td>KES 40,000</td>
-                                        <td>
-                                            <button class="btn btn-danger mr-2 btn--icon-text" data-toggle="modal" data-target="#removeMDA"><i class="zmdi zmdi-close"></i>Remove MDA</button>
-                                            <a href="MDA-Details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w60">
-                                           Orange Bananana
-                                        </td>
-                                        <td class="w60">
-                                            <a title="" href="member-profile.html">52</a>
-                                        </td>
-                                        <td>3rd Aug 2020 10:52 AM</td>
-                                        <td>Alex Wanjala</td>
-                                        <td>Gakooromone</td>
-                                        <td>KES 130,000</td>
-                                        <td>KES 40,000</td>
-                                        <td>
-                                            <button class="btn btn-danger mr-2 btn--icon-text" data-toggle="modal" data-target="#removeMDA"><i class="zmdi zmdi-close"></i>Remove MDA</button>
-                                            <a href="MDA-Details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w60">
-                                            Mirra Republik
-                                        </td>
-                                        <td class="w60">
-                                            <a title="" href="member-profile.html">30</a>
-                                        </td>
-                                        <td>3rd Aug 2020 10:52 AM</td>
-                                        <td>Alex Wanjala</td>
-                                        <td>Nchiru</td>
-                                        <td>KES 130,000</td>
-                                        <td>KES 40,000</td>
-                                        <td>
-                                            <button class="btn btn-danger mr-2 btn--icon-text" data-toggle="modal" data-target="#removeMDA"><i class="zmdi zmdi-close"></i>Remove MDA</button>
-                                            <a href="MDA-Details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w60">
-                                            Yellow Bananana
-                                        </td>
-                                        <td class="w60">
-                                            <a title="" href="member-profile.html">22</a>
-                                        </td>
-                                        <td>3rd Aug 2020 10:52 AM</td>
-                                        <td>Alex Wanjala</td>
-                                        <td>Soko Mjinga</td>
-                                        <td>KES 130,000</td>
-                                        <td>KES 40,000</td>
-                                        <td>
-                                            <button class="btn btn-danger mr-2 btn--icon-text" data-toggle="modal" data-target="#removeMDA"><i class="zmdi zmdi-close"></i>Remove MDA</button>
-                                            <a href="MDA-Details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
-                                        </td>
-                                    </tr>                                   
+            </header>
+            
+            <div class="row">
+                <div class="col-12 ">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="p-5">
+                                            <div class="contact-header d-flex justify-content-between">
+                                                <div>
+                                                    <h4>Member Statements</h4>
+                                                     <p>Member statement for <strong>02 Feb 2020 - 19 Nov 2020 </strong></p>
+                                                </div>
 
-                                </tbody>
-                            </table>
+                                                <div>
+                                                    <button class="btn btn--icon-text btn-primary"><i class="zmdi zmdi-mail-send"></i>send to email</button>
+                                                </div>
+                                            </div>
+
+                                            <table id="data-table" class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Acc No.</th>
+                                                        <th scope="col">Transactions DeDateDate registered</th>
+                                                        <th>Date</th>
+                                                        <th scope="col">Amount</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Deposit from 254704549859. Ref Number:DGGFDB321564</th>
+                                                        <th>1st jul 2020</th>
+                                                        <th scope="col">KES 3,000</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">46461</th>
+                                                        <th scope="col">Cash withdrawal Via the counter</th>
+                                                        <th>21st Jul 2020</th>
+                                                        <th scope="col">KES 33,010</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa withdrawal via Mpesa. Phone 254704549859. Ref Number:FKJKH32113</th>
+                                                        <th>22nd Jul 2020</th>
+                                                        <th scope="col">KES 11,000</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Deposit from 254704549859. Ref Number:FSDFSD454</th>
+                                                        <th>25TH Jul 2020</th>
+                                                        <th scope="col">KES 520</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Deposit from 254704549859. Ref Number:DFGDFG23132</th>
+                                                        <th>1st Jan 2020</th>
+                                                        <th scope="col">KES 702</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Deposit from 254704549859. Ref Number:FSSDF21545</th>
+                                                        <th>2nd Jan 2020</th>
+                                                        <th scope="col">KES 5,670</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Deposit from 254704549859. Ref Number:FHFYU1321653</th>
+                                                        <th>14th Feb 2020</th>
+                                                        <th scope="col">KES 425</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Airtel Money withdrawal: Phone Number 25435658956 Ref Number:SDFSDF64654</th>
+                                                        <th>16th Jan 2020</th>
+                                                        <th scope="col">KES 2,500</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">664564</th>
+                                                        <th scope="col">Airtel Money withdrawal: Phone Number 25435658956 Ref Number:SDFSD5465465</th>
+                                                        <th>22nd Feb 2020</th>
+                                                        <th scope="col">KES 420</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">664564</th>
+                                                        <th scope="col">Airtel Money withdrawal: Phone Number 25435658956 Ref Number:DSFSD132321</th>
+                                                        <th>28th feb 2020</th>
+                                                        <th scope="col">KES 300</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">664564</th>
+                                                        <th scope="col">Cash withdrawal via the counter</th>
+                                                        <th>1st Mar 2020</th>
+                                                        <th scope="col">&nbsp;KES 2,523</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">664564</th>
+                                                        <th scope="col">Cash deposit via the counter&nbsp;</th>
+                                                        <th>6th Mar 2020</th>
+                                                        <th scope="col">KES 520</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">664564</th>
+                                                        <th scope="col">Airtel Money withdrawal: Phone Number 25435658956 Ref Number:TYRFT6789</th>
+                                                        <th>22nd Mar 2020</th>
+                                                        <th scope="col">KES 8,203</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Airtel money deposi. Phone Num 2547342358250. Ref Number:GTYHUU1321653</th>
+                                                        <th>17th Mar 2020</th>
+                                                        <th scope="col">KES 3,620</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Deposit from 254704549859. Ref Number:UUYTH2548123</th>
+                                                        <th>2nd Apr 2020&nbsp;</th>
+                                                        <th scope="col">KES 1,200</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Deposit from 254704549859. Ref Number:RTYG52632</th>
+                                                        <th>17ths Apr 2020</th>
+                                                        <th scope="col">KES 2,020</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Deposit from 254704549859. Ref Number:HFHGF45466</th>
+                                                        <th>16th Apr 2020</th>
+                                                        <th scope="col">KES 210</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">231321313</th>
+                                                        <th scope="col">Mpesa Withdrawal from 254704549859. Ref Number:FHFYDFFDG56563</th>
+                                                        <th>1st jul 2020</th>
+                                                        <th scope="col">KES 120</th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
             <footer class="footer hidden-xs-down">
                 <center>
@@ -508,6 +489,8 @@
     <script src="js/wow.js"></script>
     <script src="js/app.min.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- Html include -->
     <script>
         includeHTML();
     </script>
