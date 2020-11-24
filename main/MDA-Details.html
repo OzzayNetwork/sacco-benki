@@ -111,36 +111,6 @@
             </div>
         </div>
         <!-- create account -->
-        <!-- deleting modal -->
-        <div class="modal fade" id="removeMDA" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-danger text-white py-3">
-                <h5 class="modal-title text-white" id="exampleModalLongTitle">Remove MDA</h5>
-                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <h4>Yellow Bananana</h4>
-                    <div class="warning-container">
-                        <img src="demo/img/form-svgs/forbidden.png">
-                    <p class="font-16">
-                        Are you sure you want to remove this MDA?
-                        Notice, you cant reverse the changes.
-                    </p>
-                    </div>
-                    
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-outline-dark" data-dismiss="modal">No, Dont remove</button>
-                <button type="button" class="btn btn-danger btn--icon-text text-white"> <i class="ti-trash mr-3" ></i>Yes, I want to remove it</button>
-                </div>
-            </div>
-            </div>
-        </div>
-        <!-- deleting modal -->
-
         <header class="header">
             <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
                 <div class="navigation-trigger__inner">
@@ -196,54 +166,20 @@
                     </button>
                     </div>
                     <div class="modal-body">
-                        <form>
-                            <div class="search-member ">
-                                <h6>Enter account number in order to continue:</h6>
-                                <div class="form-group  mb-2 d-flex">
-                                    <input type="Text" class="form-control" id="inputPassword2" placeholder="Enter account Number">
-                                    <button class="btn btn-primary btn--icon-text"><i class="zmdi zmdi-search"></i>Search</button>
-                                </div>
+                        <div class="">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Acc No. 12358952</h5>
+                            <div class="notes my-3">
+                                you must specify reason for freezing this account before you continue
                             </div>
-
-                            <!-- show this when the account details have been fetched -->
-
-                            <div class="fetched-details">
-                                <h6 class="mt-4">Account Details</h6>
-                                <hr>
-                                <div class="">
-                                    <small class="text-muted-blue bold bold">Owner's Full Names</small>
-                                    <div class="d-flex justify-content-between">
-                                        <p><strong>Kelvin Njuguna Ndungu</strong></p>
-                                    </div>
-                                </div>
-
-                                <div class="">
-                                    <small class="text-muted-blue bold bold">Account type</small>
-                                    <div class="d-flex justify-content-between">
-                                        <p><strong>Share Capital</strong></p>
-                                    </div>
-                                </div>
-
-                                <div class="">
-                                    <small class="text-muted-blue bold bold">Current Account Balance</small>
-                                    <div class="d-flex justify-content-between">
-                                        <p><strong>KES 23,520</strong></p>
-                                    </div>
-
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="exampleFormControlTextarea1"><strong>Reason for freezing this account</strong></label>
-                                    <textarea placeholder="Enter reason ..." class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1"><strong>Reason for freezing this account</strong></label>
+                                <textarea placeholder="Enter reason ..." class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
-
-                        </form>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <!-- show this when the account details have been fetched -->
-                        <button type="button" class="btn btn-danger d-none">Freeze account</button>
+                        <button type="button" class="btn btn-danger">Freeze account</button>
                     </div>
                 </div>
             </div>
@@ -288,107 +224,124 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-12">
                         <span class="rev-title-container">
-                                <h1 class="text-capitalize stream_name m-0">List of MDAs</h1>
+                                <h1 class="text-capitalize stream_name m-0">MDA's Accounts</h1>
                                </span>
                         <div class="">
                             <ol class="breadcrumb border-0">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Reports</a></li>
-                                <li class="breadcrumb-item active">Registered MDAs</li>
+                                <li class="breadcrumb-item"><a href="MDA-List.html">Registered MDAs</a></li>
+                                <li class="breadcrumb-item active">MDA's Accounts</li>
+
 
                             </ol>
                         </div>
                     </div>
                     <div class="col-4 col-sm-12 col-md-4">
                         <div class="section-header">
-                            <button class="btn btn-danger" data-toggle="modal" data-target="#freezeAcc" title="">Freeze An account</button>
+                            <a href="new-member.html" class="btn btn-sm btn-primary" title="">Register New Member</a>
                         </div>
                     </div>
                 </div>
-            </header <div class="row">
-            <div class="col-12 p-0">
-                <div class="card table-custom-bg">
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-hover table-custom spacing8" id="data-table">
-                                <thead>
-                                    <tr>
-                                        <th>MDA Name</th>
-                                        <th>Members</th>
-                                        <th>Date Frozen</th>
-                                        <th>Created by</th>
-                                        <th>Market</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="w60">
-                                            Avacado Movers
-                                        </td>
-                                        <td class="w60">
-                                            <a title="" href="member-profile.html">12</a>
-                                        </td>
-                                        <td>3rd Aug 2020 10:52 AM</td>
-                                        <td>Alex Wanjala</td>
-                                        <td>Nchiru Market</td>
-                                        <td>
-                                            <button class="btn btn-success mr-2" data-toggle="modal" data-target="#un-freezeAcc">Unfreeze account</button>
-                                            <a href="MDA-Details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w60">
-                                           Orange Bananana
-                                        </td>
-                                        <td class="w60">
-                                            <a title="" href="member-profile.html">52</a>
-                                        </td>
-                                        <td>3rd Aug 2020 10:52 AM</td>
-                                        <td>Alex Wanjala</td>
-                                        <td>Gakooromone</td>
-                                        <td>
-                                            <button class="btn btn-success mr-2" data-toggle="modal" data-target="#un-freezeAcc">Unfreeze account</button>
-                                            <a href="MDA-Details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w60">
-                                            Mirra Republik
-                                        </td>
-                                        <td class="w60">
-                                            <a title="" href="member-profile.html">30</a>
-                                        </td>
-                                        <td>3rd Aug 2020 10:52 AM</td>
-                                        <td>Alex Wanjala</td>
-                                        <td>Nchiru</td>
-                                        <td>
-                                            <button class="btn btn-success mr-2" data-toggle="modal" data-target="#un-freezeAcc">Unfreeze account</button>
-                                            <a href="MDA-Details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w60">
-                                            Yellow Bananana
-                                        </td>
-                                        <td class="w60">
-                                            <a title="" href="member-profile.html">22</a>
-                                        </td>
-                                        <td>3rd Aug 2020 10:52 AM</td>
-                                        <td>Alex Wanjala</td>
-                                        <td>Soko Mjinga</td>
-                                        <td>
-                                            <button class="btn btn-danger mr-2 btn--icon-text" data-toggle="modal" data-target="#removeMDA"><i class="zmdi zmdi-close"></i>Remove MDA</button>
-                                            <a href="MDA-Details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
-                                        </td>
-                                    </tr>                                   
+            </header>
 
-                                </tbody>
-                            </table>
+            <div class="row">
+                <div class="col-12 p-0">
+                    <div class="card table-custom-bg">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-custom spacing8" id="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Acc No</th>
+                                            <th>Name</th>
+                                            <th>Phone</th>
+                                            <th>Date added</th>
+                                            <th>Added By</th>
+                                            <th>Loan Payment Status</th>
+                                            <th>Current Balance</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="w60">
+                                                12566253
+                                            </td>
+                                            <td class="w60">
+                                                <a title="" href="member-profile.html">Amos Wele</a>
+                                            </td>
+                                            <td><a href="tel:0702663857">0702663857</a></td>
+                                            <td>3rd Aug 2020</td>
+                                            <td>Alex Wanjala</td>
+                                            <td><span class="badge badge-pill badge-soft-success">PAID</span></td>
+                                            <td class="text-capitalize">KES 25,200</td>
+                                            <td>
+                                                <button class="btn btn-danger mr-2" data-toggle="modal" data-target="#freezeAcc">Freeze account</button>
+                                                <a href="account-member-details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="w60">
+                                                12566253
+                                            </td>
+                                            <td class="w60">
+                                                <a title="" href="member-profile.html">Amos Wele</a>
+                                            </td>
+                                            <td><a href="tel:0702663857">0702663857</a></td>
+                                            <td>3rd Aug 2020</td>
+                                            <td>Alex Wanjala</td>
+                                            <td><span class="badge badge-pill badge-soft-warning">PARTLY</span></td>
+                                            <td class="text-capitalize">KES 25,200</td>
+                                            <td>
+                                                <button class="btn btn-success mr-2" data-toggle="modal" data-target="#un-freezeAcc">Unfreeze account</button>
+                                                <a href="frozen-account-member-details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="w60">
+                                                12566253
+                                            </td>
+                                            <td class="w60">
+                                                <a title="" href="member-profile.html">Amos Wele</a>
+                                            </td>
+                                            <td><a href="tel:0702663857">0702663857</a></td>
+                                            <td>3rd Aug 2020</td>
+                                            <td>Alex Wanjala</td>
+                                            <td><span class="badge badge-pill badge-soft-danger">UNPAID</span></td>
+                                            <td class="text-capitalize">KES 25,200</td>
+                                            <td>
+                                                <button class="btn btn-danger mr-2" data-toggle="modal" data-target="#freezeAcc">Freeze account</button>
+                                                <a href="account-member-details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="w60">
+                                                12566253
+                                            </td>
+                                            <td class="w60">
+                                                <a title="" href="member-profile.html">Amos Wele</a>
+                                            </td>
+                                            <td><a href="tel:0702663857">0702663857</a></td>
+                                            <td>3rd Aug 2020</td>
+                                            <td>Alex Wanjala</td>
+                                            <td><span class="badge badge-pill badge-soft-warning">PARTLY</span></td>
+                                            <td class="text-capitalize">KES 25,200</td>
+                                            <td>
+                                                <button class="btn btn-danger mr-2" data-toggle="modal" data-target="#freezeAcc">Freeze account</button>
+                                                <a href="account-member-details.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View account</a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
             <footer class="footer hidden-xs-down">
                 <center>

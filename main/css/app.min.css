@@ -15847,4 +15847,13 @@ font-size: xx-large !important;
     align-items: center;
 }
 
-
+.warning-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.warning-container img{
+    height: 65px;
+    margin-right: 2rem;
+}
