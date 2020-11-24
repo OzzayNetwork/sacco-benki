@@ -15229,22 +15229,22 @@ th label .error{
     padding-top: 0.3rem;
 }
 
-.nav-amounts > li {
-    display: flex;
+.nav-amounts-link {
+    display: flex !important;
     align-items: center;
 }
 
-.nav-amounts > li > i {
+.nav-amounts-link-i {
     font-size: 50px;
 }
 
 
-.nav-amounts > li > div > span {
+.nav-amounts-link-span {
     color: rgba(255,255,255,.5)!important;
     font-size: 11px;
 }
 
-.nav-amounts > li > div > h5 {
+.nav-amounts-link-h5 {
     color: white;
     font-weight: 800;
 }
