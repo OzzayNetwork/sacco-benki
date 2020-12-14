@@ -76,11 +76,16 @@
                     <div class="modal-body">
                         <form>
                             <div class="col-lg-12 p-0 col-md-12">
-                                <div class=""> 
+                                <div class="form-group"> 
                                     <label class="font-weight-bold">Enter message to send?</label>
                                     <textarea placeholder="Write message to send in bulk here"  class="form-control"></textarea>
                                 </div>
-                            </div>					
+                            </div>		
+                            
+                            <div class="checkbox">
+                                <input type="checkbox" class="" id="email_check">
+                                <label class="checkbox__label" for="email_check">Send via email as well</label>
+                            </div>
 
                         </form>
                       </div>
@@ -184,15 +189,20 @@
                         <div class="col-12">
                             <div class="filter-container float-right">
                                 <div class="dropdown row">
+
+                                    <div class="radio radio--inline" style=" margin-top: .5rem;">
+                                        <input type="radio" class="loanFilter" name="loanFilter" value="all" checked id="all">
+                                        <label class="radio__label" for="all">All</label>
+                                    </div>
         
                                     <div class="radio radio--inline" style=" margin-top: .5rem;">
-                                        <input type="radio" class="slipFilter" name="slipFilter" value="allSlip" checked id="allPayslips">
-                                        <label class="radio__label" for="allPayslips">With Loans</label>
+                                        <input type="radio" class="loanFilter" name="loanFilter" value="withLoans" checked id="withLoans">
+                                        <label class="radio__label" for="withLoans">With Loans</label>
                                     </div>
         
                                     <div class="radio radio--inline">
-                                        <input type="radio" class="slipFilter" name="slipFilter" value="paidSlip" id="paidPayslisp">
-                                        <label class="radio__label" for="paidPayslisp">Without Loans</label>
+                                        <input type="radio" class="loanFilter" name="loanFilter" value="withoutLoans" id="withoutLoans">
+                                        <label class="radio__label" for="withoutLoans">Without Loans</label>
                                     </div>
 
                                     <div class="category_loan_filter">
@@ -224,7 +234,7 @@
                             <div class="card table-custom-bg">
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table class="table table-hover bulk_sms_table table-custom spacing8" id="data-table">
+                                        <table class="table table-hover bulk_sms_table table-custom spacing8" id="bulk_sms">
                                             <thead>
                                                 <tr>
                                                     <th class="pr-5">
@@ -236,7 +246,6 @@
                                                     <th>Name</th>
                                                     <th>Phone</th>
                                                     <th>Email</th>
-                                                    <th>Accounts</th>
                                                     <th>Loan Status</th>
                                                     <th>Loan Credibility</th>
                                                     <th>Actions</th>
@@ -255,7 +264,6 @@
                                                     </td>
                                                     <td><a href="tel:0702663857">0702663857</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">amoswele@gmail.com</a></td>
-                                                    <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -277,7 +285,6 @@
                                                     </td>
                                                     <td><a href="tel:0702365985">0702365985</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">sharon@gmail.com</a></td>
-                                                    <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -300,7 +307,6 @@
                                                     </td>
                                                     <td><a href="tel:0702365972">0704525252</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">cate@gmail.com</a></td>
-                                                    <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>    
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-danger">No Loan</a></span>
                                                     </td>
@@ -321,7 +327,6 @@
                                                     </td>
                                                     <td><a href="tel:0702365972">0702525252</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">stones@gmail.com</a></td>
-                                                    <td>2 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -342,7 +347,6 @@
                                                     </td>
                                                     <td><a href="tel:0702365962">0702365962</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">gina@gmail.com</a></td>
-                                                    <td>2 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>    
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-danger">No Loan</a></span>
                                                     </td>
@@ -363,7 +367,6 @@
                                                     </td>
                                                     <td><a href="tel:0702365962">0702365962</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">jib@gmail.com</a></td>
-                                                    <td>2 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -384,7 +387,6 @@
                                                     </td>
                                                     <td><a href="tel:0702365325">0702365325</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">job@gmail.com</a></td>
-                                                    <td>4 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>    
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-danger">No Loan</a></span>
                                                     </td>
@@ -405,7 +407,6 @@
                                                     </td>
                                                     <td><a href="tel:0702361234">0702361234</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">apundo@gmail.com</a></td>
-                                                    <td>4 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -426,7 +427,6 @@
                                                     </td>
                                                     <td><a href="tel:0702323056">0702323056</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">moses@gmail.com</a></td>
-                                                    <td>4 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -447,7 +447,6 @@
                                                     </td>
                                                     <td><a href="tel:0702323202">0702323202</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">jane@gmail.com</a></td>
-                                                    <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-danger">No Loan</a></span>
                                                     </td>
@@ -468,7 +467,6 @@
                                                     </td>
                                                     <td><a href="tel:0702323859">0702323859</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">jean@gmail.com</a></td>
-                                                    <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -489,7 +487,6 @@
                                                     </td>
                                                     <td><a href="tel:0702323888">0702323888</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">dennis@gmail.com</a></td>
-                                                    <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -510,9 +507,8 @@
                                                     </td>
                                                     <td><a href="tel:0702323852">0705252563</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">kin@gmail.com</a></td>
-                                                    <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
-                                                       <span class="badge badge-pill badge-danger badge-light p-2">No Loan</span>
+                                                        <span class="badge badge-pill badge-light p-2"><a class="text-danger">No Loan</a></span>
                                                     </td>
                                                     <td class="text-capitalize">KES 10,230</td>
                                                     <td>
@@ -531,7 +527,6 @@
                                                     </td>
                                                     <td><a href="tel:0702323852">0702323852</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                                    <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -552,7 +547,6 @@
                                                     </td>
                                                     <td><a href="tel:0702323555">0702323555</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                                    <td>8 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -573,7 +567,6 @@
                                                     </td>
                                                     <td><a href="tel:0702323523">0702323523</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                                    <td>8 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -594,7 +587,6 @@
                                                     </td>
                                                     <td><a href="tel:0702323111">0702323111</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                                    <td>8 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -615,7 +607,6 @@
                                                     </td>
                                                     <td><a href="tel:0702323333">0702323333</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                                    <td>6 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -636,7 +627,6 @@
                                                     </td>
                                                     <td><a href="tel:0702323237">0702323237</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                                    <td>6 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -657,7 +647,6 @@
                                                     </td>
                                                     <td><a href="tel:0702323856">0702323856</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                                    <td>6 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -678,7 +667,6 @@
                                                     </td>
                                                     <td><a href="tel:0702323586">0702323586</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                                    <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -699,7 +687,6 @@
                                                     </td>
                                                     <td><a href="tel:0702663395">0702663395</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                                    <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -720,7 +707,6 @@
                                                     </td>
                                                     <td><a href="tel:0702663322">0702663322</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                                    <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -741,7 +727,6 @@
                                                     </td>
                                                     <td><a href="tel:0702663355">0702663355</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                                    <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -762,7 +747,6 @@
                                                     </td>
                                                     <td><a href="tel:0702663310">0702663310</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">kelin@gmail.com</a></td>
-                                                    <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -783,7 +767,6 @@
                                                     </td>
                                                     <td><a href="tel:0702663333">0702663333</a></td>
                                                     <td><a href="mailto:kelvinnjuguna99@gmail.com">john@gmail.com</a></td>
-                                                    <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
                                                     <td>
                                                         <span class="badge badge-pill badge-light p-2"><a class="text-success">Has Loan</a></span>
                                                     </td>
@@ -940,6 +923,7 @@
 		<script src="vendors/slick/slick.min.js"></script>
 
         <!-- App functions and actions -->
+        <script src="js/datatables.js"></script>
      	<script src="js/wow.js"></script>
         <script src="js/app.min.js"></script>
 		<script src="js/main.js"></script>
