@@ -1378,3 +1378,43 @@ $(document).ready(function(){
 	});
 
   });
+  //disableBtn();
+
+  function checkAll(bx) {
+	var cbs = document.getElementsByTagName('input');
+	for(var i=0; i < cbs.length; i++) {
+	  if(cbs[i].type == 'checkbox') {
+		cbs[i].checked = bx.checked;
+		// $('#bulk_button').removeClass('deactivated');
+		// $('#bulk_button').fadeIn(300);
+	  }
+	}
+  }
+
+  $('body').on('change', '.bulk_sms_table input',function(){
+	disableBtn();
+
+});
+
+function disableBtn(){
+
+	$('.bulk_sms_table input').each(function(value,index){
+		if(this.checked){
+		  
+			  $('#bulk_button').removeClass('deactivated');
+			  $('#bulk_button').fadeIn(300);
+			  $('#bulk_button').attr('disabled', false);
+
+			return false;
+		}
+		else{
+
+		  $('#bulk_button').addClass('deactivated');
+		  $('#bulk_button').fadeIn(300);
+		  $('#bulk_button').attr('disabled', true);
+
+
+		}
+	  
+	});
+}

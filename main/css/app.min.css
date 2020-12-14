@@ -15857,3 +15857,15 @@ font-size: xx-large !important;
     height: 65px;
     margin-right: 2rem;
 }
+
+.deactivated{
+    color: black;
+    background-color: grey;
+}
+
+.messages_td{
+    word-wrap: break-word;
+    white-space: normal !important; 
+    min-width: 250px; 
+    max-width: 160px;
+}

@@ -200,75 +200,25 @@
 
 
 
-
-        <!-- modals -->
-
-         <!-- Modal -->
-         <div class="modal fade" id="selectMDA" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Select MDA</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12">
-                            <form class="row">
-
-                                    <div class="col-12">
-                                        <p>Search for the MDA the member belongs to</p>
-                                    </div>
-                                    <div class="col-sm-12"> 
-                                        <div class="form-group">
-                                            <label><strong>Select MDA</strong></label>
-                                            <select class="form-control">
-                                                <option>--- Select MDA ---</option>
-                                                <option>MDA name</option>
-                                                <option>MDA name</option>
-                                                <option>MDA name</option>
-                                                <option>MDA name</option>
-                                                <option>MDA name</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary">Add to MDA</button>
-                </div>
-            </div>
-            </div>
-        </div>
-
-
-
-
-
-        <section class="content custom-table-container">
+       <section class="content custom-table-container">
 
             <header class="content__title px-0 border-0">
                 <div class="row">
                     <div class="col-md-8 col-sm-12">
                         <span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">Registered Members</h1>
+							 <h1 class="text-capitalize stream_name m-0">Messeges Sent</h1>
 							</span>
                         <div class="">
                             <ol class="breadcrumb border-0">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active">Registered members</li>
+                                <li class="breadcrumb-item"><a href="index.html">Reports</a></li>
+                                <li class="breadcrumb-item active">Messages Sent</li>
                             </ol>
                         </div>
                     </div>
                     <div class="col-4 col-sm-12 col-md-4">
                         <div class="section-header">
-                            <a href="new-member.html" class="btn btn-sm btn-primary" title="">Register New Member</a>
+                            <a href="bulk_sms.html" class="btn btn-sm btn-primary" title="">Send New Message</a>
                         </div>
                     </div>
                 </div>
@@ -285,9 +235,9 @@
                                             <th>Name</th>
                                             <th>Phone</th>
                                             <th>Email</th>
-                                            <th>Accounts</th>
-                                            <th>Registered By</th>
-                                            <th>Date registered</th>
+                                            <th>Message</th>
+                                            <th>Sent By</th>
+                                            <th>Date Sent</th>
                                             <th>Loan Credibility</th>
                                             <th>Actions</th>
                                         </tr>
@@ -299,13 +249,16 @@
                                             </td>
                                             <td><a href="tel:0702663857">0702663857</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">amoswele@gmail.com</a></td>
-                                            <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Alex Wanjala</td>
                                             <td class="text-capitalize">1st Jun 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
                                             <td>
                                                 <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
-                                                <button class="btn btn-info btn--icon-text btn-sm ml-3" data-toggle="modal" data-target="#selectMDA">Add to MDA</button>
                                             </td>
                                         </tr>
 
@@ -315,7 +268,11 @@
                                             </td>
                                             <td><a href="tel:0702365985">0702365985</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">sharon@gmail.com</a></td>
-                                            <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Karanja Kamau</td>
                                             <td class="text-capitalize">22nd Jun 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -330,7 +287,11 @@
                                             </td>
                                             <td><a href="tel:0702365972">0704525252</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">cate@gmail.com</a></td>
-                                            <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Karanja Kamau</td>
                                             <td class="text-capitalize">22nd Jun 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -344,7 +305,11 @@
                                             </td>
                                             <td><a href="tel:0702365972">0702525252</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">stones@gmail.com</a></td>
-                                            <td>2 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>          
                                             <td>Karanja Kamau</td>
                                             <td class="text-capitalize">22nd Jun 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -358,7 +323,11 @@
                                             </td>
                                             <td><a href="tel:0702365962">0702365962</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">gina@gmail.com</a></td>
-                                            <td>2 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Karanja Kamau</td>
                                             <td class="text-capitalize">22nd Jun 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -372,7 +341,11 @@
                                             </td>
                                             <td><a href="tel:0702365962">0702365962</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">jib@gmail.com</a></td>
-                                            <td>2 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Karanja Kamau</td>
                                             <td class="text-capitalize">22nd Jun 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -386,7 +359,11 @@
                                             </td>
                                             <td><a href="tel:0702365325">0702365325</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">job@gmail.com</a></td>
-                                            <td>4 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Karanja Kamau</td>
                                             <td class="text-capitalize">22nd Jun 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -400,7 +377,11 @@
                                             </td>
                                             <td><a href="tel:0702361234">0702361234</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">apundo@gmail.com</a></td>
-                                            <td>4 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>John Kimotho</td>
                                             <td class="text-capitalize">22nd Jun 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -414,7 +395,11 @@
                                             </td>
                                             <td><a href="tel:0702323056">0702323056</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">moses@gmail.com</a></td>
-                                            <td>4 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>John Kimotho</td>
                                             <td class="text-capitalize">22nd Jun 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -428,7 +413,11 @@
                                             </td>
                                             <td><a href="tel:0702323202">0702323202</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">jane@gmail.com</a></td>
-                                            <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>John Kimotho</td>
                                             <td class="text-capitalize">22nd Jun 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -442,7 +431,11 @@
                                             </td>
                                             <td><a href="tel:0702323859">0702323859</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">jean@gmail.com</a></td>
-                                            <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Andrew Rua</td>
                                             <td class="text-capitalize">22nd Jun 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -456,7 +449,11 @@
                                             </td>
                                             <td><a href="tel:0702323888">0702323888</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">dennis@gmail.com</a></td>
-                                            <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Andrew Rua</td>
                                             <td class="text-capitalize">22nd Jun 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -470,7 +467,11 @@
                                             </td>
                                             <td><a href="tel:0702323852">0705252563</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kin@gmail.com</a></td>
-                                            <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Andrew Rua</td>
                                             <td class="text-capitalize">22nd Jun 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -484,7 +485,11 @@
                                             </td>
                                             <td><a href="tel:0702323852">0702323852</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                            <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Edwin Kipkoiiung</td>
                                             <td class="text-capitalize">22nd Jun 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -498,7 +503,11 @@
                                             </td>
                                             <td><a href="tel:0702323555">0702323555</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                            <td>8 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Edwin Kipkoiiung</td>
                                             <td class="text-capitalize">22nd Jun 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -512,7 +521,11 @@
                                             </td>
                                             <td><a href="tel:0702323523">0702323523</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                            <td>8 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Edwin Kipkoiiung</td>
                                             <td class="text-capitalize">5th Jul 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -526,7 +539,11 @@
                                             </td>
                                             <td><a href="tel:0702323111">0702323111</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                            <td>8 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Nita Oria</td>
                                             <td class="text-capitalize">5th Jul 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -540,7 +557,11 @@
                                             </td>
                                             <td><a href="tel:0702323333">0702323333</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                            <td>6 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Nita Oria</td>
                                             <td class="text-capitalize">5th Jul 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -554,7 +575,11 @@
                                             </td>
                                             <td><a href="tel:0702323237">0702323237</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                            <td>6 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Ben Kimkoi</td>
                                             <td class="text-capitalize">10th Jul 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -568,7 +593,11 @@
                                             </td>
                                             <td><a href="tel:0702323856">0702323856</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                            <td>6 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Ben Kimkoi</td>
                                             <td class="text-capitalize">10th Jul 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -582,7 +611,11 @@
                                             </td>
                                             <td><a href="tel:0702323586">0702323586</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                            <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Ben Kimkoi</td>
                                             <td class="text-capitalize">10th Jul 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -596,7 +629,11 @@
                                             </td>
                                             <td><a href="tel:0702663395">0702663395</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                            <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Alex Wanjala</td>
                                             <td class="text-capitalize">10th Jul 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -610,7 +647,11 @@
                                             </td>
                                             <td><a href="tel:0702663322">0702663322</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                            <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Alex Wanjala</td>
                                             <td class="text-capitalize">3rd Jul 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -624,7 +665,11 @@
                                             </td>
                                             <td><a href="tel:0702663355">0702663355</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
-                                            <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Alex Wanjala</td>
                                             <td class="text-capitalize">3rd Jul 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -638,7 +683,11 @@
                                             </td>
                                             <td><a href="tel:0702663310">0702663310</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelin@gmail.com</a></td>
-                                            <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Alex Wanjala</td>
                                             <td class="text-capitalize">3rd Jul 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>
@@ -652,7 +701,11 @@
                                             </td>
                                             <td><a href="tel:0702663333">0702663333</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">john@gmail.com</a></td>
-                                            <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                            <td class="messages_td">
+                                                Merry Christmas!! <br>
+                                                You will be receiving a 20% discount on all your interests during the holiday season. 
+                                                Happy Holidays.
+                                            </td>
                                             <td>Alex Wanjala</td>
                                             <td class="text-capitalize">13th Jul 2020</td>
                                             <td class="text-capitalize">KES 10,230</td>

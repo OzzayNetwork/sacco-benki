@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<script src="include-sidebar-script.js"></script>
+
+
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:03 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel='icon' href='demo/img/icon_3.png' type='image/x-icon'/ >
+
+		<!-- Vendor styles -->
+		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.theme.default.css">
+	
+		<!--flat icon-->
+		<link rel="stylesheet" href="css/flaticon/font/flaticon.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_4.css">
+		<link rel="stylesheet" href="vendors/materialDesignIcons/css/materialdesignicons.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+
+
+		<!-- // Add the new slick-theme.css if you want the default styling -->
+		<link rel="stylesheet" href="vendors/slick/slick.css"/>
+		<link rel="stylesheet" href="vendors/slick/slick-theme.css"/>	
+
+        <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
+        <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
+        <link rel="stylesheet" href="vendors/select2/css/select2.min.css">
+        <link rel="stylesheet" href="vendors/dropzone/dropzone.css">
+        <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
+        <link rel="stylesheet" href="vendors/trumbowyg/ui/trumbowyg.min.css">
+        <link rel="stylesheet" href="vendors/flatpickr/flatpickr.min.css" />
+        <link rel="stylesheet" href="vendors/rateyo/jquery.rateyo.min.css">
+        <link rel="stylesheet" href="vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="css/app.min.css">
+    </head>
+
+    <body data-ma-theme="green">
+        <main class="main">
+            <div class="page-loader">
+                <div class="page-loader__spinner">
+                    <svg class="d-none" viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                    </svg>
+					<img src="demo/img/gifs/preloader.gif">
+                </div>
+				<span class="powerd-container">
+					<strong class="mb-2">Sacco Benki By</strong>
+					<img src="demo/img/logo-files/nouveta-orange.svg">
+					
+				</span>
+            </div>
+
+            <!-- create account -->
+			<div class="modal fade" id="bulk_sms_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <h5 class="modal-title" id="exampleModalLongTitle">Bulk Sms Message</h5>
+					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					  </button>
+					</div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="col-lg-12 p-0 col-md-12">
+                                <div class=""> 
+                                    <label class="font-weight-bold">Enter message to send?</label>
+                                    <textarea placeholder="Write message to send in bulk here"  class="form-control"></textarea>
+                                </div>
+                            </div>					
+
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Send Message</button>
+                      </div>
+				  </div>
+				</div>
+				</div>
+			<!-- create account -->
+            <header class="header">
+                <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+                    <div class="navigation-trigger__inner">
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                    </div>
+                </div>
+
+                <div class="header__logo hidden-sm-down">
+                    <h1><a href="index.html"><img class="the-logo" src="demo/img/logo-files/sacco-orange.png"></a></h1>
+                </div>
+				<h2 class="ml-4 text-white text-uppercase mb-0 text-light">Super Sacco</h2>
+				
+				<ul class="top-nav nav-amounts">
+		
+                    <li class="nav-amounts-link">
+						<i class="mdi mdi-cash-plus mr-2 nav-amounts-link-i"></i>
+						<div class="col-12">
+							<span class="text-uppercase font-11px nav-amounts-link-span">Debit Acc Balance</span>
+							<h5 class="text-uppercase font-weight-bold pb-0 nav-amounts-link-h5" id="yestedays_revenue">Kes 51,235,000</h5>
+						</div>
+                    </li>
+                   
+                    <li class="border-left border-white-opacity-7 pl-4 nav-amounts-link">
+						<i class="mdi mdi-cash-minus mr-2 nav-amounts-link-i"></i>
+
+						<div class="col-12">
+							<span class=" text-uppercase font-11px d-flex align-items-center nav-amounts-link-span" style="height: 19px;">Credit Acc Balance 
+								</span>
+							<h5 class="text-uppercase font-weight-bold pb-0 nav-amounts-link-h5" id="todays_revenue">Kes 21,235,000</h5>
+						<div class="col-12">
+
+                    </li>
+                    
+                </ul>
+
+                <form class="search">
+                    <div class="search__inner d-none">
+                        <input type="text" class="search__text d-none" placeholder="Search through the dashboard">
+                        <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+                    </div>
+                </form>
+				
+				<ul class="top-nav">
+					<li><button data-toggle="modal" data-target="#new-member-account2" class="btn btn-light text-black"><i class="zmdi zmdi-plus mr-2"></i>New Member Account</button></li>
+                    <li class="hidden-xl-up"><a href="#" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
+					
+					<li data-toggle="tooltip" data-original-title="Notifications" class="dropdown top-nav__notifications">
+                        <a href="#" data-toggle="dropdown"  class="top-nav__notify" >
+                            <i class="zmdi zmdi-notifications"></i>
+                        </a>                       
+                    </li>
+                    
+                </ul>
+
+                
+            </header>
+              
+			    <aside class="sidebar">
+					<div w3-include-html="nav-bar.html"></div> 
+                </aside>  
+                
+                <section class="content custom-table-container">
+                    <header class="content__title px-0 border-0">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-12">
+                                <span class="rev-title-container">
+                                     <h1 class="text-capitalize stream_name m-0">Bulk SMS</h1>
+                                    </span>
+                                <div class="">
+                                    <ol class="breadcrumb border-0">
+                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="index.html">Members</a></li>
+                                        <li class="breadcrumb-item active">Bulk SMS</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="col-4 col-sm-12 col-md-4">
+                                <div class="section-header">
+                                    <button href="#" type="button" disabled data-toggle="modal" data-target="#bulk_sms_modal" id="bulk_button" class="btn btn-sm btn-primary deactivated">
+                                        <i class="mdi mdi-android-messages mr-1"></i>Bulk SMS Message
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="filter-container float-right">
+                                <div class="dropdown">
+        
+                                    <div class="radio radio--inline">
+                                        <input type="radio" class="slipFilter" name="slipFilter" value="allSlip" checked id="allPayslips">
+                                        <label class="radio__label" for="allPayslips">With Loans</label>
+                                    </div>
+        
+                                    <div class="radio radio--inline">
+                                        <input type="radio" class="slipFilter" name="slipFilter" value="paidSlip" id="paidPayslisp">
+                                        <label class="radio__label" for="paidPayslisp">Without Loans</label>
+                                    </div>
+        
+                                    <div class="radio radio--inline d-none">
+                                        <input type="radio" class="slipFilter" name="slipFilter" value="pendingSlip" id="pendingPayslips">
+                                        <label class="radio__label" for="pendingPayslips">Pending</label>
+                                    </div>
+                                    
+        
+                                    <button class="btn btn-info dropdown-toggle payrollMonth" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      All Loan Types
+                                    </button>
+                                    <div class="dropdown-menu drop-txt" aria-labelledby="dropdownMenuButton">
+                                      <a class="dropdown-item" href="#">All Loan Types</a>
+                                      <a class="dropdown-item" href="#">Wezesha</a>
+                                      <a class="dropdown-item" href="#">Boresha</a>
+                                      <a class="dropdown-item" href="#">Mortgage</a>
+                                      <a class="dropdown-item" href="#">Elimu</a>
+                                      <a class="dropdown-item" href="#">Car</a>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 p-0">
+                            <div class="card table-custom-bg">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover bulk_sms_table table-custom spacing8" id="data-table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="pr-5">
+                                                        <div class="checkbox pr-5">
+                                                            <input type="checkbox" id="customCheckAll" onclick="checkAll(this)">
+                                                            <label class="checkbox__label" for="customCheckAll">All</label>
+                                                        </div>
+                                                    </th>
+                                                    <th>Name</th>
+                                                    <th>Phone</th>
+                                                    <th>Email</th>
+                                                    <th>Accounts</th>
+                                                    <th>Loan Credibility</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck1">
+                                                            <label class="checkbox__label" for="customCheck1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Amos Wele</a>
+                                                    </td>
+                                                    <td><a href="tel:0702663857">0702663857</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">amoswele@gmail.com</a></td>
+                                                    <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+        
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck2">
+                                                            <label class="checkbox__label" for="customCheck2"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td><a href="tel:0702365985">0702365985</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">sharon@gmail.com</a></td>
+                                                    <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+        
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck3">
+                                                            <label class="checkbox__label" for="customCheck3"></label>
+                                                        </div>
+                                                    </td>
+                                                    
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">cate kimotho</a>
+                                                    </td>
+                                                    <td><a href="tel:0702365972">0704525252</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">cate@gmail.com</a></td>
+                                                    <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck4">
+                                                            <label class="checkbox__label" for="customCheck4"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">jane stones</a>
+                                                    </td>
+                                                    <td><a href="tel:0702365972">0702525252</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">stones@gmail.com</a></td>
+                                                    <td>2 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck5">
+                                                            <label class="checkbox__label" for="customCheck5"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Gina Jean</a>
+                                                    </td>
+                                                    <td><a href="tel:0702365962">0702365962</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">gina@gmail.com</a></td>
+                                                    <td>2 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck6">
+                                                            <label class="checkbox__label" for="customCheck6"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Jib Weso</a>
+                                                    </td>
+                                                    <td><a href="tel:0702365962">0702365962</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">jib@gmail.com</a></td>
+                                                    <td>2 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck7">
+                                                            <label class="checkbox__label" for="customCheck7"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Job Kamau</a>
+                                                    </td>
+                                                    <td><a href="tel:0702365325">0702365325</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">job@gmail.com</a></td>
+                                                    <td>4 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck8">
+                                                            <label class="checkbox__label" for="customCheck8"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Innicent Apundo</a>
+                                                    </td>
+                                                    <td><a href="tel:0702361234">0702361234</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">apundo@gmail.com</a></td>
+                                                    <td>4 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck9">
+                                                            <label class="checkbox__label" for="customCheck9"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Moses Were</a>
+                                                    </td>
+                                                    <td><a href="tel:0702323056">0702323056</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">moses@gmail.com</a></td>
+                                                    <td>4 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck10">
+                                                            <label class="checkbox__label" for="customCheck10"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Jane Wambui</a>
+                                                    </td>
+                                                    <td><a href="tel:0702323202">0702323202</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">jane@gmail.com</a></td>
+                                                    <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck11">
+                                                            <label class="checkbox__label" for="customCheck11"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Jean Clowd</a>
+                                                    </td>
+                                                    <td><a href="tel:0702323859">0702323859</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">jean@gmail.com</a></td>
+                                                    <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck12">
+                                                            <label class="checkbox__label" for="customCheck12"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Dennis waweru</a>
+                                                    </td>
+                                                    <td><a href="tel:0702323888">0702323888</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">dennis@gmail.com</a></td>
+                                                    <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck13">
+                                                            <label class="checkbox__label" for="customCheck13"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Kin Wambui</a>
+                                                    </td>
+                                                    <td><a href="tel:0702323852">0705252563</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">kin@gmail.com</a></td>
+                                                    <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck14">
+                                                            <label class="checkbox__label" for="customCheck14"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td><a href="tel:0702323852">0702323852</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
+                                                    <td>5 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck15">
+                                                            <label class="checkbox__label" for="customCheck15"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td><a href="tel:0702323555">0702323555</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
+                                                    <td>8 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck16">
+                                                            <label class="checkbox__label" for="customCheck16"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td><a href="tel:0702323523">0702323523</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
+                                                    <td>8 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck17">
+                                                            <label class="checkbox__label" for="customCheck17"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td><a href="tel:0702323111">0702323111</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
+                                                    <td>8 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck18">
+                                                            <label class="checkbox__label" for="customCheck18"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td><a href="tel:0702323333">0702323333</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
+                                                    <td>6 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck19">
+                                                            <label class="checkbox__label" for="customCheck19"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td><a href="tel:0702323237">0702323237</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
+                                                    <td>6 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck20">
+                                                            <label class="checkbox__label" for="customCheck20"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td><a href="tel:0702323856">0702323856</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
+                                                    <td>6 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck21">
+                                                            <label class="checkbox__label" for="customCheck21"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td><a href="tel:0702323586">0702323586</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
+                                                    <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck22">
+                                                            <label class="checkbox__label" for="customCheck22"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td><a href="tel:0702663395">0702663395</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
+                                                    <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck23">
+                                                            <label class="checkbox__label" for="customCheck23"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td><a href="tel:0702663322">0702663322</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
+                                                    <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck24">
+                                                            <label class="checkbox__label" for="customCheck24"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td><a href="tel:0702663355">0702663355</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a></td>
+                                                    <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck25">
+                                                            <label class="checkbox__label" for="customCheck25"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Kelin Otati</a>
+                                                    </td>
+                                                    <td><a href="tel:0702663310">0702663310</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">kelin@gmail.com</a></td>
+                                                    <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" class="show_bulk_modal" id="customCheck26">
+                                                            <label class="checkbox__label" for="customCheck26"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">John Weru</a>
+                                                    </td>
+                                                    <td><a href="tel:0702663333">0702663333</a></td>
+                                                    <td><a href="mailto:kelvinnjuguna99@gmail.com">john@gmail.com</a></td>
+                                                    <td>3 Accounts <button class="btn btn-primary btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#new-member-account"><i class="zmdi zmdi-plus mr-2"></i>Create new account</button></td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="member-profile.html" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="footer hidden-xs-down">
+                        <center>
+                            <a class="nouveta-logoo" href="https://nouveta.tech/"><img src="demo/img/logo-files/logo2.png" target="new"></center>
+                        </a>
+                        </center>
+                        <p>Powered by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>
+                    </footer>
+                </section>
+        </main>
+
+        <!-- Older IE warning message -->
+            <!--[if IE]>
+                <div class="ie-warning">
+                    <h1>Warning!!</h1>
+                    <p>You are using an outdated version of Internet Explorer, please upgrade to any of the following web browsers to access this website.</p>
+
+                    <div class="ie-warning__downloads">
+                        <a href="http://www.google.com/chrome">
+                            <img src="img/browsers/chrome.png" alt="">
+                        </a>
+
+                        <a href="https://www.mozilla.org/en-US/firefox/new">
+                            <img src="img/browsers/firefox.png" alt="">
+                        </a>
+
+                        <a href="http://www.opera.com">
+                            <img src="img/browsers/opera.png" alt="">
+                        </a>
+
+                        <a href="https://support.apple.com/downloads/safari">
+                            <img src="img/browsers/safari.png" alt="">
+                        </a>
+
+                        <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">
+                            <img src="img/browsers/edge.png" alt="">
+                        </a>
+
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="img/browsers/ie.png" alt="">
+                        </a>
+                    </div>
+                    <p>Sorry for the inconvenience!</p>
+                </div>
+            <![endif]-->
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="vendors/jquery/jquery.min.js"></script>
+        <script src="vendors/popper.js/popper.min.js"></script>
+        <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+        <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+
+        <script src="vendors/flot/jquery.flot.js"></script>
+        <script src="vendors/flot/jquery.flot.resize.js"></script>
+        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+        <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
+        <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
+        <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
+        <script src="vendors/salvattore/salvattore.min.js"></script>
+        <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+		
+		 <script src="vendors/jquery-mask-plugin/jquery.mask.min.js"></script>
+        <script src="vendors/select2/js/select2.full.min.js"></script>
+        <script src="vendors/dropzone/dropzone.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/nouislider/nouislider.min.js"></script>
+        <script src="vendors/trumbowyg/trumbowyg.min.js"></script>
+        <script src="vendors/flatpickr/flatpickr.min.js"></script>
+        <script src="vendors/rateyo/jquery.rateyo.min.js"></script>
+        <script src="vendors/jquery-text-counter/textcounter.min.js"></script>
+        <script src="vendors/autosize/autosize.min.js"></script>
+        <script src="vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+
+        <!-- Charts and maps-->
+        <script src="demo/js/flot-charts/curved-line.js"></script>
+        <script src="demo/js/flot-charts/dynamic.js"></script>
+        <script src="demo/js/flot-charts/line.js"></script>
+        <script src="demo/js/flot-charts/chart-tooltips.js"></script>
+        <script src="demo/js/other-charts.js"></script>
+        <script src="demo/js/jqvmap.js"></script>
+		
+		<!--high chart-->
+		
+		 <!-- high charts -->
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/highcharts.js" integrity="sha512-PpL09bLaSaj5IzGNx6hsnjiIeLm9bL7Q9BB4pkhEvQSbmI0og5Sr/s7Ns/Ax4/jDrggGLdHfa9IbsvpnmoZYFA==" crossorigin="anonymous"></script>
+		 <!-- <script src="assets/libs/highcharts/highchart.js"></script> -->
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/data.min.js" integrity="sha512-z2pVXf6Q3w/tD7NnbA/u/EDW7X8VUISARx3mVRk0vGULcDRcfhA65veFZS3LWW3DM8l/MW2Oxu8PlqJa+Za4Hw==" crossorigin="anonymous"></script>    
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/drilldown.min.js" integrity="sha512-1F5YJc0seERSBvoF3csYQm+JO6qF9O+1hwUKBbOUKcRj3RnDAmKEEzuqPnCcLOtt/2h2CzsCbSy0bv0yuCfZNQ==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/exporting.min.js" integrity="sha512-DuFO4JhOrZK4Zz+4K0nXseP0K/daLNCrbGjSkRzK+Zibkblwqc0BYBQ1sTN7mC4Kg6vNqr8eMZwLgTcnKXF8mg==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/offline-exporting.min.js" integrity="sha512-5vKhOIyF4HBeTJQ4VvTAWGuAvGMp3BbDwD6CjzZPc0T/h4D8bqvvj+D/IYyJ1ua6s72VcuQ2fPEjBn+CHR6UWQ==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/export-data.min.js" integrity="sha512-JFLRyhQGrSpOOboAjCGEfEm0Z+GvPcucULDdEhRFoGtJJ439x64z/F1f6GTJM7+3PGqXqgkXNc6LO/04RGsW4w==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/accessibility.min.js" integrity="sha512-cN9FFspkIN+ZS37xvtrtP4jfDc7D1BA1ma9l2YPkV47Ac70t98RjOe9gR+2dCBUkiyamLLfFtqXH+/iL0fqhjw==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/es-modules/Series/ItemSeries.min.js" integrity="sha512-UnnyAAfaraMnJOILh+bwawPvAF4+bbOXAPcUv2OREvyYTdi8TPJ4UZ+Ip8IL3mMY+cAY/yzuzq+v/EvmoZx7iA==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/streamgraph.min.js" integrity="sha512-RjmbiCs5aaU692OGy4q5YbGnHmiGexQY54rMmsY2HbaHX6OJ5AxqAtDQ9lVGubnbz+UPanupAF3avZJKY2jNWg==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/series-label.min.js" integrity="sha512-ppfBb+ms2RL9FloNCD8c9mykruT6sI5ACsAdSgS69pDv/Dnn64LGewhmLnMVTCm3Zt5K2LXamZD4Ndr9EFUhMQ==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/annotations.min.js" integrity="sha512-Qq+ClgMyYirIBC34w/LXcHhviIf+DvBzPW7vi3Ekn/jHYArYe+6TCiFp74q7pkUEitJLF543JCgxVQ6ax4xBNg==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/bullet.min.js" integrity="sha512-RsB4WtWGLsMOVX4LGEqcG7TQHJBvD/wPgSYrN4zQUSvCzhubwAlxeXgFM1+ROQ7TzKfl0L6AbiBNXyRDBFKNoA==" crossorigin="anonymous"></script>
+		<script src="js/highcharts/theme1.js"></script>
+
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/data.js"></script>
+		<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/export-data.js"></script>
+		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+		<!--form validation-->
+		<script src="vendors/jq-validation/jquery.validate.min.js"></script>
+        <script src="vendors/jq-validation/additional-methods.min.js"></script>
+        
+        <!-- Vendors: Data tables -->
+        <script src="vendors/datatables/jquery.dataTables.min.js"></script>
+        <script src="vendors/datatables-buttons/dataTables.buttons.min.js"></script>
+        <script src="vendors/datatables-buttons/buttons.print.min.js"></script>
+        <script src="vendors/jszip/jszip.min.js"></script>
+        <script src="vendors/datatables-buttons/buttons.html5.min.js"></script>
+
+
+		<!-- high chart data -->
+		<script src="js/chart-data/all-loans.js"></script>
+		<script src="js/chart-data/loan-breakdown.js"></script>
+		<script src="js/chart-data/loan-summary.js"></script>
+		<script src="js/chart-data/active-loans.js"></script>
+		<script src="js/chart-data/perfomance.js"></script>
+		<script src="js/chart-data/ongoing-loans.js"></script>
+		<script src="js/chart-data/transaction-data.js"></script>
+		<script src="js/chart-data/members-activity.js"></script>
+		<script src="js/chart-data/transaction-activity.js"></script>
+
+		<script src="js/chart-data/thisMonthLoanPerfomance.js"></script>
+
+		<!-- <script src="js/highcharts/highcharts-more.js"></script> -->
+		<!--owl corousel-->
+		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
+		<script src="vendors/slick/slick.min.js"></script>
+
+        <!-- App functions and actions -->
+     	<script src="js/wow.js"></script>
+        <script src="js/app.min.js"></script>
+		<script src="js/main.js"></script>
+		
+		<!-- Html include -->
+		<script>
+			includeHTML();
+		</script>
+		
+		
+		<!--chart data scripts-->
+		
+		<script>
+
+
+
+		</script>
+    </body>
+
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:43 GMT -->
+</html>
