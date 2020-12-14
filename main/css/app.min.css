@@ -15869,3 +15869,7 @@ font-size: xx-large !important;
     min-width: 250px; 
     max-width: 160px;
 }
+
+.category_loan_filter{
+    max-width: 144px;
+}
