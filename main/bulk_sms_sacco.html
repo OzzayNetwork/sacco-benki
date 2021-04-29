@@ -70,7 +70,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="exampleModalLongTitle">Bulk Sms Message</h4>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Bulk Sms Message</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -84,7 +84,7 @@
                                         <small class="bulk_sms_char_count text-primary">0 Characters</small>
                                     </div>
                                     <textarea placeholder="Write message to send in bulk here"
-                                        class="form-control bulk_sms_text" cols="50"></textarea>
+                                        class="form-control bulk_sms_text"></textarea>
 
                                     <div class="checkbox mt-2">
                                         <input type="checkbox" class="" id="email_check">
@@ -94,29 +94,14 @@
                             </div>
 
                             <div class="bg-light p-4">
-                                <h4 class="mb-0">Billing</h4>
+                                <h5 class="mb-0"><strong>Bill Amount</strong></h5>
                                 <small class="mb-3">A message will cost 1 KSH for every 160 charaters per
                                     recepient.</small>
-                                <br class="pb-2">
-                                <div class="d-flex justify-content-between mt-2">
-                                    <span>
-                                        Recepients:
-                                    </span>
-                                    <strong class="members_selected text-black"></strong>
-                                </div>
-                                <div class="d-flex justify-content-between">
-                                    <span>
-                                        Character Cost:
-                                    </span>
-                                    <strong class="character_cost text-black"></strong>
-                                </div>
                                 <hr>
-                                <div class="d-flex justify-content-between">
-                                    <span>
-                                        <h5 class="mb-0">Amount</h5>
-                                    </span>
-                                    <h5><strong class="total_cost"></strong></h5>
-                                </div>
+                                <p>Recepients: <strong class="members_selected"></strong></p>
+                                <p>Character Cost: <strong class="character_cost"></strong></p>
+                                <p>Total Cost: <strong class="total_cost"></strong></p>
+
                             </div>
 
                         </form>
@@ -378,13 +363,13 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-12">
                         <span class="rev-title-container">
-                            <h1 class="text-capitalize stream_name m-0">Bulk SMS To Staff Members</h1>
+                            <h1 class="text-capitalize stream_name m-0">Bulk SMS To Sacco Members</h1>
                         </span>
                         <div class="">
                             <ol class="breadcrumb border-0">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                 <li class="breadcrumb-item"><a href="index.html">Bulk SMS</a></li>
-                                <li class="breadcrumb-item active">To Staff Members</li>
+                                <li class="breadcrumb-item active">To Sacco Members</li>
                             </ol>
                         </div>
                     </div>
@@ -400,6 +385,52 @@
             </header>
 
             <div class="row">
+                <div class="col-12">
+                    <div class="filter-container float-right">
+                        <div class="dropdown row">
+
+                            <div class="radio radio--inline" style=" margin-top: .5rem;">
+                                <input type="radio" class="loanFilter" name="loanFilter" value="all" checked id="all">
+                                <label class="radio__label" for="all">All</label>
+                            </div>
+
+                            <div class="radio radio--inline" style=" margin-top: .5rem;">
+                                <input type="radio" class="loanFilter" name="loanFilter" value="withLoans" checked
+                                    id="withLoans">
+                                <label class="radio__label" for="withLoans">With Loans</label>
+                            </div>
+
+                            <div class="radio radio--inline">
+                                <input type="radio" class="loanFilter" name="loanFilter" value="withoutLoans"
+                                    id="withoutLoans">
+                                <label class="radio__label" for="withoutLoans">Without Loans</label>
+                            </div>
+
+                            <div class="category_loan_filter">
+                                <select class="selectpicker form-control show-tick" data-live-search="true">
+                                    <option data-tokens="select">All Loan Types</option>
+                                    <option data-tokens="option 1">Wezesha</option>
+                                    <option data-tokens="option 2">Boresha</option>
+                                    <option data-tokens="option 3">Mortgage</option>
+                                    <option data-tokens="option 4">Elimu</option>
+                                    <option data-tokens="option 4">Car</option>
+
+                                </select>
+                            </div>
+
+                            <div class="category_loan_filter">
+                                <select class="selectpicker form-control show-tick" data-live-search="true">
+                                    <option data-tokens="select">Account Type</option>
+                                    <option data-tokens="option 1">FOSA</option>
+                                    <option data-tokens="option 2">Wekeza</option>
+                                    <option data-tokens="option 3">Wekaweka</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-12 p-0">
                     <div class="card table-custom-bg">
                         <div class="card-header d-flex justify-content-between">
@@ -425,6 +456,8 @@
                                             <th>Name</th>
                                             <th>Phone</th>
                                             <th>Email</th>
+                                            <th>Loan Status</th>
+                                            <th>Loan Credibility</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
@@ -441,6 +474,11 @@
                                             </td>
                                             <td><a href="tel:0702663857">0702663857</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">amoswele@gmail.com</a></td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
                                             <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
@@ -460,6 +498,11 @@
                                             </td>
                                             <td><a href="tel:0702365985">0702365985</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">sharon@gmail.com</a></td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
                                             <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
@@ -481,6 +524,11 @@
                                             <td><a href="tel:0702365972">0704525252</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">cate@gmail.com</a></td>
                                             <td>
+                                                <span class="badge badge-pill badge-light p-2"><a class="text-danger">No
+                                                        Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
+                                            <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
                                                         class="zmdi zmdi-eye mr-2"></i>View profile</a>
@@ -498,6 +546,11 @@
                                             </td>
                                             <td><a href="tel:0702365972">0702525252</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">stones@gmail.com</a></td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
                                             <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
@@ -517,6 +570,11 @@
                                             <td><a href="tel:0702365962">0702365962</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">gina@gmail.com</a></td>
                                             <td>
+                                                <span class="badge badge-pill badge-light p-2"><a class="text-danger">No
+                                                        Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
+                                            <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
                                                         class="zmdi zmdi-eye mr-2"></i>View profile</a>
@@ -534,6 +592,11 @@
                                             </td>
                                             <td><a href="tel:0702365962">0702365962</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">jib@gmail.com</a></td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
                                             <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
@@ -553,6 +616,11 @@
                                             <td><a href="tel:0702365325">0702365325</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">job@gmail.com</a></td>
                                             <td>
+                                                <span class="badge badge-pill badge-light p-2"><a class="text-danger">No
+                                                        Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
+                                            <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
                                                         class="zmdi zmdi-eye mr-2"></i>View profile</a>
@@ -570,6 +638,11 @@
                                             </td>
                                             <td><a href="tel:0702361234">0702361234</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">apundo@gmail.com</a></td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
                                             <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
@@ -589,6 +662,11 @@
                                             <td><a href="tel:0702323056">0702323056</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">moses@gmail.com</a></td>
                                             <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
+                                            <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
                                                         class="zmdi zmdi-eye mr-2"></i>View profile</a>
@@ -606,6 +684,11 @@
                                             </td>
                                             <td><a href="tel:0702323202">0702323202</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">jane@gmail.com</a></td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a class="text-danger">No
+                                                        Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
                                             <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
@@ -625,6 +708,11 @@
                                             <td><a href="tel:0702323859">0702323859</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">jean@gmail.com</a></td>
                                             <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
+                                            <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
                                                         class="zmdi zmdi-eye mr-2"></i>View profile</a>
@@ -643,6 +731,11 @@
                                             <td><a href="tel:0702323888">0702323888</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">dennis@gmail.com</a></td>
                                             <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
+                                            <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
                                                         class="zmdi zmdi-eye mr-2"></i>View profile</a>
@@ -660,6 +753,11 @@
                                             </td>
                                             <td><a href="tel:0702323852">0705252563</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kin@gmail.com</a></td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a class="text-danger">No
+                                                        Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
                                             <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
@@ -680,6 +778,11 @@
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
                                             </td>
                                             <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
+                                            <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
                                                         class="zmdi zmdi-eye mr-2"></i>View profile</a>
@@ -698,6 +801,11 @@
                                             <td><a href="tel:0702323555">0702323555</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
                                             </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
                                             <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
@@ -718,6 +826,11 @@
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
                                             </td>
                                             <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
+                                            <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
                                                         class="zmdi zmdi-eye mr-2"></i>View profile</a>
@@ -736,6 +849,11 @@
                                             <td><a href="tel:0702323111">0702323111</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
                                             </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
                                             <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
@@ -756,6 +874,11 @@
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
                                             </td>
                                             <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
+                                            <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
                                                         class="zmdi zmdi-eye mr-2"></i>View profile</a>
@@ -774,6 +897,11 @@
                                             <td><a href="tel:0702323237">0702323237</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
                                             </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
                                             <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
@@ -794,6 +922,11 @@
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
                                             </td>
                                             <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
+                                            <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
                                                         class="zmdi zmdi-eye mr-2"></i>View profile</a>
@@ -812,6 +945,11 @@
                                             <td><a href="tel:0702323586">0702323586</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
                                             </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
                                             <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
@@ -832,6 +970,11 @@
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
                                             </td>
                                             <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
+                                            <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
                                                         class="zmdi zmdi-eye mr-2"></i>View profile</a>
@@ -850,6 +993,11 @@
                                             <td><a href="tel:0702663322">0702663322</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
                                             </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
                                             <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
@@ -870,6 +1018,11 @@
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
                                             </td>
                                             <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
+                                            <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
                                                         class="zmdi zmdi-eye mr-2"></i>View profile</a>
@@ -888,6 +1041,11 @@
                                             <td><a href="tel:0702663310">0702663310</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">kelin@gmail.com</a></td>
                                             <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
+                                            <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i
                                                         class="zmdi zmdi-eye mr-2"></i>View profile</a>
@@ -905,6 +1063,11 @@
                                             </td>
                                             <td><a href="tel:0702663333">0702663333</a></td>
                                             <td><a href="mailto:kelvinnjuguna99@gmail.com">john@gmail.com</a></td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Has Loan</a></span>
+                                            </td>
+                                            <td class="text-capitalize">KES 10,230</td>
                                             <td>
                                                 <a href="member-profile.html"
                                                     class="btn btn-primary btn-sm btn--icon-text"><i

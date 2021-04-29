@@ -65,65 +65,42 @@
         </div>
 
         <!-- create account -->
-        <div class="modal fade" id="bulk_sms_modal" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="sent_sms" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="exampleModalLongTitle">Bulk Sms Message</h4>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Sent Message</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form>
-                            <div class="col-lg-12 p-0 col-md-12">
-                                <div class="form-group">
-                                    <div class="d-flex justify-content-between">
-                                        <label class="font-weight-bold">Enter message to send?</label>
-                                        <small class="bulk_sms_char_count text-primary">0 Characters</small>
-                                    </div>
-                                    <textarea placeholder="Write message to send in bulk here"
-                                        class="form-control bulk_sms_text" cols="50"></textarea>
-
-                                    <div class="checkbox mt-2">
-                                        <input type="checkbox" class="" id="email_check">
-                                        <label class="checkbox__label" for="email_check">Send via email as well</label>
-                                    </div>
-                                </div>
-                            </div>
-
+                        <div class="col-lg-12 p-0 col-md-12">
+                            <p><strong class="">Sender:</strong> John Mwakili</p>
+                            <hr>
+                            <p><strong class="">Date:</strong> 24th Apr 2020</p>
+                            <hr>
+                            <p><strong>Message: </strong></p>
                             <div class="bg-light p-4">
-                                <h4 class="mb-0">Billing</h4>
-                                <small class="mb-3">A message will cost 1 KSH for every 160 charaters per
-                                    recepient.</small>
-                                <br class="pb-2">
-                                <div class="d-flex justify-content-between mt-2">
-                                    <span>
-                                        Recepients:
-                                    </span>
-                                    <strong class="members_selected text-black"></strong>
-                                </div>
-                                <div class="d-flex justify-content-between">
-                                    <span>
-                                        Character Cost:
-                                    </span>
-                                    <strong class="character_cost text-black"></strong>
-                                </div>
-                                <hr>
-                                <div class="d-flex justify-content-between">
-                                    <span>
-                                        <h5 class="mb-0">Amount</h5>
-                                    </span>
-                                    <h5><strong class="total_cost"></strong></h5>
-                                </div>
-                            </div>
+                                <p>Paragraphs are the building blocks of papers. Many students define paragraphs in
+                                    terms of length: a paragraph is a group of at least five sentences, a paragraph is
+                                    half a page long, etc. In reality, though, the unity and coherence of ideas among
+                                    sentences is what constitutes a paragraph. A paragraph is defined as “a group of
+                                    sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length
+                                    and appearance do not determine whether a section in a paper is a paragraph. For
+                                    instance, in some styles of writing, particularly journalistic styles, a paragraph
+                                    can be just one sentence long. Ultimately, a paragraph is a sentence or group of
+                                    sentences that support one main idea. In this handout, we will refer to this as the
+                                    “controlling idea,” because it controls what happens in the rest of the paragraph.
+                                </p>
 
-                        </form>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                        <a href="sent_text.html" class="btn btn-success">Send Message</a>
                     </div>
                 </div>
             </div>
@@ -206,7 +183,7 @@
                     </div>
 
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="my-profile.html">View Profile</a>
+                        <a class="dropdown-item" href="my-profile.html">View Details</a>
                         <a class="dropdown-item d-none" href="#">Settings</a>
                         <a class="dropdown-item" href="landing-page.html">Logout</a>
                     </div>
@@ -378,537 +355,586 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-12">
                         <span class="rev-title-container">
-                            <h1 class="text-capitalize stream_name m-0">Bulk SMS To Staff Members</h1>
+                            <h1 class="text-capitalize stream_name m-0">SMS History</h1>
                         </span>
                         <div class="">
                             <ol class="breadcrumb border-0">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                 <li class="breadcrumb-item"><a href="index.html">Bulk SMS</a></li>
-                                <li class="breadcrumb-item active">To Staff Members</li>
+                                <li class="breadcrumb-item active">SMS History</li>
                             </ol>
-                        </div>
-                    </div>
-                    <div class="col-4 col-sm-12 col-md-4">
-                        <div class="section-header">
-                            <button href="#" type="button" disabled data-toggle="modal" data-target="#bulk_sms_modal"
-                                id="bulk_button" class="btn btn-sm btn-primary deactivated">
-                                <i class="mdi mdi-android-messages mr-1"></i>Bulk SMS Message
-                            </button>
                         </div>
                     </div>
                 </div>
             </header>
 
             <div class="row">
+                <div class="col-12">
+                    <div class="filter-container float-right">
+                        <div class="dropdown row">
+
+                            <div class="radio radio--inline" style=" margin-top: .5rem;">
+                                <input type="radio" class="loanFilter" name="loanFilter" value="all" checked id="all">
+                                <label class="radio__label" for="all">All</label>
+                            </div>
+
+                            <div class="radio radio--inline" style=" margin-top: .5rem;">
+                                <input type="radio" class="loanFilter" name="loanFilter" value="withLoans" checked
+                                    id="withLoans">
+                                <label class="radio__label" for="withLoans">Pending</label>
+                            </div>
+
+                            <div class="radio radio--inline">
+                                <input type="radio" class="loanFilter" name="loanFilter" value="withoutLoans"
+                                    id="withoutLoans">
+                                <label class="radio__label" for="withoutLoans">Sent</label>
+                            </div>
+                            <div class="category_loan_filter">
+                                <select class="selectpicker form-control show-tick" data-live-search="true">
+                                    <option data-tokens="select">All</option>
+                                    <option data-tokens="option 1">Staff Members</option>
+                                    <option data-tokens="option 2">Sacco Members</option>
+                                </select>
+                            </div>
+                            <div class="category_loan_filter">
+                                <input type="text" class="form-control datetime-picker mr-2" placeholder="Select date">
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-12 p-0">
                     <div class="card table-custom-bg">
-                        <div class="card-header d-flex justify-content-between">
-                            <span>
-                                <h4 class="members_selected_title">Number Members Selected</h4>
-                                <p class="members_selected mb-0"></p>
-                            </span>
-                            <span class="d-flex align-items-center">
-                                <h6>Text Balance: <strong class="text-amount">KES 1,500</strong></h6>
-                            </span>
-                        </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-hover bulk_sms_table table-custom spacing8" id="bulk_sms">
                                     <thead>
                                         <tr>
-                                            <th class="pr-5">
-                                                <div class="checkbox pr-5">
-                                                    <input type="checkbox" id="customCheckAll" onclick="checkAll(this)">
-                                                    <label class="checkbox__label" for="customCheckAll">All</label>
-                                                </div>
-                                            </th>
                                             <th>Name</th>
-                                            <th>Phone</th>
-                                            <th>Email</th>
-                                            <th>Actions</th>
+                                            <th>Contact</th>
+                                            <th>Delivery Status</th>
+                                            <th>Date Sent</th>
+                                            <th>Message</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck1">
-                                                    <label class="checkbox__label" for="customCheck1"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Amos Wele</a>
                                             </td>
-                                            <td><a href="tel:0702663857">0702663857</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">amoswele@gmail.com</a></td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <p class="mb-0 mt-0"><a href="tel:0702663857">0702663857</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">amoswele@gmail.com</a>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
 
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck2">
-                                                    <label class="checkbox__label" for="customCheck2"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Sharon Wambui</a>
                                             </td>
-                                            <td><a href="tel:0702365985">0702365985</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">sharon@gmail.com</a></td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <p class="mb-0 mt-0"><a href="tel:0702365985">0702365985</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">sharon@gmail.com</a></p>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
 
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck3">
-                                                    <label class="checkbox__label" for="customCheck3"></label>
-                                                </div>
-                                            </td>
 
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">cate kimotho</a>
                                             </td>
-                                            <td><a href="tel:0702365972">0704525252</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">cate@gmail.com</a></td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <p class="mb-0 mt-0"><a href="tel:0702365972">04525252</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">cate@gmail.com</a></p>
                                             </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-danger">Pending</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
+                                                </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck4">
-                                                    <label class="checkbox__label" for="customCheck4"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">jane stones</a>
                                             </td>
-                                            <td><a href="tel:0702365972">0702525252</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">stones@gmail.com</a></td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <p class="mb-0 mt-0"><a href="tel:0702365972">0702525252</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">stones@gmail.com</a></p>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck5">
-                                                    <label class="checkbox__label" for="customCheck5"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Gina Jean</a>
                                             </td>
-                                            <td><a href="tel:0702365962">0702365962</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">gina@gmail.com</a></td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <p class="mb-0 mt-0"><a href="tel:0702365962">0702365962</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">gina@gmail.com</a></p>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-danger">Pending</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck6">
-                                                    <label class="checkbox__label" for="customCheck6"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Jib Weso</a>
                                             </td>
-                                            <td><a href="tel:0702365962">0702365962</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">jib@gmail.com</a></td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <p class="mb-0 mt-0"><a href="tel:0702365962">0702365962</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">jib@gmail.com</a></p>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck7">
-                                                    <label class="checkbox__label" for="customCheck7"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Job Kamau</a>
                                             </td>
-                                            <td><a href="tel:0702365325">0702365325</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">job@gmail.com</a></td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <p class="mb-0 mt-0"><a href="tel:0702365325">0702365325</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">job@gmail.com</a></p>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-danger">Pending</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck8">
-                                                    <label class="checkbox__label" for="customCheck8"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Innicent Apundo</a>
                                             </td>
-                                            <td><a href="tel:0702361234">0702361234</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">apundo@gmail.com</a></td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <p class="mb-0 mt-0"><a href="tel:0702361234">0702361234</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">apundo@gmail.com</a></p>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck9">
-                                                    <label class="checkbox__label" for="customCheck9"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Moses Were</a>
                                             </td>
-                                            <td><a href="tel:0702323056">0702323056</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">moses@gmail.com</a></td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <p class="mb-0 mt-0"><a href="tel:0702323056">0702323056</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">moses@gmail.com</a></p>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck10">
-                                                    <label class="checkbox__label" for="customCheck10"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Jane Wambui</a>
                                             </td>
-                                            <td><a href="tel:0702323202">0702323202</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">jane@gmail.com</a></td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <p class="mb-0 mt-0"><a href="tel:0702323202">0702323202</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">jane@gmail.com</a></p>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-danger">Pending</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck11">
-                                                    <label class="checkbox__label" for="customCheck11"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Jean Clowd</a>
                                             </td>
-                                            <td><a href="tel:0702323859">0702323859</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">jean@gmail.com</a></td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <p class="mb-0 mt-0"><a href="tel:0702323859">0702323859</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">jean@gmail.com</a></p>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck12">
-                                                    <label class="checkbox__label" for="customCheck12"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Dennis waweru</a>
                                             </td>
-                                            <td><a href="tel:0702323888">0702323888</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">dennis@gmail.com</a></td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <p class="mb-0 mt-0"><a href="tel:0702323888">0702323888</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">dennis@gmail.com</a></p>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck13">
-                                                    <label class="checkbox__label" for="customCheck13"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Kin Wambui</a>
                                             </td>
-                                            <td><a href="tel:0702323852">0705252563</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">kin@gmail.com</a></td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <p class="mb-0 mt-0"><a href="tel:0702323852">0705252563</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">kin@gmail.com</a></p>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-danger">Pending</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck14">
-                                                    <label class="checkbox__label" for="customCheck14"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Sharon Wambui</a>
                                             </td>
-                                            <td><a href="tel:0702323852">0702323852</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
+                                            <td>
+                                                <p class="mb-0 mt-0"><a href="tel:0702323852">0702323852</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.co
+                                                </p>
+                                            </td>
                                             </td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck15">
-                                                    <label class="checkbox__label" for="customCheck15"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Sharon Wambui</a>
                                             </td>
-                                            <td><a href="tel:0702323555">0702323555</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
+                                            <td>
+                                                <p class="mb-0 mt-0"><a href="tel:0702323555">0702323555</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.co
+                                                </p>
+                                            </td>
                                             </td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck16">
-                                                    <label class="checkbox__label" for="customCheck16"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Sharon Wambui</a>
                                             </td>
-                                            <td><a href="tel:0702323523">0702323523</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
+                                            <td>
+                                                <p class="mb-0 mt-0"><a href="tel:0702323523">0702323523</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.co
+                                                </p>
+                                            </td>
                                             </td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck17">
-                                                    <label class="checkbox__label" for="customCheck17"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Sharon Wambui</a>
                                             </td>
-                                            <td><a href="tel:0702323111">0702323111</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
+                                            <td>
+                                                <p class="mb-0 mt-0"><a href="tel:0702323111">0702323111</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.co
+                                                </p>
+                                            </td>
                                             </td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck18">
-                                                    <label class="checkbox__label" for="customCheck18"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Sharon Wambui</a>
                                             </td>
-                                            <td><a href="tel:0702323333">0702323333</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
+                                            <td>
+                                                <p class="mb-0 mt-0"><a href="tel:0702323333">0702323333</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.co
+                                                </p>
+                                            </td>
                                             </td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck19">
-                                                    <label class="checkbox__label" for="customCheck19"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Sharon Wambui</a>
                                             </td>
-                                            <td><a href="tel:0702323237">0702323237</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
+                                            <td>
+                                                <p class="mb-0 mt-0"><a href="tel:0702323237">0702323237</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.co
+                                                </p>
+                                            </td>
                                             </td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck20">
-                                                    <label class="checkbox__label" for="customCheck20"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Sharon Wambui</a>
                                             </td>
-                                            <td><a href="tel:0702323856">0702323856</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
+                                            <td>
+                                                <p class="mb-0 mt-0"><a href="tel:0702323856">0702323856</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.co
+                                                </p>
+                                            </td>
                                             </td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck21">
-                                                    <label class="checkbox__label" for="customCheck21"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Sharon Wambui</a>
                                             </td>
-                                            <td><a href="tel:0702323586">0702323586</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
+                                            <td>
+                                                <p class="mb-0 mt-0"><a href="tel:0702323586">0702323586</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.co
+                                                </p>
+                                            </td>
                                             </td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck22">
-                                                    <label class="checkbox__label" for="customCheck22"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Sharon Wambui</a>
                                             </td>
-                                            <td><a href="tel:0702663395">0702663395</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
+                                            <td>
+                                                <p class="mb-0 mt-0"><a href="tel:0702663395">0702663395</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.co
+                                                </p>
+                                            </td>
                                             </td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck23">
-                                                    <label class="checkbox__label" for="customCheck23"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Sharon Wambui</a>
                                             </td>
-                                            <td><a href="tel:0702663322">0702663322</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
+                                            <td>
+                                                <p class="mb-0 mt-0"><a href="tel:0702663322">0702663322</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.co
+                                                </p>
+                                            </td>
                                             </td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck24">
-                                                    <label class="checkbox__label" for="customCheck24"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Sharon Wambui</a>
                                             </td>
-                                            <td><a href="tel:0702663355">0702663355</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.com</a>
+                                            <td>
+                                                <p class="mb-0 mt-0"><a href="tel:0702663355">0702663355</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">kelvinnjuguna99@gmail.co
+                                                </p>
+                                            </td>
                                             </td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck25">
-                                                    <label class="checkbox__label" for="customCheck25"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">Kelin Otati</a>
                                             </td>
-                                            <td><a href="tel:0702663310">0702663310</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">kelin@gmail.com</a></td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <p class="mb-0 mt-0"><a href="tel:0702663310">0702663310</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">kelin@gmail.com</a></p>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" class="show_bulk_modal" id="customCheck26">
-                                                    <label class="checkbox__label" for="customCheck26"></label>
-                                                </div>
-                                            </td>
                                             <td class="w60">
                                                 <a title="" href="member-profile.html">John Weru</a>
                                             </td>
-                                            <td><a href="tel:0702663333">0702663333</a></td>
-                                            <td><a href="mailto:kelvinnjuguna99@gmail.com">john@gmail.com</a></td>
                                             <td>
-                                                <a href="member-profile.html"
-                                                    class="btn btn-primary btn-sm btn--icon-text"><i
-                                                        class="zmdi zmdi-eye mr-2"></i>View profile</a>
+                                                <p class="mb-0 mt-0"><a href="tel:0702663333">0702663333</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">john@gmail.com</a></p>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-pill badge-light p-2"><a
+                                                        class="text-success">Received</a></span>
+                                            </td>
+                                            <td>25th April 2021</td>
+                                            <td class="text-capitalize">
+                                                <button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#sent_sms">Sent Message</button>
                                             </td>
                                         </tr>
                                     </tbody>

@@ -47,32 +47,34 @@
         <div class="page-loader">
             <div class="page-loader__spinner">
                 <svg class="d-none" viewBox="25 25 50 50">
-                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
-                    </svg>
+                    <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                </svg>
                 <img src="demo/img/gifs/preloader.gif">
             </div>
             <span class="powerd-container">
-					<strong class="mb-2">Sacco Benki By</strong>
-					<img src="demo/img/logo-files/nouveta-orange.svg">
-					
-				</span>
+                <strong class="mb-2">Sacco Benki By</strong>
+                <img src="demo/img/logo-files/nouveta-orange.svg">
+
+            </span>
         </div>
 
         <!-- create account -->
-        <div class="modal fade" id="new-member-account2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="new-member-account2" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">New Account</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					  </button>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <div class="modal-body">
 
                         <div class="form-group">
                             <label for="member-no">Member's Number</label>
-                            <input type="text" class="form-control" id="member-no" placeholder="Enter member's number to continue" required>
+                            <input type="text" class="form-control" id="member-no"
+                                placeholder="Enter member's number to continue" required>
                             <small id="emailHelp" class="form-text text-danger d-none">Error Message goes here</small>
                         </div>
 
@@ -136,8 +138,10 @@
             </form>
 
             <ul class="top-nav">
-                <li><button data-toggle="modal" data-target="#new-member-account2" class="btn btn-light text-black"><i class="zmdi zmdi-plus mr-2"></i>New Member Account</button></li>
-                <li class="hidden-xl-up"><a href="#" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
+                <li><button data-toggle="modal" data-target="#new-member-account2" class="btn btn-light text-black"><i
+                            class="zmdi zmdi-plus mr-2"></i>New Member Account</button></li>
+                <li class="hidden-xl-up"><a href="#" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a>
+                </li>
 
                 <li data-toggle="tooltip" data-original-title="Notifications" class="dropdown top-nav__notifications">
                     <a href="#" data-toggle="dropdown" class="top-nav__notify">
@@ -150,164 +154,186 @@
 
         </header>
 
-			    <aside class="sidebar">
-					<div class="scrollbar-inner">
-						<div class="user">
-							<div class="user__info" data-toggle="dropdown">
-								<img class="user__img" src="demo/img/icon-rules.png" alt="">
-								<div>
-									<div class="user__name">John Mwakili</div>
-									<div class="user__email">john@gmail.com</div>
-								</div>
-							</div>
+        <!-- Side bar -->
+        <aside class="sidebar">
+            <div class="scrollbar-inner">
+                <div class="user">
+                    <div class="user__info" data-toggle="dropdown">
+                        <img class="user__img" src="demo/img/icon-rules.png" alt="">
+                        <div>
+                            <div class="user__name">John Mwakili</div>
+                            <div class="user__email">john@gmail.com</div>
+                        </div>
+                    </div>
 
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="my-profile.html">View Profile</a>
-								<a class="dropdown-item d-none" href="#">Settings</a>
-								<a class="dropdown-item" href="landing-page.html">Logout</a>
-							</div>
-						</div>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="my-profile.html">View Profile</a>
+                        <a class="dropdown-item d-none" href="#">Settings</a>
+                        <a class="dropdown-item" href="landing-page.html">Logout</a>
+                    </div>
+                </div>
 
-						<ul class="navigation">
-							<li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-view-dashboard"></i>Home</a></li>
-							<li class="navigation__sub">
-								<a href="#"><i class="pe-7s-id"></i>Members</a>
-								<ul>
-									<li><a href="members.html" title="members register">Registered Members</a></li>
-									<li><a href="new-member.html" title="add new member">RegisterNew Members</a></li>
-									<li><a href="bulk_sms.html" title="bulk SMS">Bulk SMS</a></li>
-								</ul>
-							</li>
+                <ul class="navigation">
+                    <li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-view-dashboard"></i>Home</a>
+                    </li>
+                    <li class="navigation__sub">
+                        <a href="#"><i class="pe-7s-id"></i>Members</a>
+                        <ul>
+                            <li><a href="members.html" title="members register">Registered Members</a></li>
+                            <li><a href="new-member.html" title="add new member">RegisterNew Members</a></li>
+                        </ul>
+                    </li>
 
-							<li class="navigation__sub">
-								<a href="#"><i class="mdi mdi-account-cash"></i>Front Office</a>
-								<ul>
-									<li><a href="deposit-cash.html" title="deposit cash to members account">Deposit Cash</a></li>
-									<li><a href="#" title="Get member statements"  data-toggle="modal" data-target="#searchMember">Member statements</a></li>
-									<li><a href="withdraw-cash.html"title="withdraw cash from member's account">Withdraw Cash</a></li>
+                    <li class="navigation__sub">
+                        <a href="#"><i class="pe-7s-mail"></i>Bulk SMS</a>
+                        <ul>
+                            <li><a href="bulk_sms.html" title="members register">To Staff Members</a></li>
+                            <li><a href="bulk_sms_sacco.html" title="add new member">To Sacco Members</a></li>
+                            <li><a href="custom_sms.html" title="bulk SMS">Custom SMS</a></li>
+                            <li><a href="sms_history.html" title="bulk SMS">SMS History</a></li>
+                        </ul>
+                    </li>
 
-									
-								</ul>
-							</li>
-							
-							<li class="navigation__sub">
-								<a href="#"><i class="flaticon-briefcase"></i>Accounts</a>
-								<ul>
-									<li class="d-none"><a href="account.html">Share Capital</a></li>
-									<li class="d-none"><a href="account.html">Deposit account</a></li>
-									<li class="d-none"><a href="account-html">Savings</a></li>
-									<li><a href="accounts-list.html" title="set up new account">Sacco Accounts</a></li>
-									<li><a href="frozen-accounts.html" title="set up new account">Frozen Accounts</a></li>
-									<li><a href="new-account.html" title="set up new account">New account setup</a></li>
-								</ul>
-							</li>
-							
-							<li class="navigation__sub">
-								<a href="#"><i class="flaticon-money"></i>Loans</a>
-								<ul>
-									<li class=""><a href="loan-setup.html">Loan setup</a></li>
-									<li class="d-none"><a href="loan-types.html">Loan types</a></li>
-									<li><a href="loan-application.html">New Loan application</a></li>
-									<li><a href="loan-appraisal.html">Awaiting Appraisal</a></li>
-									<li><a href="loan-approval.html">Awaiting Approval</a></li>
-									<li><a href="loan-disbursment.html">Awaiting Disbursement</a></li>
+                    <li class="navigation__sub">
+                        <a href="#"><i class="mdi mdi-account-cash"></i>Front Office</a>
+                        <ul>
+                            <li><a href="deposit-cash.html" title="deposit cash to members account">Deposit Cash</a>
+                            </li>
+                            <li><a href="#" title="Get member statements" data-toggle="modal"
+                                    data-target="#searchMember">Member statements</a></li>
+                            <li><a href="withdraw-cash.html" title="withdraw cash from member's account">Withdraw
+                                    Cash</a></li>
 
-									<li><a href="active-loans.html">Active Loans</a></li>
-									<li><a href="ongoing-loans.html">Ongoing Applications</a></li>
-									<li><a href="re-evaluation-loan-applications.html">Under Re-evaluation</a></li>
-									<li><a href="declined-loan-applications.html">Declined Applications</a></li>
-									<li><a href="loan-types.html">Loan products</a></li>
-									
-								</ul>
-							</li>
 
-													
-							<li class="navigation__sub">
-								<a href="#"><i class="zmdi zmdi-swap"></i>Transactions</a>
-								<ul>
-									<li><a href="all-transactions.html">All</a></li>
-									<li><a href="deposit-transactions.html">Deposits</a></li>
-									<li><a href="withdraw-transactions.html">Withdrawals</a></li>
-									<li><a href="reconciled.html">Reconciled</a></li>
-									<li><a href="unreconciled.html">Unreconciled</a></li>
+                        </ul>
+                    </li>
 
-									
-								</ul>
-							</li>
+                    <li class="navigation__sub">
+                        <a href="#"><i class="flaticon-briefcase"></i>Accounts</a>
+                        <ul>
+                            <li class="d-none"><a href="account.html">Share Capital</a></li>
+                            <li class="d-none"><a href="account.html">Deposit account</a></li>
+                            <li class="d-none"><a href="account-html">Savings</a></li>
+                            <li><a href="accounts-list.html" title="set up new account">Sacco Accounts</a></li>
+                            <li><a href="frozen-accounts.html" title="set up new account">Frozen Accounts</a></li>
+                            <li><a href="new-account.html" title="set up new account">New account setup</a></li>
+                        </ul>
+                    </li>
 
-						
-							<li class="navigation__sub">
-								<a href="#"><i class="mdi mdi-cog-outline"></i>Setups</a>
-								<ul>
-									<li class=""><a href="mdaSetup.html">MDA Setup</a></li>
-									
-								</ul>
-							</li>
+                    <li class="navigation__sub">
+                        <a href="#"><i class="flaticon-money"></i>Loans</a>
+                        <ul>
+                            <li class=""><a href="loan-setup.html">Loan setup</a></li>
+                            <li class="d-none"><a href="loan-types.html">Loan types</a></li>
+                            <li><a href="loan-application.html">New Loan application</a></li>
+                            <li><a href="loan-appraisal.html">Awaiting Appraisal</a></li>
+                            <li><a href="loan-approval.html">Awaiting Approval</a></li>
+                            <li><a href="loan-disbursment.html">Awaiting Disbursement</a></li>
 
-							<li class="navigation__sub">
-								<a href="#"><i class="pe-7s-note2"></i>Reports</a>
-								<ul>
-									<li><a href="interests.html">Interests</a></li>
-									<li><a href="recovered-loans.html">Recovered Loans</a></li>
-									<li><a href="creditor.html">Creditors</a></li>
-									<li><a href="MDA-List.html">MDA List</a></li>
-									<li><a href="messages_sent.html">Messages Sent</a></li>
-									
-								</ul>
-							</li>
-							
-							<li class="navigation__active mt-4"><a href="landing-page.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
-						</ul>
-					</div>
+                            <li><a href="active-loans.html">Active Loans</a></li>
+                            <li><a href="ongoing-loans.html">Ongoing Applications</a></li>
+                            <li><a href="re-evaluation-loan-applications.html">Under Re-evaluation</a></li>
+                            <li><a href="declined-loan-applications.html">Declined Applications</a></li>
+                            <li><a href="loan-types.html">Loan products</a></li>
 
-					<!-- universal modals -->
+                        </ul>
+                    </li>
 
-					<!-- search for member -->
-					<div class="modal fade" id="searchMember" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-							</div>
-							<div class="modal-body">
-							<div class="row">
-								<div class="col-12">
-									<p>Enter member number in order to continue</p>
-								</div>
-								<div class="col-12">
-									<div class="form-group">
-										<label>Member Number</label>
-										<input type="text" class="form-control form-control-lg" placeholder="Enter Account Number">
-									</div>
-								</div>
 
-								<div class="col-6">
-									<div class="form-group">
-										<label><strong>Date from</strong></label>
-										<input type="text" class="form-control date-picker hidden-sm-down flatpickr-input" placeholder="Select Date from" readonly>
-									</div>
-								</div>
+                    <li class="navigation__sub">
+                        <a href="#"><i class="zmdi zmdi-swap"></i>Transactions</a>
+                        <ul>
+                            <li><a href="all-transactions.html">All</a></li>
+                            <li><a href="deposit-transactions.html">Deposits</a></li>
+                            <li><a href="withdraw-transactions.html">Withdrawals</a></li>
+                            <li><a href="reconciled.html">Reconciled</a></li>
+                            <li><a href="unreconciled.html">Unreconciled</a></li>
 
-								<div class="col-6">
-									<div class="form-group">
-										<label><strong>Date to</strong></label>
-										<input type="text" class="form-control form-control date-picker hidden-sm-down flatpickr-input" readonly placeholder="Select Date To">
-									</div>
-								</div>
 
-							</div>
-							</div>
-							<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							<a href="member-statements.html" type="button" class="btn btn-primary btn--icon-text"><i class="zmdi zmdi-search"></i>search</a>
-							</div>
-						</div>
-						</div>
-					</div>			
-				</aside>   
+                        </ul>
+                    </li>
+
+
+                    <li class="navigation__sub">
+                        <a href="#"><i class="mdi mdi-cog-outline"></i>Setups</a>
+                        <ul>
+                            <li class=""><a href="mdaSetup.html">MDA Setup</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="navigation__sub">
+                        <a href="#"><i class="pe-7s-note2"></i>Reports</a>
+                        <ul>
+                            <li><a href="interests.html">Interests</a></li>
+                            <li><a href="recovered-loans.html">Recovered Loans</a></li>
+                            <li><a href="creditor.html">Creditors</a></li>
+                            <li><a href="MDA-List.html">MDA List</a></li>
+                            <li><a href="messages_sent.html">Messages Sent</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="navigation__active mt-4"><a href="landing-page.html"><i
+                                class="zmdi zmdi-power"></i>Logout</a></li>
+                </ul>
+            </div>
+
+            <!-- universal modals -->
+
+            <!-- search for member -->
+            <div class="modal fade" id="searchMember" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <p>Enter member number in order to continue</p>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Member Number</label>
+                                        <input type="text" class="form-control form-control-lg"
+                                            placeholder="Enter Account Number">
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label><strong>Date from</strong></label>
+                                        <input type="text"
+                                            class="form-control date-picker hidden-sm-down flatpickr-input"
+                                            placeholder="Select Date from" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label><strong>Date to</strong></label>
+                                        <input type="text"
+                                            class="form-control form-control date-picker hidden-sm-down flatpickr-input"
+                                            readonly placeholder="Select Date To">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <a href="member-statements.html" type="button" class="btn btn-primary btn--icon-text"><i
+                                    class="zmdi zmdi-search"></i>search</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
 
         <!-- =========================== -->
         <!-- modals -->
@@ -315,21 +341,23 @@
 
         <!-- decline application -->
         <!-- Modal -->
-        <div class="modal fade" id="decline-loan-application" tabindex="-1" role="dialog" aria-labelledby="decline-loan-application" aria-hidden="true">
+        <div class="modal fade" id="decline-loan-application" tabindex="-1" role="dialog"
+            aria-labelledby="decline-loan-application" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">Decline the application</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <div class="modal-body">
                         <div class="">
                             <form>
                                 <div class="form-group">
                                     <label for="decline-reason">Reason for declining this application</label>
-                                    <textarea class="form-control" placeholder="Enter reason for declining ..." id="decline-reason" rows="3"></textarea>
+                                    <textarea class="form-control" placeholder="Enter reason for declining ..."
+                                        id="decline-reason" rows="3"></textarea>
                                 </div>
                             </form>
                         </div>
@@ -337,7 +365,8 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-danger btn--icon-text"><i class="zmdi zmdi-close mr-3"></i>Decline</button>
+                        <button type="button" class="btn btn-danger btn--icon-text"><i
+                                class="zmdi zmdi-close mr-3"></i>Decline</button>
                     </div>
                 </div>
             </div>
@@ -348,21 +377,23 @@
         <!-- send for re-evaluation -->
 
         <!-- Modal -->
-        <div class="modal fade" id="reevaluate-loan-application" tabindex="-1" role="dialog" aria-labelledby="decline-loan-application" aria-hidden="true">
+        <div class="modal fade" id="reevaluate-loan-application" tabindex="-1" role="dialog"
+            aria-labelledby="decline-loan-application" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">Send for re-evaluation</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <div class="modal-body">
                         <div class="">
                             <form>
                                 <div class="form-group">
                                     <label for="decline-reason">Reason for sending application for Re-evaluation</label>
-                                    <textarea class="form-control" placeholder="Enter reason ..." id="decline-reason" rows="3"></textarea>
+                                    <textarea class="form-control" placeholder="Enter reason ..." id="decline-reason"
+                                        rows="3"></textarea>
                                 </div>
                             </form>
                         </div>
@@ -370,7 +401,8 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-warning btn--icon-text"><i class="zmdi zmdi-refresh-sync mr-3"></i>Send for re-evaluation</button>
+                        <button type="button" class="btn btn-warning btn--icon-text"><i
+                                class="zmdi zmdi-refresh-sync mr-3"></i>Send for re-evaluation</button>
                     </div>
                 </div>
             </div>
@@ -387,8 +419,8 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
                         <span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">Loan details</h1>
-							</span>
+                            <h1 class="text-capitalize stream_name m-0">Loan details</h1>
+                        </span>
                         <div class="">
                             <ol class="breadcrumb border-0">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -453,12 +485,14 @@
 
                                     <div class="row my-4 bg-light">
                                         <div class="col-sm-12 col-md-4 loan-bal py-4">
-                                            <p class="text-muted-blue bold bold mb-1"><strong>Current Balance</strong></p>
+                                            <p class="text-muted-blue bold bold mb-1"><strong>Current Balance</strong>
+                                            </p>
                                             <div class="d-flex justify-content-between font-24 font-weight-light">
                                                 <p class="text-danger bold">KES 3,060</p>
                                             </div>
 
-                                            <p class="text-muted-blue bold bold m-0"><strong><small>Amount repaid</small></strong></p>
+                                            <p class="text-muted-blue bold bold m-0"><strong><small>Amount
+                                                        repaid</small></strong></p>
                                             <div class="d-flex justify-content-between font-24 font-weight-light">
                                                 <p class=" bold font-16 text-info">KES 12,482</p>
                                             </div>
@@ -472,10 +506,12 @@
                                         <div class="col-sm-12 col-md-6 col-lg-4">
                                             <div class=" widget-pie__item">
                                                 <div class="">
-                                                    <div class="easy-pie-chart" data-percent="80" data-size="80" data-track-color="#b9e0ff" data-bar-color="#0262ee">
+                                                    <div class="easy-pie-chart" data-percent="80" data-size="80"
+                                                        data-track-color="#b9e0ff" data-bar-color="#0262ee">
                                                         <span class="easy-pie-chart__value">80</span>
                                                     </div>
-                                                    <div class="widget-pie__title" style="color: #0262ee;"><strong>Repayment Progress</strong></div>
+                                                    <div class="widget-pie__title" style="color: #0262ee;">
+                                                        <strong>Repayment Progress</strong></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -484,7 +520,8 @@
 
                                     <div class="contact-header">
                                         <h4>Loan Application details</h4>
-                                        <p>Have a closr look at the details pertaining to this application before taking any action.</p>
+                                        <p>Have a closr look at the details pertaining to this application before taking
+                                            any action.</p>
                                         <hr class="mb-0 mt-1">
                                     </div>
 
@@ -495,9 +532,11 @@
                                     <hr>
                                     <div class="row">
                                         <div class="col-md- col-sm-12">
-                                            <small class="text-muted-blue bold bold">Reason for applying for the loan</small>
+                                            <small class="text-muted-blue bold bold">Reason for applying for the
+                                                loan</small>
                                             <div class="d-flex justify-content-between">
-                                                <p><strong>To pay a very urgent and emergency fee for my son's Space camp graduation at Venezuela</strong></p>
+                                                <p><strong>To pay a very urgent and emergency fee for my son's Space
+                                                        camp graduation at Venezuela</strong></p>
                                             </div>
                                             <hr>
                                         </div>
@@ -510,40 +549,44 @@
                                         <div class="col-12">
                                             <div class="row loan-docs">
                                                 <label class="col-lg-3 col-sm-12 col-md-6" for="intro-letter">
-                                                        
-                                                        <div class="intro-letter " title="attach attachment letter from employer">
-                                                            <span><img src="demo/img/attachment-docs/contract.svg"></span>
-                                                            <h5>Introduction letter</h5>
-                                                            <small></small>
-                                                        </div>
-                                                    </label>
+
+                                                    <div class="intro-letter "
+                                                        title="attach attachment letter from employer">
+                                                        <span><img src="demo/img/attachment-docs/contract.svg"></span>
+                                                        <h5>Introduction letter</h5>
+                                                        <small></small>
+                                                    </div>
+                                                </label>
 
                                                 <label class="col-lg-3 col-sm-12 col-md-6" for="payslip">
-                                                        
-                                                        <div class="pay-slip " title="attach the payslip (at least 3 months ago)">
-                                                            <span><img src="demo/img/attachment-docs/email.svg"></span>
-                                                            <h5>Payslip</h5>
-                                                            <small>At least 3 Months Ago</small>
-                                                        </div>
-                                                    </label>
+
+                                                    <div class="pay-slip "
+                                                        title="attach the payslip (at least 3 months ago)">
+                                                        <span><img src="demo/img/attachment-docs/email.svg"></span>
+                                                        <h5>Payslip</h5>
+                                                        <small>At least 3 Months Ago</small>
+                                                    </div>
+                                                </label>
 
                                                 <label class="col-lg-3 col-sm-12 col-md-6 " for="bank-statement">
-                                                       
-                                                        <div class="bank-state " title="Attach bank statement(s)(At least 23 months ago)">
-                                                            <span><img src="demo/img/attachment-docs/bank.svg"></span>
-                                                            <h5>Bank statement</h5>
-                                                            <small>At least 3 Months Ago</small>
-                                                        </div>
-                                                    </label>
 
-                                                <label for="mpesa-state" class="col-lg-3 col-sm-12 col-md-6 " title="Select mpesa statement (at least 3 months ago)">
-                                                       
-                                                        <div class="mpesa-state ">
-                                                            <span><img src="demo/img/attachment-docs/mpesa.svg"></span>
-                                                            <h5>Mpesa statement</h5>
-                                                            <small>At least 3 Months Ago</small>
-                                                        </div>
-                                                    </label>
+                                                    <div class="bank-state "
+                                                        title="Attach bank statement(s)(At least 23 months ago)">
+                                                        <span><img src="demo/img/attachment-docs/bank.svg"></span>
+                                                        <h5>Bank statement</h5>
+                                                        <small>At least 3 Months Ago</small>
+                                                    </div>
+                                                </label>
+
+                                                <label for="mpesa-state" class="col-lg-3 col-sm-12 col-md-6 "
+                                                    title="Select mpesa statement (at least 3 months ago)">
+
+                                                    <div class="mpesa-state ">
+                                                        <span><img src="demo/img/attachment-docs/mpesa.svg"></span>
+                                                        <h5>Mpesa statement</h5>
+                                                        <small>At least 3 Months Ago</small>
+                                                    </div>
+                                                </label>
                                             </div>
 
                                         </div>
@@ -619,15 +662,19 @@
                                         <hr>
 
                                         <div>
-                                            <p><strong class="d-flex align-items-center">1.<a href=""><i class="pe-7s-id mx-2"></i>National Id card</a></strong></p>
+                                            <p><strong class="d-flex align-items-center">1.<a href=""><i
+                                                            class="pe-7s-id mx-2"></i>National Id card</a></strong></p>
                                         </div>
 
                                         <div>
-                                            <p><strong class="d-flex align-items-center">2.<a href=""><i class="pe-7s-note2 mx-2"></i>KRA Pin document</a></strong></p>
+                                            <p><strong class="d-flex align-items-center">2.<a href=""><i
+                                                            class="pe-7s-note2 mx-2"></i>KRA Pin document</a></strong>
+                                            </p>
                                         </div>
 
                                         <div>
-                                            <p><strong class="d-flex align-items-center">3.<a href=""><i class="pe-7s-camera mx-2"></i>Photo image</a></strong></p>
+                                            <p><strong class="d-flex align-items-center">3.<a href=""><i
+                                                            class="pe-7s-camera mx-2"></i>Photo image</a></strong></p>
                                         </div>
 
                                     </div>
@@ -725,7 +772,9 @@
 
             <footer class="footer hidden-xs-down">
                 <center>
-                    <a class="nouveta-logoo" href="https://nouveta.tech/"><img src="demo/img/logo-files/logo2.png" target="new"></center>
+                    <a class="nouveta-logoo" href="https://nouveta.tech/"><img src="demo/img/logo-files/logo2.png"
+                            target="new">
+                </center>
                 </a>
                 </center>
                 <p>Powered by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>

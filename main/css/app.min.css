@@ -15377,6 +15377,7 @@ font-size: xx-large !important;
 }
 
 
+
 .carousel-highlight-items h4{
     color: #FFFFFF !important;
     font-weight: 300;
@@ -15872,4 +15873,9 @@ font-size: xx-large !important;
 
 .category_loan_filter{
     max-width: 144px;
+}
+
+.text-amount{
+    color: #ff5722;
+    font-weight: 800;
 }
