@@ -1464,9 +1464,11 @@ $('.bulk_sms_table input').each(function (value, index) {
 ---------------------------*/
 
 var checkedMembers;
+var Cost;
 
 function countSelectedMembers() {
 	checkedMembers = 0;
+	Cost = 1;
 
 	$('.bulk_sms_table input').each(function (value, index) {
 		if (this.checked) {
@@ -1474,23 +1476,26 @@ function countSelectedMembers() {
 		}
 	});
 
-	$('.members_selected').html(checkedMembers + " Members");
-
+	DefaultText();
 }
 
-var SMSChar = $('.bulk_sms_text').val().length;
-var Cost = 1;
+function DefaultText() {
+	var SMSChar = $('.bulk_sms_text').val().length;
 
-$('.bulk_sms_char_count').text(SMSChar + ' Characters');
-if (SMSChar < 160) {
-	$('.character_cost').text('KES ' + 1);
-	$('.total_cost').text('KES ' + (Cost * checkedMembers));
+	$('.members_selected').html(checkedMembers + " Members");	
+	$('.bulk_sms_char_count').text(SMSChar + ' Characters');
 
-} else {
-	Cost = Math.round(SMSChar / 160);
-	$('.character_cost').text('KES ' + Cost);
-	$('.total_cost').text('KES ' + (Cost * checkedMembers));
+	if (SMSChar < 160) {
+		$('.character_cost').text('KES ' + 1);
+		$('.total_cost').text('KES ' + (Cost * checkedMembers));
+
+	} else {
+		Cost = Math.round(SMSChar / 160);
+		$('.character_cost').text('KES ' + Cost);
+		$('.total_cost').text('KES' + (Cost * checkedMembers));
+	}
 }
+
 
 $('.bulk_sms_text').on('keyup', function () {
 	var Char = this.value.length;

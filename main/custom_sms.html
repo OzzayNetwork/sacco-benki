@@ -405,15 +405,16 @@
                             <span>
                                 <h4 class="members_selected_title">Attach File Below</h4>
                             </span>
-                            <span class="d-flex align-items-center">
-                                <h6>Text Balance: <strong class="text-amount">KES 1,500</strong></h6>
+                            <span class="d-flex align-items-center justify-content-center">
+                                <h6 class="mb-0">Text Balance:</h6> &nbsp;
+                                <strong class="text-amount font-20px">KES 1,500</strong>
                             </span>
                         </div>
                         <div class="card-body">
                             <form>
                                 <div class="row form-contents">
 
-                                    <label class="col-12 form-attach mb-2" for="custom_bulk">
+                                    <label class="col-12 mb-2 drop-section-container cursor-pointer" for="custom_bulk">
                                         <div class="id-container img-container">
                                             <span><img src="demo/img/form-svgs/xls.svg"></span>
                                             <h5>Custom Bulk SMS</h5>
@@ -422,7 +423,7 @@
                                             <!-- national id input box -->
                                             <input type="file" name="custom_bulk" required
                                                 accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
-                                                id="custom_bulk" class="form-control nat-id d-none">
+                                                id="custom_bulk" class="form-control d-none dropify">
                                         </div>
                                     </label>
 
@@ -441,8 +442,89 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 p-0 mt-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>File Preview</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover bulk_sms_table table-custom spacing8" id="bulk_sms">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Contact</th>
+                                            <th>Message</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="w60">
+                                                <a title="" href="member-profile.html">Amos Wele</a>
+                                            </td>
+                                            <td>
+                                                <p class="mb-0 mt-0"><a href="tel:0702663857">0702663857</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">amoswele@gmail.com</a>
+                                                </p>
+                                            </td>
+                                            <td class="text-capitalize text-wrap">Sample
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="w60">
+                                                <a title="" href="member-profile.html">Sharon Wambui</a>
+                                            </td>
+                                            <td>
+                                                <p class="mb-0 mt-0"><a href="tel:0702365985">0702365985</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">sharon@gmail.com</a></p>
+                                            </td>
+                                            <td class="text-capitalize text-wrap">
+                                                This is the sample message
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <td class="w60">
+                                                <a title="" href="member-profile.html">cate kimotho</a>
+                                            </td>
+                                            <td>
+                                                <p class="mb-0 mt-0"><a href="tel:0702365972">04525252</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">cate@gmail.com</a></p>
+                                            </td>
+                                            <td class="text-capitalize text-capitalize text-wrap">Sample Message</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="w60">
+                                                <a title="" href="member-profile.html">John Weru</a>
+                                            </td>
+                                            <td>
+                                                <p class="mb-0 mt-0"><a href="tel:0702663333">0702663333</a></p>
+                                                <p class="mb-0 mt-0"><a
+                                                        href="mailto:kelvinnjuguna99@gmail.com">john@gmail.com</a></p>
+                                            </td>
+                                            <td class="text-capitalize text-wrap">
+                                                A very important and complicated message that is to be included to test
+                                                whether the space set for the message content is sufficient if not, enough for any sample of
+                                                a large text written to give relative information.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -508,6 +590,7 @@
     <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
     <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
     <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
+
     <script src="vendors/salvattore/salvattore.min.js"></script>
     <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
     <script src="vendors/moment/moment.min.js"></script>
